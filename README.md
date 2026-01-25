@@ -1,25 +1,6 @@
 <html lang="fr">
 <head>
-    <!-- Primary Meta Tags -->
-<title>Johan Proust - Online Resume</title>
-<meta name="title" content="Johan Proust - Online Resume" />
-<meta name="description" content="Online Portfolio, Resume" />
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://bobcat88.github.io/" />
-<meta property="og:title" content="Johan Proust - Online Resume" />
-<meta property="og:description" content="Online Portfolio, Resume" />
-<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
-
-<!-- X (Twitter) -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://bobcat88.github.io/" />
-<meta property="twitter:title" content="Johan Proust - Online Resume" />
-<meta property="twitter:description" content="Online Portfolio, Resume" />
-<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
-
-<!-- Meta Tags Generated with https://metatags.io -->
+<meta property="og:image" content="portfolio.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Johan Proust | Portfolio Expert PMO & Product Owner</title>
@@ -33,7 +14,6 @@
         .glass-effect { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; border-color: #3b82f6; }
-        
         .timeline-line::before {
             content: '';
             position: absolute;
@@ -47,7 +27,6 @@
         @media (max-width: 768px) {
             .timeline-line::before { left: 20px; }
         }
-
         .tech-tag {
             background: rgba(59, 130, 246, 0.1);
             border: 1px solid rgba(59, 130, 246, 0.2);
