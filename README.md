@@ -5,7 +5,7 @@
     <title>Johan Proust | Portfolio Expert PMO & Product Owner</title>
     <!-- Meta balises pour réseaux sociaux (Open Graph) -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://votre-site.com/">
+    <meta property="og:url" content="https://bobcat88.github.io/">
     <meta property="og:title" content="Johan Proust | Portfolio Expert PMO & Product Owner">
     <meta property="og:description" content="Expert en pilotage de projets complexes, environnements industriels et transformation digitale. 11 ans d'expérience.">
     <meta property="og:image" content="portfolio.png">
