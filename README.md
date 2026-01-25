@@ -262,13 +262,13 @@
                     <div class="md:w-5/12 glass-effect p-8 rounded-3xl card-hover ml-10 md:ml-0">
                         <div class="md:hidden text-red-500 font-bold mb-2 text-sm">2011 - 2012</div>
                         <h3 class="text-2xl font-bold">Justrade International</h3>
-                        <p class="text-slate-400 font-medium mb-2">Chargé de projet Webmarketing</p>
+                        <p class="text-red-400 font-medium mb-2">Chargé de projet Webmarketing</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag italic">WordPress</span>
                             <span class="tech-tag italic">SEO/SEA</span>
                             <span class="tech-tag italic">Photoshop</span>
                         </div>
-                        <p class="text-red-400 text-sm mb-6 font-light">Déploiement International : Adaptation de la plateforme digitale aux marchés étrangers.</p>
+                        <p class="text-slate-400 text-sm mb-6 font-light">Déploiement International : Adaptation de la plateforme digitale aux marchés étrangers.</p>
                         <a href="https://docs.google.com/document/d/1JaOHl9brR_uOtd7ZPcN10GEvG5e1CPWp11Ufm67uctM/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">
                             Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
