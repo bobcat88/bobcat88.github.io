@@ -275,7 +275,7 @@
                     <div class="space-y-6">
                         <div class="p-6 rounded-2xl glass-effect border-l-4 border-red-500">
                             <h4 class="font-bold">Mission Humanitaire (Cambodge, Chine)</h4>
-                            <p class="text-sm text-slate-300 mb-2 font-medium italic">Dons etOrganisation d'événements caritatifs</p>
+                            <p class="text-sm text-slate-300 mb-2 font-medium italic">Dons et Organisation d'événements caritatifs</p>
                         </div>
                         <div class="p-6 rounded-2xl glass-effect flex items-center gap-6">
                             <div class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center shrink-0">
