@@ -52,32 +52,28 @@
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 leading-relaxed overflow-x-hidden">
-
     <!-- Header / Hero -->
     <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         <div class="absolute inset-0 z-0">
             <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/10 rounded-full blur-[120px]"></div>
             <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-600/10 rounded-full blur-[120px]"></div>
         </div>
-
         <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
             <div class="relative inline-block mb-10 group">
                 <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
                 <img src="1718401060413.jpg" alt="Johan Proust" class="relative w-56 h-56 md:w-64 md:h-64 rounded-full border-4 border-slate-900 mx-auto object-cover shadow-2xl transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://via.placeholder.com/300'">
             </div>
-            
             <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tight">Johan <span class="gradient-text">Proust</span></h1>
             <p class="text-2xl md:text-3xl text-slate-400 mb-10 max-w-3xl mx-auto font-light">
                 Expert Pilotage de Projets Complexes <br>
                 <span class="text-slate-300 font-normal">PMO | Project Manager | Product Owner | Business Analyst</span>
             </p>
-            
             <div class="flex flex-wrap justify-center gap-4 mb-12">
                 <span class="px-6 py-2 rounded-full glass-effect border border-blue-500/30 text-sm"><i class="fas fa-briefcase mr-2 text-blue-400"></i>11 ans d'expérience</span>
                 <span class="px-6 py-2 rounded-full glass-effect border border-purple-500/30 text-sm"><i class="fas fa-globe-asia mr-2 text-purple-400"></i>7 ans en Asie</span>
                 <span class="px-6 py-2 rounded-full glass-effect border border-emerald-500/30 text-sm"><i class="fas fa-check-circle mr-2 text-emerald-400"></i>Bilingue Anglais</span>
+                <span class="px-6 py-2 rounded-full glass-effect border border-emerald-500/30 text-sm"><i class="fas fa-check-circle mr-2 text-emerald-400"></i>Hybride Tech/Biz</span>
             </div>
-
             <div class="flex flex-col md:flex-row justify-center gap-6 items-center">
                 <div class="flex gap-6 text-3xl">
                     <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" class="text-slate-400 hover:text-blue-400 transition-colors"><i class="fab fa-linkedin"></i></a>
@@ -87,14 +83,11 @@
             </div>
         </div>
     </header>
-
     <!-- Expériences -->
     <section id="experiences" class="py-24 bg-slate-900/30 relative">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-20 text-center">Parcours <span class="text-blue-500">Professionnel</span></h2>
-            
-            <div class="relative timeline-line">
-                
+            <h2 class="text-4xl font-bold mb-20 text-center">Parcours <span class="text-blue-500">Professionnel</span></h2>       
+            <div class="relative timeline-line">              
                 <!-- 1. NeoSoft -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full" data-aos="fade-up">
                     <div class="hidden md:block w-5/12 text-right pr-12">
@@ -117,7 +110,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- 2. Thales -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full flex-row-reverse" data-aos="fade-up">
                     <div class="hidden md:block w-5/12 text-left pl-12">
@@ -130,8 +122,8 @@
                         <p class="text-purple-400 font-medium mb-2">PMO & Support Bid Management</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag italic">QDV</span>
-                            <span class="tech-tag italic">SAP</span>
-                            <span class="tech-tag italic">MS Project</span>
+                            <span class="tech-tag italic">Primavera P6</span>
+                            <span class="tech-tag italic">MS Project/Office</span>
                             <span class="tech-tag italic">RiskX</span>
                             <span class="tech-tag italic">VBA/Excel</span>
                         </div>
@@ -141,7 +133,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- 3. EPSI -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full" data-aos="fade-up">
                     <div class="hidden md:block w-5/12 text-right pr-12">
@@ -164,7 +155,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- 4. Gestion Locative -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full flex-row-reverse" data-aos="fade-up">
                     <div class="hidden md:block w-5/12 text-left pl-12">
@@ -179,6 +169,7 @@
                             <span class="tech-tag italic">Asset Management</span>
                             <span class="tech-tag italic">CRM</span>
                             <span class="tech-tag italic">Notion</span>
+                            <span class="tech-tag italic">Gestion Prestaires</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Optimisation du rendement (>90% d'occupation) et gestion opérationnelle.</p>
                         <a href="https://docs.google.com/document/d/1ol-LDjmEQJhorYPO4kL01Zx-NNv1tXec8wUHrufqFgg/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-xl transition-all">
@@ -186,7 +177,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- 5. Sichuan Shuhan Plastics -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full" data-aos="fade-up">
                     <div class="hidden md:block w-5/12 text-right pr-12">
@@ -201,6 +191,7 @@
                             <span class="tech-tag italic">SAP Ariba</span>
                             <span class="tech-tag italic">International Trade</span>
                             <span class="tech-tag italic">YonYou CRM</span>
+                            <span class="tech-tag italic">Asian Market</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Développement de l'export de 5% à 20% du CA (15M$), Management d'équipe.</p>
                         <a href="https://docs.google.com/document/d/1YrwQRrBlTZ2I9lxNmwhOv0kSdqsAalw34sNbqmhaTbk/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white text-xs font-bold rounded-xl transition-all">
@@ -208,7 +199,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- 6. Vacorda Instruments -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full flex-row-reverse" data-aos="fade-up">
                     <div class="hidden md:block w-5/12 text-left pl-12">
@@ -221,7 +211,7 @@
                         <p class="text-cyan-400 font-medium mb-2">Stratégie Digitale & Biz Dev</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag italic">WIX</span>
-                            <span class="tech-tag italic">Google Ads</span>
+                            <span class="tech-tag italic">Google Ads and Analytics</span>
                             <span class="tech-tag italic">SEO/SEA</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Création de l'écosystème digital et développement zone francophone.</p>
@@ -230,7 +220,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- 7. Diadom -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full" data-aos="fade-up">
                     <div class="hidden md:block w-5/12 text-right pr-12">
@@ -243,8 +232,10 @@
                         <p class="text-yellow-400 font-medium mb-2">Chef de Projet Digital / BA</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag italic">E-commerce</span>
+                            <span class="tech-tag italic">Drupal</span>
                             <span class="tech-tag italic">Business Analysis</span>
                             <span class="tech-tag italic">KPI/Reporting</span>
+                            <span class="tech-tag italic">HTML/CSS</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Refonte e-commerce. Hausse du trafic de +196% et conversion +23%.</p>
                         <a href="https://docs.google.com/document/d/1KIIt6meTpW7Xdh325C70he49OIoGGtHkd-nkTJciUzk/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-xs font-bold rounded-xl transition-all">
@@ -252,7 +243,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- 8. Justrade -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full flex-row-reverse" data-aos="fade-up">
                     <div class="hidden md:block w-5/12 text-left pl-12">
@@ -264,9 +254,10 @@
                         <h3 class="text-2xl font-bold">Justrade International</h3>
                         <p class="text-red-400 font-medium mb-2">Chargé de projet Webmarketing</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag italic">WordPress</span>
+                            <span class="tech-tag italic">WordPress CMS</span>
                             <span class="tech-tag italic">SEO/SEA</span>
                             <span class="tech-tag italic">Photoshop</span>
+                            <span class="tech-tag italic">Logistique</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Déploiement International : Adaptation de la plateforme digitale aux marchés étrangers.</p>
                         <a href="https://docs.google.com/document/d/1JaOHl9brR_uOtd7ZPcN10GEvG5e1CPWp11Ufm67uctM/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">
@@ -274,23 +265,20 @@
                         </a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-
     <!-- Humanitaire & Formations -->
     <section class="py-24 bg-slate-950">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12">
-                
                 <!-- Humanitaire & Loisirs -->
                 <div data-aos="fade-right">
                     <h2 class="text-3xl font-bold mb-10"><i class="fas fa-heart text-red-500 mr-4"></i>Engagements & Loisirs</h2>
                     <div class="space-y-6">
                         <div class="p-6 rounded-2xl glass-effect border-l-4 border-red-500">
                             <h4 class="font-bold">Mission Humanitaire (Cambodge, Chine)</h4>
-                            <p class="text-sm text-slate-300 mb-2 font-medium italic">Dons et Organisation d'événements caritatifs</p>
+                            <p class="text-sm text-slate-300 mb-2 font-medium italic">Dons et Organisation logistique d'événements caritatifs</p>
                         </div>
                         <div class="p-6 rounded-2xl glass-effect flex items-center gap-6">
                             <div class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center shrink-0">
@@ -312,7 +300,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Formations -->
                 <div data-aos="fade-left">
                     <h2 class="text-3xl font-bold mb-10"><i class="fas fa-graduation-cap text-blue-500 mr-4"></i>Formations & Certifs</h2>
@@ -323,7 +310,7 @@
                         </div>
                         <div class="p-6 rounded-2xl glass-effect border-l-4 border-emerald-500">
                             <h4 class="font-bold">Microsoft Project Management (2024)</h4>
-                            <p class="text-sm text-slate-400 italic">Certifié Gestion de Projet Industrielle</p>
+                            <p class="text-sm text-slate-400 italic">Certifié Gestion de Projet Industrielle & IT</p>
                         </div>
                         <div class="p-6 rounded-2xl glass-effect border-l-4 border-purple-500">
                             <h4 class="font-bold">Certified Agile Master (2023)</h4>
@@ -335,11 +322,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="py-20 border-t border-slate-900 text-center bg-slate-950">
         <div class="container mx-auto px-6">
@@ -358,7 +343,6 @@
             <p class="text-xs text-slate-600 uppercase tracking-widest">© 2026 Johan Proust — Portfolio Professionnel</p>
         </div>
     </footer>
-
     <script>
         window.addEventListener('load', () => {
             AOS.init({
