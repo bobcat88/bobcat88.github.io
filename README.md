@@ -1,5 +1,3 @@
-# bobcat88.github.io
-Portfolio
 <!DOCTYPE html>
 <html lang="fr">
 <head>
