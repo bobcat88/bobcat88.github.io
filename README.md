@@ -268,7 +268,7 @@
                             <span class="tech-tag italic">SEO/SEA</span>
                             <span class="tech-tag italic">Photoshop</span>
                         </div>
-                        <p class="text-slate-400 text-sm mb-6 font-light">Déploiement International : Adaptation de la plateforme digitale aux marchés étrangers.</p>
+                        <p class="text-red-400 text-sm mb-6 font-light">Déploiement International : Adaptation de la plateforme digitale aux marchés étrangers.</p>
                         <a href="https://docs.google.com/document/d/1JaOHl9brR_uOtd7ZPcN10GEvG5e1CPWp11Ufm67uctM/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-slate-600 hover:bg-slate-700 text-white text-xs font-bold rounded-xl transition-all">
                             Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
