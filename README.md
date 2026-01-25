@@ -9,7 +9,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Geom', sans-serif; scroll-behavior: smooth; }
         .glass-effect { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
         .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; border-color: #3b82f6; }
@@ -57,7 +57,7 @@
             <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tight">Johan <span class="gradient-text">Proust</span></h1>
             <p class="text-2xl md:text-3xl text-slate-400 mb-10 max-w-3xl mx-auto font-light">
                 Expert Pilotage de Projets Complexes <br>
-                <span class="text-slate-300 font-normal">PMO | Project Manager |Product Owner | Business Analyst</span>
+                <span class="text-slate-300 font-normal">PMO | Project Manager | Product Owner | Business Analyst</span>
             </p>
             
             <div class="flex flex-wrap justify-center gap-4 mb-12">
