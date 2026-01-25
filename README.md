@@ -269,6 +269,9 @@
                             <span class="tech-tag italic">Photoshop</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Déploiement International : Adaptation de la plateforme digitale aux marchés étrangers.</p>
+                        <a href="https://docs.google.com/document/d/e/2PACX-1vT0abuxbtJtHuWL6eh-5Odorm9uExjDgsxdTWkWTDhsY9KHcG872UI-PtMaZ9JCJtAUGrXXGzXuBCnl/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-xs font-bold rounded-xl transition-all">
+                            Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
                     </div>
                 </div>
 
