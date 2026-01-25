@@ -1,5 +1,25 @@
 <html lang="fr">
 <head>
+    <!-- Primary Meta Tags -->
+<title>Johan Proust - Online Resume</title>
+<meta name="title" content="Johan Proust - Online Resume" />
+<meta name="description" content="Online Portfolio, Resume" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://bobcat88.github.io/" />
+<meta property="og:title" content="Johan Proust - Online Resume" />
+<meta property="og:description" content="Online Portfolio, Resume" />
+<meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+<!-- X (Twitter) -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://bobcat88.github.io/" />
+<meta property="twitter:title" content="Johan Proust - Online Resume" />
+<meta property="twitter:description" content="Online Portfolio, Resume" />
+<meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+<!-- Meta Tags Generated with https://metatags.io -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Johan Proust | Portfolio Expert PMO & Product Owner</title>
