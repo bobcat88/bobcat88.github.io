@@ -1,6 +1,19 @@
 <html lang="fr">
 <head>
-<meta property="og:image" content="portfolio.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johan Proust | Portfolio Expert PMO & Product Owner</title>
+    <!-- Meta balises pour réseaux sociaux (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votre-site.com/">
+    <meta property="og:title" content="Johan Proust | Portfolio Expert PMO & Product Owner">
+    <meta property="og:description" content="Expert en pilotage de projets complexes, environnements industriels et transformation digitale. 11 ans d'expérience.">
+    <meta property="og:image" content="portfolio.png">
+    <!-- Meta balises pour Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Johan Proust | Portfolio Expert PMO & Product Owner">
+    <meta name="twitter:description" content="Expert en pilotage de projets complexes. PMO | Project Manager | Product Owner.">
+    <meta name="twitter:image" content="portfolio.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Johan Proust | Portfolio Expert PMO & Product Owner</title>
