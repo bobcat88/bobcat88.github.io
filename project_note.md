@@ -28,13 +28,24 @@
 
 ## Patch Notes
 
-- **CONTENT** : Mise à jour du compteur à "13 ans", confirmation du statut "Freelance disponible", ajout du PnL sur la section engagements.
+### v1.3 — Mars 2026 (Security, SEO & A11y Polish)
+- **SECURITY** : Fix de la vulnérabilité Reverse Tabnabbing (ajout `rel="noopener noreferrer"` sur tous les liens externes).
+- **SEO** : Utilisation d'URLs absolues pour les balises Open Graph et Twitter Cards afin de garantir l'affichage des miniatures.
+- **ACCESSIBILITY** : Ajout de balises `aria-hidden` et `aria-label` sur le composant Hero.
+- **UI** : Ajout d'un point d'état animé (pulse) sur le badge "Freelance disponible".
 
 ### v1.2 — Mars 2026 (Asset Optimization & SEO)
 - **TECH** : Conversion du portrait en WebP HD (`johan-proust.webp`), ajout de hints de preconnect (Google Fonts, CDNs), ajout de lien canonique et robots meta.
 - **UX** : Amélioration de l'obfuscation d'email (header/footer) via JS.
 - **ACCESSIBILITY** : Gestion de la préférence "Reduced Motion" pour désactiver les animations AOS si nécessaire.
 - **UI** : Intégration du portrait le plus récent.
+
+### v1.1 — Mars 2026 (Refonte Audit Antigravity)
+- **TECH** : Fix double meta viewport/charset, passage à DM Sans, ajout meta-description SEO, sémantique `<main>`.
+- **UI** : Ajout sections Expertise et Réalisations (Chiffres clés).
+- **UX** : Refonte de la proposition de valeur du Hero pour affirmer le positionnement "Strategic PMO & AI Architect".
+- **FUNCTION** : Ajout d'indicateur de scroll, CTAs rafraîchis.
+- **CONTENT** : Mise à jour du compteur à "13 ans", confirmation du statut "Freelance disponible", ajout du PnL sur la section engagements.
 
 ### v1.0 — Initial
 - Mise en ligne initiale du CV monopage avec Tailwind et AOS.

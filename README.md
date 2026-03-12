@@ -16,12 +16,12 @@
     <meta property="og:url" content="https://bobcat88.github.io/">
     <meta property="og:title" content="Johan Proust | Expert PMO Stratégique & AI Architecture">
     <meta property="og:description" content="Expert en pilotage de projets complexes, structuration stratégique et intégration d'agents IA. 13 ans d'expérience.">
-    <meta property="og:image" content="johan-proust.webp">
+    <meta property="og:image" content="https://bobcat88.github.io/johan-proust.webp">
     <!-- Meta balises pour Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Johan Proust | Expert PMO Stratégique & AI Architecture">
     <meta name="twitter:description" content="Expert PMO Stratégique | Project Manager | AI Architect.">
-    <meta name="twitter:image" content="johan-proust.webp">
+    <meta name="twitter:image" content="https://bobcat88.github.io/johan-proust.webp">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -86,14 +86,14 @@
                 <span class="px-6 py-2 rounded-full glass-effect border border-purple-500/30 text-sm"><i class="fas fa-globe-asia mr-2 text-purple-400"></i>7 ans en Asie</span>
                 <span class="px-6 py-2 rounded-full glass-effect border border-emerald-500/30 text-sm"><i class="fas fa-comment-dots mr-2 text-emerald-400"></i>Bilingue EN/FR</span>
                 <span class="px-6 py-2 rounded-full glass-effect border border-orange-500/30 text-sm"><i class="fas fa-laptop-code mr-2 text-orange-400"></i>Hybride Tech/Biz</span>
-                <span class="px-6 py-2 rounded-full glass-effect border border-red-500/30 text-sm font-bold"><i class="fas fa-rocket mr-2 text-red-400"></i>Freelance disponible</span>
+                <span class="px-6 py-2 rounded-full glass-effect border border-red-500/30 text-sm font-bold flex items-center"><span class="w-2 h-2 rounded-full bg-red-500 animate-pulse mr-2"></span>Freelance disponible</span>
             </div>
             <div class="flex flex-col md:flex-row justify-center gap-6 items-center">
                 <a href="#experiences" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold rounded-full transition-all shadow-lg shadow-blue-500/25">Découvrir mon parcours <i class="fas fa-arrow-right ml-2"></i></a>
                 <div class="flex gap-6 text-3xl ml-4">
-                    <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" class="text-slate-400 hover:text-blue-400 transition-colors" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://wa.link/holzmf" target="_blank" class="text-slate-400 hover:text-green-400 transition-colors" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="javascript:void(0)" onclick="window.location.href='mailto:'+'johanproust'+'@'+'pm.me'" class="text-slate-400 hover:text-purple-400 transition-colors" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-400 transition-colors" title="LinkedIn" aria-label="Profil LinkedIn de Johan Proust"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://wa.link/holzmf" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-green-400 transition-colors" title="WhatsApp" aria-label="Contacter Johan Proust sur WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0)" onclick="window.location.href='mailto:'+'johanproust'+'@'+'pm.me'" class="text-slate-400 hover:text-purple-400 transition-colors" title="Email" aria-label="Envoyer un email à Johan Proust"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                 </div>
             </div>
             
@@ -166,7 +166,7 @@
                             <span class="tech-tag italic">Stakeholder Coordination</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Mission de structuration du pôle Support au Développement et pilotage du Plan de Développement stratégique (12-18 mois).</p>
-                        <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">
+                        <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">
                             Détails Mission <i class="fab fa-linkedin ml-2"></i>
                         </a>
                     </div>
@@ -188,7 +188,7 @@
                             <span class="tech-tag italic">Kanban</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Cadrage amont et validation de concept (POC) pour sécuriser le développement.</p>
-                        <a href="https://docs.google.com/document/d/1xxzyoGqOU6SiQq8ci9xPORed7DPamUyGA2Xxg_xhwEA/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl transition-all">
+                        <a href="https://docs.google.com/document/d/1xxzyoGqOU6SiQq8ci9xPORed7DPamUyGA2Xxg_xhwEA/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl transition-all">
                             Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
@@ -211,7 +211,7 @@
                             <span class="tech-tag italic">VBA/Excel</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Pilotage financier de +50 offres (>1Md€) et audit stratégique.</p>
-                        <a href="https://docs.google.com/document/d/13LURIzIYDEVGRZU5gprV16Lhpt4zj_yfUqO1joVTVhw/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold rounded-xl transition-all">
+                        <a href="https://docs.google.com/document/d/13LURIzIYDEVGRZU5gprV16Lhpt4zj_yfUqO1joVTVhw/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold rounded-xl transition-all">
                             Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
@@ -233,7 +233,7 @@
                             <span class="tech-tag italic">Scrum</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Pilotage de 2 équipes de dev pour un CRM sécurisé. Livraison 100% conforme.</p>
-                        <a href="https://docs.google.com/document/d/18pWjCAtyOMRExgEGMnvHBI772hxGsIZtfomSjvaS4t4/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition-all">
+                        <a href="https://docs.google.com/document/d/18pWjCAtyOMRExgEGMnvHBI772hxGsIZtfomSjvaS4t4/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition-all">
                             Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
@@ -255,7 +255,7 @@
                             <span class="tech-tag italic">Gestion Prestaires</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Optimisation du rendement (>90% d'occupation) et gestion opérationnelle.</p>
-                        <a href="https://docs.google.com/document/d/1ol-LDjmEQJhorYPO4kL01Zx-NNv1tXec8wUHrufqFgg/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-xl transition-all">
+                        <a href="https://docs.google.com/document/d/1ol-LDjmEQJhorYPO4kL01Zx-NNv1tXec8wUHrufqFgg/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-xl transition-all">
                             Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
@@ -277,7 +277,7 @@
                             <span class="tech-tag italic">Asian Market</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Développement de l'export de 5% à 20% du CA (15M$), Management d'équipe.</p>
-                        <a href="https://docs.google.com/document/d/1YrwQRrBlTZ2I9lxNmwhOv0kSdqsAalw34sNbqmhaTbk/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white text-xs font-bold rounded-xl transition-all">
+                        <a href="https://docs.google.com/document/d/1YrwQRrBlTZ2I9lxNmwhOv0kSdqsAalw34sNbqmhaTbk/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white text-xs font-bold rounded-xl transition-all">
                             Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
@@ -298,7 +298,7 @@
                             <span class="tech-tag italic">SEO/SEA</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Création de l'écosystème digital et développement zone francophone.</p>
-                        <a href="https://docs.google.com/document/d/1KIIt6meTpW7Xdh325C70he49OIoGGtHkd-nkTJciUzk/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs font-bold rounded-xl transition-all">
+                        <a href="https://docs.google.com/document/d/1KIIt6meTpW7Xdh325C70he49OIoGGtHkd-nkTJciUzk/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs font-bold rounded-xl transition-all">
                             Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
@@ -321,7 +321,7 @@
                             <span class="tech-tag italic">HTML/CSS</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Refonte e-commerce. Hausse du trafic de +196% et conversion +23%.</p>
-                        <a href="https://docs.google.com/document/d/1KIIt6meTpW7Xdh325C70he49OIoGGtHkd-nkTJciUzk/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-xs font-bold rounded-xl transition-all">
+                        <a href="https://docs.google.com/document/d/1KIIt6meTpW7Xdh325C70he49OIoGGtHkd-nkTJciUzk/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-xs font-bold rounded-xl transition-all">
                             Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
@@ -343,7 +343,7 @@
                             <span class="tech-tag italic">Logistique</span>
                         </div>
                         <p class="text-slate-400 text-sm mb-6 font-light">Déploiement International : Adaptation de la plateforme digitale aux marchés étrangers.</p>
-                        <a href="https://docs.google.com/document/d/1JaOHl9brR_uOtd7ZPcN10GEvG5e1CPWp11Ufm67uctM/edit?usp=drive_link" target="_blank" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">
+                        <a href="https://docs.google.com/document/d/1JaOHl9brR_uOtd7ZPcN10GEvG5e1CPWp11Ufm67uctM/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">
                             Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
                         </a>
                     </div>
