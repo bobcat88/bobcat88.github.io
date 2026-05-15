@@ -2,463 +2,662 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johan Proust | Expert PMO Stratégique & AI Architecture</title>
-    <meta name="description" content="PMO Senior & Consultant en Transformation Stratégique — Johan Proust. 13 ans d'expérience. Freelance disponible.">
+    <title>Johan Proust | Senior PMO / PO — Transformation Stratégique & AI</title>
+    <meta name="description" content="Johan Proust — PMO Senior, Product Owner & Consultant en Transformation Stratégique. 13 ans d'expérience, portefeuilles &gt;1Md€, 7 ans Asie. Freelance disponible.">
+    <meta name="keywords" content="PMO, PMO Senior, Product Owner, Project Manager, Transformation, AI Architect, Freelance, Brest, Banque, Défense, Thales, Crédit Mutuel Arkéa">
+    <meta name="author" content="Johan Proust">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://bobcat88.github.io/">
+
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://unpkg.com">
-    <!-- Meta balises pour réseaux sociaux (Open Graph) -->
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://bobcat88.github.io/">
-    <meta property="og:title" content="Johan Proust | Expert PMO Stratégique & AI Architecture">
-    <meta property="og:description" content="Expert en pilotage de projets complexes, structuration stratégique et intégration d'agents IA. 13 ans d'expérience.">
+    <meta property="og:title" content="Johan Proust | Senior PMO / PO — Transformation Stratégique & AI">
+    <meta property="og:description" content="Pilotage de portefeuilles >1Md€, structuration de programmes complexes et intégration d'agents IA. 13 ans d'expérience.">
     <meta property="og:image" content="https://bobcat88.github.io/johan-proust.webp">
-    <!-- Meta balises pour Twitter -->
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Johan Proust | Expert PMO Stratégique & AI Architecture">
-    <meta name="twitter:description" content="Expert PMO Stratégique | Project Manager | AI Architect.">
+    <meta name="twitter:title" content="Johan Proust | Senior PMO / PO — Transformation Stratégique & AI">
+    <meta name="twitter:description" content="Expert PMO Stratégique | Product Owner | AI Architect.">
     <meta name="twitter:image" content="https://bobcat88.github.io/johan-proust.webp">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Johan Proust",
+      "jobTitle": "Senior PMO & Product Owner — Strategic Transformation",
+      "url": "https://bobcat88.github.io/",
+      "image": "https://bobcat88.github.io/johan-proust.webp",
+      "sameAs": ["https://www.linkedin.com/in/johan-proust/"],
+      "knowsAbout": ["PMO","Product Ownership","Business Analysis","Bid Management","AI Agents","Transformation"],
+      "address": {"@type": "PostalAddress", "addressLocality": "Brest", "addressCountry": "FR"}
+    }
+    </script>
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
         body { font-family: 'DM Sans', sans-serif; scroll-behavior: smooth; }
-        .glass-effect { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
-        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; border-color: #3b82f6; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass-effect { background: rgba(255, 255, 255, 0.025); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.06); }
+        .glass-strong { background: rgba(15, 23, 42, 0.72); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7, #ec4899); background-size: 200% 100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 8s ease-in-out infinite; }
+        @keyframes shimmer { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+        .card-hover { transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease; }
+        .card-hover:hover { transform: translateY(-4px); border-color: rgba(59,130,246,0.45); box-shadow: 0 12px 40px -10px rgba(59,130,246,0.25); }
         .timeline-line::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: linear-gradient(to bottom, #3b82f6, #a855f7, #3b82f6);
-            opacity: 0.2;
+            content: ''; position: absolute; left: 50%; transform: translateX(-50%);
+            width: 2px; height: 100%;
+            background: linear-gradient(to bottom, #3b82f6, #a855f7, #ec4899, #3b82f6);
+            opacity: 0.25;
         }
-        @media (max-width: 768px) {
-            .timeline-line::before { left: 20px; }
+        @media (max-width: 768px) { .timeline-line::before { left: 20px; } }
+        .tech-tag { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.18); padding: 3px 10px; border-radius: 6px; font-size: 0.7rem; color: #93c5fd; font-weight: 500; }
+        .star-letter { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: .72rem; letter-spacing: .15em; }
+        .star-S { color:#60a5fa; } .star-T { color:#a855f7; } .star-A { color:#f59e0b; } .star-R { color:#10b981; }
+        .grid-bg {
+            background-image:
+              linear-gradient(rgba(148,163,184,0.06) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(148,163,184,0.06) 1px, transparent 1px);
+            background-size: 64px 64px;
+            mask-image: radial-gradient(ellipse at center, #000 0%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, transparent 70%);
         }
-        .tech-tag {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            padding: 2px 8px;
-            border-radius: 6px;
-            font-size: 0.7rem;
-            color: #93c5fd;
-            font-weight: 500;
+        .cta-glow { box-shadow: 0 0 0 0 rgba(59,130,246,0.5); animation: pulseGlow 2.4s ease-out infinite; }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(59,130,246,0.55); }
+            70% { box-shadow: 0 0 0 18px rgba(59,130,246,0); }
+            100% { box-shadow: 0 0 0 0 rgba(59,130,246,0); }
         }
+        .nav-link { position: relative; }
+        .nav-link::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:2px; background: linear-gradient(90deg,#60a5fa,#a855f7); transition: width .25s ease; }
+        .nav-link:hover::after { width: 100%; }
+        .floating-cta { box-shadow: 0 10px 30px -8px rgba(168,85,247,0.55), 0 0 0 1px rgba(255,255,255,0.05); }
+        details > summary { list-style: none; cursor: pointer; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] .chev { transform: rotate(180deg); }
+        .chev { transition: transform .25s ease; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 leading-relaxed overflow-x-hidden">
-    <main>
-        <!-- Header / Hero -->
-        <header class="relative min-h-screen flex items-center justify-center pt-20 pb-10 overflow-hidden">
-            <div class="absolute inset-0 z-0">
-            <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/10 rounded-full blur-[120px]"></div>
-            <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-600/10 rounded-full blur-[120px]"></div>
+
+<!-- Sticky Nav -->
+<nav class="fixed top-0 inset-x-0 z-40 glass-strong">
+    <div class="container mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#top" class="flex items-center gap-2 font-bold">
+            <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-sm">JP</span>
+            <span class="hidden sm:inline">Johan Proust</span>
+        </a>
+        <div class="hidden md:flex items-center gap-7 text-sm text-slate-300">
+            <a href="#about" class="nav-link">À propos</a>
+            <a href="#expertise" class="nav-link">Expertise</a>
+            <a href="#experiences" class="nav-link">Parcours</a>
+            <a href="#star" class="nav-link">STAR</a>
+            <a href="#metrics" class="nav-link">Impact</a>
+            <a href="#formations" class="nav-link">Formations</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
+        <a href="#contact" class="cta-glow inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white text-sm font-semibold transition-all">
+            <span class="w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span>
+            Disponible — Discutons
+        </a>
+    </div>
+</nav>
+
+<main id="top">
+
+    <!-- Hero -->
+    <header class="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 grid-bg"></div>
+            <div class="absolute top-[-10%] left-[-10%] w-[55%] h-[55%] bg-blue-600/10 rounded-full blur-[140px]"></div>
+            <div class="absolute bottom-[-15%] right-[-10%] w-[55%] h-[55%] bg-purple-600/10 rounded-full blur-[140px]"></div>
+            <div class="absolute top-[30%] right-[20%] w-[20%] h-[20%] bg-pink-600/10 rounded-full blur-[120px]"></div>
+        </div>
+
         <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
-            <div class="relative inline-block mb-10 group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
-                <img src="johan-proust.webp" alt="Johan Proust" class="relative w-56 h-56 md:w-64 md:h-64 rounded-full border-4 border-slate-900 mx-auto object-cover shadow-2xl transition-transform duration-500 group-hover:scale-105">
-            </div>
-            <h1 class="text-6xl md:text-8xl font-bold mb-6 tracking-tight">Johan <span class="gradient-text">Proust</span></h1>
-            
-            <p class="text-2xl md:text-3xl font-bold text-slate-200 mb-8 max-w-3xl mx-auto">
-                PMO Senior & Consultant en Transformation Stratégique
-            </p>
-            <div class="text-lg md:text-xl text-slate-400 mb-10 font-light flex flex-col items-center gap-2">
-                <span>Je structure ce qui est complexe.</span>
-                <span>Je pilote ce qui est risqué.</span>
-                <span class="text-blue-400 font-medium">Je livre ce qui compte.</span>
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-effect border border-emerald-500/30 text-xs font-medium text-emerald-300 mb-8">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                Freelance disponible — Mission PMO / PO / Transformation
             </div>
 
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <span class="px-6 py-2 rounded-full glass-effect border border-blue-500/30 text-sm"><i class="fas fa-briefcase mr-2 text-blue-400"></i>13 ans d'expérience</span>
-                <span class="px-6 py-2 rounded-full glass-effect border border-purple-500/30 text-sm"><i class="fas fa-globe-asia mr-2 text-purple-400"></i>7 ans en Asie</span>
-                <span class="px-6 py-2 rounded-full glass-effect border border-emerald-500/30 text-sm"><i class="fas fa-comment-dots mr-2 text-emerald-400"></i>Bilingue EN/FR</span>
-                <span class="px-6 py-2 rounded-full glass-effect border border-orange-500/30 text-sm"><i class="fas fa-laptop-code mr-2 text-orange-400"></i>Hybride Tech/Biz</span>
-                <span class="px-6 py-2 rounded-full glass-effect border border-red-500/30 text-sm font-bold flex items-center"><span class="w-2 h-2 rounded-full bg-red-500 animate-pulse mr-2"></span>Freelance disponible</span>
+            <div class="relative inline-block mb-10 group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+                <img src="johan-proust.webp" alt="Johan Proust" class="relative w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-slate-900 mx-auto object-cover shadow-2xl transition-transform duration-500 group-hover:scale-105">
             </div>
-            <div class="flex flex-col md:flex-row justify-center gap-6 items-center">
-                <a href="#experiences" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold rounded-full transition-all shadow-lg shadow-blue-500/25">Découvrir mon parcours <i class="fas fa-arrow-right ml-2"></i></a>
-                <div class="flex gap-6 text-3xl ml-4">
-                    <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-400 transition-colors" title="LinkedIn" aria-label="Profil LinkedIn de Johan Proust"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="https://wa.link/holzmf" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-green-400 transition-colors" title="WhatsApp" aria-label="Contacter Johan Proust sur WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
-                    <a href="javascript:void(0)" onclick="window.location.href='mailto:'+'johanproust'+'@'+'pm.me'" class="text-slate-400 hover:text-purple-400 transition-colors" title="Email" aria-label="Envoyer un email à Johan Proust"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Johan <span class="gradient-text">Proust</span></h1>
+
+            <p class="text-xl md:text-2xl font-semibold text-slate-200 mb-3 max-w-3xl mx-auto">
+                Senior PMO · Product Owner · Strategic Transformation
+            </p>
+            <p class="text-slate-400 max-w-2xl mx-auto mb-10 font-light">
+                Je structure ce qui est complexe. Je pilote ce qui est risqué. <span class="text-blue-400 font-medium">Je livre ce qui compte.</span>
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <span class="px-5 py-2 rounded-full glass-effect text-xs md:text-sm"><i class="fas fa-briefcase mr-2 text-blue-400"></i>13 ans d'expérience</span>
+                <span class="px-5 py-2 rounded-full glass-effect text-xs md:text-sm"><i class="fas fa-globe-asia mr-2 text-purple-400"></i>7 ans en Asie</span>
+                <span class="px-5 py-2 rounded-full glass-effect text-xs md:text-sm"><i class="fas fa-comments mr-2 text-emerald-400"></i>Bilingue EN/FR</span>
+                <span class="px-5 py-2 rounded-full glass-effect text-xs md:text-sm"><i class="fas fa-laptop-code mr-2 text-orange-400"></i>Hybride Tech/Biz</span>
+                <span class="px-5 py-2 rounded-full glass-effect text-xs md:text-sm"><i class="fas fa-coins mr-2 text-yellow-400"></i>&gt;1Md€ pilotés</span>
+            </div>
+
+            <!-- Hero CTAs -->
+            <div class="flex flex-col md:flex-row justify-center gap-4 items-center">
+                <a href="#contact" class="cta-glow px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold rounded-full transition-all shadow-lg shadow-blue-500/25 inline-flex items-center gap-2">
+                    <i class="fas fa-rocket"></i> Démarrer une mission
+                </a>
+                <a href="#star" class="px-8 py-4 glass-effect border border-slate-700 hover:border-blue-500 text-white font-semibold rounded-full transition-all inline-flex items-center gap-2">
+                    <i class="fas fa-star text-yellow-400"></i> Voir mes résultats STAR
+                </a>
+                <div class="flex gap-5 text-2xl md:ml-2">
+                    <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-400 transition-colors" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://wa.link/holzmf" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-green-400 transition-colors" title="WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0)" onclick="window.location.href='mailto:'+'johanproust'+'@'+'pm.me'" class="text-slate-400 hover:text-purple-400 transition-colors" title="Email" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                 </div>
             </div>
-            
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
-                <a href="#expertise" class="text-slate-500 hover:text-white transition-colors">
+
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+                <a href="#expertise" class="text-slate-500 hover:text-white transition-colors" aria-label="Scroll">
                     <i class="fas fa-chevron-down text-2xl"></i>
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Expertise -->
-    <section id="expertise" class="py-24 bg-slate-900/50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-16 text-center">3 Piliers <span class="gradient-text">d'Expertise</span></h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-effect p-8 rounded-3xl card-hover" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-14 h-14 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6">
-                        <i class="fas fa-project-diagram text-2xl text-blue-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Pilotage de Portefeuilles & PMO</h3>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Gouvernance, reporting COMEX/CODIR, risk management, planification multi-projets, suivi budgétaire >1Md€.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-tag">Primavera P6</span><span class="tech-tag">MS Project</span><span class="tech-tag">QDV</span>
-                    </div>
+    <!-- About -->
+    <section id="about" class="py-24 bg-slate-950 relative">
+        <div class="absolute inset-0 grid-bg opacity-30"></div>
+        <div class="container mx-auto px-6 relative">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <p class="mono text-xs uppercase tracking-[0.3em] text-blue-400 mb-3">// About</p>
+                    <h2 class="text-4xl md:text-5xl font-bold">Le profil <span class="gradient-text">derrière le CV</span></h2>
                 </div>
-                <div class="glass-effect p-8 rounded-3xl card-hover" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-14 h-14 rounded-2xl bg-purple-500/20 flex items-center justify-center mb-6">
-                        <i class="fas fa-rocket text-2xl text-purple-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Transformation & Product</h3>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Cadrage amont, roadmap stratégique, gestion de backlog, MVP, méthodologie Design Thinking.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-tag">Agile/Scrum</span><span class="tech-tag">Product Owner</span><span class="tech-tag">Business Analysis</span>
-                    </div>
-                </div>
-                <div class="glass-effect p-8 rounded-3xl card-hover" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 flex items-center justify-center mb-6">
-                        <i class="fas fa-globe-asia text-2xl text-emerald-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Biz Dev International</h3>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Export strategy, négociation multiculturelle, management d'équipes transculturelles, 7 pays opérés en Asie-Pacifique.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="tech-tag">Négociation</span><span class="tech-tag">Asie-Pacifique</span><span class="tech-tag">KPI/NPS</span>
+                <div class="glass-effect rounded-3xl p-8 md:p-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="grid md:grid-cols-[auto,1fr] gap-8 items-start">
+                        <div class="flex md:flex-col gap-4 md:gap-3 md:sticky md:top-24">
+                            <div class="text-center md:text-left">
+                                <div class="text-3xl md:text-4xl font-bold gradient-text">13 ans</div>
+                                <div class="text-xs text-slate-500 uppercase tracking-widest mt-1">Expérience</div>
+                            </div>
+                            <div class="text-center md:text-left">
+                                <div class="text-3xl md:text-4xl font-bold text-emerald-400">7 ans</div>
+                                <div class="text-xs text-slate-500 uppercase tracking-widest mt-1">Asie · Expat</div>
+                            </div>
+                            <div class="text-center md:text-left">
+                                <div class="text-3xl md:text-4xl font-bold text-purple-400">FR · EN</div>
+                                <div class="text-xs text-slate-500 uppercase tracking-widest mt-1">Bilingue Biz</div>
+                            </div>
+                        </div>
+                        <div class="space-y-5 text-slate-300 leading-relaxed">
+                            <p class="text-lg text-white font-medium">Nerd depuis mes 7 ans, je n'ai jamais cessé d'aimer démonter ce qui est compliqué — d'abord par curiosité, puis par métier.</p>
+                            <p>Ce qui me passionne réellement, c'est résoudre les situations complexes là où elles se jouent : à l'intersection des <span class="text-blue-300 font-medium">gens</span>, de <span class="text-purple-300 font-medium">l'expertise métier</span> et des <span class="text-emerald-300 font-medium">leviers techniques</span>. C'est cette triple lecture qui me permet d'agir en duality — autant à l'aise pour cadrer un Plan stratégique en COMEX que pour coder un outil PMO en Apps Script ou industrialiser un chiffrage en VBA.</p>
+                            <p>Bilingue FR/EN, professionnel hybride avec 13 ans d'expérience dont 7 à l'international (Asie), j'interviens sur tout le cycle de vie des projets — du <span class="text-white">cadrage stratégique (Business Analysis)</span> au <span class="text-white">pilotage opérationnel (PMO / Project Management)</span> jusqu'à la <span class="text-white">livraison produit (Product Ownership)</span>. Environnements maîtrisés : <span class="font-medium">Défense, Banque, Industrie, Digital</span>.</p>
+                            <p class="text-slate-400 text-sm italic border-l-2 border-blue-500/40 pl-4">Ce que je cherche : des programmes exposés, des arbitrages à structurer, des sujets où la complexité humaine et technique se rejoignent. Ce que j'apporte : la posture, l'outillage, et la livraison.</p>
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="tech-tag">Business Analysis</span>
+                                <span class="tech-tag">PMO Stratégique</span>
+                                <span class="tech-tag">Product Ownership</span>
+                                <span class="tech-tag">AI Agents</span>
+                                <span class="tech-tag">Défense</span>
+                                <span class="tech-tag">Banque</span>
+                                <span class="tech-tag">Industrie</span>
+                                <span class="tech-tag">Digital</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Expériences -->
+    <!-- Expertise -->
+    <section id="expertise" class="py-24 bg-slate-900/40 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="mono text-xs uppercase tracking-[0.3em] text-blue-400 mb-3">// Positioning</p>
+                <h2 class="text-4xl md:text-5xl font-bold">3 Piliers <span class="gradient-text">d'Expertise</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto mt-4">Un profil hybride couvrant l'amont stratégique, le pilotage exécutif et le delivery produit.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-effect p-8 rounded-3xl card-hover" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-500/15 flex items-center justify-center mb-6">
+                        <i class="fas fa-project-diagram text-2xl text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Portfolio & PMO Stratégique</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Gouvernance, reporting COMEX/CODIR, risk management, planification multi-projets, suivi budgétaire &gt;1Md€, arbitrages de portefeuille.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Primavera P6</span><span class="tech-tag">MS Project</span><span class="tech-tag">QDV</span><span class="tech-tag">RiskX</span>
+                    </div>
+                </div>
+                <div class="glass-effect p-8 rounded-3xl card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500/15 flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-2xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Product Ownership & Transformation</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Cadrage amont, roadmap, backlog, MVP, Design Thinking, conduite du changement, AI agents & automatisation Workspace.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Agile/Scrum</span><span class="tech-tag">Product Owner</span><span class="tech-tag">Business Analysis</span><span class="tech-tag">AI Agents</span>
+                    </div>
+                </div>
+                <div class="glass-effect p-8 rounded-3xl card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/15 flex items-center justify-center mb-6">
+                        <i class="fas fa-globe-asia text-2xl text-emerald-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Biz Dev International</h3>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Export strategy, négociation multiculturelle, management d'équipes transculturelles, RFI/RFP, 7 pays opérés en Asie-Pacifique.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">Négociation</span><span class="tech-tag">Asie-Pacifique</span><span class="tech-tag">KPI/NPS</span><span class="tech-tag">SAP Ariba</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STAR Highlights -->
+    <section id="star" class="py-24 bg-slate-950 relative">
+        <div class="absolute inset-0 grid-bg opacity-40"></div>
+        <div class="container mx-auto px-6 relative">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="mono text-xs uppercase tracking-[0.3em] text-purple-400 mb-3">// Method · Situation · Task · Action · Result</p>
+                <h2 class="text-4xl md:text-5xl font-bold">Missions clés <span class="gradient-text">en STAR</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto mt-4">Quatre missions structurantes, chacune disséquée selon le framework STAR pour une lecture executive.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-6">
+
+                <!-- STAR: Arkéa -->
+                <article class="glass-effect rounded-3xl p-8 card-hover" data-aos="fade-up">
+                    <div class="flex items-start justify-between mb-5">
+                        <div>
+                            <p class="mono text-xs text-red-400 uppercase tracking-widest">Mar 2026 — Présent · Brest</p>
+                            <h3 class="text-2xl font-bold mt-1">Crédit Mutuel Arkéa</h3>
+                            <p class="text-red-300 font-medium">PMO Stratégique / BA — Banque de Détail</p>
+                        </div>
+                        <span class="text-3xl">🏦</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div><span class="star-letter star-S">S · Situation</span><p class="text-slate-300 mt-1">Réorganisation du département Support au Développement, en charge du Plan stratégique Banque de Détail (12-18 mois), avec besoin d'aligner marketing, data, expérience client et process.</p></div>
+                        <div><span class="star-letter star-T">T · Task</span><p class="text-slate-300 mt-1">Installer une gouvernance, un cadre de qualification des initiatives et un outillage PMO de référence pour sécuriser les arbitrages COMEX.</p></div>
+                        <div><span class="star-letter star-A">A · Action</span><p class="text-slate-300 mt-1">Cadrage des initiatives, standardisation documentaire, construction d'une app PMO sur Google Apps Script (Kanban, KPI, jalons), automatisation des comités et accompagnement des contributeurs.</p></div>
+                        <div><span class="star-letter star-R">R · Result</span><p class="text-slate-300 mt-1">Gain capacitaire estimé <b class="text-white">440 à 2 760 h/an</b> (~0,24 à 1,52 ETP), potentiel valorisé <b class="text-white">31 à 135 k€/an</b>, traçabilité des décisions et pilotage de portefeuille industrialisé.</p></div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-5">
+                        <span class="tech-tag">Portfolio Mgmt</span><span class="tech-tag">Apps Script</span><span class="tech-tag">Kanban</span><span class="tech-tag">Change Mgmt</span>
+                    </div>
+                </article>
+
+                <!-- STAR: Thales -->
+                <article class="glass-effect rounded-3xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start justify-between mb-5">
+                        <div>
+                            <p class="mono text-xs text-purple-400 uppercase tracking-widest">Oct 2024 — Oct 2025 · Thales ISR</p>
+                            <h3 class="text-2xl font-bold mt-1">Thales ISR (via MIGSO-PCUBED)</h3>
+                            <p class="text-purple-300 font-medium">PMO & Support Bid Management — Multi-milieux</p>
+                        </div>
+                        <span class="text-3xl">🛰️</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div><span class="star-letter star-S">S · Situation</span><p class="text-slate-300 mt-1">Environnement Défense haute intensité (Terrestre/Naval/Aéroporté/Spatial), portefeuille de <b class="text-white">+50 offres</b>, budgets unitaires jusqu'à <b class="text-white">&gt;1Md€</b>.</p></div>
+                        <div><span class="star-letter star-T">T · Task</span><p class="text-slate-300 mt-1">Sécuriser la fiabilité financière des devis, industrialiser le traitement risques et standardiser les méthodes pour 4 Bid Managers.</p></div>
+                        <div><span class="star-letter star-A">A · Action</span><p class="text-slate-300 mt-1">Analyse RC/NRC, animation ROR, automatisation Excel/VBA, templates QDV/MS Project, workshops RiskX, audit post-mortem stratégique (RETEX) et participation aux HOR.</p></div>
+                        <div><span class="star-letter star-R">R · Result</span><p class="text-slate-300 mt-1">Temps de traitement risques offre <b class="text-white">3h → 15 min</b> (-92%), réduction du taux d'erreur d'imputation, rapport stratégique d'amélioration du Win Rate délivré à la GBU ISR.</p></div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-5">
+                        <span class="tech-tag">QDV</span><span class="tech-tag">Primavera P6</span><span class="tech-tag">RiskX</span><span class="tech-tag">VBA</span><span class="tech-tag">Bid Mgmt</span>
+                    </div>
+                </article>
+
+                <!-- STAR: NeoSoft -->
+                <article class="glass-effect rounded-3xl p-8 card-hover" data-aos="fade-up">
+                    <div class="flex items-start justify-between mb-5">
+                        <div>
+                            <p class="mono text-xs text-blue-400 uppercase tracking-widest">Oct 2025 — Déc 2025</p>
+                            <h3 class="text-2xl font-bold mt-1">NeoSoft</h3>
+                            <p class="text-blue-300 font-medium">Product Owner — MVP Application Interne</p>
+                        </div>
+                        <span class="text-3xl">🧪</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div><span class="star-letter star-S">S · Situation</span><p class="text-slate-300 mt-1">Projet MVP en phase amont, besoin de sécuriser la valeur métier avant industrialisation.</p></div>
+                        <div><span class="star-letter star-T">T · Task</span><p class="text-slate-300 mt-1">Cadrer le produit, valider le POC et préparer un backlog priorisé exploitable par l'équipe de dev.</p></div>
+                        <div><span class="star-letter star-A">A · Action</span><p class="text-slate-300 mt-1">Design Thinking, prototypage Figma collaboratif, parcours UX/UI, backlog Kanban itératif et alignement parties prenantes.</p></div>
+                        <div><span class="star-letter star-R">R · Result</span><p class="text-slate-300 mt-1">POC validé et roadmap MVP livrée — équipe de dev en capacité d'exécuter sans retro-cadrage.</p></div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-5">
+                        <span class="tech-tag">Figma</span><span class="tech-tag">Design Thinking</span><span class="tech-tag">Kanban</span><span class="tech-tag">UX/UI</span>
+                    </div>
+                </article>
+
+                <!-- STAR: Shuhan -->
+                <article class="glass-effect rounded-3xl p-8 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-start justify-between mb-5">
+                        <div>
+                            <p class="mono text-xs text-pink-400 uppercase tracking-widest">Juin 2015 — Janv 2020 · Chine</p>
+                            <h3 class="text-2xl font-bold mt-1">Sichuan Shuhan Plastics</h3>
+                            <p class="text-pink-300 font-medium">Resp. Développement Commercial International</p>
+                        </div>
+                        <span class="text-3xl">🌏</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div><span class="star-letter star-S">S · Situation</span><p class="text-slate-300 mt-1">PME industrielle chinoise sur-dépendante du marché domestique, export limité à 5% du CA.</p></div>
+                        <div><span class="star-letter star-T">T · Task</span><p class="text-slate-300 mt-1">Définir et exécuter la stratégie export sur les marchés émergents asiatiques, structurer la force commerciale internationale.</p></div>
+                        <div><span class="star-letter star-A">A · Action</span><p class="text-slate-300 mt-1">Management d'une équipe multiculturelle de 5, pilotage KPI (prospection, transformation, NPS), appels d'offres SAP Ariba, salons internationaux, management par objectifs.</p></div>
+                        <div><span class="star-letter star-R">R · Result</span><p class="text-slate-300 mt-1">CA Export <b class="text-white">5% → 20%</b> du global, soit <b class="text-white">~15M$</b> en 2019. Présence opérée sur 7 marchés (Chine, Malaisie, Cambodge, Indonésie…).</p></div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-5">
+                        <span class="tech-tag">SAP Ariba</span><span class="tech-tag">Export Strategy</span><span class="tech-tag">Team Mgmt</span><span class="tech-tag">Asia</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="#experiences" class="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-effect border border-slate-700 hover:border-blue-500 text-white font-medium transition-all">
+                    Parcours complet <i class="fas fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
     <section id="experiences" class="py-24 bg-slate-900/30 relative">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-20 text-center">Parcours <span class="text-blue-500">Professionnel</span></h2>       
-            <div class="relative timeline-line">              
-                <!-- 0. Crédit Mutuel Arkéa -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="mono text-xs uppercase tracking-[0.3em] text-emerald-400 mb-3">// Timeline</p>
+                <h2 class="text-4xl md:text-5xl font-bold">Parcours <span class="text-blue-500">Professionnel</span></h2>
+            </div>
+
+            <div class="relative timeline-line">
+
+                <!-- 0. Arkéa -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full flex-row-reverse" data-aos="fade-up">
-                    <div class="hidden md:block w-5/12 text-left pl-12">
-                        <span class="text-red-500 font-bold text-lg">Mar 2026 - Présent</span>
-                    </div>
+                    <div class="hidden md:block w-5/12 text-left pl-12"><span class="text-red-500 font-bold text-lg">Mar 2026 — Présent</span></div>
                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-red-600 border-4 border-slate-950 z-10 hidden md:block"></div>
                     <div class="md:w-5/12 glass-effect p-8 rounded-3xl card-hover ml-10 md:ml-0">
-                        <div class="md:hidden text-red-500 font-bold mb-2 text-sm">Mar 2026 - Présent</div>
+                        <div class="md:hidden text-red-500 font-bold mb-2 text-sm">Mar 2026 — Présent</div>
                         <h3 class="text-2xl font-bold">Crédit Mutuel Arkéa</h3>
-                        <p class="text-red-400 font-medium mb-2">PMO Stratégique - Dir. Développement</p>
+                        <p class="text-red-400 font-medium mb-3">PMO Stratégique & Business Analyst — Banque de Détail</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag italic">Portfolio Management</span>
-                            <span class="tech-tag italic">Strategic Planning</span>
+                            <span class="tech-tag italic">Portfolio Mgmt</span>
+                            <span class="tech-tag italic">Apps Script</span>
                             <span class="tech-tag italic">Agile Hybrid</span>
-                            <span class="tech-tag italic">Stakeholder Coordination</span>
+                            <span class="tech-tag italic">Change Mgmt</span>
                         </div>
-                        <p class="text-slate-400 text-sm mb-6 font-light">Mission de structuration du pôle Support au Développement et pilotage du Plan de Développement stratégique (12-18 mois).</p>
-                        <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">
-                            Détails Mission <i class="fab fa-linkedin ml-2"></i>
-                        </a>
+                        <p class="text-slate-300 text-sm mb-3 font-light">Structuration du pôle Support au Développement et pilotage du Plan stratégique Banque de Détail (12-18 mois).</p>
+                        <ul class="text-slate-400 text-xs space-y-1 list-disc ml-4 mb-5">
+                            <li>Cadrage et qualification des initiatives stratégiques transverses.</li>
+                            <li>App PMO sur Apps Script (Kanban, KPI, jalons, alertes).</li>
+                            <li>Gain estimé 440-2 760 h/an, valorisation 31-135 k€/an.</li>
+                        </ul>
+                        <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fab fa-linkedin ml-2"></i></a>
                     </div>
                 </div>
+
                 <!-- 1. NeoSoft -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full" data-aos="fade-up">
-                    <div class="hidden md:block w-5/12 text-right pr-12">
-                        <span class="text-blue-500 font-bold text-lg">Oct 2025 - Déc 2025</span>
-                    </div>
+                    <div class="hidden md:block w-5/12 text-right pr-12"><span class="text-blue-500 font-bold text-lg">Oct 2025 — Déc 2025</span></div>
                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 border-4 border-slate-950 z-10 hidden md:block"></div>
-                    <div class="md:w-5/12 glass-effect p-8 rounded-3xl card-hover ml-10 md:ml-0 relative">
-                        <div class="md:hidden text-blue-500 font-bold mb-2 text-sm">Oct 2025 - Déc 2025</div>
+                    <div class="md:w-5/12 glass-effect p-8 rounded-3xl card-hover ml-10 md:ml-0">
+                        <div class="md:hidden text-blue-500 font-bold mb-2 text-sm">Oct 2025 — Déc 2025</div>
                         <h3 class="text-2xl font-bold">NeoSoft</h3>
-                        <p class="text-blue-400 font-medium mb-2">Product Owner - Développement MVP</p>
+                        <p class="text-blue-400 font-medium mb-3">Product Owner — Développement MVP</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag italic">Figma</span>
-                            <span class="tech-tag italic">Design Thinking</span>
-                            <span class="tech-tag italic">Agilité</span>
-                            <span class="tech-tag italic">Kanban</span>
+                            <span class="tech-tag italic">Figma</span><span class="tech-tag italic">Design Thinking</span><span class="tech-tag italic">Agilité</span><span class="tech-tag italic">Kanban</span>
                         </div>
-                        <p class="text-slate-400 text-sm mb-6 font-light">Cadrage amont et validation de concept (POC) pour sécuriser le développement.</p>
-                        <a href="https://docs.google.com/document/d/1xxzyoGqOU6SiQq8ci9xPORed7DPamUyGA2Xxg_xhwEA/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl transition-all">
-                            Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                        <p class="text-slate-300 text-sm mb-5 font-light">Cadrage amont et validation de concept (POC) pour sécuriser le développement d'une application interne.</p>
+                        <a href="https://docs.google.com/document/d/1xxzyoGqOU6SiQq8ci9xPORed7DPamUyGA2Xxg_xhwEA/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fas fa-external-link-alt ml-2"></i></a>
                     </div>
                 </div>
+
                 <!-- 2. Thales -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full flex-row-reverse" data-aos="fade-up">
-                    <div class="hidden md:block w-5/12 text-left pl-12">
-                        <span class="text-purple-500 font-bold text-lg">Oct 2024 - Oct 2025</span>
-                    </div>
+                    <div class="hidden md:block w-5/12 text-left pl-12"><span class="text-purple-500 font-bold text-lg">Oct 2024 — Oct 2025</span></div>
                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-purple-600 border-4 border-slate-950 z-10 hidden md:block"></div>
                     <div class="md:w-5/12 glass-effect p-8 rounded-3xl card-hover ml-10 md:ml-0">
-                        <div class="md:hidden text-purple-500 font-bold mb-2 text-sm">Oct 2024 - Oct 2025</div>
+                        <div class="md:hidden text-purple-500 font-bold mb-2 text-sm">Oct 2024 — Oct 2025</div>
                         <h3 class="text-2xl font-bold">Thales ISR</h3>
-                        <p class="text-purple-400 font-medium mb-2">PMO & Support Bid Management</p>
+                        <p class="text-purple-400 font-medium mb-3">PMO & Support Bid Management (via MIGSO-PCUBED)</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag italic">QDV</span>
-                            <span class="tech-tag italic">Primavera P6</span>
-                            <span class="tech-tag italic">MS Project/Office</span>
-                            <span class="tech-tag italic">RiskX</span>
-                            <span class="tech-tag italic">VBA/Excel</span>
+                            <span class="tech-tag italic">QDV</span><span class="tech-tag italic">Primavera P6</span><span class="tech-tag italic">MS Project</span><span class="tech-tag italic">RiskX</span><span class="tech-tag italic">VBA</span>
                         </div>
-                        <p class="text-slate-400 text-sm mb-6 font-light">Pilotage financier de +50 offres (>1Md€) et audit stratégique.</p>
-                        <a href="https://docs.google.com/document/d/13LURIzIYDEVGRZU5gprV16Lhpt4zj_yfUqO1joVTVhw/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold rounded-xl transition-all">
-                            Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                        <p class="text-slate-300 text-sm mb-3 font-light">Pilotage financier de +50 offres (&gt;1Md€), industrialisation des ROR et audit stratégique RETEX.</p>
+                        <ul class="text-slate-400 text-xs space-y-1 list-disc ml-4 mb-5">
+                            <li>Traitement risques : 3h → 15 min/offre (-92%).</li>
+                            <li>Rapport stratégique Win Rate délivré à la GBU ISR.</li>
+                        </ul>
+                        <a href="https://docs.google.com/document/d/13LURIzIYDEVGRZU5gprV16Lhpt4zj_yfUqO1joVTVhw/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fas fa-external-link-alt ml-2"></i></a>
                     </div>
                 </div>
+
                 <!-- 3. EPSI -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full" data-aos="fade-up">
-                    <div class="hidden md:block w-5/12 text-right pr-12">
-                        <span class="text-emerald-500 font-bold text-lg">2024 (4 mois)</span>
-                    </div>
+                    <div class="hidden md:block w-5/12 text-right pr-12"><span class="text-emerald-500 font-bold text-lg">Avr 2024 — Juil 2024</span></div>
                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-emerald-600 border-4 border-slate-950 z-10 hidden md:block"></div>
                     <div class="md:w-5/12 glass-effect p-8 rounded-3xl card-hover ml-10 md:ml-0">
-                        <div class="md:hidden text-emerald-500 font-bold mb-2 text-sm">2024 (4 mois)</div>
+                        <div class="md:hidden text-emerald-500 font-bold mb-2 text-sm">Avr 2024 — Juil 2024</div>
                         <h3 class="text-2xl font-bold">EPSI (Client Capgemini)</h3>
-                        <p class="text-emerald-400 font-medium mb-2">Product Owner & Scrum Master</p>
+                        <p class="text-emerald-400 font-medium mb-3">Product Owner & Scrum Master — CRM sécurisé</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag italic">Java/Spring</span>
-                            <span class="tech-tag italic">MySQL</span>
-                            <span class="tech-tag italic">Cybersecurity</span>
-                            <span class="tech-tag italic">Scrum</span>
+                            <span class="tech-tag italic">Java/Spring</span><span class="tech-tag italic">MySQL</span><span class="tech-tag italic">Cybersecurity</span><span class="tech-tag italic">Scrum</span>
                         </div>
-                        <p class="text-slate-400 text-sm mb-6 font-light">Pilotage de 2 équipes de dev pour un CRM sécurisé. Livraison 100% conforme.</p>
-                        <a href="https://docs.google.com/document/d/18pWjCAtyOMRExgEGMnvHBI772hxGsIZtfomSjvaS4t4/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition-all">
-                            Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                        <p class="text-slate-300 text-sm mb-5 font-light">Pilotage de 2 équipes sur MVP CRM sécurisé. Seul PO ayant livré ses 2 équipes (sur 5). Félicitations jury Capgemini / Orange Cyber.</p>
+                        <a href="https://docs.google.com/document/d/18pWjCAtyOMRExgEGMnvHBI772hxGsIZtfomSjvaS4t4/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fas fa-external-link-alt ml-2"></i></a>
                     </div>
                 </div>
+
                 <!-- 4. Gestion Locative -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full flex-row-reverse" data-aos="fade-up">
-                    <div class="hidden md:block w-5/12 text-left pl-12">
-                        <span class="text-orange-500 font-bold text-lg">2022 - 2023</span>
-                    </div>
+                    <div class="hidden md:block w-5/12 text-left pl-12"><span class="text-orange-500 font-bold text-lg">Juil 2022 — Sept 2023</span></div>
                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-orange-600 border-4 border-slate-950 z-10 hidden md:block"></div>
                     <div class="md:w-5/12 glass-effect p-8 rounded-3xl card-hover ml-10 md:ml-0">
-                        <div class="md:hidden text-orange-500 font-bold mb-2 text-sm">2022 - 2023</div>
+                        <div class="md:hidden text-orange-500 font-bold mb-2 text-sm">Juil 2022 — Sept 2023</div>
                         <h3 class="text-2xl font-bold">Auto-Entrepreneur</h3>
-                        <p class="text-orange-400 font-medium mb-2">Project Manager - Logistique</p>
+                        <p class="text-orange-400 font-medium mb-3">Project Manager — Gestion Locative</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag italic">Asset Management</span>
-                            <span class="tech-tag italic">CRM</span>
-                            <span class="tech-tag italic">Notion</span>
-                            <span class="tech-tag italic">Gestion Prestaires</span>
+                            <span class="tech-tag italic">Asset Mgmt</span><span class="tech-tag italic">CRM</span><span class="tech-tag italic">Notion</span><span class="tech-tag italic">Prestataires</span>
                         </div>
-                        <p class="text-slate-400 text-sm mb-6 font-light">Optimisation du rendement (>90% d'occupation) et gestion opérationnelle.</p>
-                        <a href="https://docs.google.com/document/d/1ol-LDjmEQJhorYPO4kL01Zx-NNv1tXec8wUHrufqFgg/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-xl transition-all">
-                            Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                        <p class="text-slate-300 text-sm mb-5 font-light">Pilotage du cycle locatif courte durée. Taux d'occupation &gt;90% en haute saison, satisfaction 88%.</p>
+                        <a href="https://docs.google.com/document/d/1ol-LDjmEQJhorYPO4kL01Zx-NNv1tXec8wUHrufqFgg/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fas fa-external-link-alt ml-2"></i></a>
                     </div>
                 </div>
-                <!-- 5. Sichuan Shuhan Plastics -->
+
+                <!-- 5. Shuhan -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full" data-aos="fade-up">
-                    <div class="hidden md:block w-5/12 text-right pr-12">
-                        <span class="text-pink-500 font-bold text-lg">2015 - 2020</span>
-                    </div>
+                    <div class="hidden md:block w-5/12 text-right pr-12"><span class="text-pink-500 font-bold text-lg">Juin 2015 — Janv 2020</span></div>
                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-pink-600 border-4 border-slate-950 z-10 hidden md:block"></div>
                     <div class="md:w-5/12 glass-effect p-8 rounded-3xl card-hover ml-10 md:ml-0">
-                        <div class="md:hidden text-pink-500 font-bold mb-2 text-sm">2015 - 2020</div>
+                        <div class="md:hidden text-pink-500 font-bold mb-2 text-sm">Juin 2015 — Janv 2020</div>
                         <h3 class="text-2xl font-bold">Sichuan Shuhan Plastics</h3>
-                        <p class="text-pink-400 font-medium mb-2">Resp. Développement Asie</p>
+                        <p class="text-pink-400 font-medium mb-3">Resp. Développement Commercial International</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag italic">SAP Ariba</span>
-                            <span class="tech-tag italic">International Trade</span>
-                            <span class="tech-tag italic">YonYou CRM</span>
-                            <span class="tech-tag italic">Asian Market</span>
+                            <span class="tech-tag italic">SAP Ariba</span><span class="tech-tag italic">YonYou CRM</span><span class="tech-tag italic">Export</span><span class="tech-tag italic">Asia</span>
                         </div>
-                        <p class="text-slate-400 text-sm mb-6 font-light">Développement de l'export de 5% à 20% du CA (15M$), Management d'équipe.</p>
-                        <a href="https://docs.google.com/document/d/1YrwQRrBlTZ2I9lxNmwhOv0kSdqsAalw34sNbqmhaTbk/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white text-xs font-bold rounded-xl transition-all">
-                            Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                        <p class="text-slate-300 text-sm mb-5 font-light">Export 5% → 20% du CA (~15M$). Management équipe multiculturelle de 5, KPI pilotés (NPS, transformation, cycle vente).</p>
+                        <a href="https://docs.google.com/document/d/1YrwQRrBlTZ2I9lxNmwhOv0kSdqsAalw34sNbqmhaTbk/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fas fa-external-link-alt ml-2"></i></a>
                     </div>
                 </div>
-                <!-- 6. Vacorda Instruments -->
+
+                <!-- 6. Vacorda -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full flex-row-reverse" data-aos="fade-up">
-                    <div class="hidden md:block w-5/12 text-left pl-12">
-                        <span class="text-cyan-500 font-bold text-lg">2015 (6 mois)</span>
-                    </div>
+                    <div class="hidden md:block w-5/12 text-left pl-12"><span class="text-cyan-500 font-bold text-lg">Janv 2015 — Juin 2015</span></div>
                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-600 border-4 border-slate-950 z-10 hidden md:block"></div>
                     <div class="md:w-5/12 glass-effect p-8 rounded-3xl card-hover ml-10 md:ml-0">
-                        <div class="md:hidden text-cyan-500 font-bold mb-2 text-sm">2015 (6 mois)</div>
+                        <div class="md:hidden text-cyan-500 font-bold mb-2 text-sm">Janv 2015 — Juin 2015</div>
                         <h3 class="text-2xl font-bold">Vacorda Instruments</h3>
-                        <p class="text-cyan-400 font-medium mb-2">Stratégie Digitale & Biz Dev</p>
+                        <p class="text-cyan-400 font-medium mb-3">Stratégie Digitale & Business Development</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag italic">WIX</span>
-                            <span class="tech-tag italic">Google Ads and Analytics</span>
-                            <span class="tech-tag italic">SEO/SEA</span>
+                            <span class="tech-tag italic">WIX</span><span class="tech-tag italic">Google Ads</span><span class="tech-tag italic">SEO/SEA</span>
                         </div>
-                        <p class="text-slate-400 text-sm mb-6 font-light">Création de l'écosystème digital et développement zone francophone.</p>
-                        <a href="https://docs.google.com/document/d/1KIIt6meTpW7Xdh325C70he49OIoGGtHkd-nkTJciUzk/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs font-bold rounded-xl transition-all">
-                            Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                        <p class="text-slate-300 text-sm mb-5 font-light">Création de l'écosystème digital multilingue, budget Google Ads 24k$/an. Développement zone francophone.</p>
+                        <a href="https://docs.google.com/document/d/1KIIt6meTpW7Xdh325C70he49OIoGGtHkd-nkTJciUzk/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fas fa-external-link-alt ml-2"></i></a>
                     </div>
                 </div>
+
                 <!-- 7. Diadom -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full" data-aos="fade-up">
-                    <div class="hidden md:block w-5/12 text-right pr-12">
-                        <span class="text-yellow-500 font-bold text-lg">2012 - 2014</span>
-                    </div>
+                    <div class="hidden md:block w-5/12 text-right pr-12"><span class="text-yellow-500 font-bold text-lg">Sept 2012 — Oct 2014</span></div>
                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-yellow-600 border-4 border-slate-950 z-10 hidden md:block"></div>
                     <div class="md:w-5/12 glass-effect p-8 rounded-3xl card-hover ml-10 md:ml-0">
-                        <div class="md:hidden text-yellow-500 font-bold mb-2 text-sm">2012 - 2014</div>
+                        <div class="md:hidden text-yellow-500 font-bold mb-2 text-sm">Sept 2012 — Oct 2014</div>
                         <h3 class="text-2xl font-bold">Diadom SAS</h3>
-                        <p class="text-yellow-400 font-medium mb-2">Chef de Projet Digital / BA</p>
+                        <p class="text-yellow-400 font-medium mb-3">Chef de Projet Digital / Business Analyst</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag italic">E-commerce</span>
-                            <span class="tech-tag italic">Drupal</span>
-                            <span class="tech-tag italic">Business Analysis</span>
-                            <span class="tech-tag italic">KPI/Reporting</span>
-                            <span class="tech-tag italic">HTML/CSS</span>
+                            <span class="tech-tag italic">Drupal</span><span class="tech-tag italic">MS Project</span><span class="tech-tag italic">Business Analysis</span><span class="tech-tag italic">SEO/SEA</span>
                         </div>
-                        <p class="text-slate-400 text-sm mb-6 font-light">Refonte e-commerce. Hausse du trafic de +196% et conversion +23%.</p>
-                        <a href="https://docs.google.com/document/d/1KIIt6meTpW7Xdh325C70he49OIoGGtHkd-nkTJciUzk/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-xs font-bold rounded-xl transition-all">
-                            Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                        <p class="text-slate-300 text-sm mb-5 font-light">Refonte site institutionnel + e-commerce, reporting CODIR/PDG. Trafic <b>+196%</b>, conversion <b>+23%</b> sur 2 ans.</p>
+                        <a href="https://docs.google.com/document/d/1KIIt6meTpW7Xdh325C70he49OIoGGtHkd-nkTJciUzk/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-yellow-600 hover:bg-yellow-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fas fa-external-link-alt ml-2"></i></a>
                     </div>
                 </div>
+
                 <!-- 8. Justrade -->
                 <div class="relative mb-16 md:flex justify-between items-center w-full flex-row-reverse" data-aos="fade-up">
-                    <div class="hidden md:block w-5/12 text-left pl-12">
-                        <span class="text-red-500 font-bold text-lg">2011 - 2012</span>
-                    </div>
+                    <div class="hidden md:block w-5/12 text-left pl-12"><span class="text-red-500 font-bold text-lg">Sept 2011 — Août 2012</span></div>
                     <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-red-600 border-4 border-slate-950 z-10 hidden md:block"></div>
                     <div class="md:w-5/12 glass-effect p-8 rounded-3xl card-hover ml-10 md:ml-0">
-                        <div class="md:hidden text-red-500 font-bold mb-2 text-sm">2011 - 2012</div>
+                        <div class="md:hidden text-red-500 font-bold mb-2 text-sm">Sept 2011 — Août 2012</div>
                         <h3 class="text-2xl font-bold">Justrade International</h3>
-                        <p class="text-red-400 font-medium mb-2">Chargé de projet Webmarketing</p>
+                        <p class="text-red-400 font-medium mb-3">Chargé de Projet Webmarketing — International</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag italic">WordPress CMS</span>
-                            <span class="tech-tag italic">SEO/SEA</span>
-                            <span class="tech-tag italic">Photoshop</span>
-                            <span class="tech-tag italic">Logistique</span>
+                            <span class="tech-tag italic">WordPress</span><span class="tech-tag italic">SEO/SEA</span><span class="tech-tag italic">Photoshop</span><span class="tech-tag italic">Logistique</span>
                         </div>
-                        <p class="text-slate-400 text-sm mb-6 font-light">Déploiement International : Adaptation de la plateforme digitale aux marchés étrangers.</p>
-                        <a href="https://docs.google.com/document/d/1JaOHl9brR_uOtd7ZPcN10GEvG5e1CPWp11Ufm67uctM/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">
-                            Détails Mission <i class="fas fa-external-link-alt ml-2"></i>
-                        </a>
+                        <p class="text-slate-300 text-sm mb-5 font-light">Refonte multilingue, expansion internationale, reporting mensuel CODIR.</p>
+                        <a href="https://docs.google.com/document/d/1JaOHl9brR_uOtd7ZPcN10GEvG5e1CPWp11Ufm67uctM/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fas fa-external-link-alt ml-2"></i></a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Metrics -->
-    <section id="metrics" class="py-24 bg-blue-600/5">
+    <section id="metrics" class="py-24 bg-gradient-to-b from-blue-600/5 to-purple-600/5">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-16 text-center">L'Impact en <span class="gradient-text">Chiffres</span></h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center" data-aos="zoom-in" data-aos-delay="0">
-                    <div class="text-4xl md:text-5xl font-bold text-white mb-2">> 1Md€</div>
-                    <div class="text-slate-400 text-xs uppercase tracking-widest font-medium">Portefeuilles Pilotés</div>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="mono text-xs uppercase tracking-[0.3em] text-pink-400 mb-3">// Impact</p>
+                <h2 class="text-3xl md:text-4xl font-bold">L'Impact en <span class="gradient-text">Chiffres</span></h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass-effect rounded-2xl p-6 text-center card-hover" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="text-3xl md:text-5xl font-bold text-white mb-2">&gt;1Md€</div>
+                    <div class="text-slate-400 text-xs uppercase tracking-widest font-medium">Portefeuilles pilotés</div>
                 </div>
-                <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="text-4xl md:text-5xl font-bold text-blue-500 mb-2">+196%</div>
-                    <div class="text-slate-400 text-xs uppercase tracking-widest font-medium">Trafic Digital (Diadom)</div>
+                <div class="glass-effect rounded-2xl p-6 text-center card-hover" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-3xl md:text-5xl font-bold text-blue-400 mb-2">-92%</div>
+                    <div class="text-slate-400 text-xs uppercase tracking-widest font-medium">Traitement risques (Thales)</div>
                 </div>
-                <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="text-4xl md:text-5xl font-bold text-purple-500 mb-2">15M$</div>
-                    <div class="text-slate-400 text-xs uppercase tracking-widest font-medium">Expansion Export (Shuhan)</div>
+                <div class="glass-effect rounded-2xl p-6 text-center card-hover" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-3xl md:text-5xl font-bold text-purple-400 mb-2">15M$</div>
+                    <div class="text-slate-400 text-xs uppercase tracking-widest font-medium">Expansion export (Shuhan)</div>
                 </div>
-                <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="text-4xl md:text-5xl font-bold text-emerald-500 mb-2">25+</div>
-                    <div class="text-slate-400 text-xs uppercase tracking-widest font-medium">Pays Traversés</div>
+                <div class="glass-effect rounded-2xl p-6 text-center card-hover" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-3xl md:text-5xl font-bold text-emerald-400 mb-2">+196%</div>
+                    <div class="text-slate-400 text-xs uppercase tracking-widest font-medium">Trafic digital (Diadom)</div>
+                </div>
+                <div class="glass-effect rounded-2xl p-6 text-center card-hover" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="text-3xl md:text-5xl font-bold text-yellow-400 mb-2">+50</div>
+                    <div class="text-slate-400 text-xs uppercase tracking-widest font-medium">Offres Défense pilotées</div>
+                </div>
+                <div class="glass-effect rounded-2xl p-6 text-center card-hover" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-3xl md:text-5xl font-bold text-pink-400 mb-2">7</div>
+                    <div class="text-slate-400 text-xs uppercase tracking-widest font-medium">Pays opérés en Asie</div>
+                </div>
+                <div class="glass-effect rounded-2xl p-6 text-center card-hover" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-3xl md:text-5xl font-bold text-cyan-400 mb-2">13</div>
+                    <div class="text-slate-400 text-xs uppercase tracking-widest font-medium">Années d'expérience</div>
+                </div>
+                <div class="glass-effect rounded-2xl p-6 text-center card-hover" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-3xl md:text-5xl font-bold text-orange-400 mb-2">2</div>
+                    <div class="text-slate-400 text-xs uppercase tracking-widest font-medium">Langues natives Biz (FR/EN)</div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Humanitaire & Formations -->
-    <section class="py-24 bg-slate-950">
+
+    <!-- Formations & Engagements -->
+    <section id="formations" class="py-24 bg-slate-950">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12">
-                <!-- Humanitaire & Loisirs -->
                 <div data-aos="fade-right">
-                    <h2 class="text-3xl font-bold mb-10"><i class="fas fa-heart text-red-500 mr-4"></i>Engagements & Loisirs</h2>
-                    <div class="space-y-6">
-                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-red-500">
-                            <div class="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center shrink-0">
-                                <i class="fas fa-hand-holding-heart text-red-500"></i>
-                            </div>
+                    <p class="mono text-xs uppercase tracking-[0.3em] text-red-400 mb-3">// Off-mission</p>
+                    <h2 class="text-3xl font-bold mb-10"><i class="fas fa-heart text-red-500 mr-3"></i>Engagements & Loisirs</h2>
+                    <div class="space-y-5">
+                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-red-500 card-hover">
+                            <div class="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center shrink-0"><i class="fas fa-hand-holding-heart text-red-400"></i></div>
                             <div>
-                                <h4 class="font-bold">Mission Humanitaire (Cambodge, Chine)</h4>
-                                <p class="text-xs text-slate-400 italic font-light">Dons et Organisation logistique d'événements caritatifs</p>
+                                <h4 class="font-bold">Missions Humanitaires (Cambodge, Chine)</h4>
+                                <p class="text-xs text-slate-400 italic font-light">Dons & organisation logistique d'événements caritatifs</p>
                             </div>
                         </div>
-                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-orange-500">
-                            <div class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center shrink-0">
-                                <i class="fas fa-microchip text-orange-500"></i>
-                            </div>
+                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-orange-500 card-hover">
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center shrink-0"><i class="fas fa-microchip text-orange-400"></i></div>
                             <div>
                                 <h4 class="font-bold">Veille Tech & IA</h4>
-                                <p class="text-xs text-slate-400 italic font-light">Agents IA, automatisation, LLMs.</p>
+                                <p class="text-xs text-slate-400 italic font-light">Agents IA, automatisation, LLMs, AI architecture personnelle</p>
                             </div>
                         </div>
-                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-blue-500">
-                            <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center shrink-0">
-                                <i class="fas fa-plane text-blue-500"></i>
-                            </div>
+                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-blue-500 card-hover">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center shrink-0"><i class="fas fa-plane text-blue-400"></i></div>
                             <div>
-                                <h4 class="font-bold">Voyages (25 pays)</h4>
-                                <p class="text-xs text-slate-400 italic font-light">7 ans d'expatriation en Asie.</p>
+                                <h4 class="font-bold">Voyages — 25+ pays</h4>
+                                <p class="text-xs text-slate-400 italic font-light">7 ans d'expatriation en Asie</p>
                             </div>
                         </div>
-                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-emerald-500">
-                            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center shrink-0">
-                                <i class="fas fa-chart-line text-emerald-500"></i>
-                            </div>
+                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-emerald-500 card-hover">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center shrink-0"><i class="fas fa-chart-line text-emerald-400"></i></div>
                             <div>
                                 <h4 class="font-bold">Investissement & Finance</h4>
-                                <p class="text-xs text-slate-400 italic font-light">Gestion d'un portefeuille familial (PnL +35%).</p>
+                                <p class="text-xs text-slate-400 italic font-light">Gestion portefeuille familial — PnL +35%</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Formations -->
+
                 <div data-aos="fade-left">
-                    <h2 class="text-3xl font-bold mb-10"><i class="fas fa-graduation-cap text-blue-500 mr-4"></i>Formations & Certifs</h2>
-                    <div class="space-y-6">
-                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-blue-500">
-                            <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center shrink-0">
-                                <i class="fas fa-shield-alt text-blue-500"></i>
-                            </div>
+                    <p class="mono text-xs uppercase tracking-[0.3em] text-blue-400 mb-3">// Credentials</p>
+                    <h2 class="text-3xl font-bold mb-10"><i class="fas fa-graduation-cap text-blue-500 mr-3"></i>Formations & Certifs</h2>
+                    <div class="space-y-5">
+                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-blue-500 card-hover">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center shrink-0"><i class="fas fa-shield-alt text-blue-400"></i></div>
                             <div>
-                                <h4 class="font-bold">Développeur Cybersécurité (2024)</h4>
-                                <p class="text-xs text-slate-400 italic font-light">EPSI - École d'ingénierie informatique</p>
+                                <h4 class="font-bold">Développeur Cybersécurité — 2024</h4>
+                                <p class="text-xs text-slate-400 italic font-light">EPSI — École d'ingénierie informatique</p>
                             </div>
                         </div>
-                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-emerald-500">
-                            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center shrink-0">
-                                <i class="fas fa-tasks text-emerald-500"></i>
-                            </div>
+                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-emerald-500 card-hover">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center shrink-0"><i class="fas fa-tasks text-emerald-400"></i></div>
                             <div>
-                                <h4 class="font-bold">Microsoft Project Management (2024)</h4>
-                                <p class="text-xs text-slate-400 italic font-light">Certifié Gestion de Projet Industrielle & IT</p>
+                                <h4 class="font-bold">Microsoft Project Management — 2023</h4>
+                                <p class="text-xs text-slate-400 italic font-light">Gestion de projet industrielle & IT</p>
                             </div>
                         </div>
-                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-purple-500">
-                            <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center shrink-0">
-                                <i class="fas fa-sync-alt text-purple-500"></i>
-                            </div>
+                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-purple-500 card-hover">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center shrink-0"><i class="fas fa-sync-alt text-purple-400"></i></div>
                             <div>
-                                <h4 class="font-bold">Certified Agile Master (2023)</h4>
+                                <h4 class="font-bold">Certified Agile Master — 2024</h4>
                                 <p class="text-xs text-slate-400 italic font-light">Frameworks Scrum & Kanban</p>
                             </div>
                         </div>
-                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-slate-500">
-                            <div class="w-12 h-12 rounded-xl bg-slate-500/20 flex items-center justify-center shrink-0">
-                                <i class="fas fa-university text-slate-500"></i>
-                            </div>
+                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-slate-500 card-hover">
+                            <div class="w-12 h-12 rounded-xl bg-slate-500/20 flex items-center justify-center shrink-0"><i class="fas fa-university text-slate-400"></i></div>
                             <div>
-                                <h4 class="font-bold">Master 2 Gestion de Projet IT & BI (2014)</h4>
+                                <h4 class="font-bold">Master 2 Gestion de Projet IT & BI — 2014</h4>
                                 <p class="text-xs text-slate-400 italic font-light">Montpellier Business School</p>
                             </div>
                         </div>
@@ -467,41 +666,69 @@
             </div>
         </div>
     </section>
-    </main>
-    <!-- Footer -->
-    <footer class="py-20 border-t border-slate-900 text-center bg-slate-950">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-10">Me <span class="gradient-text">contacter</span></h2>
-            <div class="flex flex-wrap justify-center gap-8 mb-12">
-                <a href="javascript:void(0)" onclick="window.location.href='mailto:'+'johanproust'+'@'+'pm.me'" class="flex items-center gap-3 text-slate-400 hover:text-white transition-all">
-                    <i class="fas fa-envelope text-2xl text-purple-500"></i> Johanproust@pm.me
-                </a>
-                <a href="https://wa.link/holzmf" class="flex items-center gap-3 text-slate-400 hover:text-white transition-all">
-                    <i class="fab fa-whatsapp text-2xl text-green-500"></i> WhatsApp
-                </a>
-                <a href="https://www.linkedin.com/in/johan-proust/" class="flex items-center gap-3 text-slate-400 hover:text-white transition-all">
-                    <i class="fab fa-linkedin text-2xl text-blue-500"></i> LinkedIn
-                </a>
-            </div>
-            <p class="text-xs text-slate-600 uppercase tracking-widest">© 2026 Johan Proust — Portfolio Professionnel</p>
+
+    <!-- Final CTA -->
+    <section id="contact" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[80%] h-[100%] bg-gradient-to-br from-blue-600/15 via-purple-600/15 to-pink-600/15 blur-[140px] rounded-full"></div>
         </div>
-    </footer>
-    <script>
-        window.addEventListener('load', () => {
-            AOS.init({
-                duration: 800,
-                once: true,
-                offset: 100
-            });
-        });
-        
-        // Accessibilité : Désactivation des animations si l'utilisateur préfère réduire les mouvements
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            AOS.refreshHard();
-            document.querySelectorAll('[data-aos]').forEach(el => {
-                el.removeAttribute('data-aos');
-            });
-        }
-    </script>
+        <div class="container mx-auto px-6 relative">
+            <div class="glass-strong rounded-3xl p-10 md:p-16 max-w-5xl mx-auto text-center" data-aos="zoom-in">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-xs font-medium text-emerald-300 mb-6">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Disponible dès maintenant
+                </span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Un programme à structurer ? <span class="gradient-text">Parlons-en.</span></h2>
+                <p class="text-slate-300 max-w-2xl mx-auto mb-10">PMO Senior, Product Owner ou architecte de transformation : je prends les sujets les plus exposés et je livre les arbitrages, le pilotage et les outils qui ancrent les décisions.</p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
+                    <a href="javascript:void(0)" onclick="window.location.href='mailto:'+'johanproust'+'@'+'pm.me'+'?subject=Mission%20PMO%20%2F%20Product%20Owner'" class="cta-glow inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold rounded-full transition-all">
+                        <i class="fas fa-paper-plane"></i> Envoyer un brief
+                    </a>
+                    <a href="https://wa.link/holzmf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 glass-effect border border-emerald-500/40 hover:border-emerald-400 text-white font-semibold rounded-full transition-all">
+                        <i class="fab fa-whatsapp text-emerald-400"></i> WhatsApp direct
+                    </a>
+                    <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 glass-effect border border-blue-500/40 hover:border-blue-400 text-white font-semibold rounded-full transition-all">
+                        <i class="fab fa-linkedin text-blue-400"></i> LinkedIn
+                    </a>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-sm text-slate-400">
+                    <div class="flex items-center justify-center gap-2"><i class="fas fa-map-marker-alt text-pink-400"></i> Brest · Remote France/EU</div>
+                    <div class="flex items-center justify-center gap-2"><i class="fas fa-clock text-blue-400"></i> Réponse &lt; 24h</div>
+                    <div class="flex items-center justify-center gap-2"><i class="fas fa-handshake text-emerald-400"></i> Freelance / CDI / Mission</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="py-14 border-t border-slate-900 text-center bg-slate-950">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-wrap justify-center gap-8 mb-8 text-slate-400">
+            <a href="javascript:void(0)" onclick="window.location.href='mailto:'+'johanproust'+'@'+'pm.me'" class="flex items-center gap-2 hover:text-white transition-all"><i class="fas fa-envelope text-purple-500"></i> johanproust@pm.me</a>
+            <a href="https://wa.link/holzmf" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-all"><i class="fab fa-whatsapp text-green-500"></i> WhatsApp</a>
+            <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-all"><i class="fab fa-linkedin text-blue-500"></i> LinkedIn</a>
+        </div>
+        <p class="text-xs text-slate-600 uppercase tracking-widest">© 2026 Johan Proust — Portfolio Professionnel · Brest, FR</p>
+    </div>
+</footer>
+
+<!-- Floating CTA mobile -->
+<a href="#contact" class="md:hidden floating-cta fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold">
+    <i class="fas fa-rocket"></i> Discutons
+</a>
+
+<script>
+    window.addEventListener('load', () => {
+        AOS.init({ duration: 800, once: true, offset: 80 });
+    });
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        AOS.refreshHard();
+        document.querySelectorAll('[data-aos]').forEach(el => el.removeAttribute('data-aos'));
+    }
+</script>
 </body>
 </html>
