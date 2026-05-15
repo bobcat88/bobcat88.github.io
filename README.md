@@ -52,6 +52,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
         body { font-family: 'DM Sans', sans-serif; scroll-behavior: smooth; }
+        section[id], main > section, [id="contact"], [id="about"], [id="expertise"], [id="star"], [id="testimonials"], [id="experiences"], [id="metrics"], [id="formations"] { scroll-margin-top: 80px; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .glass-effect { background: rgba(255, 255, 255, 0.025); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.06); }
         .glass-strong { background: rgba(15, 23, 42, 0.72); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.08); }
