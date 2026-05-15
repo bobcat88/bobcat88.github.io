@@ -87,6 +87,26 @@
         .nav-link::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:2px; background: linear-gradient(90deg,#60a5fa,#a855f7); transition: width .25s ease; }
         .nav-link:hover::after { width: 100%; }
         .floating-cta { box-shadow: 0 10px 30px -8px rgba(168,85,247,0.55), 0 0 0 1px rgba(255,255,255,0.05); }
+        @keyframes drift-a { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(40px,-30px) scale(1.05); } }
+        @keyframes drift-b { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-50px,30px) scale(1.08); } }
+        @keyframes drift-c { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(20px,40px) scale(0.95); } }
+        .orb-a { animation: drift-a 22s ease-in-out infinite; }
+        .orb-b { animation: drift-b 28s ease-in-out infinite; }
+        .orb-c { animation: drift-c 25s ease-in-out infinite; }
+        @keyframes shine-line { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        .accent-line { position: relative; overflow: hidden; }
+        .accent-line::after {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(96,165,250,0.5), transparent);
+            animation: shine-line 6s ease-in-out infinite;
+        }
+        @keyframes float-tick { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+        .float-tick { animation: float-tick 4s ease-in-out infinite; }
+        @media (prefers-reduced-motion: reduce) {
+            .orb-a, .orb-b, .orb-c, .accent-line::after, .float-tick { animation: none !important; }
+        }
+        .svg-icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.125em; flex-shrink: 0; }
+        .svg-icon-lg { width: 2.5rem; height: 2.5rem; }
         details > summary { list-style: none; cursor: pointer; }
         details > summary::-webkit-details-marker { display: none; }
         details[open] .chev { transform: rotate(180deg); }
@@ -125,20 +145,20 @@
     <header class="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden">
         <div class="absolute inset-0 z-0">
             <div class="absolute inset-0 grid-bg"></div>
-            <div class="absolute top-[-10%] left-[-10%] w-[55%] h-[55%] bg-blue-600/10 rounded-full blur-[140px]"></div>
-            <div class="absolute bottom-[-15%] right-[-10%] w-[55%] h-[55%] bg-purple-600/10 rounded-full blur-[140px]"></div>
-            <div class="absolute top-[30%] right-[20%] w-[20%] h-[20%] bg-pink-600/10 rounded-full blur-[120px]"></div>
+            <div class="orb-a absolute top-[-10%] left-[-10%] w-[55%] h-[55%] bg-blue-600/10 rounded-full blur-[140px]"></div>
+            <div class="orb-b absolute bottom-[-15%] right-[-10%] w-[55%] h-[55%] bg-purple-600/10 rounded-full blur-[140px]"></div>
+            <div class="orb-c absolute top-[30%] right-[20%] w-[20%] h-[20%] bg-pink-600/10 rounded-full blur-[120px]"></div>
         </div>
 
-        <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
+        <div class="container mx-auto px-6 relative z-10 flex flex-col items-center text-center" data-aos="fade-up">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-effect border border-emerald-500/30 text-xs font-medium text-emerald-300 mb-8">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 Freelance disponible — Mission PMO / PO / Transformation
             </div>
 
-            <div class="relative inline-block mb-10 group">
+            <div class="relative mb-10 group flex justify-center">
                 <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 rounded-full blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
-                <img src="johan-proust.webp" alt="Johan Proust" class="relative w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-slate-900 mx-auto object-cover shadow-2xl transition-transform duration-500 group-hover:scale-105">
+                <img src="johan-proust.webp" alt="Johan Proust" class="relative w-48 h-48 md:w-56 md:h-56 rounded-full border-4 border-slate-900 object-cover shadow-2xl transition-transform duration-500 group-hover:scale-105">
             </div>
 
             <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Johan <span class="gradient-text">Proust</span></h1>
@@ -161,10 +181,12 @@
             <!-- Hero CTAs -->
             <div class="flex flex-col md:flex-row justify-center gap-4 items-center">
                 <a href="#contact" class="cta-glow px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold rounded-full transition-all shadow-lg shadow-blue-500/25 inline-flex items-center gap-2">
-                    <i class="fas fa-rocket"></i> Démarrer une mission
+                    <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l14-9-3 9 3 9z"/><path d="M5 12l4 2"/></svg>
+                    Démarrer une mission
                 </a>
                 <a href="#star" class="px-8 py-4 glass-effect border border-slate-700 hover:border-blue-500 text-white font-semibold rounded-full transition-all inline-flex items-center gap-2">
-                    <i class="fas fa-star text-yellow-400"></i> Voir mes résultats STAR
+                    <svg class="svg-icon" viewBox="0 0 24 24" fill="#facc15" stroke="#facc15" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+                    Voir mes résultats STAR
                 </a>
                 <div class="flex gap-5 text-2xl md:ml-2">
                     <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-400 transition-colors" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
@@ -272,8 +294,10 @@
     </section>
 
     <!-- STAR Highlights -->
-    <section id="star" class="py-24 bg-slate-950 relative">
+    <section id="star" class="py-24 bg-slate-950 relative overflow-hidden">
         <div class="absolute inset-0 grid-bg opacity-40"></div>
+        <div class="orb-a absolute top-[10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/[0.06] rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="orb-c absolute bottom-[5%] right-[-5%] w-[35%] h-[35%] bg-purple-600/[0.06] rounded-full blur-[120px] pointer-events-none"></div>
         <div class="container mx-auto px-6 relative">
             <div class="text-center mb-16" data-aos="fade-up">
                 <p class="mono text-xs uppercase tracking-[0.3em] text-purple-400 mb-3">// Method · Situation · Task · Action · Result</p>
@@ -291,7 +315,7 @@
                             <h3 class="text-2xl font-bold mt-1">Crédit Mutuel Arkéa</h3>
                             <p class="text-red-300 font-medium">PMO Stratégique / BA — Banque de Détail</p>
                         </div>
-                        <span class="text-3xl">🏦</span>
+                        <svg class="svg-icon-lg text-red-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M3 10h18"/><path d="M5 6l7-4 7 4"/><path d="M4 10v11"/><path d="M20 10v11"/><path d="M8 14v3"/><path d="M12 14v3"/><path d="M16 14v3"/></svg>
                     </div>
                     <div class="space-y-3 text-sm">
                         <div><span class="star-letter star-S">S · Situation</span><p class="text-slate-300 mt-1">Réorganisation du département Support au Développement, en charge du Plan stratégique Banque de Détail (12-18 mois), avec besoin d'aligner marketing, data, expérience client et process.</p></div>
@@ -312,7 +336,7 @@
                             <h3 class="text-2xl font-bold mt-1">Thales ISR (via MIGSO-PCUBED)</h3>
                             <p class="text-purple-300 font-medium">PMO & Support Bid Management — Multi-milieux</p>
                         </div>
-                        <span class="text-3xl">🛰️</span>
+                        <svg class="svg-icon-lg text-purple-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l3-3 5 5-3 3z"/><path d="M11 6l3-3 5 5-3 3z"/><path d="M9 14l-4 4"/><path d="M18 5l3-3"/><path d="M14 18l1.5 1.5a3 3 0 0 0 4-4L18 14"/><path d="M6 10L4.5 8.5a3 3 0 0 1 4-4L10 6"/></svg>
                     </div>
                     <div class="space-y-3 text-sm">
                         <div><span class="star-letter star-S">S · Situation</span><p class="text-slate-300 mt-1">Environnement Défense haute intensité (Terrestre/Naval/Aéroporté/Spatial), portefeuille de <b class="text-white">+50 offres</b>, budgets unitaires jusqu'à <b class="text-white">&gt;1Md€</b>.</p></div>
@@ -337,7 +361,7 @@
                             <h3 class="text-2xl font-bold mt-1">NeoSoft</h3>
                             <p class="text-blue-300 font-medium">Product Owner — MVP Application Interne</p>
                         </div>
-                        <span class="text-3xl">🧪</span>
+                        <svg class="svg-icon-lg text-blue-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9.4-8 10-4.5-.6-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
                     </div>
                     <div class="space-y-3 text-sm">
                         <div><span class="star-letter star-S">S · Situation</span><p class="text-slate-300 mt-1">Projet MVP en phase amont, besoin de sécuriser la valeur métier avant industrialisation.</p></div>
@@ -358,7 +382,7 @@
                             <h3 class="text-2xl font-bold mt-1">Sichuan Shuhan Plastics</h3>
                             <p class="text-pink-300 font-medium">Resp. Développement Commercial International</p>
                         </div>
-                        <span class="text-3xl">🌏</span>
+                        <svg class="svg-icon-lg text-pink-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 12l2 2 4-4"/><path d="M3 12c0-3 2-5 5-5 1.5 0 3 .8 4 2"/><path d="M21 12c0 3-2 5-5 5-1.5 0-3-.8-4-2"/><path d="M8 7l-2 3 2 3"/><path d="M16 17l2-3-2-3"/></svg>
                     </div>
                     <div class="space-y-3 text-sm">
                         <div><span class="star-letter star-S">S · Situation</span><p class="text-slate-300 mt-1">PME industrielle chinoise sur-dépendante du marché domestique, export limité à 5% du CA.</p></div>
@@ -418,7 +442,9 @@
     </section>
 
     <!-- Timeline -->
-    <section id="experiences" class="py-24 bg-slate-900/30 relative">
+    <section id="experiences" class="py-24 bg-slate-900/30 relative overflow-hidden">
+        <div class="orb-b absolute top-[20%] right-[-15%] w-[40%] h-[40%] bg-emerald-600/[0.05] rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="orb-a absolute bottom-[10%] left-[-15%] w-[40%] h-[40%] bg-blue-600/[0.05] rounded-full blur-[140px] pointer-events-none"></div>
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
                 <p class="mono text-xs uppercase tracking-[0.3em] text-emerald-400 mb-3">// Timeline</p>
@@ -447,7 +473,37 @@
                             <li>App PMO sur Apps Script (Kanban, KPI, jalons, alertes).</li>
                             <li>Gain estimé 440-2 760 h/an, valorisation 31-135 k€/an.</li>
                         </ul>
-                        <a href="https://www.linkedin.com/in/johan-proust/" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fab fa-linkedin ml-2"></i></a>
+                        <a href="https://docs.google.com/document/d/1IMbDitXQVkhThj8OEU_OJxWEX9xzpcZg49NObkJ4sIo/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fas fa-external-link-alt ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- 0.5 Velocity Lab - Founder Break -->
+                <div class="relative mb-16" data-aos="fade-up">
+                    <div class="absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 border-4 border-slate-950 z-10 hidden md:block shadow-lg shadow-amber-500/30"></div>
+                    <div class="relative max-w-3xl mx-auto rounded-3xl p-[1.5px] bg-gradient-to-r from-amber-400 via-orange-500 to-pink-500 overflow-hidden">
+                        <div class="accent-line absolute inset-0 opacity-50 pointer-events-none"></div>
+                        <div class="relative rounded-[calc(1.5rem-1.5px)] bg-slate-950 p-8 md:p-10">
+                            <div class="flex items-start gap-5">
+                                <div class="hidden sm:flex shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 border border-amber-500/30 items-center justify-center">
+                                    <svg class="svg-icon-lg text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex flex-wrap items-center gap-2 mb-2">
+                                        <span class="mono text-[10px] uppercase tracking-[0.25em] text-amber-300">// Founder track</span>
+                                        <span class="px-2 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-[10px] font-bold text-amber-200">En parallèle</span>
+                                    </div>
+                                    <h3 class="text-2xl md:text-3xl font-bold mb-1">Founder · <span class="bg-gradient-to-r from-amber-300 to-pink-400 bg-clip-text text-transparent">Velocity Lab</span></h3>
+                                    <p class="text-amber-300 font-medium text-sm mb-3">Conseil en stratégie · Janvier 2026 → Présent</p>
+                                    <p class="text-slate-300 text-sm leading-relaxed mb-4">Cabinet personnel de conseil stratégique — PMO augmenté, transformation et intégration d'agents IA pour structurer les décisions complexes.</p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="tech-tag" style="background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.25);color:#fcd34d">Stratégie</span>
+                                        <span class="tech-tag" style="background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.25);color:#fcd34d">PMO augmenté</span>
+                                        <span class="tech-tag" style="background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.25);color:#fcd34d">AI Agents</span>
+                                        <span class="tech-tag" style="background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.25);color:#fcd34d">Conseil</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -690,7 +746,7 @@
                             <div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center shrink-0"><i class="fas fa-tasks text-emerald-400"></i></div>
                             <div>
                                 <h4 class="font-bold">Microsoft Project Management — 2023</h4>
-                                <p class="text-xs text-slate-400 italic font-light">Gestion de projet industrielle & IT</p>
+                                <p class="text-xs text-slate-400 italic font-light">Projets industriels & IT</p>
                             </div>
                         </div>
                         <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-purple-500 card-hover">
