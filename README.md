@@ -134,7 +134,7 @@
             <a href="#contact" class="nav-link">Contact</a>
         </div>
         <div class="flex items-center gap-3">
-            <a href="https://docs.google.com/document/d/1JqAik7TN7-DBs5k37pxGNWCC0NdA1nxw6pprdNChWjA/export?format=pdf" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-full border border-amber-500/40 hover:border-amber-400 hover:bg-amber-500/10 text-amber-200 text-xs font-semibold transition-all" title="Télécharger le dossier de compétences (PDF)">
+            <a href="https://drive.google.com/uc?export=download&id=1UuxM7MnoVKVc1mrgKyzomqhJ-9mr1a3a" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-full border border-amber-500/40 hover:border-amber-400 hover:bg-amber-500/10 text-amber-200 text-xs font-semibold transition-all" title="Télécharger le dossier de compétences (PDF)">
                 <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 CV
             </a>
@@ -820,15 +820,11 @@
 
                 <div class="flex flex-col sm:flex-row gap-3 justify-center items-center mb-10">
                     <span class="mono text-[10px] uppercase tracking-[0.25em] text-slate-500">// Dossier de compétences</span>
-                    <a href="https://docs.google.com/document/d/1JqAik7TN7-DBs5k37pxGNWCC0NdA1nxw6pprdNChWjA/export?format=pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 glass-effect border border-amber-500/40 hover:border-amber-400 hover:bg-amber-500/5 text-white text-sm font-semibold rounded-full transition-all">
+                    <a href="https://drive.google.com/uc?export=download&id=1UuxM7MnoVKVc1mrgKyzomqhJ-9mr1a3a" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 glass-effect border border-amber-500/40 hover:border-amber-400 hover:bg-amber-500/5 text-white text-sm font-semibold rounded-full transition-all">
                         <svg class="svg-icon text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                         Télécharger (PDF)
                     </a>
-                    <a href="https://docs.google.com/document/d/1JqAik7TN7-DBs5k37pxGNWCC0NdA1nxw6pprdNChWjA/export?format=docx" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 glass-effect border border-slate-700 hover:border-slate-500 text-white text-sm font-semibold rounded-full transition-all">
-                        <svg class="svg-icon text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                        DOCX
-                    </a>
-                    <a href="https://docs.google.com/document/d/1JqAik7TN7-DBs5k37pxGNWCC0NdA1nxw6pprdNChWjA/edit" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 glass-effect border border-slate-700 hover:border-slate-500 text-slate-300 text-sm font-medium rounded-full transition-all">
+                    <a href="https://drive.google.com/file/d/1UuxM7MnoVKVc1mrgKyzomqhJ-9mr1a3a/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 glass-effect border border-slate-700 hover:border-slate-500 text-slate-300 text-sm font-medium rounded-full transition-all">
                         <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                         Voir en ligne
                     </a>
