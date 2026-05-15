@@ -107,6 +107,7 @@
             <a href="#expertise" class="nav-link">Expertise</a>
             <a href="#experiences" class="nav-link">Parcours</a>
             <a href="#star" class="nav-link">STAR</a>
+            <a href="#testimonials" class="nav-link">Témoignages</a>
             <a href="#metrics" class="nav-link">Impact</a>
             <a href="#formations" class="nav-link">Formations</a>
             <a href="#contact" class="nav-link">Contact</a>
@@ -208,7 +209,7 @@
                         <div class="space-y-5 text-slate-300 leading-relaxed">
                             <p class="text-lg text-white font-medium">Nerd depuis mes 7 ans, je n'ai jamais cessé d'aimer démonter ce qui est compliqué — d'abord par curiosité, puis par métier.</p>
                             <p>Ce qui me passionne réellement, c'est résoudre les situations complexes là où elles se jouent : à l'intersection des <span class="text-blue-300 font-medium">gens</span>, de <span class="text-purple-300 font-medium">l'expertise métier</span> et des <span class="text-emerald-300 font-medium">leviers techniques</span>. C'est cette triple lecture qui me permet d'agir en duality — autant à l'aise pour cadrer un Plan stratégique en COMEX que pour coder un outil PMO en Apps Script ou industrialiser un chiffrage en VBA.</p>
-                            <p>Bilingue FR/EN, professionnel hybride avec 13 ans d'expérience dont 7 à l'international (Asie), j'interviens sur tout le cycle de vie des projets — du <span class="text-white">cadrage stratégique (Business Analysis)</span> au <span class="text-white">pilotage opérationnel (PMO / Project Management)</span> jusqu'à la <span class="text-white">livraison produit (Product Ownership)</span>. Environnements maîtrisés : <span class="font-medium">Défense, Banque, Industrie, Digital</span>.</p>
+                            <p>Bilingue FR/EN (<span class="text-white">Anglais C1-C2</span> professionnel), profil hybride avec 13 ans d'expérience dont 7 à l'international (Asie), j'interviens sur tout le cycle de vie des projets — du <span class="text-white">cadrage stratégique (Business Analysis)</span> au <span class="text-white">pilotage opérationnel (PMO / Project Management)</span> jusqu'à la <span class="text-white">livraison produit (Product Ownership)</span>. Environnements maîtrisés : <span class="font-medium">Défense, Banque, Industrie, Digital</span>.</p>
                             <p class="text-slate-400 text-sm italic border-l-2 border-blue-500/40 pl-4">Ce que je cherche : des programmes exposés, des arbitrages à structurer, des sujets où la complexité humaine et technique se rejoignent. Ce que j'apporte : la posture, l'outillage, et la livraison.</p>
                             <div class="flex flex-wrap gap-2 pt-2">
                                 <span class="tech-tag">Business Analysis</span>
@@ -317,10 +318,14 @@
                         <div><span class="star-letter star-S">S · Situation</span><p class="text-slate-300 mt-1">Environnement Défense haute intensité (Terrestre/Naval/Aéroporté/Spatial), portefeuille de <b class="text-white">+50 offres</b>, budgets unitaires jusqu'à <b class="text-white">&gt;1Md€</b>.</p></div>
                         <div><span class="star-letter star-T">T · Task</span><p class="text-slate-300 mt-1">Sécuriser la fiabilité financière des devis, industrialiser le traitement risques et standardiser les méthodes pour 4 Bid Managers.</p></div>
                         <div><span class="star-letter star-A">A · Action</span><p class="text-slate-300 mt-1">Analyse RC/NRC, animation ROR, automatisation Excel/VBA, templates QDV/MS Project, workshops RiskX, audit post-mortem stratégique (RETEX) et participation aux HOR.</p></div>
-                        <div><span class="star-letter star-R">R · Result</span><p class="text-slate-300 mt-1">Temps de traitement risques offre <b class="text-white">3h → 15 min</b> (-92%), réduction du taux d'erreur d'imputation, rapport stratégique d'amélioration du Win Rate délivré à la GBU ISR.</p></div>
+                        <div><span class="star-letter star-R">R · Result</span><p class="text-slate-300 mt-1">Temps de traitement risques offre <b class="text-white">3h → 15 min</b> (-92%), rapport RETEX livré au CODIR DMS France, Key User conduite du changement sur 2 projets Groupe.</p></div>
                     </div>
+                    <blockquote class="mt-5 p-4 rounded-xl bg-purple-500/5 border-l-2 border-purple-400">
+                        <p class="text-sm italic text-purple-100">"Au-dessus des attentes sur <b>7 livrables sur 10</b>."</p>
+                        <p class="text-xs text-slate-500 mt-1">— Revue de clôture mission Thales / MIGSO-PCUBED</p>
+                    </blockquote>
                     <div class="flex flex-wrap gap-2 mt-5">
-                        <span class="tech-tag">QDV</span><span class="tech-tag">Primavera P6</span><span class="tech-tag">RiskX</span><span class="tech-tag">VBA</span><span class="tech-tag">Bid Mgmt</span>
+                        <span class="tech-tag">QDV</span><span class="tech-tag">Primavera P6</span><span class="tech-tag">RiskX</span><span class="tech-tag">VBA</span><span class="tech-tag">OpenText EIM</span><span class="tech-tag">PowerBI</span><span class="tech-tag">SAP</span>
                     </div>
                 </article>
 
@@ -372,6 +377,42 @@
                 <a href="#experiences" class="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-effect border border-slate-700 hover:border-blue-500 text-white font-medium transition-all">
                     Parcours complet <i class="fas fa-arrow-down"></i>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 bg-slate-900/40 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <p class="mono text-xs uppercase tracking-[0.3em] text-emerald-400 mb-3">// Social proof</p>
+                <h2 class="text-4xl md:text-5xl font-bold">Ce qu'ils <span class="gradient-text">en disent</span></h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <figure class="glass-effect rounded-3xl p-7 card-hover" data-aos="fade-up">
+                    <i class="fas fa-quote-left text-2xl text-purple-400 mb-4"></i>
+                    <blockquote class="text-slate-200 text-sm leading-relaxed mb-5">Au-dessus des attentes sur <b class="text-white">7 livrables sur 10</b>. Haut niveau de satisfaction client et équipe offre sur la performance de la mission.</blockquote>
+                    <figcaption class="text-xs text-slate-400">
+                        <span class="block font-bold text-purple-300">Revue de clôture · MIGSO-PCUBED × Thales</span>
+                        Mission PMO ISR — 2025
+                    </figcaption>
+                </figure>
+                <figure class="glass-effect rounded-3xl p-7 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-quote-left text-2xl text-emerald-400 mb-4"></i>
+                    <blockquote class="text-slate-200 text-sm leading-relaxed mb-5">Johan is a dedicated employee with <b class="text-white">good IT and communication skills</b>. It was a pleasure to work with him during his time in Justrade. I highly recommend him and wish him the best.</blockquote>
+                    <figcaption class="text-xs text-slate-400">
+                        <span class="block font-bold text-emerald-300">Recommandation LinkedIn</span>
+                        Justrade International · 2012
+                    </figcaption>
+                </figure>
+                <figure class="glass-effect rounded-3xl p-7 card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-quote-left text-2xl text-blue-400 mb-4"></i>
+                    <blockquote class="text-slate-200 text-sm leading-relaxed mb-5">Seul Product Owner ayant mené ses <b class="text-white">2 équipes à livraison conforme</b> (sur 5). Félicitations du jury d'experts.</blockquote>
+                    <figcaption class="text-xs text-slate-400">
+                        <span class="block font-bold text-blue-300">Jury Capgemini · Orange Cyber</span>
+                        EPSI — Projet CRM sécurisé · 2024
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </section>
@@ -455,9 +496,13 @@
                         <h3 class="text-2xl font-bold">EPSI (Client Capgemini)</h3>
                         <p class="text-emerald-400 font-medium mb-3">Product Owner & Scrum Master — CRM sécurisé</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-tag italic">Java/Spring</span><span class="tech-tag italic">MySQL</span><span class="tech-tag italic">Cybersecurity</span><span class="tech-tag italic">Scrum</span>
+                            <span class="tech-tag italic">Java 21</span><span class="tech-tag italic">Spring Boot 3.3</span><span class="tech-tag italic">MySQL</span><span class="tech-tag italic">Cybersecurity</span><span class="tech-tag italic">Scrum</span><span class="tech-tag italic">Postman</span>
                         </div>
-                        <p class="text-slate-300 text-sm mb-5 font-light">Pilotage de 2 équipes sur MVP CRM sécurisé. Seul PO ayant livré ses 2 équipes (sur 5). Félicitations jury Capgemini / Orange Cyber.</p>
+                        <p class="text-slate-300 text-sm mb-3 font-light">Rôle dual <b class="text-white">Product Owner + Coach Agile</b> sur 2 équipes — MVP CRM sécurisé, architecture N-tiers (Java 21 / Spring Boot 3.3).</p>
+                        <ul class="text-slate-400 text-xs space-y-1 list-disc ml-4 mb-5">
+                            <li>Seul PO ayant livré ses 2 équipes (sur 5).</li>
+                            <li>Félicitations jury Capgemini / Orange Cyber.</li>
+                        </ul>
                         <a href="https://docs.google.com/document/d/18pWjCAtyOMRExgEGMnvHBI772hxGsIZtfomSjvaS4t4/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fas fa-external-link-alt ml-2"></i></a>
                     </div>
                 </div>
@@ -537,7 +582,8 @@
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="tech-tag italic">WordPress</span><span class="tech-tag italic">SEO/SEA</span><span class="tech-tag italic">Photoshop</span><span class="tech-tag italic">Logistique</span>
                         </div>
-                        <p class="text-slate-300 text-sm mb-5 font-light">Refonte multilingue, expansion internationale, reporting mensuel CODIR.</p>
+                        <p class="text-slate-300 text-sm mb-3 font-light">Refonte multilingue, expansion internationale, reporting mensuel CODIR.</p>
+                        <blockquote class="text-xs italic text-slate-400 border-l-2 border-red-400/40 pl-3 mb-4">"Dedicated employee with good IT and communication skills." <span class="block not-italic text-[10px] text-slate-500 mt-1">— Recommandation LinkedIn</span></blockquote>
                         <a href="https://docs.google.com/document/d/1JaOHl9brR_uOtd7ZPcN10GEvG5e1CPWp11Ufm67uctM/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition-all">Détails Mission <i class="fas fa-external-link-alt ml-2"></i></a>
                     </div>
                 </div>
@@ -658,7 +704,28 @@
                             <div class="w-12 h-12 rounded-xl bg-slate-500/20 flex items-center justify-center shrink-0"><i class="fas fa-university text-slate-400"></i></div>
                             <div>
                                 <h4 class="font-bold">Master 2 Gestion de Projet IT & BI — 2014</h4>
-                                <p class="text-xs text-slate-400 italic font-light">Montpellier Business School</p>
+                                <p class="text-xs text-slate-400 italic font-light">Montpellier Business School (ESC)</p>
+                            </div>
+                        </div>
+                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-indigo-500 card-hover">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center shrink-0"><i class="fas fa-certificate text-indigo-400"></i></div>
+                            <div>
+                                <h4 class="font-bold">Career Essentials in Project Management — 2024</h4>
+                                <p class="text-xs text-slate-400 italic font-light">LinkedIn Learning · Microsoft</p>
+                            </div>
+                        </div>
+                        <div class="p-6 rounded-2xl glass-effect border-l-4 border-cyan-500 card-hover">
+                            <div class="flex items-center gap-6 mb-2">
+                                <div class="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center shrink-0"><i class="fas fa-graduation-cap text-cyan-400"></i></div>
+                                <h4 class="font-bold">Formations 2025 — Amélioration continue</h4>
+                            </div>
+                            <p class="text-xs text-slate-400 italic font-light leading-relaxed pl-[72px]">PMO · Gestion du Risque · Planification · Gestion des Coûts · Intelligence Collective & Émotionnelle · Leadership · IA & Agents · Cyber / RGPD</p>
+                        </div>
+                        <div class="p-6 rounded-2xl glass-effect flex items-center gap-6 border-l-4 border-teal-500 card-hover">
+                            <div class="w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center shrink-0"><i class="fas fa-language text-teal-400"></i></div>
+                            <div>
+                                <h4 class="font-bold">Langues</h4>
+                                <p class="text-xs text-slate-400 italic font-light">Français (natif) · Anglais professionnel <span class="text-teal-300 font-medium not-italic">C1-C2</span></p>
                             </div>
                         </div>
                     </div>
