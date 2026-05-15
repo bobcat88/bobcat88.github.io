@@ -195,11 +195,9 @@
                 </div>
             </div>
 
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
-                <a href="#expertise" class="text-slate-500 hover:text-white transition-colors" aria-label="Scroll">
-                    <i class="fas fa-chevron-down text-2xl"></i>
-                </a>
-            </div>
+            <a href="#about" class="hidden lg:flex absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce text-slate-500 hover:text-white transition-colors" aria-label="Scroll vers le contenu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
         </div>
     </header>
 
