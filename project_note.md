@@ -5,7 +5,7 @@
 > **Objectif** : Portfolio en ligne servant de CV augmenté pour cibler des missions freelance PMO/Stratégie.
 
 ## Stack Technique
-- **Structure** : Monofichier HTML dans `README.md` (hébergé via GitHub Pages).
+- **Structure** : Monofichier HTML dans `index.html` (hébergé via GitHub Pages).
 - **Style** : Tailwind CSS (via CDN) + Custom CSS (`glass-effect`, gradients).
 - **Typographie** : DM Sans (Google Fonts).
 - **Icônes** : FontAwesome 6 (CDN).
@@ -24,7 +24,7 @@
 - Johan est un profil **hybride technique et business** (développeur de ses propres agents IA + PMO COMEX).
 - **Ne jamais infantiliser les expériences** ou réduire ses rôles à de la pure exécution conditionnée.
 - Le ton doit rester direct, professionnel et orienté *impact massif/executive*.
-- **Ne pas renommer** `README.md` en `index.html`, le site s'exécute directement depuis le README sur GitHub Pages.
+- **Entrée GitHub Pages** : le site s'exécute depuis `index.html` pour éviter le wrapper Markdown/Jekyll appliqué au README.
 
 ## Patch Notes
 
