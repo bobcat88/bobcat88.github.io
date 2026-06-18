@@ -13,3 +13,5 @@ Freelance disponible — Mission PMO / PO / Transformation
 Certifié Claude by Anthropic · badges LinkedIn
 
 Utiliser logo complet Anhropic au lieu du nom sur la bulle : Claude by Anthropic certifié
+
+Fleche inversé à gauche (<) sur bouton 'démarrer une missison' au lieu de (>)
