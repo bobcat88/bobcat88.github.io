@@ -1,4 +1,14 @@
+---
+type: note
+tags:
+  - domain/career
+aliases:
+- README
+---
 # Johan Proust Portfolio
+Up: [[📍 Dashboard]]
+
+#career #onlinecv
 
 Personal portfolio and CV website for Johan Proust.
 

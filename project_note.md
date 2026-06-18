@@ -1,4 +1,14 @@
+---
+type: note
+tags:
+  - domain/career
+aliases:
+- project_note
+---
 # PMO Portfolio — Notes de Projet & Documentation technique
+Up: [[📍 Dashboard]]
+
+#career #onlinecv
 
 > **Propriétaire** : Johan Proust
 > **Repo** : bobcat88.github.io
