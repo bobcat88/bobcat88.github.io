@@ -38,6 +38,20 @@ Up: [[📍 Dashboard]]
 
 ## Patch Notes
 
+### v1.5 — Juin 2026 (AI Practice & Gate Discipline)
+- **CONTENT** : Ajout d'un bloc pleine largeur "AI Practice" pour distinguer les réalisations et projets IA concrets de la section méthodologique "AI Stack".
+- **FINANCE** : Ajout du projet personnel d'investissement structuré assisté par IA : thèses documentées, scénarios, allocation, risk review, audit trail et gates Go/No-go.
+- **POSITIONING** : Retrait de l'entrée IA dans "Engagements & Loisirs" afin de repositionner l'IA comme expertise appliquée, non comme simple veille off-mission.
+- **QUALITY** : Mise en avant d'une chaîne de vérification stricte : contexte, risque, preuve, décision journalisée.
+
+### v1.4 — Juin 2026 (Audit contenu & AI Delivery)
+- **POSITIONING** : Recentrage de la proposition de valeur sur "PMO augmenté" et "AI Delivery" plutôt qu'une mention générique d'AI Architect.
+- **CONTENT** : Ajout d'une section dédiée "AI Stack" expliquant ce que font les algorithmes : cartographie contexte, analyse d'impact, exécution contrôlée, vérification.
+- **STACK** : Mise en avant de GitNexus, GSD, RTK, Memory MCP, Context7, Claude/Codex et Apps Script comme système opérationnel.
+- **SEO** : Mise à jour des titres, descriptions Open Graph/Twitter et mots-clés pour refléter les systèmes d'agents IA auditables.
+- **CONSISTENCY** : Harmonisation des mentions Velocity Lab, Formations, Metrics et CTA final avec le nouveau positionnement.
+- **UX** : Suppression du CTA mobile flottant qui pouvait masquer le contenu lors du scroll ; le CTA mobile reste disponible dans la navigation sticky.
+
 ### v1.3 — Mars 2026 (Security, SEO & A11y Polish)
 - **SECURITY** : Fix de la vulnérabilité Reverse Tabnabbing (ajout `rel="noopener noreferrer"` sur tous les liens externes).
 - **SEO** : Utilisation d'URLs absolues pour les balises Open Graph et Twitter Cards afin de garantir l'affichage des miniatures.
