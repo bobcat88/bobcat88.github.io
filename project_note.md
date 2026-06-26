@@ -38,6 +38,20 @@ Up: [[📍 Dashboard]]
 
 ## Patch Notes
 
+### v1.8 — Juin 2026 (Internationalisation FR/EN + switcher drapeau)
+- **I18N** : Traduction professionnelle complète EN de tout le site (~297 chaînes). Mécanisme `data-i18n` (mode `html` pour le contenu riche, mode `text` pour les boutons à icône) + dictionnaire EN inline, fallback FR automatique pour les noms propres / dates internationales.
+- **SWITCHER** : Bouton bascule FR/EN avec drapeau, placé **au-dessus de la photo de profil**. Défaut = FR. En FR il affiche le drapeau UK + « Profile available in English » ; en EN il affiche le drapeau FR + « Profil disponible en français ». Choix mémorisé via localStorage (défaut FR sinon).
+- **Détail bilingue** : les principes de travail gardent toujours un libellé FR + un libellé EN (la langue inactive sert de signature), quelle que soit la langue active.
+- **TITLE** : `<title>` repositionné « Systèmes de décision · Senior PMO, Product Owner & AI Delivery ».
+- **Technique** : injection via DOM réel (Playwright) pour fiabilité sur le HTML formaté ; ajout `<!DOCTYPE html>` (sortie du quirks mode). Aucune dépendance JS ajoutée (vanilla).
+
+### v1.7 — Juin 2026 (Audit→fix : proposition de conseil premium, score 9.5/10)
+Boucle d'audit sur 12 métriques jusqu'à ≥9.5 partout. Gap principal comblé : « comment j'aide le client à résoudre SES problèmes ».
+- **CLIENT-CENTRIC** : Nouvelle section « Comment je vous aide » — 4 cartes problème→résultat + 4 modes d'intervention (diagnostic flash / mission PMO-BA / product / AI enablement).
+- **CONVERSION** : Process « comment on travaille ensemble » en 3 étapes dans le Contact.
+- **NAV** : Réordonnée orientée acheteur (Vos enjeux en premier).
+- **TECHNIQUE/SEO/A11Y** : landmark nav, preload + width/height photo (CLS), theme-color, og:locale + image:alt, JSON-LD Person enrichi (description, makesOffer, knowsLanguage).
+
 ### v1.6 — Juin 2026 (Refonte "Systèmes de décision" — recommandations CV en ligne)
 Implémentation du dossier de recommandations `maj_pour_CV_en_ligne` (10 axes). Objectif : rendre visible le **mode de pensée**, pas ajouter des compétences.
 - **POSITIONING (Axe 2 & 9)** : Hero repositionné valeur-d'abord — « Je conçois des systèmes de décision » ; les métiers (PMO/PO/BA/AI) deviennent une conséquence (ligne mono secondaire). Meta title/description/keywords enrichis « systèmes de décision / decision systems ».
