@@ -5,6 +5,8 @@
     "company": "Crédit Mutuel Arkéa | Banque de Détail",
     "period": "Mars 2026 – Présent",
     "location": "Brest",
+    "context": "Direction d'un cadre commun de pilotage des initiatives du Plan stratégique en banque de détail.",
+    "stack": ["PMO", "Business Analysis", "Apps Script", "Kanban / KPI", "POC IA", "Gouvernance"],
     "bullets": [
       "Cadre commun de qualification des initiatives du Plan stratégique (12-18 mois), alignant marketing, data, expérience client et process.",
       "Application PMO sur mesure (Apps Script : Kanban, KPI, jalons, alertes) + POC génération auto de comptes rendus.",
@@ -17,6 +19,8 @@
     "company": "NeoSoft",
     "period": "Oct. 2025 – Déc. 2025",
     "location": "Brest / Rennes",
+    "context": "Cadrage amont et prototypage d'un MVP d'application interne métier.",
+    "stack": ["Product Owner", "Design Thinking", "Figma", "UX / UI", "Backlog Kanban"],
     "bullets": [
       "Design Thinking, prototypage Figma, parcours UX/UI, backlog Kanban itératif, facilitation Dev-Design.",
       "POC validé + prototype livré + roadmap MVP exploitable sans retro-cadrage."
@@ -28,6 +32,8 @@
     "company": "Thales ISR (via MIGSO-PCUBED)",
     "period": "Oct. 2024 – Oct. 2025",
     "location": "Brest",
+    "context": "Support bid management sur un portefeuille d'offres Défense multi-milieux à forts enjeux financiers.",
+    "stack": ["PMO", "Bid Management", "Pilotage financier RC / NRC", "Excel / VBA", "Gestion des risques (ROR)", "RETEX CODIR"],
     "bullets": [
       "Portefeuille +50 offres Défense multi-milieux, budgets jusqu'à >1Md€ ; pilotage financier RC/NRC, optimisation marge.",
       "Industrialisation Excel/VBA de la gestion des risques (ROR) : 3h → 15 min par offre (-92%).",
@@ -40,6 +46,8 @@
     "company": "EPSI (client Capgemini)",
     "period": "Avr. 2024 – Juil. 2024",
     "location": "Rennes",
+    "context": "Double rôle PO + Coach Agile sur la livraison d'un CRM sécurisé pour un client grand compte.",
+    "stack": ["Product Owner", "Coaching Agile", "Scrum", "User Stories", "Tests Postman"],
     "bullets": [
       "Double rôle PO + Coach Agile sur 2 équipes ; cérémonies Scrum, User Stories, critères d'acceptation, tests Postman.",
       "Seul PO ayant livré ses 2 équipes (sur 5), MVP < 2 mois ; félicitations jury (Lead Tech Capgemini + Expert Cyber Orange)."
@@ -51,6 +59,8 @@
     "company": "Indépendant (EI) | Location Saisonnière",
     "period": "Juil. 2022 – Sept. 2023",
     "location": "Luz-Saint-Sauveur",
+    "context": "Gestion d'actifs locatifs courte durée en autonomie totale, du cycle locatif à la relation client.",
+    "stack": ["Asset Management", "Coordination logistique", "Relation client", "Ops AirBnB"],
     "bullets": [
       "Pilotage intégralité du cycle locatif courte durée (AirBnB) en autonomie totale.",
       "Coordination logistique, maintenance, asset management et interface unique propriétaires/locataires.",
@@ -63,6 +73,8 @@
     "company": "Sichuan Shuhan Plastics (Chine)",
     "period": "Juin 2015 – Janv. 2020",
     "location": "Deyang",
+    "context": "Développement commercial export sur marchés émergents asiatiques, poste exercé 100% en anglais.",
+    "stack": ["Business Dev International", "Management interculturel", "Appels d'offres SAP Ariba", "Export"],
     "bullets": [
       "Stratégie export marchés émergents asiatiques, management équipe multiculturelle de 5, appels d'offres SAP Ariba.",
       "Part export 5% → 20% du CA (~15M$ en 2019) ; poste exercé 100% en anglais."
@@ -74,6 +86,8 @@
     "company": "Vacorda Instruments (Chine)",
     "period": "Janv. 2015 – Juin 2015",
     "location": "Chengdu",
+    "context": "Création d'un écosystème digital from-scratch pour la conquête de la zone francophone.",
+    "stack": ["Stratégie digitale", "SEO / SEA", "Google Ads", "Lead Generation"],
     "bullets": [
       "Création écosystème digital from-scratch, SEO/SEA, lead generation zone francophone.",
       "Gestion budget publicitaire 24k$/an Google Ads ; poste exercé 90% en anglais."
@@ -85,6 +99,8 @@
     "company": "Diadom SAS",
     "period": "Sept. 2012 – Oct. 2014",
     "location": "Montpellier",
+    "context": "MOE d'une refonte e-commerce sponsorisée par la direction générale.",
+    "stack": ["Chef de projet", "Business Analysis", "MS Project", "SEO / SEA", "Reporting CODIR"],
     "bullets": [
       "MOE refonte e-commerce (sponsor PDG), chemin critique MS Project, SEO/SEA 30 k€/an, reporting CODIR.",
       "Trafic +196% · conversion +23% sur 2 ans, livré dans les jalons."
@@ -96,6 +112,8 @@
     "company": "Justrade International (Chine)",
     "period": "Sept. 2011 – Août 2012",
     "location": "Yiwu",
+    "context": "Coordination d'une refonte web multilingue et du social media bilingue à l'international.",
+    "stack": ["Webmarketing", "Coordination prestataires", "Social Media", "International"],
     "bullets": [
       "Coordination refonte site internet multilingue (supervision prestataires, traducteurs) et social media bilingue EN/FR.",
       "Reporting mensuel CODIR et recommandation LinkedIn client."

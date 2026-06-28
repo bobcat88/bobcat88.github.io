@@ -3,27 +3,57 @@
 <title>Johan Proust — CV (A · Header Band)</title>
 <link rel="stylesheet" href="base.css">
 <style>
-:root{ --ink:#1c1b22; --muted:#5b5670; --accent:#6d28d9; --accent2:#4c1d95; --soft:#f4effd; --rule:#e6def7; }
-.banner{ background:linear-gradient(120deg,var(--accent2),var(--accent)); color:#fff; padding:12mm 15mm 10mm; display:grid; grid-template-columns:1fr 25mm; gap:12pt; align-items:center; }
-.banner h1{ font-size:27pt; font-weight:800; letter-spacing:.3px; line-height:1; }
-.banner .title{ font-size:11pt; font-weight:600; margin-top:5pt; color:#ece4ff; }
-.banner .brand{ font-size:9.6pt; margin-top:7pt; color:#d9caff; font-style:italic; max-width:150mm; }
-.banner .contact{ display:flex; flex-wrap:wrap; gap:4pt 16pt; margin-top:9pt; font-size:8.8pt; color:#e7ddff; }
+/* Generic "Dossier de compétences" — multi-page (≤3 A4), richer than the 1-page CV.
+   Banner bleeds on page 1; continuation pages get top/bottom margin. */
+@page { size: A4; margin: 13mm 0; }
+@page :first { margin-top: 0; }
+:root{
+  --ink:#1c1b22; --muted:#5b6573;
+  --accent:#6d28d9; --accent2:#4c1d95;   /* mauve — banner, H2, bullets only */
+  --soft:#eef0f4;                         /* cool-grey cards & tags */
+  --rule:#e6def7;                         /* mauve-tint — H2 underline */
+  --line:#e3e6ea;                         /* neutral divider — experience/edu */
+  --slate:#334155;                        /* sober accent — metric figures, tags, years */
+}
+
+/* This document flows across several sheets — opt out of the single-sheet clip. */
+.page{ min-height:auto; overflow:visible; }
+@media print{ .page{ overflow:visible; min-height:auto; } }
+
+.banner{ background:linear-gradient(120deg,var(--accent2),var(--accent)); color:#fff; padding:13mm 15mm 11mm; display:grid; grid-template-columns:1fr 26mm; gap:14pt; align-items:center; }
+.banner h1{ font-size:28pt; font-weight:800; letter-spacing:.3px; line-height:1; }
+.banner .title{ font-size:11.5pt; font-weight:600; margin-top:6pt; color:#ece4ff; }
+.banner .brand{ font-size:9.8pt; margin-top:8pt; color:#d9caff; font-style:italic; max-width:150mm; }
+.banner .contact{ display:flex; flex-wrap:wrap; gap:4pt 16pt; margin-top:10pt; font-size:9pt; color:#e7ddff; }
 .banner .contact a{ color:#fff; text-decoration:none; }
-.body{ padding:10mm 15mm 13mm; }
-h2{ font-size:10pt; text-transform:uppercase; letter-spacing:.9px; color:var(--accent); margin:0 0 6pt; padding-bottom:2pt; border-bottom:2px solid var(--rule); }
+.banner .doc-kind{ display:inline-block; margin-top:9pt; font-size:8pt; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#fff; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:4px; padding:3pt 9pt; }
+
+.body{ padding:11mm 15mm 14mm; }
+h2{ font-size:10.5pt; text-transform:uppercase; letter-spacing:.9px; color:var(--accent); margin:0 0 7pt; padding-bottom:2.5pt; border-bottom:2px solid var(--rule); }
 .section{ margin-top:11pt; } .section:first-child{ margin-top:0; }
-.metrics{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:5pt; }
-.metric{ background:var(--soft); border-radius:6px; padding:5pt 8pt; }
-.metric b{ display:block; color:var(--accent2); font-size:11pt; } .metric span{ font-size:8.3pt; color:var(--muted); }
-.exp{ margin-bottom:8pt; page-break-inside:avoid; }
-.exp-head{ display:flex; justify-content:space-between; align-items:baseline; gap:8pt; }
-.exp-role b{ color:var(--accent2); } .exp-meta{ font-size:8.3pt; color:var(--muted); white-space:nowrap; }
-.exp ul{ list-style:none; margin-top:3pt; } .exp li{ position:relative; padding-left:11pt; margin-bottom:1.6pt; font-size:9.2pt; }
-.exp li::before{ content:""; position:absolute; left:0; top:5pt; width:4pt; height:4pt; border-radius:50%; background:var(--accent); }
-.tags{ display:flex; flex-wrap:wrap; gap:3pt; } .tag{ background:var(--soft); color:var(--accent2); border-radius:4px; padding:2pt 8pt; font-size:8.3pt; font-weight:500; }
-.cols{ display:grid; grid-template-columns:1fr 1fr; gap:6pt 16pt; }
-.kv{ font-size:8.8pt; margin-bottom:2pt; } .kv b{ color:var(--accent2); }
+.summary{ font-size:10pt; line-height:1.5; }
+
+.metrics{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:6pt; }
+.metric{ background:var(--soft); border-radius:6px; padding:6pt 9pt; }
+.metric b{ display:block; color:var(--slate); font-size:12pt; } .metric span{ font-size:8.5pt; color:var(--muted); }
+
+/* --- experience: roomier, prominent dates/location, context + tech stack --- */
+.exp{ margin-bottom:8pt; padding-bottom:7pt; border-bottom:1px solid var(--line); page-break-inside:avoid; }
+.exp:last-child{ border-bottom:none; }
+.exp-head{ display:flex; justify-content:space-between; align-items:baseline; gap:10pt; }
+.exp-role{ font-size:10.5pt; } .exp-role b{ color:var(--ink); font-size:11pt; }
+.exp-meta{ font-size:9.4pt; font-weight:700; color:var(--ink); white-space:nowrap; }
+.exp-meta .loc{ color:var(--muted); font-weight:600; }
+.exp-context{ font-size:9.2pt; font-style:italic; color:var(--muted); margin-top:3pt; }
+.exp ul{ list-style:none; margin-top:5pt; } .exp li{ position:relative; padding-left:12pt; margin-bottom:2.6pt; font-size:9.5pt; line-height:1.4; }
+.exp li::before{ content:""; position:absolute; left:0; top:5.5pt; width:4pt; height:4pt; border-radius:50%; background:var(--accent); }
+.exp-stack{ display:flex; flex-wrap:wrap; gap:3pt; margin-top:6pt; }
+.exp-stack .tag{ background:#fff; border:1px solid var(--line); color:var(--slate); border-radius:4px; padding:1.5pt 7pt; font-size:8pt; font-weight:600; }
+
+.tags{ display:flex; flex-wrap:wrap; gap:3pt; } .tag{ background:var(--soft); color:var(--slate); border-radius:4px; padding:2pt 8pt; font-size:8.5pt; font-weight:500; }
+.skills-multicol{ columns:3; column-gap:16pt; } .skills-multicol > div{ break-inside:avoid; }
+.edu-multicol{ columns:2; column-gap:16pt; }
+.kv{ font-size:9pt; margin-bottom:2.5pt; break-inside:avoid; } .kv b{ color:var(--slate); }
 </style></head><body>
 <div class="toolbar no-print"><a href="gallery2.html">← Gallery</a><button onclick="print()">Print / PDF</button></div>
 <main class="page">
@@ -31,19 +61,18 @@ h2{ font-size:10pt; text-transform:uppercase; letter-spacing:.9px; color:var(--a
     <div>
       <h1 id="name"></h1><div class="title" id="title"></div><div class="brand" id="brand"></div>
       <div class="contact" id="contact"></div>
+      <span class="doc-kind">Dossier de compétences</span>
     </div>
     <div style="text-align: right;">
-      <img id="photo" src="" alt="Johan Proust" style="width: 24mm; height: 24mm; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.35); object-fit: cover; display: none; margin-left: auto;">
+      <img id="photo" src="" alt="Johan Proust" style="width: 25mm; height: 25mm; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.35); object-fit: cover; display: none; margin-left: auto;">
     </div>
   </div>
   <div class="body">
-    <div class="section"><h2>Profil</h2><p id="summary"></p></div>
+    <div class="section"><h2>Profil</h2><p class="summary" id="summary"></p></div>
     <div class="section"><h2>Résultats clés</h2><div class="metrics" id="metrics"></div></div>
-    <div class="section"><h2>Expérience</h2><div id="exp"></div></div>
-    <div class="section cols">
-      <div><h2>Compétences par domaine</h2><div id="skills-grouped"></div></div>
-      <div><h2>Formation & Langues</h2><div id="edu"></div></div>
-    </div>
+    <div class="section"><h2>Parcours détaillé</h2><div id="exp"></div></div>
+    <div class="section"><h2>Compétences par domaine</h2><div class="skills-multicol" id="skills-grouped"></div></div>
+    <div class="section"><h2>Formation & Langues</h2><div class="edu-multicol" id="edu"></div></div>
   </div>
 </main>
 <script src="data.js"></script>
@@ -57,10 +86,19 @@ $("name").textContent=d.name; $("title").textContent=d.title; $("brand").textCon
 $("contact").innerHTML=d.contact.map(([_,t,h])=>h?`<a href="${h}">${t}</a>`:`<span>${t}</span>`).join("");
 $("summary").textContent=d.summary;
 $("metrics").innerHTML=d.metrics.map(([v,l,c])=>`<div class="metric"><b>${v}</b><span>${l} · ${c}</span></div>`).join("");
-$("exp").innerHTML=d.experience.map(([r,o,dt,loc,b])=>`<div class="exp"><div class="exp-head"><div class="exp-role"><b>${r}</b> — ${o}</div><div class="exp-meta">${dt} · ${loc}</div></div><ul>${b.map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
+$("exp").innerHTML=d.experience.map(([r,o,dt,loc,b,ctx,stack])=>`
+  <div class="exp">
+    <div class="exp-head">
+      <div class="exp-role"><b>${r}</b> — ${o}</div>
+      <div class="exp-meta">${dt} · <span class="loc">${loc}</span></div>
+    </div>
+    ${ctx?`<div class="exp-context">${ctx}</div>`:""}
+    <ul>${b.map(x=>`<li>${x}</li>`).join("")}</ul>
+    ${stack&&stack.length?`<div class="exp-stack">${stack.map(s=>`<span class="tag">${s}</span>`).join("")}</div>`:""}
+  </div>`).join("");
 $("skills-grouped").innerHTML=d.skillGroups.map(([g,arr])=>`
-  <div style="margin-bottom: 7pt; page-break-inside:avoid;">
-    <b style="color: var(--accent2); font-size: 8.2pt; display: block; margin-bottom: 2.5pt; text-transform: uppercase; letter-spacing: 0.5px;">${g}</b>
+  <div style="margin-bottom: 8pt; page-break-inside:avoid;">
+    <b style="color: var(--slate); font-size: 8.4pt; display: block; margin-bottom: 3pt; text-transform: uppercase; letter-spacing: 0.5px;">${g}</b>
     <div class="tags">${arr.map(s=>`<span class="tag">${s}</span>`).join("")}</div>
   </div>
 `).join("");

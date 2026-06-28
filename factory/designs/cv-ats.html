@@ -5,7 +5,7 @@
 <style>
 /* ATS-safe sibling of B: single column, selectable text, no text over color blocks,
    no multi-column flow → parsers extract cleanly. Aubergine accent on white. */
-:root{ --ink:#1f1b22; --muted:#555; --accent:#6e2b74; --plum:#34123a; --rule:#d9c9db; --soft:#f5eef5; }
+:root{ --ink:#1c1b22; --muted:#5b6573; --accent:#6d28d9; --plum:#4c1d95; --rule:#e6def7; --soft:#eef0f4; --slate:#334155; }
 .page{ padding:10mm 14mm; font-size:9.5pt; }
 .nm{ font-size:20pt; font-weight:800; color:var(--plum); letter-spacing:.2px; }
 .title{ font-size:10.5pt; font-weight:600; color:var(--ink); margin-top:2pt; }
@@ -15,14 +15,14 @@ h2{ font-size:9.6pt; text-transform:uppercase; letter-spacing:.6px; color:var(--
 p.sum{ font-size:9.6pt; }
 .metrics{ margin:0; padding-left:0; list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:0 18pt; } .metrics li{ font-size:9.1pt; margin-bottom:1pt; padding-left:11pt; position:relative; }
 .metrics li::before{ content:"•"; position:absolute; left:2pt; color:var(--accent); }
-.metrics b{ color:var(--plum); }
+.metrics b{ color:var(--slate); }
 .exp{ margin-bottom:5pt; page-break-inside:avoid; }
 .exp-head{ display:flex; justify-content:space-between; align-items:baseline; gap:8pt; }
-.exp-role{ font-weight:700; } .exp-role .org{ font-weight:600; color:var(--accent); }
-.exp-meta{ font-size:8.8pt; color:var(--muted); white-space:nowrap; }
+.exp-role{ font-weight:700; } .exp-role .org{ font-weight:600; color:var(--ink); }
+.exp-meta{ font-size:8.8pt; font-weight:600; color:var(--ink); white-space:nowrap; }
 .exp ul{ margin:1.5pt 0 0 0; padding-left:14pt; } .exp li{ font-size:9pt; margin-bottom:0.5pt; line-height:1.34; }
-.skline{ font-size:9.4pt; } .skline b{ color:var(--plum); }
-.kv{ font-size:9.3pt; margin-bottom:1.5pt; } .kv b{ color:var(--plum); }
+.skline{ font-size:9.4pt; } .skline b{ color:var(--slate); }
+.kv{ font-size:9.3pt; margin-bottom:1.5pt; } .kv b{ color:var(--slate); }
 .two{ display:grid; grid-template-columns:1fr 1fr; gap:2pt 18pt; }
 </style></head><body>
 <div class="toolbar no-print"><a href="gallery2.html">← Gallery</a><button onclick="print()">Print / PDF</button></div>

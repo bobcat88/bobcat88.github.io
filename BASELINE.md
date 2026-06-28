@@ -113,3 +113,10 @@ Generic platform CVs = same library, no offer → `cv/platforms/<platform>.html`
 1. **Baseline numbers** — fill the metrics table (even rough estimates).
 2. **Migration vs reference** — copy vault mission `.md` into `library/missions/`, or keep vault as source and symlink? (Recommend: copy into repo = SSOT; vault keeps knowledge-graph notes that *link* to repo.)
 3. **Drive** — pull the Drive PDFs/CVs into `cv/platforms/` as reference, or leave in Drive and just catalog?
+
+## Content SSOT — resolution (2026-06-28)
+
+- **`library/experience.json` = the render SSOT** for CV experience (consumed by `factory/render.js`). It now carries, per mission: `role, company, period, location, context, stack[], bullets[]`.
+- **`library/missions/*.md` = human reference / narrative** (full mission write-ups, vault-linked). Not read by the renderer. When a fact changes, edit `experience.json` (and optionally mirror the prose in the mission `.md`).
+- **`library/case-studies/*.md` = portfolio narrative** (Contexte/Problème/Résultats + tags) for `index.html` popups and the dossier de compétences. 11 case-studies vs 9 salaried experiences: velocity / luz-saisonnier / trading-perso are entrepreneurial/personal and intentionally have no `experience.json` entry.
+- **Two premium templates** (resolved): `designs/cv-a.html` = **Dossier générique** (ESN / portage, ≤3 A4, all 9 experiences) ; `designs/cv-b.html` = **CV ciblé** (offer-tailored, 1 A4). See `factory/README.md`.

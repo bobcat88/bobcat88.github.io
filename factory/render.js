@@ -10,7 +10,7 @@
 //   bun factory/render.js --variant ats --platform malt       # platform variant
 //
 
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 
 const ROOT = join(import.meta.dir, "..");
@@ -52,6 +52,13 @@ writeFileSync(join(outDir, "base.css"), css);
 const dataJs = `window.CV_DATA = ${JSON.stringify(compileCvData(profile), null, 2)};`;
 writeFileSync(join(outDir, "data.js"), dataJs);
 console.log("✓ Data →", join(outDir, "data.js"));
+
+// Self-contained portrait: copy the webp next to the output so the relative path always resolves.
+const photoSrc = join(ROOT, "johan-proust.webp");
+if (existsSync(photoSrc)) copyFileSync(photoSrc, join(outDir, "johan-proust.webp"));
+
+// Keep the design-preview data snapshot in sync with the library (generic runs only).
+if (!args.offer) writeFileSync(join(ROOT, "factory/designs/data.js"), dataJs);
 
 if (args.pdf) await toPdf(htmlPath);
 
@@ -207,21 +214,21 @@ function compileCvData(profile) {
   let filteredExp;
   if (args.offer) {
     filteredExp = selectTailoredExperiences(offerText, experience)
-      .map(x => [x.role, x.company, x.period, x.location, x.bullets]);
+      .map(x => [x.role, x.company, x.period, x.location, x.bullets, x.context || "", x.stack || []]);
   } else if (model.variant === "premium") {
     // Generic Premium is a Dossier de Compétences: export all 9 experiences!
     filteredExp = experience
-      .map(x => [x.role, x.company, x.period, x.location, x.bullets]);
+      .map(x => [x.role, x.company, x.period, x.location, x.bullets, x.context || "", x.stack || []]);
   } else {
     // Generic ATS is a single-page CV: export top 6 experiences
     const genericExperienceIds = ["arkea", "thales", "neosoft", "epsi", "shuhan", "diadom"];
     filteredExp = experience.filter(x => genericExperienceIds.includes(x.id))
-      .map(x => [x.role, x.company, x.period, x.location, x.bullets]);
+      .map(x => [x.role, x.company, x.period, x.location, x.bullets, x.context || "", x.stack || []]);
   }
 
   return {
     name: profile.identity.fullName,
-    photo: args.offer ? "../../_assets/johan-proust.webp" : "../../johan-proust.webp",
+    photo: "johan-proust.webp",
     first: profile.identity.fullName.split(" ")[0],
     last: profile.identity.fullName.split(" ").slice(1).join(" "),
     monogram: profile.identity.fullName.split(" ").map(x => x[0]).join(""),
@@ -243,8 +250,8 @@ function compileCvData(profile) {
     education: profile.education.map(x => [x.year, x.title, x.school]),
     languages: profile.languages.map(x => [x.name, x.level]),
     facts: [
-      ["13 ans", "Expérience"],
-      ["7 ans", "Asie · Expat"],
+      [`${profile.summary.experienceYears} ans`, "Expérience"],
+      [`${profile.summary.internationalYears} ans`, "Asie · Expat"],
       ["FR · EN", "Bilingue Biz"],
       ["> 1 Md€", "Pilotés"]
     ]
@@ -268,7 +275,6 @@ async function toPdf(htmlPath) {
 }
 
 function read(p) { return readFileSync(join(ROOT, p), "utf8"); }
-function base(p) { return p.split("/").pop().replace(/\.[^.]+$/, ""); }
 function parseArgs(a) {
   const o = {};
   for (let i = 0; i < a.length; i++) {

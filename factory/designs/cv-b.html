@@ -3,7 +3,14 @@
 <title>Johan Proust — CV (B · Plum Sidebar)</title>
 <link rel="stylesheet" href="base.css">
 <style>
-:root{ --ink:#241f27; --muted:#6b6172; --accent:#6e2b74; --plum:#34123a; --plum2:#4c1d54; --soft:#f5eef5; --rule:#e8dbea; }
+:root{
+  --ink:#1c1b22; --muted:#5b6573;
+  --accent:#6d28d9; --plum:#4c1d95; --plum2:#6d28d9;  /* unified mauve (matches Dossier banner) */
+  --soft:#eef0f4;        /* cool-grey cards */
+  --rule:#e6def7;        /* mauve-tint — H2 underline */
+  --line:#e3e6ea;        /* neutral divider */
+  --slate:#334155;       /* sober accent — figures, years */
+}
 .grid{ display:grid; grid-template-columns:62mm 1fr; min-height:297mm; }
 .side{ background:linear-gradient(180deg,var(--plum),var(--plum2)); color:#efe7fb; padding:14mm 9mm; }
 .mono{ width:18mm; height:18mm; border-radius:50%; background:rgba(255,255,255,.14); border:1.5px solid rgba(255,255,255,.4);
@@ -23,10 +30,10 @@
 h2{ font-size:9.4pt; text-transform:uppercase; letter-spacing:.9px; color:var(--accent); margin:9pt 0 5pt; border-bottom:2px solid var(--rule); padding-bottom:2pt; }
 .metrics{ display:grid; grid-template-columns:1fr 1fr; gap:3pt 6pt; }
 .metric{ border-left:2.5px solid var(--accent); background:var(--soft); padding:3pt 6pt; font-size:8.4pt; border-radius:0 4px 4px 0; }
-.metric b{ color:var(--plum); }
+.metric b{ color:var(--slate); }
 .exp{ margin-bottom:5pt; page-break-inside:avoid; }
 .exp-head{ display:flex; justify-content:space-between; align-items:baseline; gap:8pt; }
-.exp-role b{ color:var(--plum); } .exp-meta{ font-size:8.2pt; color:var(--muted); white-space:nowrap; }
+.exp-role b{ color:var(--ink); } .exp-meta{ font-size:8.2pt; font-weight:600; color:var(--ink); white-space:nowrap; }
 .exp ul{ list-style:none; margin-top:2pt; } .exp li{ position:relative; padding-left:10pt; margin-bottom:1pt; font-size:8.9pt; line-height:1.34; }
 .exp li::before{ content:"▸"; position:absolute; left:0; color:var(--accent); font-size:7pt; top:1.5pt; }
 </style></head><body>

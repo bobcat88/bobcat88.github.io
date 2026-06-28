@@ -1,6 +1,6 @@
 window.CV_DATA = {
   "name": "Johan PROUST",
-  "photo": "../../johan-proust.webp",
+  "photo": "johan-proust.webp",
   "first": "Johan",
   "last": "PROUST",
   "monogram": "JP",
@@ -72,6 +72,15 @@ window.CV_DATA = {
         "Cadre commun de qualification des initiatives du Plan stratégique (12-18 mois), alignant marketing, data, expérience client et process.",
         "Application PMO sur mesure (Apps Script : Kanban, KPI, jalons, alertes) + POC génération auto de comptes rendus.",
         "Gain capacitaire estimé 440–2760 h/an (~31–135 k€/an), traçabilité des décisions, effet plateforme."
+      ],
+      "Direction d'un cadre commun de pilotage des initiatives du Plan stratégique en banque de détail.",
+      [
+        "PMO",
+        "Business Analysis",
+        "Apps Script",
+        "Kanban / KPI",
+        "POC IA",
+        "Gouvernance"
       ]
     ],
     [
@@ -82,6 +91,14 @@ window.CV_DATA = {
       [
         "Design Thinking, prototypage Figma, parcours UX/UI, backlog Kanban itératif, facilitation Dev-Design.",
         "POC validé + prototype livré + roadmap MVP exploitable sans retro-cadrage."
+      ],
+      "Cadrage amont et prototypage d'un MVP d'application interne métier.",
+      [
+        "Product Owner",
+        "Design Thinking",
+        "Figma",
+        "UX / UI",
+        "Backlog Kanban"
       ]
     ],
     [
@@ -93,6 +110,15 @@ window.CV_DATA = {
         "Portefeuille +50 offres Défense multi-milieux, budgets jusqu'à >1Md€ ; pilotage financier RC/NRC, optimisation marge.",
         "Industrialisation Excel/VBA de la gestion des risques (ROR) : 3h → 15 min par offre (-92%).",
         "RETEX stratégique mandaté par la GBU ISR, rapport CODIR ; « au-dessus des attentes sur 7 livrables / 10 »."
+      ],
+      "Support bid management sur un portefeuille d'offres Défense multi-milieux à forts enjeux financiers.",
+      [
+        "PMO",
+        "Bid Management",
+        "Pilotage financier RC / NRC",
+        "Excel / VBA",
+        "Gestion des risques (ROR)",
+        "RETEX CODIR"
       ]
     ],
     [
@@ -103,6 +129,14 @@ window.CV_DATA = {
       [
         "Double rôle PO + Coach Agile sur 2 équipes ; cérémonies Scrum, User Stories, critères d'acceptation, tests Postman.",
         "Seul PO ayant livré ses 2 équipes (sur 5), MVP < 2 mois ; félicitations jury (Lead Tech Capgemini + Expert Cyber Orange)."
+      ],
+      "Double rôle PO + Coach Agile sur la livraison d'un CRM sécurisé pour un client grand compte.",
+      [
+        "Product Owner",
+        "Coaching Agile",
+        "Scrum",
+        "User Stories",
+        "Tests Postman"
       ]
     ],
     [
@@ -114,6 +148,13 @@ window.CV_DATA = {
         "Pilotage intégralité du cycle locatif courte durée (AirBnB) en autonomie totale.",
         "Coordination logistique, maintenance, asset management et interface unique propriétaires/locataires.",
         "Taux d'occupation >90% en période haute, taux de satisfaction 88%."
+      ],
+      "Gestion d'actifs locatifs courte durée en autonomie totale, du cycle locatif à la relation client.",
+      [
+        "Asset Management",
+        "Coordination logistique",
+        "Relation client",
+        "Ops AirBnB"
       ]
     ],
     [
@@ -124,6 +165,13 @@ window.CV_DATA = {
       [
         "Stratégie export marchés émergents asiatiques, management équipe multiculturelle de 5, appels d'offres SAP Ariba.",
         "Part export 5% → 20% du CA (~15M$ en 2019) ; poste exercé 100% en anglais."
+      ],
+      "Développement commercial export sur marchés émergents asiatiques, poste exercé 100% en anglais.",
+      [
+        "Business Dev International",
+        "Management interculturel",
+        "Appels d'offres SAP Ariba",
+        "Export"
       ]
     ],
     [
@@ -134,6 +182,13 @@ window.CV_DATA = {
       [
         "Création écosystème digital from-scratch, SEO/SEA, lead generation zone francophone.",
         "Gestion budget publicitaire 24k$/an Google Ads ; poste exercé 90% en anglais."
+      ],
+      "Création d'un écosystème digital from-scratch pour la conquête de la zone francophone.",
+      [
+        "Stratégie digitale",
+        "SEO / SEA",
+        "Google Ads",
+        "Lead Generation"
       ]
     ],
     [
@@ -144,6 +199,14 @@ window.CV_DATA = {
       [
         "MOE refonte e-commerce (sponsor PDG), chemin critique MS Project, SEO/SEA 30 k€/an, reporting CODIR.",
         "Trafic +196% · conversion +23% sur 2 ans, livré dans les jalons."
+      ],
+      "MOE d'une refonte e-commerce sponsorisée par la direction générale.",
+      [
+        "Chef de projet",
+        "Business Analysis",
+        "MS Project",
+        "SEO / SEA",
+        "Reporting CODIR"
       ]
     ],
     [
@@ -154,6 +217,13 @@ window.CV_DATA = {
       [
         "Coordination refonte site internet multilingue (supervision prestataires, traducteurs) et social media bilingue EN/FR.",
         "Reporting mensuel CODIR et recommandation LinkedIn client."
+      ],
+      "Coordination d'une refonte web multilingue et du social media bilingue à l'international.",
+      [
+        "Webmarketing",
+        "Coordination prestataires",
+        "Social Media",
+        "International"
       ]
     ]
   ],
@@ -279,7 +349,7 @@ window.CV_DATA = {
     [
       "2024",
       "Certified Agile Master (Scrum / Kanban)",
-      "—"
+      ""
     ],
     [
       "2024",

@@ -2,11 +2,12 @@
 
 Turn one content library into any career deliverable. Edit content **once** in `../library/`; every output re-renders.
 
-## Chosen design — **B · Plum Sidebar** (deep aubergine)
+## Two premium templates (by purpose) + ATS
 Master files (edit these, they're the canonical CVs):
-- `designs/cv-b.html` — **premium CV** (dark-aubergine sidebar + light main, fits 1 A4).
+- `designs/cv-a.html` — **Dossier de compétences générique** (header band, multi-page ≤3 A4). The default `--variant premium` with **no offer**. For ESN / sociétés de portage / placement en indépendant: full 9-experience parcours with context + tech stack per mission.
+- `designs/cv-b.html` — **CV ciblé** (deep-aubergine sidebar, 1 A4). The `--variant premium` **with an offer**: tailored, 4 key experiences, offer keywords.
 - `designs/cv-ats.html` — **ATS CV** (single-column, selectable text, parser-safe, 1 A4).
-- `designs/data.js` — content for both (mirrors `../library/`; v1 render.js will generate it).
+- `designs/data.js` — design-preview snapshot; **auto-regenerated** from `../library/` on every generic render (do not hand-edit).
 - `designs/base.css` — A4 page shell + print rules. Palette lives per-file (`:root`).
 - `templates/lettre.html` — cover letter (fills `{{OFFER_*}}` slots).
 - `templates/pitch.html` — Niveau 1 elevator one-pager.
@@ -35,7 +36,7 @@ A4 HTML → print-to-PDF (browser Ctrl-P, or Playwright headless via `--pdf`). N
 ATS variant stays single-column / selectable-text so parsers extract cleanly.
 
 ## Pick a design
-Open `designs/gallery.html` → preview 10 light premium themes with real data → note the chosen `theme-NN` → set it as the default in `styles/print-a4.css`.
+Open `designs/gallery2.html` → preview the archetypes (A,C,D,E,F) with real data. Chosen: A (Dossier générique) + B (CV ciblé).
 
 ## Roadmap
 - v0 (now): profile.json injection, ATS template, design gallery.
