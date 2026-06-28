@@ -36,7 +36,7 @@ h2{ font-size:10pt; text-transform:uppercase; letter-spacing:.9px; color:var(--a
     <div class="section"><h2>Résultats clés</h2><div class="metrics" id="metrics"></div></div>
     <div class="section"><h2>Expérience</h2><div id="exp"></div></div>
     <div class="section cols">
-      <div><h2>Compétences</h2><div class="tags" id="skills"></div></div>
+      <div><h2>Compétences par domaine</h2><div id="skills-grouped"></div></div>
       <div><h2>Formation & Langues</h2><div id="edu"></div></div>
     </div>
   </div>
@@ -49,6 +49,11 @@ $("contact").innerHTML=d.contact.map(([_,t,h])=>h?`<a href="${h}">${t}</a>`:`<sp
 $("summary").textContent=d.summary;
 $("metrics").innerHTML=d.metrics.map(([v,l,c])=>`<div class="metric"><b>${v}</b><span>${l} · ${c}</span></div>`).join("");
 $("exp").innerHTML=d.experience.map(([r,o,dt,loc,b])=>`<div class="exp"><div class="exp-head"><div class="exp-role"><b>${r}</b> — ${o}</div><div class="exp-meta">${dt} · ${loc}</div></div><ul>${b.map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
-$("skills").innerHTML=d.skillsFlat.map(s=>`<span class="tag">${s}</span>`).join("");
+$("skills-grouped").innerHTML=d.skillGroups.map(([g,arr])=>`
+  <div style="margin-bottom: 7pt; page-break-inside:avoid;">
+    <b style="color: var(--accent2); font-size: 8.2pt; display: block; margin-bottom: 2.5pt; text-transform: uppercase; letter-spacing: 0.5px;">${g}</b>
+    <div class="tags">${arr.map(s=>`<span class="tag">${s}</span>`).join("")}</div>
+  </div>
+`).join("");
 $("edu").innerHTML=d.education.map(([y,t,s])=>`<div class="kv"><b>${y}</b> · ${t}${s?" — "+s:""}</div>`).join("")+d.languages.map(([l,v])=>`<div class="kv"><b>${l}</b> — ${v}</div>`).join("");
 </script></body></html>
