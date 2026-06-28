@@ -22,12 +22,12 @@ Pour sécuriser le delivery d'agents IA, trois piliers manquaient :
 3. Une boucle de rétroaction cumulative (Self-feeding Memory) pour capitaliser sur chaque projet.
 
 ## 4. Approche
-Concevoir un **System Harness** reposant sur les règles globales du coffre fort (Borg Vault), intégrant une boucle de critique contradictoire systématique (Quality Loop / QLoop) et des scripts d'initialisation et de mise à jour automatique de l'outillage.
+Concevoir un **System Harness** reposant sur les règles globales du coffre fort (Knowledge Vault), intégrant une boucle de critique contradictoire systématique (Quality Loop / QLoop) et des scripts d'initialisation et de mise à jour automatique de l'outillage.
 
 ## 5. Actions
 - **Adversarial AI & QLoop** : Intégration systématique de la boucle de critique contradictoire (Devil's Advocate). Chaque livrable (code, CV, étude de cas) est auto-critiqué, noté sur une grille de critères stricts et modifié jusqu'à atteindre un score mini >= 9.5/10.
 - **Gouvernance & AI Contract** : Application des règles du Vault (stack-contract) via l'outil de gestion Dolt-backed `beads` (`bd prime`, `bd claim`, `bd close`), assurant la traçabilité complète de chaque action.
-- **Boucle d'Apprentissage IA** : Alimentation continue d'une base de connaissances partagée (Borg Vault) qui capitalise sur les recherches et RETEX de chaque session, créant une mémoire commune inter-projets.
+- **Boucle d'Apprentissage IA** : Alimentation continue d'une base de connaissances partagée (Knowledge Vault) qui capitalise sur les recherches et RETEX de chaque session, créant une mémoire commune inter-projets.
 - **Automatisation & Templates** : Écriture de scripts Bun/Node de mise à jour de l'outillage, templates d'initialisation de projets et moteurs de compilation dynamique de livrables (CV, LM, Pitches).
 
 ## 6. Résultats
