@@ -26,7 +26,7 @@ Concevoir un **System Harness** reposant sur les règles globales du coffre fort
 
 ## 5. Actions
 - **Adversarial AI & QLoop** : Intégration systématique de la boucle de critique contradictoire (Devil's Advocate). Chaque livrable (code, CV, étude de cas) est auto-critiqué, noté sur une grille de critères stricts et modifié jusqu'à atteindre un score mini >= 9.5/10.
-- **Gouvernance & AI Contract** : Application des règles du Vault (stack-contract) via l'outil de gestion Dolt-backed `beads` (`bd prime`, `bd claim`, `bd close`), assurant la traçabilité complète de chaque action.
+- **Gouvernance & AI Contract** : Application des règles de l'AI Contract (stack-contract) pour maintenir un backlog sécurisé et auditable à tout instant, rendant chaque action traçable de bout en bout.
 - **Boucle d'Apprentissage IA** : Alimentation continue d'une base de connaissances partagée (Knowledge Vault) qui capitalise sur les recherches et RETEX de chaque session, créant une mémoire commune inter-projets.
 - **Automatisation & Templates** : Écriture de scripts Bun/Node de mise à jour de l'outillage, templates d'initialisation de projets et moteurs de compilation dynamique de livrables (CV, LM, Pitches).
 
