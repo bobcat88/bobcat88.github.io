@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johan Proust — CV (C · Timeline)</title>
+<link rel="stylesheet" href="base.css">
+<style>
+:root{ --ink:#1f1d27; --muted:#615c75; --accent:#7c3aed; --accent2:#5b21b6; --soft:#f5f0fe; --rule:#e7dffa; }
+.page{ padding:14mm 15mm 13mm; }
+.head{ text-align:center; border-bottom:2px solid var(--accent); padding-bottom:9pt; }
+.head h1{ font-size:25pt; font-weight:800; color:var(--accent2); letter-spacing:.4px; }
+.head .title{ font-size:10.5pt; font-weight:600; margin-top:3pt; }
+.head .brand{ font-size:9.4pt; font-style:italic; color:var(--muted); margin-top:4pt; }
+.head .contact{ display:flex; justify-content:center; flex-wrap:wrap; gap:3pt 14pt; margin-top:6pt; font-size:8.7pt; color:var(--muted); }
+.head .contact a{ color:var(--accent2); text-decoration:none; }
+h2{ font-size:9.8pt; text-transform:uppercase; letter-spacing:.9px; color:var(--accent); margin:12pt 0 7pt; }
+.summary{ text-align:center; max-width:165mm; margin:9pt auto 0; font-size:9.6pt; }
+.metrics{ display:grid; grid-template-columns:repeat(3,1fr); gap:5pt; }
+.metric{ text-align:center; background:var(--soft); border-radius:6px; padding:6pt 5pt; }
+.metric b{ display:block; color:var(--accent2); font-size:12pt; } .metric span{ font-size:8pt; color:var(--muted); }
+/* timeline */
+.tl{ position:relative; margin-left:30mm; padding-left:8mm; border-left:2px solid var(--rule); }
+.tl .item{ position:relative; padding-bottom:9pt; page-break-inside:avoid; }
+.tl .dot{ position:absolute; left:calc(-8mm - 5.5pt); top:2pt; width:9pt; height:9pt; border-radius:50%; background:var(--accent); border:2px solid #fff; box-shadow:0 0 0 1.5px var(--accent); }
+.tl .date{ position:absolute; left:-38mm; top:1pt; width:28mm; text-align:right; font-size:8.2pt; color:var(--accent2); font-weight:600; }
+.tl .loc{ font-size:7.6pt; color:var(--muted); }
+.tl .role b{ color:var(--accent2); } .tl .org{ color:var(--muted); font-size:9pt; }
+.tl ul{ list-style:none; margin-top:3pt; } .tl li{ position:relative; padding-left:10pt; margin-bottom:1.5pt; font-size:9pt; }
+.tl li::before{ content:""; position:absolute; left:0; top:4.5pt; width:3.5pt; height:3.5pt; border-radius:50%; background:var(--accent); }
+.foot{ display:grid; grid-template-columns:1.4fr 1fr; gap:16pt; margin-top:12pt; }
+.tags{ display:flex; flex-wrap:wrap; gap:3pt; } .tag{ background:var(--soft); color:var(--accent2); border-radius:4px; padding:2pt 8pt; font-size:8.2pt; }
+.kv{ font-size:8.7pt; margin-bottom:2pt; } .kv b{ color:var(--accent2); }
+</style></head><body>
+<div class="toolbar no-print"><a href="gallery2.html">← Gallery</a><button onclick="print()">Print / PDF</button></div>
+<main class="page">
+  <div class="head"><h1 id="name"></h1><div class="title" id="title"></div><div class="brand" id="brand"></div><div class="contact" id="contact"></div></div>
+  <p class="summary" id="summary"></p>
+  <h2 style="text-align:center">Résultats clés</h2><div class="metrics" id="metrics"></div>
+  <h2>Parcours</h2><div class="tl" id="tl"></div>
+  <div class="foot">
+    <div><h2>Compétences</h2><div class="tags" id="skills"></div></div>
+    <div><h2>Formation & Langues</h2><div id="edu"></div></div>
+  </div>
+</main>
+<script src="data.js"></script>
+<script>
+const d=window.CV_DATA, $=id=>document.getElementById(id);
+$("name").textContent=d.name; $("title").textContent=d.title; $("brand").textContent="« "+d.brand+" »"; $("summary").textContent=d.summary;
+$("contact").innerHTML=d.contact.map(([_,t,h])=>h?`<a href="${h}">${t}</a>`:`<span>${t}</span>`).join("");
+$("metrics").innerHTML=d.metrics.map(([v,l,c])=>`<div class="metric"><b>${v}</b><span>${l} · ${c}</span></div>`).join("");
+$("tl").innerHTML=d.experience.map(([r,o,dt,loc,b])=>`<div class="item"><div class="dot"></div><div class="date">${dt}<div class="loc">${loc}</div></div><div class="role"><b>${r}</b> <span class="org">— ${o}</span></div><ul>${b.map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
+$("skills").innerHTML=d.skillsFlat.map(s=>`<span class="tag">${s}</span>`).join("");
+$("edu").innerHTML=d.education.map(([y,t,s])=>`<div class="kv"><b>${y}</b> · ${t}${s?" — "+s:""}</div>`).join("")+d.languages.map(([l,v])=>`<div class="kv"><b>${l}</b> — ${v}</div>`).join("");
+</script></body></html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johan Proust — CV ATS</title>
+<link rel="stylesheet" href="base.css">
+<style>
+/* ATS-safe sibling of B: single column, selectable text, no text over color blocks,
+   no multi-column flow → parsers extract cleanly. Aubergine accent on white. */
+:root{ --ink:#1f1b22; --muted:#555; --accent:#6e2b74; --plum:#34123a; --rule:#d9c9db; --soft:#f5eef5; }
+.page{ padding:10mm 14mm; font-size:9.5pt; }
+.nm{ font-size:20pt; font-weight:800; color:var(--plum); letter-spacing:.2px; }
+.title{ font-size:10.5pt; font-weight:600; color:var(--ink); margin-top:2pt; }
+.contact{ font-size:8.8pt; color:var(--muted); margin-top:4pt; }
+.contact a{ color:var(--accent); text-decoration:none; }
+h2{ font-size:9.6pt; text-transform:uppercase; letter-spacing:.6px; color:var(--accent); border-bottom:1px solid var(--rule); padding-bottom:2pt; margin:6pt 0 3.5pt; }
+p.sum{ font-size:9.6pt; }
+.metrics{ margin:0; padding-left:0; list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:0 18pt; } .metrics li{ font-size:9.1pt; margin-bottom:1pt; padding-left:11pt; position:relative; }
+.metrics li::before{ content:"•"; position:absolute; left:2pt; color:var(--accent); }
+.metrics b{ color:var(--plum); }
+.exp{ margin-bottom:5pt; page-break-inside:avoid; }
+.exp-head{ display:flex; justify-content:space-between; align-items:baseline; gap:8pt; }
+.exp-role{ font-weight:700; } .exp-role .org{ font-weight:600; color:var(--accent); }
+.exp-meta{ font-size:8.8pt; color:var(--muted); white-space:nowrap; }
+.exp ul{ margin:1.5pt 0 0 0; padding-left:14pt; } .exp li{ font-size:9pt; margin-bottom:0.5pt; line-height:1.34; }
+.skline{ font-size:9.4pt; } .skline b{ color:var(--plum); }
+.kv{ font-size:9.3pt; margin-bottom:1.5pt; } .kv b{ color:var(--plum); }
+.two{ display:grid; grid-template-columns:1fr 1fr; gap:2pt 18pt; }
+</style></head><body>
+<div class="toolbar no-print"><a href="gallery2.html">← Gallery</a><button onclick="print()">Print / PDF</button></div>
+<main class="page">
+  <div class="nm" id="name"></div>
+  <div class="title" id="title"></div>
+  <div class="contact" id="contact"></div>
+
+  <h2>Profil</h2><p class="sum" id="summary"></p>
+  <h2>Résultats clés</h2><ul class="metrics" id="metrics"></ul>
+  <h2>Compétences</h2><div id="skills"></div>
+  <h2>Expérience professionnelle</h2><div id="exp"></div>
+  <h2>Formation</h2><div class="two" id="edu"></div>
+  <h2>Langues</h2><div id="lang"></div>
+</main>
+<script src="data.js?b=2"></script>
+<script>
+const d=window.CV_DATA, $=id=>document.getElementById(id);
+$("name").textContent=d.name; $("title").textContent=d.title;
+$("contact").innerHTML=d.contact.map(([k,t,h])=>`${k} : ${h?`<a href="${h}">${t}</a>`:t}`).join(" &nbsp;|&nbsp; ");
+$("summary").textContent=d.summary;
+$("metrics").innerHTML=d.metrics.map(([v,l,c])=>`<li><b>${v}</b> — ${l} (${c})</li>`).join("");
+$("skills").innerHTML=d.skillGroups.map(([g,arr])=>`<div class="skline"><b>${g} :</b> ${arr.join(", ")}</div>`).join("");
+// ATS keeps keyword density; trim only the 2 oldest roles to 1 bullet to fit 1 page
+$("exp").innerHTML=d.experience.map(([r,o,dt,loc,b],i)=>{const bl=i>=4?b.slice(0,1):b;return `<div class="exp"><div class="exp-head"><div class="exp-role">${r} <span class="org">— ${o}</span></div><div class="exp-meta">${dt} · ${loc}</div></div><ul>${bl.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;}).join("");
+$("edu").innerHTML=d.education.map(([y,t,s])=>`<div class="kv"><b>${y}</b> · ${t}${s?" — "+s:""}</div>`).join("");
+$("lang").innerHTML=`<div class="kv">${d.languages.map(([l,v])=>`<b>${l}</b> — ${v}`).join(" &nbsp;·&nbsp; ")}</div>`;
+</script></body></html>

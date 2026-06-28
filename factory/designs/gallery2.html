@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV Wireframes — pick a layout (Project Phoenix)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; } body{ font-family:Inter,sans-serif; background:#f4f2f8; color:#1c1b22; padding:28px; }
+  h1{ font-size:22px; } .sub{ color:#5b5670; font-size:13px; margin:6px 0 22px; max-width:820px; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:24px; }
+  .card{ background:#fff; border:1px solid #e6e2ee; border-radius:12px; overflow:hidden; box-shadow:0 1px 8px rgba(91,33,182,.06); }
+  .frame{ position:relative; height:420px; overflow:hidden; border-bottom:1px solid #eee; background:#e9e9ec; }
+  .frame iframe{ width:794px; height:1123px; border:0; transform:scale(.52); transform-origin:top left; pointer-events:none; }
+  .num{ position:absolute; top:8px; left:8px; background:rgba(76,29,107,.85); color:#fff; font-size:11px; padding:2px 9px; border-radius:20px; z-index:2; font-weight:600; }
+  .meta{ padding:12px 15px; display:flex; justify-content:space-between; align-items:center; gap:8px; }
+  .meta .name{ font-weight:700; font-size:14px; } .meta .desc{ color:#6b6480; font-size:11.5px; margin-top:2px; }
+  .actions{ display:flex; gap:6px; } .actions a{ font-size:12px; text-decoration:none; padding:6px 11px; border-radius:6px; border:1px solid #d8d2e6; color:#5b21b6; }
+  .actions a.print{ background:#6d28d9; color:#fff; border-color:#6d28d9; }
+</style></head><body>
+  <h1>CV — choisis un <b>wireframe</b></h1>
+  <p class="sub">6 mises en page structurellement différentes (pas des variantes de couleur). Palette violet/aubergine — modifiable ensuite. Mêmes données réelles, A4, impression PDF en un clic. Dis-moi la lettre retenue → elle devient le design du factory, puis on ajuste la palette.</p>
+  <div class="grid" id="grid"></div>
+<script>
+const A=[
+  ["a","Header Band","Bandeau violet pleine largeur (nom/titre en blanc), corps clair une colonne — présence exécutive forte"],
+  ["b","Plum Sidebar","Colonne latérale aubergine foncée (contact/compétences/formation), corps clair — deux colonnes premium"],
+  ["c","Timeline","Frise verticale du parcours, dates en marge, pastilles — narratif et progression"],
+  ["d","Modular Cards","Grille de cartes type dashboard (stats, compétences, expérience) — moderne, structuré"],
+  ["e","Editorial Minimal","Grand nom serif, filet violet, beaucoup de blanc — sobre, haut de gamme"],
+  ["f","Split Banner","Bandeau monogramme + rail lavande à gauche (faits/compétences) — équilibré, identitaire"]
+];
+document.getElementById("grid").innerHTML=A.map(([k,name,desc])=>`
+  <div class="card">
+    <div class="frame"><span class="num">${k.toUpperCase()}</span><iframe src="cv-${k}.html" loading="lazy" scrolling="no"></iframe></div>
+    <div class="meta"><div><div class="name">${k.toUpperCase()} · ${name}</div><div class="desc">${desc}</div></div>
+      <div class="actions"><a href="cv-${k}.html" target="_blank">Ouvrir</a><a class="print" href="cv-${k}.html" target="_blank">Print</a></div></div>
+  </div>`).join("");
+</script></body></html>

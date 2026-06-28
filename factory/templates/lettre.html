@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johan Proust — Lettre de motivation</title>
+<link rel="stylesheet" href="../designs/base.css">
+<style>
+/* A4 cover letter — matches CV B aubergine. Factory fills the {{OFFER_*}} slots. */
+:root{ --ink:#23202a; --muted:#5d5666; --accent:#6e2b74; --plum:#34123a; --rule:#e3d6e5; }
+.page{ padding:18mm 20mm; font-size:10.6pt; line-height:1.5; }
+.head{ display:flex; justify-content:space-between; align-items:flex-start; border-bottom:2px solid var(--accent); padding-bottom:8pt; }
+.head .nm{ font-size:18pt; font-weight:800; color:var(--plum); }
+.head .ttl{ font-size:9.6pt; color:var(--accent); font-weight:600; margin-top:2pt; }
+.head .ct{ text-align:right; font-size:8.8pt; color:var(--muted); line-height:1.5; } .head .ct a{ color:var(--accent); text-decoration:none; }
+.meta{ display:flex; justify-content:space-between; margin-top:14pt; font-size:9.6pt; }
+.recipient b{ color:var(--plum); }
+.subject{ margin-top:14pt; font-weight:700; color:var(--plum); }
+.body{ margin-top:10pt; } .body p{ margin-bottom:8pt; text-align:justify; }
+.body .accent{ color:var(--accent); font-weight:600; }
+.sign{ margin-top:14pt; } .sign .name{ font-weight:700; color:var(--plum); margin-top:2pt; }
+.tip{ background:#f7eef7; border-left:3px solid var(--accent); padding:6pt 9pt; font-size:8.6pt; color:var(--muted); margin-top:16pt; }
+@media print{ .tip{ display:none; } }
+</style></head><body>
+<div class="toolbar no-print"><a href="../designs/gallery2.html">← Gallery</a><button onclick="print()">Print / PDF</button></div>
+<main class="page">
+  <div class="head">
+    <div><div class="nm" id="nm"></div><div class="ttl" id="ttl"></div></div>
+    <div class="ct" id="ct"></div>
+  </div>
+  <div class="meta">
+    <div class="recipient"><b id="recip">{{OFFER_RECIPIENT}}</b><br><span id="company">{{OFFER_COMPANY}}</span></div>
+    <div id="place">Brest, le {{DATE}}</div>
+  </div>
+  <div class="subject" id="subject">Objet : candidature — {{OFFER_TITLE}}</div>
+  <div class="body" id="body">
+    <p>Madame, Monsieur,</p>
+    <p>{{OFFER_HOOK — pourquoi cette organisation / ce poste, 1-2 phrases liées à l'offre}}</p>
+    <p>Senior PMO et Product Owner avec <span class="accent">13 ans d'expérience</span> dont 7 à l'international, j'interviens sur tout le cycle projet — du cadrage stratégique au pilotage et à la livraison. {{OFFER_FIT — 2-3 réalisations de la bibliothèque qui matchent les besoins de l'offre}}</p>
+    <p>{{OFFER_VALUE — ce que j'apporte concrètement : posture, outillage, livraison ; problèmes avant outils, résultats avant missions}}</p>
+    <p>Je serais ravi d'échanger sur la manière dont je peux contribuer à {{OFFER_COMPANY}}. Disponible {{AVAILABILITY}}, j'attache plus d'importance à l'adéquation de la mission qu'au format.</p>
+    <p>Dans l'attente de votre retour, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.</p>
+  </div>
+  <div class="sign"><span>Cordialement,</span><div class="name" id="sign"></div></div>
+  <div class="tip no-print">⚙️ Factory : remplir les {{OFFER_*}} depuis <code>factory/offers/&lt;offre&gt;.md</code> + <code>library/achievements.md</code>. Garde ≤ 1 page, 4-5 paragraphes, résultats-first.</div>
+</main>
+<script src="../designs/data.js?b=3"></script>
+<script>
+const d=window.CV_DATA, $=id=>document.getElementById(id);
+$("nm").textContent=d.name; $("ttl").textContent="Chef de projet senior · PMO · Product Owner";
+$("ct").innerHTML=d.contact.map(([k,t,h])=>h?`<a href="${h}">${t}</a>`:t).join("<br>");
+$("sign").textContent=d.name;
+</script></body></html>

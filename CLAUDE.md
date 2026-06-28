@@ -41,3 +41,79 @@ This project is indexed by GitNexus as **bobcat88.github.io** (33 symbols, 27 re
 | Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
 
 <!-- gitnexus:end -->
+
+# CLAUDE.md — johanproust.me (Project Phoenix site)
+
+Up: [[AI Agents Vault]] · Rules: [[Stack Contract]] · [[AI Collaboration Protocol]] · [[AI Coding Rules]]
+
+#ai-agents #claude-code #borg #project/phoenix #stack-core
+
+## Project Context
+
+This repo is the **live site** of Johan Proust (GitHub Pages → johanproust.me), Niveau 4 of **Project Phoenix** — the professional-identity ecosystem. Parent docs root: `../` (CV ATS, CV Premium, dossier de compétences, portfolio). Project skill + full Phoenix context: `../CLAUDE.md`.
+
+Positioning the site must express: *"J'aide les organisations à reprendre le contrôle de systèmes complexes."* Answer Qui suis-je / Comment je réfléchis / Pourquoi ça fonctionne / Pourquoi différent / Quels problèmes je résous. Sell a capability, not a job title.
+
+## Read (shared vault — no local copies)
+
+- `AI-Agents/_shared/AI Coding Rules.md`
+- `AI-Agents/_shared/stack-contract.md`
+- `AI-Agents/_shared/mcp-registry.md`
+- `AI-Agents/_shared/hook-registry.md`
+- `300 Entities/Projects/Portfolio - Condensed Knowledge.md`
+- `400 Resources/Tech/Mandatory AI Development Stack.md`
+
+Vault root: `/home/_johan/Documents/Borg/`. Shared fallback: `/home/_johan/Documents/Borg/AI-Agents/_shared/`.
+
+## MCP Rules
+
+- Core MCPs: Memory, Context7, GitNexus (this repo is indexed — see block above).
+- Enable Playwright for UI/visual verification of the site.
+- Use fully qualified MCP tool names in durable docs/skills. Keep secrets out of MCP config.
+- GitNexus discipline (above) is mandatory: `impact` before symbol edits, `detect_changes` before commits, honor HIGH/CRITICAL warnings.
+
+Use Beads, GitNexus, RTK, Caveman Full, GSD Core where supported. Durable facts → Borg vault, not chat.
+
+## AI Coding Rules
+
+Follow [AI Coding Rules](file:///home/_johan/Documents/Borg/AI-Agents/_shared/AI%20Coding%20Rules.md): SOLID/SRP, DDD, DRY, KISS, SOTA. Read surrounding code first, small explicit changes, verify before claiming done. `index.html` is large — edit precisely, don't rewrite wholesale.
+
+> [!IMPORTANT]
+> Before any UI/frontend change, read `/home/_johan/Documents/Borg/400 Resources/Tech/UI/UI UX Best Practices.md` and invoke the `ui-design-rules` skill (mandatory per global rules).
+
+## Quality Loop
+
+On `/QLoop`, an iterative quality loop request, or "improve until target score": follow the [Quality Loop Protocol](file:///home/_johan/Documents/Borg/AI-Agents/_shared/qloop-protocol.md). Silent draft → Devil's Advocate → score → refine until ≥ 9.0/10 (max 3 iters) → present with `[QLoop Result]` summary. Higher domain threshold wins.
+
+## Mission Closure
+
+On mission closure / RETEX / sponsor report / handoff / gains-ROI / closing audit: follow the [Mission Closure RETEX Protocol](file:///home/_johan/Documents/Borg/AI-Agents/_shared/mission-closure-retex-protocol.md). Do not close until mini score ≥ 9.5/10 or blocker is explicit.
+
+## Phoenix Principles (positioning hygiene)
+
+Every section of the site obeys: problems **before** tools · results **before** missions · value **before** responsibilities. Keep the site aligned with the other five Phoenix levels.
+
+## Applications privacy rule (MANDATORY)
+
+Tailored job applications **NEVER** live in this public repo. This repo is served via GitHub Pages — anything here is world-readable. Per-company applications go in the **PRIVATE** companion repo `career-applications` (`github.com/bobcat88/career-applications`), surfaced here through a **gitignored symlink** `application/`.
+
+- **Public** (`bobcat88.github.io`): factory, `library/`, master CV designs. Generic, shareable.
+- **Private** (`career-applications`): per-company `offer.md`, tailored CVs (premium + ATS), lettres, pitches, gap analyses, source captures. **Anything naming a target company or tailored to a specific offer.**
+
+Never commit `application/` to this repo. `.gitignore` contains a **bare** `application` line — it must stay bare: `application/` (trailing slash) only matches a real directory and would **fail to ignore the symlink**, leaking private data.
+
+### Recreate the symlink (if missing)
+```bash
+cd bobcat88.github.io
+ln -s ../career-applications application     # repos are siblings under Projects/CV/
+git check-ignore application                 # must print: application
+git status --porcelain | grep application    # must print nothing (ignored)
+```
+
+### Fresh clone / new machine
+```bash
+git clone https://github.com/bobcat88/bobcat88.github.io.git
+git clone https://github.com/bobcat88/career-applications.git   # private
+cd bobcat88.github.io && ln -s ../career-applications application
+```
+The symlink target is **relative** (`../career-applications`) so both repos move together safely. Mirror of this rule lives in `career-applications/CLAUDE.md`.

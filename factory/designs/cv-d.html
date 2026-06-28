@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johan Proust — CV (D · Modular Cards)</title>
+<link rel="stylesheet" href="base.css">
+<style>
+:root{ --ink:#1e1c26; --muted:#615c74; --accent:#7c3aed; --accent2:#5b21b6; --soft:#f5f0fe; --line:#ece4fb; --bg:#faf8ff; }
+.page{ background:var(--bg); padding:13mm 13mm; }
+.head{ display:flex; justify-content:space-between; align-items:flex-end; gap:10pt; padding-bottom:8pt; border-bottom:3px solid var(--accent); }
+.head h1{ font-size:24pt; font-weight:800; color:var(--accent2); line-height:1; }
+.head .title{ font-size:10pt; font-weight:600; color:var(--accent); margin-top:3pt; }
+.head .brand{ font-size:9pt; font-style:italic; color:var(--muted); margin-top:4pt; max-width:120mm; }
+.head .contact{ text-align:right; font-size:8.4pt; color:var(--muted); line-height:1.55; } .head .contact a{ color:var(--accent2); text-decoration:none; display:block; }
+.card{ background:#fff; border:1px solid var(--line); border-radius:9px; padding:7pt 9pt; box-shadow:0 1px 4px rgba(91,33,182,.05); }
+.card h2{ font-size:9pt; text-transform:uppercase; letter-spacing:.8px; color:var(--accent); margin-bottom:5pt; }
+.row{ display:grid; gap:7pt; margin-top:9pt; }
+.r1{ grid-template-columns:1fr; } .r-metrics{ grid-template-columns:repeat(3,1fr); }
+.r-split{ grid-template-columns:1.5fr 1fr; align-items:start; }
+.metric{ background:var(--soft); border-radius:7px; padding:6pt 7pt; text-align:center; }
+.metric b{ display:block; color:var(--accent2); font-size:12pt; } .metric span{ font-size:7.8pt; color:var(--muted); }
+.exp{ margin-bottom:6.5pt; } .exp:last-child{ margin-bottom:0; }
+.exp-head{ display:flex; justify-content:space-between; align-items:baseline; gap:6pt; }
+.exp-role b{ color:var(--accent2); font-size:9.6pt; } .exp-meta{ font-size:8pt; color:var(--muted); white-space:nowrap; }
+.exp ul{ list-style:none; margin-top:2pt; } .exp li{ position:relative; padding-left:9pt; margin-bottom:1.2pt; font-size:8.8pt; }
+.exp li::before{ content:""; position:absolute; left:0; top:4pt; width:3pt; height:3pt; border-radius:50%; background:var(--accent); }
+.skg{ margin-bottom:5pt; } .skg b{ font-size:8.3pt; color:var(--accent2); display:block; margin-bottom:2pt; }
+.tags{ display:flex; flex-wrap:wrap; gap:2.5pt; } .tag{ background:var(--soft); color:var(--accent2); border-radius:4px; padding:1.5pt 6pt; font-size:7.8pt; }
+.kv{ font-size:8.3pt; margin-bottom:1.5pt; } .kv b{ color:var(--accent2); }
+</style></head><body>
+<div class="toolbar no-print"><a href="gallery2.html">← Gallery</a><button onclick="print()">Print / PDF</button></div>
+<main class="page">
+  <div class="head">
+    <div><h1 id="name"></h1><div class="title" id="title"></div><div class="brand" id="brand"></div></div>
+    <div class="contact" id="contact"></div>
+  </div>
+  <div class="row r1"><div class="card"><h2>Profil</h2><p id="summary" style="font-size:9.2pt"></p></div></div>
+  <div class="row r-metrics" id="metrics"></div>
+  <div class="row r-split">
+    <div class="card"><h2>Expérience</h2><div id="exp"></div></div>
+    <div style="display:grid; gap:7pt">
+      <div class="card"><h2>Compétences</h2><div id="skills"></div></div>
+      <div class="card"><h2>Formation</h2><div id="edu"></div></div>
+      <div class="card"><h2>Langues</h2><div id="lang"></div></div>
+    </div>
+  </div>
+</main>
+<script src="data.js"></script>
+<script>
+const d=window.CV_DATA, $=id=>document.getElementById(id);
+$("name").textContent=d.name; $("title").textContent=d.title; $("brand").textContent="« "+d.brand+" »"; $("summary").textContent=d.summary;
+$("contact").innerHTML=d.contact.map(([_,t,h])=>h?`<a href="${h}">${t}</a>`:`<div>${t}</div>`).join("");
+$("metrics").innerHTML=d.metrics.map(([v,l,c])=>`<div class="metric"><b>${v}</b><span>${l} · ${c}</span></div>`).join("");
+$("exp").innerHTML=d.experience.map(([r,o,dt,loc,b])=>`<div class="exp"><div class="exp-head"><div class="exp-role"><b>${r}</b> — ${o}</div><div class="exp-meta">${dt} · ${loc}</div></div><ul>${b.map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
+$("skills").innerHTML=d.skillGroups.map(([g,arr])=>`<div class="skg"><b>${g}</b><div class="tags">${arr.map(s=>`<span class="tag">${s}</span>`).join("")}</div></div>`).join("");
+$("edu").innerHTML=d.education.map(([y,t,s])=>`<div class="kv"><b>${y}</b> · ${t}${s?" — "+s:""}</div>`).join("");
+$("lang").innerHTML=d.languages.map(([l,v])=>`<div class="kv"><b>${l}</b> — ${v}</div>`).join("");
+</script></body></html>

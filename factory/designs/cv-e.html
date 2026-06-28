@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johan Proust — CV (E · Editorial Minimal)</title>
+<link rel="stylesheet" href="base.css">
+<style>
+:root{ --ink:#241f2b; --muted:#6c6679; --accent:#6d28d9; --rule:#e6def7; }
+.page{ padding:20mm 20mm 16mm; font-size:10pt; }
+.name{ font-family:"Fraunces",Georgia,serif; font-size:34pt; font-weight:600; line-height:1; letter-spacing:.3px; color:var(--ink); }
+.name span{ color:var(--accent); }
+.title{ font-size:10.5pt; letter-spacing:.5px; color:var(--muted); margin-top:6pt; text-transform:uppercase; }
+.brand{ font-family:"Fraunces",serif; font-size:13pt; font-weight:500; color:var(--accent); margin-top:10pt; max-width:150mm; line-height:1.3; }
+.rule{ height:2px; background:var(--accent); width:34mm; margin:11pt 0; }
+.contact{ display:flex; flex-wrap:wrap; gap:3pt 18pt; font-size:8.8pt; color:var(--muted); }
+.contact a{ color:var(--accent); text-decoration:none; }
+h2{ font-family:"Fraunces",serif; font-size:12pt; font-weight:600; color:var(--ink); margin:15pt 0 6pt; }
+h2::before{ content:"— "; color:var(--accent); }
+p.lead{ font-size:10pt; max-width:165mm; }
+.metrics{ display:grid; grid-template-columns:1fr 1fr; gap:3pt 24pt; }
+.metric{ font-size:9.2pt; padding:2pt 0; border-bottom:1px solid var(--rule); } .metric b{ color:var(--accent); }
+.exp{ margin-bottom:9pt; page-break-inside:avoid; }
+.exp-head{ display:flex; justify-content:space-between; align-items:baseline; }
+.exp-role{ font-weight:600; } .exp-role b{ color:var(--accent); font-weight:600; } .exp-meta{ font-size:8.4pt; color:var(--muted); }
+.exp ul{ list-style:none; margin-top:2.5pt; } .exp li{ padding-left:11pt; position:relative; margin-bottom:1.5pt; font-size:9.2pt; }
+.exp li::before{ content:"·"; position:absolute; left:2pt; color:var(--accent); font-weight:700; }
+.inline{ font-size:9pt; } .inline b{ color:var(--accent); }
+.foot{ display:grid; grid-template-columns:1fr 1fr; gap:18pt; }
+</style></head><body>
+<div class="toolbar no-print"><a href="gallery2.html">← Gallery</a><button onclick="print()">Print / PDF</button></div>
+<main class="page">
+  <div class="name" id="name"></div>
+  <div class="title" id="title"></div>
+  <div class="brand" id="brand"></div>
+  <div class="rule"></div>
+  <div class="contact" id="contact"></div>
+  <h2>Profil</h2><p class="lead" id="summary"></p>
+  <h2>Résultats clés</h2><div class="metrics" id="metrics"></div>
+  <h2>Expérience</h2><div id="exp"></div>
+  <div class="foot">
+    <div><h2>Compétences</h2><p class="inline" id="skills"></p></div>
+    <div><h2>Formation & Langues</h2><div class="inline" id="edu"></div></div>
+  </div>
+</main>
+<script src="data.js"></script>
+<script>
+const d=window.CV_DATA, $=id=>document.getElementById(id);
+$("name").innerHTML=`${d.first} <span>${d.last}</span>`; $("title").textContent=d.title; $("brand").textContent="« "+d.brand+" »"; $("summary").textContent=d.summary;
+$("contact").innerHTML=d.contact.map(([_,t,h])=>h?`<a href="${h}">${t}</a>`:`<span>${t}</span>`).join("");
+$("metrics").innerHTML=d.metrics.map(([v,l,c])=>`<div class="metric"><b>${v}</b> — ${l} (${c})</div>`).join("");
+$("exp").innerHTML=d.experience.map(([r,o,dt,loc,b])=>`<div class="exp"><div class="exp-head"><div class="exp-role"><b>${r}</b> — ${o}</div><div class="exp-meta">${dt} · ${loc}</div></div><ul>${b.map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
+$("skills").innerHTML=d.skillsFlat.join(" · ");
+$("edu").innerHTML=d.education.map(([y,t,s])=>`<div><b>${y}</b> · ${t}${s?" — "+s:""}</div>`).join("")+d.languages.map(([l,v])=>`<div><b>${l}</b> — ${v}</div>`).join("");
+</script></body></html>

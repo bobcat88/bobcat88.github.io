@@ -1,0 +1,67 @@
+{
+  "_comment": "SINGLE SOURCE OF TRUTH for identity. Edit here, every CV re-renders. Project Phoenix.",
+  "identity": {
+    "fullName": "Johan PROUST",
+    "location": "Brest, France",
+    "mobility": "Remote / national / international",
+    "titleAts": ["Chef de projet senior", "PMO", "Program Manager", "Product Owner", "Business Analyst"],
+    "brandDescriptor": "I help organizations regain control of complex systems",
+    "headlineFr": "PMO / Product Owner — je structure ce qui est complexe, je pilote ce qui est risqué, je livre ce qui compte",
+    "headlineEn": "Program Manager / PMO — I help organizations regain control of complex systems"
+  },
+  "contact": {
+    "email": "johanproust@pm.me",
+    "emailAlt": "johanproust@protonmail.com",
+    "phone": "07 45 65 45 82",
+    "phoneE164": "+33 7 45 65 45 82",
+    "linkedin": "https://www.linkedin.com/in/johan-proust/",
+    "portfolio": "https://bobcat88.github.io/",
+    "site": "https://bobcat88.github.io/"
+  },
+  "positioning": {
+    "valueProposition": "J'aide les organisations à reprendre le contrôle de systèmes complexes.",
+    "scope": ["gouvernance", "organisation", "processus", "données", "IA", "équipes", "programmes"],
+    "tagline": "Je transforme des environnements complexes en systèmes pilotables, compréhensibles et évolutifs.",
+    "narrativeThread": "J'apporte gouvernance et structure de delivery dans des environnements radicalement différents et désordonnés — défense/aéro, banque de détail, industrie cross-culturelle, fintech, open source. Cette amplitude prouve que je structure des systèmes, pas des industries.",
+    "principles": ["problèmes avant outils", "résultats avant missions", "valeur avant responsabilités"]
+  },
+  "summary": {
+    "fr": "Senior PMO et Product Owner, 13 ans d'expérience dont 7 ans en Asie, sur tout le cycle projet — du cadrage stratégique (Business Analysis) au pilotage opérationnel (PMO) jusqu'à la livraison produit (Product Ownership). Profil hybride tech × business : structurer un Plan de Développement en COMEX comme coder un outil PMO en Apps Script.",
+    "en": "Senior PMO and Product Owner, 13 years' experience (7 in Asia), across the full project lifecycle — from strategic framing (Business Analysis) to delivery (PMO / Project Management) to product (Product Ownership). Hybrid tech × business profile.",
+    "sectors": ["Défense", "Banque", "Industrie", "Digital"],
+    "experienceYears": 13,
+    "internationalYears": 7
+  },
+  "headlineMetrics": [
+    {"label": "Portefeuilles pilotés", "value": "> 1 Md€", "context": "Défense — Thales ISR"},
+    {"label": "CA Export piloté", "value": "5% → 20% (~15M$)", "context": "Sichuan Shuhan Plastics"},
+    {"label": "Refonte e-commerce", "value": "+196% trafic / +23% conversion", "context": "Diadom"},
+    {"label": "Industrialisation risques", "value": "3h → 15 min / offre (-92%)", "context": "Thales ISR"},
+    {"label": "Gain capacitaire PMO", "value": "440–2760 h/an (~31–135 k€/an)", "context": "Crédit Mutuel Arkéa"}
+  ],
+  "languages": [
+    {"name": "Français", "level": "Natif"},
+    {"name": "Anglais", "level": "Professionnel C1-C2", "note": "Postes exercés 90-100% en anglais sur 7 ans"}
+  ],
+  "education": [
+    {"year": "2014", "title": "Master 2 — Gestion de Projet IT & Business Intelligence", "school": "ESC Montpellier (Bac+5)"},
+    {"year": "2024", "title": "Développeur Cybersécurité", "school": "EPSI Rennes"},
+    {"year": "2024", "title": "Certified Agile Master (Scrum / Kanban)", "school": "—"},
+    {"year": "2024", "title": "Career Essentials in Project Management", "school": "LinkedIn Learning · Microsoft"},
+    {"year": "2023", "title": "Microsoft Project Management", "school": "Microsoft"}
+  ],
+  "compensation": {
+    "freelanceTjm": "465 €/jour",
+    "cdiPackageEstimate": "55–62 k€ brut/an",
+    "cdiBasis": "TJM 465 €/j × ~218 j facturables, net des charges patronales et de la prime de flexibilité freelance — fourchette indicative pour un poste PMO/PM senior (Brest/remote)",
+    "stance": "Ouvert à la discussion — l'adéquation de la mission prime sur le package.",
+    "stanceEn": "Open to discussion — mission fit matters most."
+  },
+  "availability": "Freelance (Velocity Lab — EI) ou CDI",
+  "engagements": [
+    "Missions humanitaires (Cambodge, Chine)",
+    "Gestion portefeuille familial (PnL +35%)",
+    "Veille AI : agents autonomes, LLMs, MCP, prompt engineering",
+    "25+ pays, 7 ans d'expatriation"
+  ]
+}

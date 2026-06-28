@@ -1,0 +1,104 @@
+[
+  {
+    "id": "arkea",
+    "role": "PMO Stratégique / Business Analyst",
+    "company": "Crédit Mutuel Arkéa | Banque de Détail",
+    "period": "Mars 2026 – Présent",
+    "location": "Brest",
+    "bullets": [
+      "Cadre commun de qualification des initiatives du Plan stratégique (12-18 mois), alignant marketing, data, expérience client et process.",
+      "Application PMO sur mesure (Apps Script : Kanban, KPI, jalons, alertes) + POC génération auto de comptes rendus.",
+      "Gain capacitaire estimé 440–2760 h/an (~31–135 k€/an), traçabilité des décisions, effet plateforme."
+    ]
+  },
+  {
+    "id": "neosoft",
+    "role": "Product Owner | MVP application interne",
+    "company": "NeoSoft",
+    "period": "Oct. 2025 – Déc. 2025",
+    "location": "Brest / Rennes",
+    "bullets": [
+      "Design Thinking, prototypage Figma, parcours UX/UI, backlog Kanban itératif, facilitation Dev-Design.",
+      "POC validé + prototype livré + roadmap MVP exploitable sans retro-cadrage."
+    ]
+  },
+  {
+    "id": "thales",
+    "role": "PMO & Support Bid Management",
+    "company": "Thales ISR (via MIGSO-PCUBED)",
+    "period": "Oct. 2024 – Oct. 2025",
+    "location": "Brest",
+    "bullets": [
+      "Portefeuille +50 offres Défense multi-milieux, budgets jusqu'à >1Md€ ; pilotage financier RC/NRC, optimisation marge.",
+      "Industrialisation Excel/VBA de la gestion des risques (ROR) : 3h → 15 min par offre (-92%).",
+      "RETEX stratégique mandaté par la GBU ISR, rapport CODIR ; « au-dessus des attentes sur 7 livrables / 10 »."
+    ]
+  },
+  {
+    "id": "epsi",
+    "role": "Product Owner + Coach Agile | CRM sécurisé",
+    "company": "EPSI (client Capgemini)",
+    "period": "Avr. 2024 – Juil. 2024",
+    "location": "Rennes",
+    "bullets": [
+      "Double rôle PO + Coach Agile sur 2 équipes ; cérémonies Scrum, User Stories, critères d'acceptation, tests Postman.",
+      "Seul PO ayant livré ses 2 équipes (sur 5), MVP < 2 mois ; félicitations jury (Lead Tech Capgemini + Expert Cyber Orange)."
+    ]
+  },
+  {
+    "id": "gestion-locative",
+    "role": "Project Manager — Gestion Locative",
+    "company": "Auto-Entrepreneur | Location Saisonnière",
+    "period": "Juil. 2022 – Sept. 2023",
+    "location": "Luz-Saint-Sauveur",
+    "bullets": [
+      "Pilotage intégralité du cycle locatif courte durée (AirBnB) en autonomie totale.",
+      "Coordination logistique, maintenance, asset management et interface unique propriétaires/locataires.",
+      "Taux d'occupation >90% en période haute, taux de satisfaction 88%."
+    ]
+  },
+  {
+    "id": "shuhan",
+    "role": "Resp. Développement Commercial International",
+    "company": "Sichuan Shuhan Plastics (Chine)",
+    "period": "Juin 2015 – Janv. 2020",
+    "location": "Deyang",
+    "bullets": [
+      "Stratégie export marchés émergents asiatiques, management équipe multiculturelle de 5, appels d'offres SAP Ariba.",
+      "Part export 5% → 20% du CA (~15M$ en 2019) ; poste exercé 100% en anglais."
+    ]
+  },
+  {
+    "id": "vacorda",
+    "role": "Chargé de Stratégie Digitale & Business Dev",
+    "company": "Vacorda Instruments (Chine)",
+    "period": "Janv. 2015 – Juin 2015",
+    "location": "Chengdu",
+    "bullets": [
+      "Création écosystème digital from-scratch, SEO/SEA, lead generation zone francophone.",
+      "Gestion budget publicitaire 24k$/an Google Ads ; poste exercé 90% en anglais."
+    ]
+  },
+  {
+    "id": "diadom",
+    "role": "Chef de Projet Digital / Business Analyst",
+    "company": "Diadom SAS",
+    "period": "Sept. 2012 – Oct. 2014",
+    "location": "Montpellier",
+    "bullets": [
+      "MOE refonte e-commerce (sponsor PDG), chemin critique MS Project, SEO/SEA 30 k€/an, reporting CODIR.",
+      "Trafic +196% · conversion +23% sur 2 ans, livré dans les jalons."
+    ]
+  },
+  {
+    "id": "justrade",
+    "role": "Chargé de Projet Webmarketing — International",
+    "company": "Justrade International (Chine)",
+    "period": "Sept. 2011 – Août 2012",
+    "location": "Yiwu",
+    "bullets": [
+      "Coordination refonte site internet multilingue (supervision prestataires, traducteurs) et social media bilingue EN/FR.",
+      "Reporting mensuel CODIR et recommandation LinkedIn client."
+    ]
+  }
+]

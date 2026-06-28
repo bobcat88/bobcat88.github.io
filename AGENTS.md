@@ -41,3 +41,20 @@ This project is indexed by GitNexus as **bobcat88.github.io** (33 symbols, 27 re
 | Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
 
 <!-- gitnexus:end -->
+
+# Applications privacy rule (MANDATORY)
+
+Tailored job applications **NEVER** live in this public repo (served via GitHub Pages = world-readable). They go in the **PRIVATE** repo `career-applications` (`github.com/bobcat88/career-applications`), surfaced here via a **gitignored symlink** `application/`.
+
+- **Public** (this repo): factory, `library/`, master CV designs — generic, shareable.
+- **Private** (`career-applications`): per-company `offer.md`, tailored CVs, lettres, pitches, gap analyses, source captures — anything naming a target company or tied to a specific offer.
+
+`.gitignore` must keep a **bare** `application` line. `application/` (trailing slash) only matches a real dir and would fail to ignore the symlink → leaks private data.
+
+### Symlink (recreate if missing / fresh clone)
+```bash
+cd bobcat88.github.io
+ln -s ../career-applications application   # sibling repos under Projects/CV/
+git check-ignore application               # must print: application
+```
+Relative target (`../career-applications`) so both repos move together. Full rule + the parallel rule in `CLAUDE.md` and `career-applications/AGENTS.md`.

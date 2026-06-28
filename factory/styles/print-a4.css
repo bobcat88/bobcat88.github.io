@@ -1,0 +1,83 @@
+/* print-a4.css — styling SSOT for all CV variants (Project Phoenix).
+   A4, print-to-PDF accurate. Single-column, selectable text → ATS-safe. */
+
+:root {
+  --ink: #1a1a1a;
+  --muted: #5a5a5a;
+  --accent: #1f3a5f;        /* sober deep blue — premium, not flashy */
+  --rule: #d8d8d8;
+  --font: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --pad: 14mm;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+html, body { background: #ececec; }
+
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  font-size: 10.2pt;
+  line-height: 1.4;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* The A4 page surface */
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 8mm auto;
+  padding: var(--pad);
+  background: #fff;
+  box-shadow: 0 1px 8px rgba(0,0,0,.18);
+}
+
+/* Header */
+.cv-header { border-bottom: 2px solid var(--accent); padding-bottom: 6pt; margin-bottom: 10pt; }
+.cv-name { font-size: 21pt; font-weight: 700; color: var(--accent); letter-spacing: .2px; }
+.cv-title { font-size: 11pt; font-weight: 600; color: var(--ink); margin-top: 2pt; }
+.cv-tagline { font-size: 9.4pt; color: var(--muted); font-style: italic; margin-top: 3pt; }
+.cv-contact { font-size: 8.8pt; color: var(--muted); margin-top: 5pt; display: flex; flex-wrap: wrap; gap: 4pt 10pt; }
+.cv-contact a { color: var(--accent); text-decoration: none; }
+
+/* Sections */
+.section { margin-top: 11pt; }
+.section h2 {
+  font-size: 10.5pt; text-transform: uppercase; letter-spacing: .8px;
+  color: var(--accent); border-bottom: 1px solid var(--rule);
+  padding-bottom: 2pt; margin-bottom: 6pt;
+}
+
+/* Experience */
+.exp { margin-bottom: 8pt; page-break-inside: avoid; }
+.exp-head { display: flex; justify-content: space-between; align-items: baseline; }
+.exp-role { font-weight: 700; font-size: 10.4pt; }
+.exp-org { font-weight: 600; color: var(--accent); }
+.exp-meta { font-size: 8.6pt; color: var(--muted); white-space: nowrap; }
+.exp ul { list-style: none; margin-top: 3pt; }
+.exp li { position: relative; padding-left: 10pt; margin-bottom: 1.5pt; }
+.exp li::before { content: "▸"; position: absolute; left: 0; color: var(--accent); font-size: 7pt; top: 1.5pt; }
+
+/* Metrics strip */
+.metrics { display: flex; flex-wrap: wrap; gap: 6pt; margin-top: 4pt; }
+.metric { background: #f3f6fa; border-left: 2px solid var(--accent); padding: 3pt 6pt; font-size: 8.6pt; }
+.metric b { color: var(--accent); }
+
+/* Skills / tags */
+.tags { display: flex; flex-wrap: wrap; gap: 3pt; }
+.tag { background: #eef2f7; color: var(--accent); border-radius: 3px; padding: 1.5pt 6pt; font-size: 8.4pt; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4pt 16pt; }
+
+/* Print: drop screen chrome */
+@media print {
+  html, body { background: #fff; }
+  .page { margin: 0; box-shadow: none; width: auto; min-height: auto; }
+  .no-print { display: none !important; }
+}

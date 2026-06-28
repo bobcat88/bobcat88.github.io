@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johan Proust — Pitch</title>
+<link rel="stylesheet" href="../designs/base.css">
+<style>
+/* Niveau 1 — elevator pitch one-pager (oral prep / intro / LinkedIn about). Aubergine. */
+:root{ --ink:#23202a; --muted:#5d5666; --accent:#6e2b74; --plum:#34123a; --plum2:#4c1d54; --soft:#f5eef5; --rule:#e6d8e8; }
+.page{ padding:0; }
+.hero{ background:linear-gradient(135deg,var(--plum),var(--plum2)); color:#fff; padding:16mm 18mm 12mm; }
+.hero .nm{ font-size:24pt; font-weight:800; } .hero .ttl{ font-size:10.5pt; color:#e8d8ea; font-weight:600; margin-top:3pt; }
+.hero .vp{ font-size:14pt; font-weight:600; margin-top:11pt; line-height:1.3; max-width:150mm; }
+.body{ padding:11mm 18mm; }
+h2{ font-size:9.6pt; text-transform:uppercase; letter-spacing:.9px; color:var(--accent); margin:0 0 6pt; }
+.section{ margin-bottom:12pt; }
+.pitch30{ font-size:11pt; line-height:1.55; } .pitch30 .accent{ color:var(--accent); font-weight:600; }
+.proof{ display:grid; grid-template-columns:repeat(3,1fr); gap:7pt; }
+.proof .p{ background:var(--soft); border-radius:8px; padding:8pt; } .proof b{ display:block; color:var(--plum); font-size:13pt; } .proof span{ font-size:8.6pt; color:var(--muted); }
+.cols{ display:grid; grid-template-columns:1fr 1fr; gap:18pt; }
+ul{ list-style:none; } li{ position:relative; padding-left:11pt; margin-bottom:3pt; font-size:9.8pt; }
+li::before{ content:"▸"; position:absolute; left:0; color:var(--accent); font-size:7pt; top:2pt; }
+.foot{ border-top:1px solid var(--rule); padding-top:7pt; font-size:9pt; color:var(--muted); } .foot a{ color:var(--accent); text-decoration:none; }
+</style></head><body>
+<div class="toolbar no-print"><a href="../designs/gallery2.html">← Gallery</a><button onclick="print()">Print / PDF</button></div>
+<main class="page">
+  <div class="hero">
+    <div class="nm" id="nm"></div><div class="ttl" id="ttl"></div>
+    <div class="vp" id="vp"></div>
+  </div>
+  <div class="body">
+    <div class="section"><h2>Pitch 30 secondes</h2><p class="pitch30" id="p30"></p></div>
+    <div class="section"><h2>3 preuves</h2><div class="proof" id="proof"></div></div>
+    <div class="section cols">
+      <div><h2>Ce que je résous</h2><ul id="solve"></ul></div>
+      <div><h2>Ce que je cherche</h2><ul id="seek"></ul></div>
+    </div>
+    <div class="foot" id="foot"></div>
+  </div>
+</main>
+<script src="../designs/data.js?b=3"></script>
+<script>
+const d=window.CV_DATA, $=id=>document.getElementById(id);
+$("nm").textContent=d.name; $("ttl").textContent=d.title; $("vp").textContent="« "+d.brand+" »";
+$("p30").innerHTML=`Senior PMO & Product Owner, <span class="accent">13 ans</span> dont 7 en Asie. J'entre dans des environnements complexes — défense, banque, industrie cross-culturelle, fintech — et j'en fais des <span class="accent">systèmes pilotables</span> : gouvernance, processus, données, équipes, IA. Profil hybride tech × business : je structure en COMEX comme je code l'outil qui exécute. ${d.tagline}`;
+$("proof").innerHTML=d.metrics.slice(0,3).map(([v,l,c])=>`<div class="p"><b>${v}</b><span>${l} — ${c}</span></div>`).join("");
+$("solve").innerHTML=["Programmes exposés & arbitrages à structurer","Gouvernance & pilotage de portefeuilles à risque","Processus & données à rendre pilotables","Delivery produit + conduite du changement","Automatisation / IA contrôlée dans le pilotage"].map(x=>`<li>${x}</li>`).join("");
+$("seek").innerHTML=["Sujets où complexité humaine + technique se rejoignent","Mission > intitulé de poste","Freelance (TJM 465 €/j) ou CDI (~55-62 k€, ouvert)","Impact mesurable, autonomie, exposition stratégique"].map(x=>`<li>${x}</li>`).join("");
+$("foot").innerHTML=d.contact.map(([k,t,h])=>h?`<a href="${h}">${t}</a>`:t).join(" &nbsp;·&nbsp; ");
+</script></body></html>
