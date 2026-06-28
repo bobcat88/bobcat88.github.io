@@ -105,6 +105,17 @@ window.CV_DATA = {
       ]
     ],
     [
+      "Project Manager — Gestion Locative",
+      "Indépendant (EI) | Location Saisonnière",
+      "Juil. 2022 – Sept. 2023",
+      "Luz-Saint-Sauveur",
+      [
+        "Pilotage intégralité du cycle locatif courte durée (AirBnB) en autonomie totale.",
+        "Coordination logistique, maintenance, asset management et interface unique propriétaires/locataires.",
+        "Taux d'occupation >90% en période haute, taux de satisfaction 88%."
+      ]
+    ],
+    [
       "Resp. Développement Commercial International",
       "Sichuan Shuhan Plastics (Chine)",
       "Juin 2015 – Janv. 2020",
@@ -115,6 +126,16 @@ window.CV_DATA = {
       ]
     ],
     [
+      "Chargé de Stratégie Digitale & Business Dev",
+      "Vacorda Instruments (Chine)",
+      "Janv. 2015 – Juin 2015",
+      "Chengdu",
+      [
+        "Création écosystème digital from-scratch, SEO/SEA, lead generation zone francophone.",
+        "Gestion budget publicitaire 24k$/an Google Ads ; poste exercé 90% en anglais."
+      ]
+    ],
+    [
       "Chef de Projet Digital / Business Analyst",
       "Diadom SAS",
       "Sept. 2012 – Oct. 2014",
@@ -122,6 +143,16 @@ window.CV_DATA = {
       [
         "MOE refonte e-commerce (sponsor PDG), chemin critique MS Project, SEO/SEA 30 k€/an, reporting CODIR.",
         "Trafic +196% · conversion +23% sur 2 ans, livré dans les jalons."
+      ]
+    ],
+    [
+      "Chargé de Projet Webmarketing — International",
+      "Justrade International (Chine)",
+      "Sept. 2011 – Août 2012",
+      "Yiwu",
+      [
+        "Coordination refonte site internet multilingue (supervision prestataires, traducteurs) et social media bilingue EN/FR.",
+        "Reporting mensuel CODIR et recommandation LinkedIn client."
       ]
     ]
   ],

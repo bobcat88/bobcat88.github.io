@@ -20,6 +20,8 @@ const profile = JSON.parse(read("library/profile.json"));
 const experience = JSON.parse(read("library/experience.json"));
 const skills = parseSkills();
 
+const offerText = args.offer ? read(args.offer).toLowerCase() : "";
+
 // --- assemble model -------------------------------------------------------
 const model = {
   profile,
@@ -89,8 +91,14 @@ if (args.offer) {
 
 // --- helpers --------------------------------------------------------------
 function renderTemplate(m) {
-  const tplFile = m.variant === "premium" ? "factory/designs/cv-b.html" : `factory/designs/cv-${m.variant}.html`;
-  return read(tplFile);
+  const tplFile = m.variant === "premium"
+    ? (args.offer ? "factory/designs/cv-b.html" : "factory/designs/cv-a.html")
+    : `factory/designs/cv-${m.variant}.html`;
+  let htmlContent = read(tplFile);
+  if (m.variant === "premium" && !args.offer) {
+    htmlContent = htmlContent.replace("<title>Johan Proust — CV (A · Header Band)</title>", "<title>Johan Proust — Dossier de Compétences</title>");
+  }
+  return htmlContent;
 }
 
 function renderLetter(tpl, meta, hook, fit, value, profile, dateStr) {
@@ -126,7 +134,6 @@ function parseFrontmatter(text) {
 }
 
 function parseSection(text, title) {
-  // Support both h2 and h3 header search
   const rx = new RegExp(`(?:##|###)\\s+${title}[\\s\\S]*?\\r?\\n([\\s\\S]*?)(?:\\r?\\n(?:##|###)|$)`, "i");
   const m = text.match(rx);
   return m ? m[1].trim() : "";
@@ -160,10 +167,57 @@ function parseSkills() {
   return { groups, flat };
 }
 
+function selectTailoredExperiences(offer, exps) {
+  if (!offer) {
+    const genericIds = ["arkea", "thales", "neosoft", "epsi", "shuhan", "diadom"];
+    return exps.filter(x => genericIds.includes(x.id));
+  }
+
+  const scored = exps.map(exp => {
+    let score = 0;
+    const companyWords = exp.company.toLowerCase().split(/[\s|()—,·]+/);
+    const roleWords = exp.role.toLowerCase().split(/[\s|()—,·]+/);
+    
+    for (const w of companyWords) {
+      if (w.length > 2 && offer.includes(w)) score += 10;
+    }
+    for (const w of roleWords) {
+      if (w.length > 2 && offer.includes(w)) score += 5;
+    }
+    for (const bullet of exp.bullets) {
+      const bulletWords = bullet.toLowerCase().split(/[\s|()—,·]+/);
+      for (const w of bulletWords) {
+        if (w.length > 3 && offer.includes(w)) score += 1;
+      }
+    }
+    
+    // Boost recent primary experiences
+    if (exp.id === "arkea") score += 2;
+    if (exp.id === "thales") score += 3;
+    if (exp.id === "neosoft") score += 1;
+    
+    return { exp, score };
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, 4).map(x => x.exp);
+}
+
 function compileCvData(profile) {
-  const genericExperienceIds = ["arkea", "thales", "neosoft", "epsi", "shuhan", "diadom"];
-  const filteredExp = experience.filter(x => genericExperienceIds.includes(x.id))
-    .map(x => [x.role, x.company, x.period, x.location, x.bullets]);
+  let filteredExp;
+  if (args.offer) {
+    filteredExp = selectTailoredExperiences(offerText, experience)
+      .map(x => [x.role, x.company, x.period, x.location, x.bullets]);
+  } else if (model.variant === "premium") {
+    // Generic Premium is a Dossier de Compétences: export all 9 experiences!
+    filteredExp = experience
+      .map(x => [x.role, x.company, x.period, x.location, x.bullets]);
+  } else {
+    // Generic ATS is a single-page CV: export top 6 experiences
+    const genericExperienceIds = ["arkea", "thales", "neosoft", "epsi", "shuhan", "diadom"];
+    filteredExp = experience.filter(x => genericExperienceIds.includes(x.id))
+      .map(x => [x.role, x.company, x.period, x.location, x.bullets]);
+  }
 
   return {
     name: profile.identity.fullName,
