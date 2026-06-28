@@ -1,43 +1,44 @@
-# Étude de Cas : Ingénierie de Systèmes Agentiques & Harness IA — Velocity Lab
+# Étude de Cas : Ingénierie de Systèmes Agentiques, QLoop & Harness IA — Velocity Lab
 
 ## Meta
 - **Date** : 2026-06-28
 - **Mission** : Conception de System-Harness IA & Workspace Agentique (Velocity Lab)
 - **Rôle** : Architecte Systèmes IA / Consultant PMO augmenté
 - **Format** : Flagship (8 sections)
-- **Tags** : #ai, #automation, #pmo, #agents, #harness
+- **Tags** : #ai, #automation, #qloop, #adversarial-ai, #harness
 
 ---
 
 ## 1. Contexte
-Création d'un environnement opérationnel et de développement augmenté pour automatiser l'analyse, le traitement, le contrôle d'impact et la génération de documentation technique et de supports de présentation pour des projets complexes.
+Création d'un environnement opérationnel et de développement augmenté pour automatiser l'analyse, la génération documentaire, et le pilotage de programmes complexes sous un cadre strict de gouvernance homme-agent.
 
 ## 2. Problème
-L'utilisation directe de modèles LLM de manière isolée ou non structurée (ad-hoc prompts) produit des résultats instables, des dérives de code non contrôlées, et ne garantit aucune traçabilité ou auditabilité requise en entreprise pour le pilotage de programmes.
+L'intégration de l'IA générative dans les processus d'ingénierie et de management souffre d'un manque de robustesse. Sans contrôle strict, les agents produisent du code instable, souffrent de dérive non contrôlée (drift) et n'offrent pas le niveau de confiance requis pour des livrables CODIR/COMEX.
 
 ## 3. Analyse
-Les barrières clés de l'adoption de l'IA dans les processus critiques sont :
-1. L'opacité des décisions des agents.
-2. Le manque de règles structurantes guidant l'application des modifications.
-3. La nécessité d'un contrôle humain systématique (human-in-the-loop) à des points de validation (gates) précis.
+Pour sécuriser le delivery d'agents IA, trois piliers manquaient :
+1. Un cadre réglementaire strict (AI Contract) pour régir les accès et modifications.
+2. Une évaluation contradictoire (Adversarial AI) pour éliminer les biais d'auto-validation.
+3. Une boucle de rétroaction cumulative (Self-feeding Memory) pour capitaliser sur chaque projet.
 
 ## 4. Approche
-Concevoir un **System Harness** (environnement outillé, règles de contexte indexées, structures de prompts standardisées et strictes) pour encadrer les actions des agents et automatiser intégralement la production de livrables décisionnels.
+Concevoir un **System Harness** reposant sur les règles globales du coffre fort (Borg Vault), intégrant une boucle de critique contradictoire systématique (Quality Loop / QLoop) et des scripts d'initialisation et de mise à jour automatique de l'outillage.
 
 ## 5. Actions
-- **Conception du Harness** : Définition des règles d'alignement contextuel (Memory, Context7, GitNexus) et de validation (gates de décision Go/No-go).
-- **Génération Documentaire** : Création d'un moteur d'assemblage dynamique capable de compiler des données brutes en documents de synthèse prêts pour impression ou comités (CV, lettres de motivation, pitchs, présentations).
-- **Audit d'Impact** : Mise en place d'outils d'évaluation automatique de l'impact des modifications (analyse de zone d'impact, filtrage de logs) avant validation de commits.
+- **Adversarial AI & QLoop** : Intégration systématique de la boucle de critique contradictoire (Devil's Advocate). Chaque livrable (code, CV, étude de cas) est auto-critiqué, noté sur une grille de critères stricts et modifié jusqu'à atteindre un score mini >= 9.5/10.
+- **Gouvernance & AI Contract** : Application des règles du Vault (stack-contract) via l'outil de gestion Dolt-backed `beads` (`bd prime`, `bd claim`, `bd close`), assurant la traçabilité complète de chaque action.
+- **Boucle d'Apprentissage IA** : Alimentation continue d'une base de connaissances partagée (Borg Vault) qui capitalise sur les recherches et RETEX de chaque session, créant une mémoire commune inter-projets.
+- **Automatisation & Templates** : Écriture de scripts Bun/Node de mise à jour de l'outillage, templates d'initialisation de projets et moteurs de compilation dynamique de livrables (CV, LM, Pitches).
 
 ## 6. Résultats
-- **Zéro Dérive** : 100% des modifications de code ou de processus passent par des validations strictes et auditables.
-- **Accélération** : Génération de dossiers d'offres ou de comptes rendus complexes instantanée, conforme aux règles visuelles de l'organisation.
-- **Fiabilité** : Garantie d'audit trail complet facilitant le travail collaboratif homme-agent.
+- **Qualité Accrue** : Amélioration drastique de la précision des livrables (zéro hallucination, structure homogène) par l'application du QLoop.
+- **Traçabilité Totale** : Audit trail complet et journalisé de chaque étape de cadrage et de modification.
+- **Effet Plateforme** : Réduction du temps de configuration de nouveaux workspaces grâce à l'outillage d'automatisation et aux templates réutilisables.
 
 ## 7. Leçons
-La valeur d'un système IA réside dans son cadre de contrôle. Plus le cadre, le harness et les règles sont rigides, plus l'autonomie et l'accélération accordées aux agents sont élevées et sécurisées.
+L'autonomie de l'IA n'a de valeur que si elle est encadrée par une rigueur méthodologique absolue. Le couple "AI Contract + Adversarial Loop" est indispensable pour transformer un assistant en un système de production industriel.
 
 ## 8. Compétences démontrées
-- **Ingénierie Agentique** : Conception de frameworks structurant l'action des LLMs.
-- **Génération Automatisée** : Traduction de structures de données en supports écrits et de présentation.
-- **Contrôle & Traçabilité** : Établissement d'audit trails pour environnements hybrides.
+- **Ingénierie Agentique & Harness** : Structuration de chaînes de production IA fiables et reproductibles.
+- **Adversarial AI & Assurance Qualité** : Conception de grilles d'audit et de boucles d'auto-critique QLoop.
+- **Automation & Scripting** : Automatisation de la maintenance de l'environnement de travail.
