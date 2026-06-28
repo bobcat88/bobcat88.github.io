@@ -143,7 +143,7 @@ Sectors maîtrisés : **Défense · Banque · Industrie · Digital**.
 
 ---
 
-### Auto-Entrepreneur · Project Manager — Gestion Locative Saisonnière
+### Indépendant (EI) · Project Manager — Gestion Locative Saisonnière
 *Juillet 2022 – Septembre 2023 · Luz-Saint-Sauveur*
 [Dossier Mission](https://docs.google.com/document/d/1ol-LDjmEQJhorYPO4kL01Zx-NNv1tXec8wUHrufqFgg)
 

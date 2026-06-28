@@ -2,7 +2,7 @@
 
 ## Meta
 - **Date** : 2026-06-28
-- **Mission** : Crédit Mutuel Arkéa (Banque de Détail)
+- **Mission** : Crédit Mutuel Arkéa (Banque de Détail — via Wekey / Velocity Lab)
 - **Rôle** : PMO Stratégique / Business Analyst
 - **Format** : Flagship (8 sections)
 - **Tags** : #pmo, #agile, #apps-script, #change-management, #finance

@@ -12,7 +12,7 @@ Up: [[Career - MOC]]
 
 # 🏡 Project Manager — Gestion Locative Opérationnelle & Logistique
 
-**Auto-Entrepreneur** · Juillet 2022 – Septembre 2023 · Luz-Saint-Sauveur · 1 an 3 mois
+**Indépendant (EI)** · Juillet 2022 – Septembre 2023 · Luz-Saint-Sauveur · 1 an 3 mois
 
 **Profil** : [Johan PROUST](mailto:johanproust@gmail.com)
 **Dossier de compétences complet** : [01- Dossier de compétences](https://docs.google.com/document/d/1JqAik7TN7-DBs5k37pxGNWCC0NdA1nxw6pprdNChWjA)
