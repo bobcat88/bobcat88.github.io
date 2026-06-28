@@ -1,5 +1,6 @@
 window.CV_DATA = {
   "name": "Johan PROUST",
+  "photo": "../../johan-proust.webp",
   "first": "Johan",
   "last": "PROUST",
   "monogram": "JP",

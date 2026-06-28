@@ -221,6 +221,7 @@ function compileCvData(profile) {
 
   return {
     name: profile.identity.fullName,
+    photo: args.offer ? "../../_assets/johan-proust.webp" : "../../johan-proust.webp",
     first: profile.identity.fullName.split(" ")[0],
     last: profile.identity.fullName.split(" ").slice(1).join(" "),
     monogram: profile.identity.fullName.split(" ").map(x => x[0]).join(""),
