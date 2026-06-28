@@ -31,12 +31,12 @@ Concevoir un **System Harness** reposant sur les règles globales du coffre fort
 - **Automatisation & Templates** : Écriture de scripts Bun/Node de mise à jour de l'outillage, templates d'initialisation de projets et moteurs de compilation dynamique de livrables (CV, LM, Pitches).
 
 ## 6. Résultats
-- **Qualité Accrue** : Amélioration drastique de la précision des livrables (zéro hallucination, structure homogène) par l'application du QLoop.
+- **Qualité Accrue** : Amélioration drastique de la précision des livrables (réduction maximale des hallucinations, structure homogène) par l'application du QLoop.
 - **Traçabilité Totale** : Audit trail complet et journalisé de chaque étape de cadrage et de modification.
 - **Effet Plateforme** : Réduction du temps de configuration de nouveaux workspaces grâce à l'outillage d'automatisation et aux templates réutilisables.
 
 ## 7. Leçons
-L'autonomie de l'IA n'a de valeur que si elle est encadrée par une rigueur méthodologique absolue. Le couple "AI Contract + Adversarial Loop" est indispensable pour transformer un assistant en un système de production industriel.
+L'autonomie de l'IA n'a de valeur que si elle est encadrée par une rigueur méthodologique absolue. En appliquant un cadre PMO strict et entièrement automatisé aux interactions IA (briques de templates réutilisables, RETEX systématiques), le système s'auto-raffine en continu : plus les projets y sont traités, plus la qualité globale de l'écosystème augmente par apprentissage cumulatif.
 
 ## 8. Compétences démontrées
 - **Ingénierie Agentique & Harness** : Structuration de chaînes de production IA fiables et reproductibles.
