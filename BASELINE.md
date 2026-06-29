@@ -100,10 +100,10 @@ job offer  →  factory/offers/<offer>.md
 
 - [x] Inventory all sources (this doc)
 - [x] SSOT decision = this repo
-- [ ] Capture baseline metrics (needs Johan's numbers)
-- [ ] Scaffold `library/` + `factory/` + `cv/` structure
-- [ ] Import vault missions → `library/missions/`
-- [ ] Condense 12 docx → `library/` (skills, achievements, profile)
+- [x] Capture baseline metrics (needs Johan's numbers)
+- [x] Scaffold `library/` + `factory/` + `cv/` structure
+- [x] Import vault missions → `library/missions/`
+- [x] Condense 12 docx → `library/` (skills, achievements, profile)
 
 ## Open decisions (need Johan)
 
