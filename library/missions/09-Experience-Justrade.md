@@ -15,7 +15,7 @@ Up: [[Career - MOC]]
 **[[Justrade International]]** · Septembre 2011 – Août 2012 · Yiwu (Chine) · 1 an
 
 **Profil** : [Johan PROUST](mailto:johanproust@gmail.com)
-**Dossier de compétences complet** : [01- Dossier de compétences](https://docs.google.com/document/d/1JqAik7TN7-DBs5k37pxGNWCC0NdA1nxw6pprdNChWjA)
+**Dossier de compétences complet** : [01- Dossier de compétences](https://bobcat88.github.io/cv/premium/cv-premium.html)
 
 ---
 

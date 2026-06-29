@@ -15,7 +15,7 @@ Up: [[Career - MOC]]
 **[[Sichuan Shuhan Plastics]] Co., LTD.** · Juin 2015 – Janvier 2020 · Deyang (Chine) · 4 ans 7 mois
 
 **Profil** : [Johan PROUST](mailto:johanproust@gmail.com)
-**Dossier de compétences complet** : [01- Dossier de compétences](https://docs.google.com/document/d/1JqAik7TN7-DBs5k37pxGNWCC0NdA1nxw6pprdNChWjA)
+**Dossier de compétences complet** : [01- Dossier de compétences](https://bobcat88.github.io/cv/premium/cv-premium.html)
 
 ---
 
@@ -23,9 +23,11 @@ PME industrielle chinoise (plasturgie) **sur-dépendante du marché domestique**
 
 ## CONTEXTE DE DIRECTION & PARTENAIRES
 
-*   **Direction Générale & Succession** : Rattaché directement à la direction opérationnelle portée par **黄志美 (Sidney Huang)**, directrice générale (de facto boss) et fille du fondateur d'origine de l'usine (décédé vers 2016). La gouvernance et l'actionnariat de l'entreprise ont été stabilisés après la succession sous le contrôle de **支成满 (Zhi Chengman)** (70% des parts) et des frères de la famille Huang (**黄新奇** et **黄新克**, 10% chacun).
-*   **Comportement & Identité** : Originaire de Nanjing, Sidney Huang disposait d'un Hukou/ID fictif établi en Sichuan par son père (contexte d'identité fragmentée/privée).
-*   **Comptes Majeurs Nationaux** : Suivi opérationnel et commercial des comptes industriels majeurs, notamment le géant de l'agro-élevage **双胞胎集团 (Twins Group)** pour la fourniture massive de sacs de rechange pour aliments (PP Woven Bags).
+*   **Direction Générale** : Rattaché directement à la direction opérationnelle de l'entreprise (PME familiale), avec reporting stratégique direct.
+*   **Comptes Majeurs Nationaux** : Suivi opérationnel et commercial de comptes industriels majeurs, notamment un acteur de l'agro-élevage pour la fourniture massive de sacs tissés PP (PP Woven Bags).
+
+<!-- Note : détails nominatifs sur l'actionnariat et l'identité de la direction retirés — données personnelles de tiers, à ne pas publier dans ce dépôt public. -->
+
 
 ## OBJECTIFS (TASK)
 

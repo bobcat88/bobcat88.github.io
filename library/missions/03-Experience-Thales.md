@@ -15,7 +15,7 @@ Up: [[Career - MOC]]
 **[[Thales]] ISR** via **[[MIGSO-PCUBED]]** · Octobre 2024 – Octobre 2025 · Brest (multi-sites Groupe) · 1 an
 
 **Profil** : [Johan PROUST](mailto:johanproust@gmail.com)
-**Dossier de compétences complet** : [01- Dossier de compétences](https://docs.google.com/document/d/1JqAik7TN7-DBs5k37pxGNWCC0NdA1nxw6pprdNChWjA)
+**Dossier de compétences complet** : [01- Dossier de compétences](https://bobcat88.github.io/cv/premium/cv-premium.html)
 
 ---
 

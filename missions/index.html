@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johan Proust — Dossier de mission</title>
+<link rel="stylesheet" href="base.css">
+<style>
+/* Per-mission dossier — same A4 "Dossier" aesthetic as the CV factory (cv-a).
+   Accent is set per mission from the data. Flows across sheets when long. */
+@page { size: A4; margin: 13mm 0; }
+@page :first { margin-top: 0; }
+:root{
+  --ink:#1c1b22; --muted:#5b6573;
+  --accent:#6d28d9; --accent2:#4c1d95;
+  --soft:#eef0f4; --rule:#e6def7; --line:#e3e6ea; --slate:#334155;
+}
+.page{ min-height:auto; overflow:visible; }
+@media print{ .page{ overflow:visible; min-height:auto; } }
+
+.banner{ background:linear-gradient(120deg,var(--accent2),var(--accent)); color:#fff; padding:13mm 15mm 11mm; }
+.banner .doc-kind{ display:inline-block; font-size:8pt; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:#fff; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:4px; padding:3pt 9pt; margin-bottom:9pt; }
+.banner h1{ font-size:23pt; font-weight:800; letter-spacing:.2px; line-height:1.08; }
+.banner .org{ font-size:12pt; font-weight:600; margin-top:6pt; color:#ece4ff; }
+.banner .meta{ font-size:9.6pt; margin-top:5pt; color:#d9caff; }
+.banner .who{ display:flex; flex-wrap:wrap; gap:4pt 16pt; margin-top:11pt; padding-top:9pt; border-top:1px solid rgba(255,255,255,.22); font-size:9pt; color:#e7ddff; }
+.banner .who b{ color:#fff; font-weight:700; } .banner .who a{ color:#fff; text-decoration:none; }
+
+.body{ padding:11mm 15mm 14mm; }
+h2{ font-size:10.5pt; text-transform:uppercase; letter-spacing:.9px; color:var(--accent); margin:0 0 7pt; padding-bottom:2.5pt; border-bottom:2px solid var(--rule); }
+.section{ margin-top:13pt; } .section:first-child{ margin-top:0; }
+.section p{ font-size:10pt; line-height:1.5; margin-bottom:5pt; }
+
+ol.obj{ margin:0 0 0 16pt; } ol.obj li{ font-size:10pt; line-height:1.45; margin-bottom:3pt; padding-left:3pt; }
+
+.act{ margin-bottom:9pt; page-break-inside:avoid; }
+.act h3{ font-size:10pt; color:var(--slate); margin-bottom:3pt; }
+.act .act-note{ font-size:9pt; font-style:italic; color:var(--muted); margin-bottom:3pt; }
+.act ul{ list-style:none; } .act li{ position:relative; padding-left:12pt; margin-bottom:2.6pt; font-size:9.5pt; line-height:1.42; }
+.act li::before{ content:""; position:absolute; left:0; top:5.5pt; width:4pt; height:4pt; border-radius:50%; background:var(--accent); }
+
+table.res{ width:100%; border-collapse:collapse; font-size:9.4pt; }
+table.res td{ border-bottom:1px solid var(--line); padding:4pt 6pt; vertical-align:top; }
+table.res td.k{ color:var(--slate); font-weight:700; width:42%; }
+ul.res-items{ list-style:none; margin-top:6pt; } ul.res-items li{ position:relative; padding-left:12pt; margin-bottom:2.6pt; font-size:9.5pt; line-height:1.42; }
+ul.res-items li::before{ content:""; position:absolute; left:0; top:5.5pt; width:4pt; height:4pt; border-radius:50%; background:var(--accent); }
+.res-note{ font-size:9.2pt; color:var(--muted); margin-top:6pt; line-height:1.45; }
+
+ul.deliv{ list-style:none; } ul.deliv li{ position:relative; padding-left:12pt; margin-bottom:2.6pt; font-size:9.5pt; line-height:1.42; }
+ul.deliv li::before{ content:""; position:absolute; left:0; top:5.5pt; width:4pt; height:4pt; border-radius:50%; background:var(--accent); }
+
+.quote{ border-left:3px solid var(--accent); background:var(--soft); padding:7pt 11pt; font-size:9.6pt; font-style:italic; color:var(--ink); border-radius:0 6px 6px 0; }
+.env .kv{ font-size:9.4pt; margin-bottom:4pt; line-height:1.45; } .env .kv b{ color:var(--slate); }
+.note-box{ font-size:9.4pt; line-height:1.5; color:var(--muted); background:var(--soft); border-radius:6px; padding:8pt 11pt; }
+.full-dossier{ margin-top:13pt; font-size:9.4pt; } .full-dossier a{ color:var(--accent); font-weight:600; text-decoration:none; }
+
+.toolbar .lang{ display:flex; gap:0; }
+.toolbar .lang button{ border-radius:0; }
+.toolbar .lang button:first-child{ border-radius:6px 0 0 6px; }
+.toolbar .lang button:last-child{ border-radius:0 6px 6px 0; border-left:none; }
+.toolbar .lang button[aria-pressed="true"]{ background:#1c1b22; color:#fff; }
+
+.miss-index{ max-width:680px; margin:18mm auto; padding:0 16px; }
+.miss-index h1{ font-size:18pt; color:var(--accent2); margin-bottom:10pt; }
+.miss-index a{ display:block; padding:9pt 12pt; margin-bottom:6pt; border:1px solid var(--line); border-radius:8px; color:var(--ink); text-decoration:none; }
+.miss-index a:hover{ border-color:var(--accent); }
+</style></head><body>
+
+<div class="toolbar no-print">
+  <a href="../" id="back">← Portfolio</a>
+  <span class="lang">
+    <button type="button" id="lang-fr" onclick="setLang('fr')" aria-pressed="true">FR</button>
+    <button type="button" id="lang-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+  </span>
+  <button type="button" onclick="window.print()" id="dl">Télécharger en PDF</button>
+</div>
+
+<main id="root"></main>
+
+<script src="missions-data.js"></script>
+<script>
+(function(){
+  var DB = window.MISSIONS || {labels:{},person:{},missions:{}};
+  var params = new URLSearchParams(location.search);
+  var id = params.get("id") || params.get("m") || "";
+  var lang = (params.get("lang") || localStorage.getItem("mission-lang") || "fr").toLowerCase();
+  if (lang !== "en") lang = "fr";
+
+  function esc(s){ return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+  function tx(o){ return o && typeof o === "object" ? (o[lang] != null ? o[lang] : o.fr) : o; }
+  function L(k){ var l = DB.labels[lang] || DB.labels.fr || {}; return l[k] != null ? l[k] : k; }
+
+  window.setLang = function(l){
+    lang = (l === "en") ? "en" : "fr";
+    localStorage.setItem("mission-lang", lang);
+    var u = new URL(location); u.searchParams.set("lang", lang); history.replaceState(null, "", u);
+    render();
+  };
+
+  function section(title, inner){ return '<div class="section"><h2>'+esc(title)+'</h2>'+inner+'</div>'; }
+
+  function renderMission(m){
+    document.documentElement.lang = lang;
+    document.title = DB.person.name + " — " + tx(m.title);
+    document.getElementById("dl").textContent = L("download");
+    document.getElementById("back").textContent = L("back");
+    document.getElementById("lang-fr").setAttribute("aria-pressed", lang === "fr");
+    document.getElementById("lang-en").setAttribute("aria-pressed", lang === "en");
+
+    var accent = m.accent || "#6d28d9";
+    document.documentElement.style.setProperty("--accent", accent);
+    document.documentElement.style.setProperty("--accent2", accent);
+
+    var p = DB.person || {};
+    var who = '<div class="who">'
+      + '<span><b>'+esc(L("profile"))+' :</b> '+esc(p.name)+'</span>'
+      + (p.email ? '<span><a href="mailto:'+esc(p.email)+'">'+esc(p.email)+'</a></span>' : "")
+      + (p.linkedin ? '<span><a href="'+esc(p.linkedin)+'" target="_blank" rel="noopener">'+esc(p.linkedinLabel || "LinkedIn")+'</a></span>' : "")
+      + (p.portfolio ? '<span><a href="'+esc(p.portfolio)+'" target="_blank" rel="noopener">'+esc(p.portfolioLabel || "Portfolio")+'</a></span>' : "")
+      + '</div>';
+
+    var banner = '<div class="banner">'
+      + '<span class="doc-kind">'+esc(L("dossier"))+'</span>'
+      + '<h1>'+esc(tx(m.title))+'</h1>'
+      + '<div class="org">'+esc(tx(m.org))+'</div>'
+      + '<div class="meta">'+esc(tx(m.meta))+'</div>'
+      + who + '</div>';
+
+    var html = "";
+
+    // Situation
+    if (m.situation){
+      var paras = (tx(m.situation) || []).map(function(t){ return "<p>"+esc(t)+"</p>"; }).join("");
+      html += section(L("situation"), paras);
+    }
+    // Objectives
+    if (m.objectives){
+      var ob = (tx(m.objectives) || []).map(function(t){ return "<li>"+esc(t)+"</li>"; }).join("");
+      html += section(L("objectives"), '<ol class="obj">'+ob+"</ol>");
+    }
+    // Actions
+    if (m.actions && m.actions.length){
+      var acts = m.actions.map(function(a){
+        var items = (tx(a.items) || []).map(function(t){ return "<li>"+esc(t)+"</li>"; }).join("");
+        return '<div class="act"><h3>'+esc(tx(a.h))+"</h3>"
+          + (a.note ? '<div class="act-note">'+esc(tx(a.note))+"</div>" : "")
+          + "<ul>"+items+"</ul></div>";
+      }).join("");
+      html += section(L("actions"), acts);
+    }
+    // Results
+    if (m.results){
+      var r = m.results, inner = "";
+      if (r.table && r.table.length){
+        inner += '<table class="res">'+r.table.map(function(row){
+          return '<tr><td class="k">'+esc(tx(row.k))+'</td><td>'+esc(tx(row.v))+"</td></tr>";
+        }).join("")+"</table>";
+      }
+      if (r.items){
+        inner += '<ul class="res-items">'+(tx(r.items)||[]).map(function(t){ return "<li>"+esc(t)+"</li>"; }).join("")+"</ul>";
+      }
+      if (r.note){ inner += '<div class="res-note">'+esc(tx(r.note))+"</div>"; }
+      if (m.testimonial){ inner += '<div class="quote" style="margin-top:7pt">'+esc(tx(m.testimonial))+"</div>"; }
+      html += section(L("results"), inner);
+    } else if (m.testimonial){
+      html += section(L("results"), '<div class="quote">'+esc(tx(m.testimonial))+"</div>");
+    }
+    // Deliverables
+    if (m.deliverables){
+      var dv = (tx(m.deliverables) || []).map(function(t){ return "<li>"+esc(t)+"</li>"; }).join("");
+      html += section(L("deliverables"), '<ul class="deliv">'+dv+"</ul>");
+    }
+    // Environment
+    if (m.environment){
+      var e = m.environment, env = "";
+      if (e.tools)   env += '<div class="kv"><b>'+esc(L("tools"))+' :</b> '+esc(tx(e.tools))+"</div>";
+      if (e.methods) env += '<div class="kv"><b>'+esc(L("methods"))+' :</b> '+esc(tx(e.methods))+"</div>";
+      if (e.skills)  env += '<div class="kv"><b>'+esc(L("skills"))+' :</b> '+esc(tx(e.skills))+"</div>";
+      html += section(L("environment"), '<div class="env">'+env+"</div>");
+    }
+    // Note
+    if (m.note){ html += section(L("note"), '<div class="note-box">'+esc(tx(m.note))+"</div>"); }
+
+    // Full dossier link (local, GitHub-served)
+    html += '<div class="full-dossier no-print"><a href="../cv/premium/cv-premium.html" target="_blank" rel="noopener">'+esc(L("fullDossier"))+' →</a></div>';
+
+    document.getElementById("root").innerHTML = '<div class="page">'+banner+'<div class="body">'+html+"</div></div>";
+  }
+
+  function renderIndex(){
+    document.documentElement.lang = lang;
+    var items = Object.keys(DB.missions || {}).map(function(k){
+      var m = DB.missions[k];
+      return '<a href="?id='+encodeURIComponent(k)+'&lang='+lang+'"><b>'+esc(tx(m.title))+'</b><br><span style="color:#5b6573;font-size:9pt">'+esc(tx(m.org))+' · '+esc(tx(m.meta))+'</span></a>';
+    }).join("");
+    document.getElementById("root").innerHTML = '<div class="miss-index"><h1>'+esc(DB.person.name)+' — '+esc(L("dossier"))+'</h1>'+items+"</div>";
+  }
+
+  function render(){
+    var m = DB.missions && DB.missions[id];
+    if (m) renderMission(m); else renderIndex();
+  }
+  render();
+})();
+</script>
+</body></html>

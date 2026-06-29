@@ -21,6 +21,8 @@ Other archetypes kept for reference: `designs/gallery2.html` (A,C,D,E,F).
 - `offers/` — incoming job descriptions (input).
 - `outputs/` — per-offer bundle: CV + LM + pitch + gap analysis.
 - `render.js` — render engine (Bun) — v1 TODO: emit cv-b/cv-ats from `library/` + offer.
+- `build-site.js` — `../library/case-studies.json` → `../case-studies.js` (case-study popups on the site).
+- `build-missions.js` — `../library/missions.json` → `../missions/missions-data.js` + `../missions/base.css` (per-mission dossier pages served locally at `/missions/?id=<key>`, bilingual, in-browser Download-PDF).
 
 ## Usage (Bun)
 ```bash
@@ -28,6 +30,8 @@ bun factory/render.js --variant ats                 # generic ATS CV → cv/ats/
 bun factory/render.js --variant premium             # narrative CV  → cv/premium/
 bun factory/render.js --variant ats --offer factory/offers/acme.md   # tailored → outputs/acme/
 bun factory/render.js --variant ats --pdf           # also export A4 PDF
+bun factory/build-site.js                            # rebuild case-study popups
+bun factory/build-missions.js                        # rebuild per-mission dossier pages
 ```
 
 ## Output format

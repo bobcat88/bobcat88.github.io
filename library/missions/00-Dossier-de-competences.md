@@ -15,7 +15,7 @@ Up: [[Career - MOC]]
 **Senior PMO · Product Owner · Strategic Transformation & AI**
 *Brest, France · Bilingue FR/EN (C1-C2) · Disponible Freelance*
 johanproust@pm.me · [LinkedIn](https://www.linkedin.com/in/johan-proust/) · [Portfolio](https://bobcat88.github.io/)
-- **Version PDF officielle** : [Dossier Competence - Johan PROUST - PMO.pdf](file:///home/_johan/Documents/Borg/300%20Entities/Career/Missions/Dossier%20Competence%20-%20Johan%20PROUST%20-%20PMO.pdf)
+- **Version PDF officielle** : [Dossier de compétences (PDF)](https://bobcat88.github.io/cv/premium/cv-premium.pdf)
 
 > *« Je structure ce qui est complexe. Je pilote ce qui est risqué. Je livre ce qui compte. »*
 
@@ -76,7 +76,7 @@ Sectors maîtrisés : **Défense · Banque · Industrie · Digital**.
 
 ### [[Credit Mutuel Arkea|Crédit Mutuel Arkéa]] · PMO Stratégique / BA — Banque de Détail
 *Mars 2026 – Présent · Brest (Freelance — mission prévisionnelle 12-18 mois)*
-[Dossier Mission](https://docs.google.com/document/d/1IMbDitXQVkhThj8OEU_OJxWEX9xzpcZg49NObkJ4sIo)
+[Dossier Mission](https://bobcat88.github.io/missions/index.html?id=arkea)
 
 **Situation** · Structuration d'un département Support au Développement post-réorganisation, en charge du Plan stratégique Banque de Détail (12-18 mois), avec besoin d'aligner marketing, data, expérience client et process & outils.
 
@@ -90,7 +90,7 @@ Sectors maîtrisés : **Défense · Banque · Industrie · Digital**.
 
 ### [[NeoSoft]] · Product Owner — MVP Application Interne
 *Octobre 2025 – Décembre 2025 · Brest / Rennes*
-[Dossier Mission](https://docs.google.com/document/d/1xxzyoGqOU6SiQq8ci9xPORed7DPamUyGA2Xxg_xhwEA)
+[Dossier Mission](https://bobcat88.github.io/missions/index.html?id=neosoft)
 
 **Situation** · Projet MVP en phase amont, nécessité de sécuriser la valeur métier avant industrialisation.
 
@@ -104,7 +104,7 @@ Sectors maîtrisés : **Défense · Banque · Industrie · Digital**.
 
 ### Thales ISR (via [[MIGSO-PCUBED]]) · PMO & Support Bid Management
 *Octobre 2024 – Octobre 2025 · Brest (multi-sites Groupe)*
-[Dossier Mission](https://docs.google.com/document/d/13LURIzIYDEVGRZU5gprV16Lhpt4zj_yfUqO1joVTVhw)
+[Dossier Mission](https://bobcat88.github.io/missions/index.html?id=thales)
 
 **Situation** · Environnement Défense haute intensité multi-milieux (Terrestre, Naval, Aéroporté, Spatial). Portefeuille de **+50 offres**, budgets unitaires de quelques centaines de k€ à **>1Md€**, durées de 2 mois à plusieurs décennies. Support stratégique à 4 Bid Managers.
 
@@ -128,7 +128,7 @@ Sectors maîtrisés : **Défense · Banque · Industrie · Digital**.
 
 ### [[EPSI]] (Client Capgemini) · Product Owner + Coach Agile — CRM sécurisé
 *Avril 2024 – Juillet 2024 · Rennes*
-[Dossier Mission](https://docs.google.com/document/d/18pWjCAtyOMRExgEGMnvHBI772hxGsIZtfomSjvaS4t4)
+[Dossier Mission](https://bobcat88.github.io/missions/index.html?id=epsi)
 
 **Situation** · Développement d'un MVP CRM sécurisé en formation certifiante cybersécurité, 2 équipes à piloter en parallèle.
 
@@ -145,7 +145,7 @@ Sectors maîtrisés : **Défense · Banque · Industrie · Digital**.
 
 ### Indépendant (EI) · Project Manager — Gestion Locative Saisonnière
 *Juillet 2022 – Septembre 2023 · Luz-Saint-Sauveur*
-[Dossier Mission](https://docs.google.com/document/d/1ol-LDjmEQJhorYPO4kL01Zx-NNv1tXec8wUHrufqFgg)
+[Dossier Mission](https://bobcat88.github.io/missions/index.html?id=gestion-locative)
 
 **Situation** · Parc immobilier en location courte durée (AirBnB) à piloter en autonomie totale.
 
@@ -159,7 +159,7 @@ Sectors maîtrisés : **Défense · Banque · Industrie · Digital**.
 
 ### [[Sichuan Shuhan Plastics]] · Resp. Développement Commercial International
 *Juin 2015 – Janvier 2020 · Deyang (Chine) · 4 ans 7 mois*
-[Dossier Mission](https://docs.google.com/document/d/1YrwQRrBlTZ2I9lxNmwhOv0kSdqsAalw34sNbqmhaTbk)
+[Dossier Mission](https://bobcat88.github.io/missions/index.html?id=shuhan)
 
 **Situation** · PME industrielle chinoise sur-dépendante du marché domestique, export limité à 5% du CA.
 
@@ -173,7 +173,7 @@ Sectors maîtrisés : **Défense · Banque · Industrie · Digital**.
 
 ### [[Vacorda Instruments]] · Stratégie Digitale & Business Development
 *Janvier 2015 – Juin 2015 · Chengdu (Chine) · 6 mois*
-[Dossier Mission](https://docs.google.com/document/d/1PTNCRD_HBE4nENYdqwEFyFRPh0hM-eWsMrAhi75rGIM)
+[Dossier Mission](https://bobcat88.github.io/missions/index.html?id=vacorda)
 
 **Situation** · Entreprise sans présence digitale, ambition d'expansion francophone.
 
@@ -187,7 +187,7 @@ Sectors maîtrisés : **Défense · Banque · Industrie · Digital**.
 
 ### [[Diadom]] SAS · Chef de Projet Digital / Business Analyst
 *Septembre 2012 – Octobre 2014 · Montpellier · 2 ans 1 mois*
-[Dossier Mission](https://docs.google.com/document/d/1KIIt6meTpW7Xdh325C70he49OIoGGtHkd-nkTJciUzk)
+[Dossier Mission](https://bobcat88.github.io/missions/index.html?id=diadom)
 
 **Situation** · Refonte e-commerce et site institutionnel, mission rattachée Direction Générale (sponsor PDG).
 
@@ -201,7 +201,7 @@ Sectors maîtrisés : **Défense · Banque · Industrie · Digital**.
 
 ### [[Justrade]] International · Chargé de Projet Webmarketing — International
 *Septembre 2011 – Août 2012 · Yiwu (Chine) · 1 an*
-[Dossier Mission](https://docs.google.com/document/d/1JaOHl9brR_uOtd7ZPcN10GEvG5e1CPWp11Ufm67uctM)
+[Dossier Mission](https://bobcat88.github.io/missions/index.html?id=justrade)
 
 **Situation** · Expansion internationale en immersion Chine, besoin d'une plateforme digitale multilingue.
 

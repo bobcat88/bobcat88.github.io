@@ -15,7 +15,7 @@ Up: [[Career - MOC]]
 **[[Diadom|Diadom SAS]]** · Septembre 2012 – Octobre 2014 · Montpellier · 2 ans 1 mois
 
 **Profil** : [Johan PROUST](mailto:johanproust@gmail.com)
-**Dossier de compétences complet** : [01- Dossier de compétences](https://docs.google.com/document/d/1JqAik7TN7-DBs5k37pxGNWCC0NdA1nxw6pprdNChWjA)
+**Dossier de compétences complet** : [01- Dossier de compétences](https://bobcat88.github.io/cv/premium/cv-premium.html)
 
 ---
 
