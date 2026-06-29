@@ -6,17 +6,21 @@
 /* ATS-safe sibling of B: single column, selectable text, no text over color blocks,
    no multi-column flow → parsers extract cleanly. Aubergine accent on white. */
 :root{ --ink:#1c1b22; --muted:#5b6573; --accent:#6d28d9; --plum:#4c1d95; --rule:#e6def7; --soft:#eef0f4; --slate:#334155; }
-.page{ padding:8mm 14mm; font-size:9.5pt; }
+/* Margins live on @page so every sheet — including the top of page 2 — gets the
+   same breathing room (same fix as the Dossier). .page just flows the content. */
+@page{ size:A4; margin:10mm 14mm; }
+.page{ padding:0; font-size:9.5pt; line-height:1.34; min-height:auto; overflow:visible; }
+@media print{ .page{ overflow:visible; min-height:auto; } }
 .nm{ font-size:20pt; font-weight:800; color:var(--plum); letter-spacing:.2px; }
 .title{ font-size:10.5pt; font-weight:600; color:var(--ink); margin-top:2pt; }
 .contact{ font-size:8.8pt; color:var(--muted); margin-top:4pt; }
 .contact a{ color:var(--accent); text-decoration:none; }
-h2{ font-size:9.6pt; text-transform:uppercase; letter-spacing:.6px; color:var(--accent); border-bottom:1px solid var(--rule); padding-bottom:2pt; margin:4.5pt 0 3pt; }
+h2{ font-size:9.6pt; text-transform:uppercase; letter-spacing:.6px; color:var(--accent); border-bottom:1px solid var(--rule); padding-bottom:1.5pt; margin:3.5pt 0 2.5pt; }
 p.sum{ font-size:9.6pt; }
 .metrics{ margin:0; padding-left:0; list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:0 18pt; } .metrics li{ font-size:9.1pt; margin-bottom:1pt; padding-left:11pt; position:relative; }
 .metrics li::before{ content:"•"; position:absolute; left:2pt; color:var(--accent); }
 .metrics b{ color:var(--slate); }
-.exp{ margin-bottom:3.5pt; page-break-inside:avoid; }
+.exp{ margin-bottom:2.5pt; page-break-inside:avoid; }
 .exp-head{ display:flex; justify-content:space-between; align-items:baseline; gap:8pt; }
 .exp-role{ font-weight:700; } .exp-role .org{ font-weight:600; color:var(--ink); }
 .exp-meta{ font-size:8.8pt; font-weight:600; color:var(--ink); white-space:nowrap; }
