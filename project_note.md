@@ -25,15 +25,15 @@ Up: [[📍 Dashboard]]
 ## Modèle de Données & Structure de la Page
 1. **Hero Header** : Proposition de valeur claire, positionnement Senior/Freelance, photo, CTAs principaux.
 2. **Expertise** : 3 piliers détaillant la valeur ajoutée (Portfolio, Transformation, Biz Dev).
-3. **Parcours Professionnel (Timeline)** : Expériences chronologiques (Arkéa en premier), formatées avec des liens GDocs détaillés.
-4. **Réalisations (Métrique Chocs)** : Chiffres d'impact massifs pour rassurer sur le delivery.
+3. **Parcours Professionnel (Timeline)** : Expériences chronologiques (Arkéa en premier), formatées avec des liens Github détaillés.
+4. **Réalisations (Métrique Chocs)** : Chiffres d'impact pour rassurer sur le delivery.
 5. **Engagements & Formations** : Background académique et associatif, incluant les investissements personnels et la veille tech.
 6. **Footer** : Liens sociaux et contact.
 
 ## Contexte pour les Agents IA (Context for Claude)
 - Johan est un profil **hybride technique et business** (développeur de ses propres agents IA + PMO COMEX).
 - **Ne jamais infantiliser les expériences** ou réduire ses rôles à de la pure exécution conditionnée.
-- Le ton doit rester direct, professionnel et orienté *impact massif/executive*.
+- Le ton doit rester direct, professionnel et orienté *impact/executive*.
 - **Entrée GitHub Pages** : le site s'exécute depuis `index.html` pour éviter le wrapper Markdown/Jekyll appliqué au README.
 
 ## Patch Notes
