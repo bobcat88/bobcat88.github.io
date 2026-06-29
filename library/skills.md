@@ -66,7 +66,7 @@ Tag each skill with missions where it's proven. The render script filters by off
 | Conception d'agents IA personnels | Agents autonomes, intégration LLMs au pilotage PMO | Veille / perso, Arkéa (POC ComitéAuto) |
 | Intégration LLMs / MCP / prompt engineering | Automatisation Workspace, génération CR auto | Arkéa |
 | Veille architecture AI | Agents, automatisation, MCP | Continu |
-| Orchestration d'agents multi-agents | Création de workflows d'agents collaboratifs | Perso / Veille |
+| Orchestration de systèmes multi-agents | Création de workflows d'agents collaboratifs | Perso / Veille |
 | Model Context Protocol (MCP) | Intégration de serveurs de contexte pour IA | Perso / Veille |
 | Audit d'invite (Prompt Security & Hardening) | Sécurisation des interactions LLM contre injection | Perso / Veille (EPSI) |
 
