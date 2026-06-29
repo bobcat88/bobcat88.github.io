@@ -28,7 +28,6 @@ bun factory/render.js --variant ats                 # generic ATS CV → cv/ats/
 bun factory/render.js --variant premium             # narrative CV  → cv/premium/
 bun factory/render.js --variant ats --offer factory/offers/acme.md   # tailored → outputs/acme/
 bun factory/render.js --variant ats --pdf           # also export A4 PDF
-bun factory/render.js --variant ats --platform malt # platform variant → cv/platforms/
 ```
 
 ## Output format

@@ -32,9 +32,6 @@ tags: [project/phoenix, career-os, baseline]
 ### Mission set (10)
 Arkéa (Banque de détail) · Neosoft · Thales · EPSI · Gestion Locative · Shuhan Plastics (Chine) · Vacorda · Diadom · Justrade · (+ Velocity Lab / entrepreneurial).
 
-### Job platforms (registry — see `platforms.md`)
-Some referenced in vault. To catalog: LinkedIn, Malt, Free-Work, Comet, APEC, Welcome to the Jungle, others. Each gets a generic CV variant.
-
 ## Current-state metrics — ⏸️ PARKED (2026-06-29)
 
 > Not relevant right now: Johan was on a 6-month mission, so there is no recent application activity to baseline. Revisit when actively prospecting. Table kept below for when it matters.
@@ -60,7 +57,7 @@ CVs are **A4-formatted HTML** rendered from the content library by scripts, styl
 - **Format**: single HTML per CV, A4 via CSS `@page { size: A4; margin: … }` + `@media print`.
 - **Data-driven**: content stays in `library/` (markdown/JSON). A render script injects it into a template → finished HTML. Change a fact once in the library → every CV re-renders.
 - **PDF export**: browser Print-to-PDF (zero-dep, pixel-accurate) or headless via Playwright (already in stack) / `weasyprint` for batch. No docx, no Word.
-- **Styling SSOT**: one print stylesheet (`factory/styles/print-a4.css`) shared by all variants → consistent typography across ATS/Premium/platform.
+- **Styling SSOT**: one print stylesheet (`factory/styles/print-a4.css`) shared by all variants → consistent typography across ATS/Premium.
 - **ATS caveat**: some ATS parse PDF poorly. Keep ATS variant as **clean single-column, selectable-text** HTML→PDF (no multi-column, no text-in-images), so parsers extract correctly.
 
 ## Proposed repo architecture (CV Factory hub)
@@ -70,7 +67,6 @@ bobcat88.github.io/
 ├── index.html              # Niveau 4 — live site (one output)
 ├── PROJECT-PHOENIX.md      # plan (copied from parent)
 ├── BASELINE.md             # this file
-├── platforms.md            # job-platform registry → which CV variant each uses
 │
 ├── library/                # ← SINGLE SOURCE OF TRUTH (all content, md/json)
 │   ├── profile.json        # identity, contact, positioning, tagline, 2-layer titles
@@ -81,8 +77,7 @@ bobcat88.github.io/
 │
 ├── cv/                     # generated A4 HTML CVs (+ exported PDFs)
 │   ├── ats/                # ATS variant per offer  (single-col, selectable text)
-│   ├── premium/            # narrative variant
-│   └── platforms/          # generic per-platform CVs (Malt, Free-Work, LinkedIn…)
+│   └── premium/            # narrative variant
 │
 └── factory/                # CV Factory (WP05)
     ├── README.md           # how to run: offer in → A4 HTML + PDF out
@@ -100,7 +95,6 @@ job offer  →  factory/offers/<offer>.md
                      ▼   render.js pulls library/: profile + matching skills + achievements + missions
             factory/outputs/<offer>/  →  cv.html (A4)  →  cv.pdf  + LM + pitch + gap analysis
 ```
-Generic platform CVs = same library, no offer → `cv/platforms/<platform>.html` + `.pdf`.
 
 ## Phase 0 deliverables
 
@@ -110,13 +104,14 @@ Generic platform CVs = same library, no offer → `cv/platforms/<platform>.html`
 - [ ] Scaffold `library/` + `factory/` + `cv/` structure
 - [ ] Import vault missions → `library/missions/`
 - [ ] Condense 12 docx → `library/` (skills, achievements, profile)
-- [ ] Build `platforms.md` registry
 
 ## Open decisions (need Johan)
 
 1. **Baseline numbers** — fill the metrics table (even rough estimates).
 2. **Migration vs reference** — copy vault mission `.md` into `library/missions/`, or keep vault as source and symlink? (Recommend: copy into repo = SSOT; vault keeps knowledge-graph notes that *link* to repo.)
-3. **Drive** — pull the Drive PDFs/CVs into `cv/platforms/` as reference, or leave in Drive and just catalog?
+3. **Drive** — pull the Drive PDFs/CVs into the repo as reference, or leave in Drive and just catalog?
+
+> **Scope note (2026-06-29)** : per-platform CV tailoring **retiré du projet** (peu réaliste sans logique de tailoring réelle). Plus de `cv/platforms/`, plus de `platforms.md`, plus de flag `--platform`. LinkedIn reste une cible mais via le positionnement de `library/profile.json`, pas un CV généré.
 
 ## Content SSOT — resolution (2026-06-28)
 

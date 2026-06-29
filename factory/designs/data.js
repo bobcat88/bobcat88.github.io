@@ -140,6 +140,24 @@ window.CV_DATA = {
       ]
     ],
     [
+      "Project Manager — Gestion Locative",
+      "Indépendant (EI) | Location Saisonnière",
+      "Juil. 2022 – Sept. 2023",
+      "Luz-Saint-Sauveur",
+      [
+        "Pilotage intégralité du cycle locatif courte durée (AirBnB) en autonomie totale.",
+        "Coordination logistique, maintenance, asset management et interface unique propriétaires/locataires.",
+        "Taux d'occupation >90% en période haute, taux de satisfaction 88%."
+      ],
+      "Gestion d'actifs locatifs courte durée en autonomie totale, du cycle locatif à la relation client.",
+      [
+        "Asset Management",
+        "Coordination logistique",
+        "Relation client",
+        "Ops AirBnB"
+      ]
+    ],
+    [
       "Resp. Développement Commercial International",
       "Sichuan Shuhan Plastics (Chine)",
       "Juin 2015 – Janv. 2020",
@@ -154,6 +172,23 @@ window.CV_DATA = {
         "Management interculturel",
         "Appels d'offres SAP Ariba",
         "Export"
+      ]
+    ],
+    [
+      "Chargé de Stratégie Digitale & Business Dev",
+      "Vacorda Instruments (Chine)",
+      "Janv. 2015 – Juin 2015",
+      "Chengdu",
+      [
+        "Création écosystème digital from-scratch, SEO/SEA, lead generation zone francophone.",
+        "Gestion budget publicitaire 24k$/an Google Ads ; poste exercé 90% en anglais."
+      ],
+      "Création d'un écosystème digital from-scratch pour la conquête de la zone francophone.",
+      [
+        "Stratégie digitale",
+        "SEO / SEA",
+        "Google Ads",
+        "Lead Generation"
       ]
     ],
     [
@@ -172,6 +207,23 @@ window.CV_DATA = {
         "MS Project",
         "SEO / SEA",
         "Reporting CODIR"
+      ]
+    ],
+    [
+      "Chargé de Projet Webmarketing — International",
+      "Justrade International (Chine)",
+      "Sept. 2011 – Août 2012",
+      "Yiwu",
+      [
+        "Coordination refonte site internet multilingue (supervision prestataires, traducteurs) et social media bilingue EN/FR.",
+        "Reporting mensuel CODIR et recommandation LinkedIn client."
+      ],
+      "Coordination d'une refonte web multilingue et du social media bilingue à l'international.",
+      [
+        "Webmarketing",
+        "Coordination prestataires",
+        "Social Media",
+        "International"
       ]
     ]
   ],

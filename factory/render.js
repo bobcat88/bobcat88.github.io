@@ -7,7 +7,6 @@
 //   bun factory/render.js --variant premium                   # narrative CV
 //   bun factory/render.js --variant ats --offer application/thales/responsable-projet-delivery-cm-2026-04-28/offer.md --pdf
 //   bun factory/render.js --variant ats --pdf                 # also export PDF (needs playwright)
-//   bun factory/render.js --variant ats --platform malt       # platform variant
 //
 
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync } from "node:fs";
@@ -41,7 +40,7 @@ const outDir = args.offer
 
 mkdirSync(outDir, { recursive: true });
 
-const htmlPath = join(outDir, `cv-${model.variant}${args.platform ? "-" + args.platform : ""}.html`);
+const htmlPath = join(outDir, `cv-${model.variant}.html`);
 writeFileSync(htmlPath, html);
 console.log("✓ HTML (CV) →", htmlPath);
 

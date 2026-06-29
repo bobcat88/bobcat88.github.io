@@ -92,7 +92,6 @@ const tplFile = m.variant === "premium"
 
 ## Phase-0 deliverable gaps (from BASELINE checklist, still open)
 - **Baseline metrics** — all `_TBD_`; needs Johan's numbers. Blocks any "prove the lift" claim.
-- **`cv/platforms/`** — empty. `--platform` flag is wired in render.js but no platform CV has been generated, and `platforms.md` registry isn't connected to any render call.
 - **docx condense** — missions imported; skills/achievements/profile condensation from the 12 `CV/*.docx` not verified against the audit checkbox.
 
 ## Resolution log — 2026-06-28
@@ -110,7 +109,7 @@ Fixed this pass:
 Deferred (bigger / needs input):
 - **#9** case-studies vs experience mapping — noted in BASELINE, no code change.
 - ~~Baseline metrics~~ → **PARKED 2026-06-29** (no recent activity to baseline; Johan on a 6-month mission).
-- `cv/platforms/` generation — **deferred**: render `--platform` is filename-only; needs real per-platform tailoring before it's worth generating.
+- ~~`cv/platforms/` generation~~ → **RETIRÉ DU PROJET 2026-06-29** (tailoring par plateforme peu réaliste). `platforms.md`, `cv/platforms/`, flag `--platform` supprimés.
 - docx-condense verification.
 
 ## Backlog resolution — 2026-06-29
@@ -127,6 +126,6 @@ Generic premium rebuilt: multi-page (3 A4, verified via PDF), **bold dates/locat
 2. #3 master decision + #5 designs/data.js (resolve template/data drift together).
 3. #4 experience SSOT decision (architectural; do once, deliberately).
 4. #6–#9 cleanups.
-5. Phase-0 gaps (metrics need Johan; platforms + docz are build work).
+5. Phase-0 gaps (docx-condense verification).
 </content>
 </invoke>
