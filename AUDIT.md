@@ -109,8 +109,15 @@ Fixed this pass:
 
 Deferred (bigger / needs input):
 - **#9** case-studies vs experience mapping — noted in BASELINE, no code change.
-- Baseline metrics (need Johan), `cv/platforms/` generation, docx-condense verification.
-- New asks: case-studies → embed tech stack section ; `index.html` → mission popups instead of inline detail.
+- ~~Baseline metrics~~ → **PARKED 2026-06-29** (no recent activity to baseline; Johan on a 6-month mission).
+- `cv/platforms/` generation — **deferred**: render `--platform` is filename-only; needs real per-platform tailoring before it's worth generating.
+- docx-condense verification.
+
+## Backlog resolution — 2026-06-29
+- **Site horizontal overflow at 320px** → fixed (`overflow-x: clip` on root; verified 320/390).
+- **Case-study triple-copy drift** → resolved: `library/case-studies.json` is now the bilingual SSOT; `bun factory/build-site.js` generates `case-studies.js`; `index.html` loads it (inline copy removed, −75 lines). `library/case-studies/*.md` demoted to human reference.
+- **GitNexus index** → reindexed.
+- **EN case-studies** → covered: the EN now lives in `case-studies.json` (no separate `*.md` EN needed).
 
 ## v2 Dossier (cv-a) — 2026-06-28
 Generic premium rebuilt: multi-page (3 A4, verified via PDF), **bold dates/location**, per-mission **context** line + **tech-stack tags**, all 9 experiences, skills in 3-col + formation in 2-col. Output: `cv/premium/cv-premium.{html,pdf}`.

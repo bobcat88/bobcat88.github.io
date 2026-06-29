@@ -35,7 +35,11 @@ Arkéa (Banque de détail) · Neosoft · Thales · EPSI · Gestion Locative · S
 ### Job platforms (registry — see `platforms.md`)
 Some referenced in vault. To catalog: LinkedIn, Malt, Free-Work, Comet, APEC, Welcome to the Jungle, others. Each gets a generic CV variant.
 
-## Current-state metrics — ⚠️ TO FILL (needed to prove lift)
+## Current-state metrics — ⏸️ PARKED (2026-06-29)
+
+> Not relevant right now: Johan was on a 6-month mission, so there is no recent application activity to baseline. Revisit when actively prospecting. Table kept below for when it matters.
+
+### (parked) ⚠️ TO FILL (needed to prove lift)
 
 Cannot prove improvement without these. Johan to provide best estimate of the last ~3 months:
 
@@ -118,5 +122,6 @@ Generic platform CVs = same library, no offer → `cv/platforms/<platform>.html`
 
 - **`library/experience.json` = the render SSOT** for CV experience (consumed by `factory/render.js`). It now carries, per mission: `role, company, period, location, context, stack[], bullets[]`.
 - **`library/missions/*.md` = human reference / narrative** (full mission write-ups, vault-linked). Not read by the renderer. When a fact changes, edit `experience.json` (and optionally mirror the prose in the mission `.md`).
-- **`library/case-studies/*.md` = portfolio narrative** (Contexte/Problème/Résultats + tags) for `index.html` popups and the dossier de compétences. 11 case-studies vs 9 salaried experiences: velocity / luz-saisonnier / trading-perso are entrepreneurial/personal and intentionally have no `experience.json` entry.
+- **`library/case-studies.json` = SSOT des popups étude de cas du site** (bilingue FR/EN, structuré : kicker, role, context, problem, approach, results, stack, accent, doc). Édite ce fichier puis lance **`bun factory/build-site.js`** → génère `case-studies.js` (racine, `window.CASE_STUDIES`) que charge `index.html`. **Ne pas éditer `case-studies.js` à la main** (généré).
+- **`library/case-studies/*.md` = narratif humain longform** (Contexte/Problème/Résultats + tags), référence/brouillon pour le dossier de compétences. Plus consommé par le site (remplacé par `case-studies.json`). 11 vs 9 expériences salariées : velocity / luz-saisonnier / trading-perso sont entrepreneuriaux/perso et n'ont volontairement pas d'entrée `experience.json`.
 - **Two premium templates** (resolved): `designs/cv-a.html` = **Dossier générique** (ESN / portage, ≤3 A4, all 9 experiences) ; `designs/cv-b.html` = **CV ciblé** (offer-tailored, 1 A4). See `factory/README.md`.
