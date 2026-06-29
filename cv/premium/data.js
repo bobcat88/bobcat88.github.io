@@ -34,7 +34,7 @@ window.CV_DATA = {
       "https://bobcat88.github.io/"
     ]
   ],
-  "summary": "Senior PMO et Product Owner, 13 ans d'expérience dont 7 ans en Asie, sur tout le cycle projet — du cadrage stratégique (Business Analysis) au pilotage opérationnel (PMO) jusqu'à la livraison produit (Product Ownership). Profil hybride tech × business : structurer un Plan de Développement en COMEX comme coder un outil PMO en Apps Script.",
+  "summary": "Senior PMO et Product Owner, 13 ans d'expérience dont 7 ans en Asie, sur tout le cycle projet — du cadrage stratégique (Business Analysis) au pilotage opérationnel (PMO) jusqu'à la livraison produit (Product Ownership). Profil hybride tech × business : aussi à l'aise pour structurer un plan stratégique en COMEX que pour coder l'outil PMO qui le pilote.",
   "metrics": [
     [
       "> 1 Md€",
