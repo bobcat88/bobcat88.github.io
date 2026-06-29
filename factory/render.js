@@ -104,6 +104,8 @@ function renderTemplate(m) {
   if (m.variant === "premium" && !args.offer) {
     htmlContent = htmlContent.replace("<title>Johan Proust — CV (A · Header Band)</title>", "<title>Johan Proust — Dossier de Compétences</title>");
   }
+  // Published outputs are standalone (no design gallery): drop the gallery link, keep Print.
+  htmlContent = htmlContent.replace(/<a href="gallery2\.html"[^>]*>[\s\S]*?<\/a>/, "");
   return htmlContent;
 }
 
