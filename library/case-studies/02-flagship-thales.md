@@ -10,10 +10,10 @@
 ---
 
 ## 1. Contexte
-Dans l'environnement hautement sensible de la Défense (systèmes sonars, maritimes, spatiaux), le site Thales de Brest gère un portefeuille complexe de plus de 50 offres en parallèle, avec des budgets unitaires allant de quelques centaines de k€ à plus de 1 Md€.
+Dans l'environnement hautement sensible de la Défense (Radars, guerre électronique, surface, spatial), le site Thales de Brest gère un portefeuille complexe de plus de 50 offres sur la durée de mission, avec des budgets unitaires allant de quelques centaines de k€ à plus de 1 Md€.
 
 ## 2. Problème
-Le processus d'évaluation des risques et opportunités (ROR - Risk & Opportunity Reviews) lors des phases d'offres était lourd et sujet à des erreurs d'imputation manuelle de codes de taux. L'extraction et la synthèse des données prenaient en moyenne 3 heures par offre pour les Bid Managers.
+Le processus d'évaluation des risques et opportunités (ROR - Risk & Opportunity Reviews) lors des phases d'offres était lourd et entièrement manuel, offres sujets à des erreurs d'imputation manuelle de codes de taux. L'extraction et la synthèse des données prenaient en moyenne 3 heures par offre à chaque Revue. 
 
 ## 3. Analyse
 Les goulots d'étranglement résidaient dans la dispersion des structures de chiffrage (RC/NRC) et la ressaisie manuelle des données de risque entre les outils de chiffrage (QDV) et le registre des risques (RiskX).
@@ -30,10 +30,11 @@ Mettre en place une approche d'**Earned Value Management (EVM)** standardisée e
 ## 6. Résultats
 - **Temps de traitement risques** : Réduit de **3 heures à 15 minutes** par offre (-92%).
 - **Taux d'erreur** : Pratiquement éliminé sur les imputations de Centres de Taux.
-- **Impact décisionnel** : Rapport RETEX présenté et validé par le **CODIR DMS France**.
+- **Impact décisionnel** : Rapport RETEX présenté et validé par la **BU DMS France**, puis présenté à la **GBU**
 
 ## 7. Leçons
-L'industrialisation des méthodes PMO en phase d'offre permet d'allouer plus de temps à l'analyse stratégique des risques et moins à la manipulation technique des chiffres.
+L'industrialisation des méthodes PMO en phase d'offre permet d'allouer plus de temps à l'analyse stratégique des risques et ds offres et moins à la manipulation technique des chiffres.
+La réduction des taux d'imputation et donc des couts présentés, permet une meilleure acceptation des offres par les clients. 
 
 ## 8. Compétences démontrées
 - **EVM & WBS/OBS** : Structuration de chiffrages complexes > 1 Md€.
