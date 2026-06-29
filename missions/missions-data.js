@@ -924,12 +924,10 @@ window.MISSIONS = {
       },
       "situation": {
         "fr": [
-          "PME industrielle chinoise (plasturgie) sur-dépendante du marché domestique, export limité à 5% du CA global. Mission stratégique : piloter le développement commercial international avec un focus sur la zone Asie émergente, créer et fidéliser un portefeuille clients export, et assurer le reporting stratégique direct à la Direction Générale.",
-          "Suivi opérationnel et commercial de comptes industriels majeurs, dont un acteur de l'agro-élevage pour la fourniture massive de sacs tissés PP (PP Woven Bags)."
+          "PME industrielle chinoise (plasturgie) sur-dépendante du marché domestique, export limité à 5% du CA global. Mission stratégique : piloter le développement commercial international avec un focus sur la zone Asie émergente, créer et fidéliser un portefeuille clients export, et assurer le reporting stratégique direct à la Direction Générale."
         ],
         "en": [
-          "A Chinese industrial SME (plastics) over-dependent on its domestic market, with exports limited to 5% of global revenue. Strategic mission: lead international business development with a focus on emerging Asia, build and retain an export client portfolio, and provide strategic reporting directly to top management.",
-          "Operational and commercial management of major industrial accounts, including an agri-livestock player for the bulk supply of PP woven bags."
+          "A Chinese industrial SME (plastics) over-dependent on its domestic market, with exports limited to 5% of global revenue. Strategic mission: lead international business development with a focus on emerging Asia, build and retain an export client portfolio, and provide strategic reporting directly to top management."
         ]
       },
       "objectives": {

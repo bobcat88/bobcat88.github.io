@@ -21,14 +21,6 @@ Up: [[Career - MOC]]
 
 PME industrielle chinoise (plasturgie) **sur-dépendante du marché domestique**, export limité à **5% du CA global**. Mission stratégique : piloter le développement commercial international avec focus sur la zone **Asie émergente**, créer et fidéliser un portefeuille clients export, et assurer le reporting stratégique direct à la Direction Générale.
 
-## CONTEXTE DE DIRECTION & PARTENAIRES
-
-*   **Direction Générale** : Rattaché directement à la direction opérationnelle de l'entreprise (PME familiale), avec reporting stratégique direct.
-*   **Comptes Majeurs Nationaux** : Suivi opérationnel et commercial de comptes industriels majeurs, notamment un acteur de l'agro-élevage pour la fourniture massive de sacs tissés PP (PP Woven Bags).
-
-<!-- Note : détails nominatifs sur l'actionnariat et l'identité de la direction retirés — données personnelles de tiers, à ne pas publier dans ce dépôt public. -->
-
-
 ## OBJECTIFS (TASK)
 
 1. **Définir et exécuter** une stratégie export marchés émergents asiatiques.
