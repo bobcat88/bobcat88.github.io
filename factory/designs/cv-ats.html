@@ -54,4 +54,5 @@ $("skills").innerHTML=d.skillGroups.map(([g,arr])=>`<div class="skline"><b>${g} 
 $("exp").innerHTML=d.experience.map(([r,o,dt,loc,b],i)=>{const bl=i>=4?b.slice(0,1):b;return `<div class="exp"><div class="exp-head"><div class="exp-role">${r} <span class="org">— ${o}</span></div><div class="exp-meta">${dt} · ${loc}</div></div><ul>${bl.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;}).join("");
 $("edu").innerHTML=d.education.map(([y,t,s])=>`<div class="kv"><b>${y}</b> · ${t}${s?" — "+s:""}</div>`).join("");
 $("lang").innerHTML=`<div class="kv">${d.languages.map(([l,v])=>`<b>${l}</b> — ${v}`).join(" &nbsp;·&nbsp; ")}</div>`;
+// References are intentionally premium-only: the ATS stays a clean one-pager.
 </script></body></html>

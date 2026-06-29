@@ -48,13 +48,19 @@ console.log("✓ HTML (CV) →", htmlPath);
 const css = read("factory/designs/base.css");
 writeFileSync(join(outDir, "base.css"), css);
 
-const dataJs = `window.CV_DATA = ${JSON.stringify(compileCvData(profile), null, 2)};`;
+const cvData = compileCvData(profile);
+// Per-application overrides (PRIVATE, never in the public library): a tailored
+// summary, a references encart, an alternate photo path. Lives next to offer.md
+// as overrides.json, so it survives re-renders (no manual post-patch needed).
+if (args.offer) applyOverrides(cvData, join(dirname(join(ROOT, args.offer)), "overrides.json"));
+const dataJs = `window.CV_DATA = ${JSON.stringify(cvData, null, 2)};`;
 writeFileSync(join(outDir, "data.js"), dataJs);
 console.log("✓ Data →", join(outDir, "data.js"));
 
-// Self-contained portrait: copy the webp next to the output so the relative path always resolves.
+// Self-contained portrait: copy the webp next to the output so the relative path
+// always resolves — unless an override points the photo elsewhere (e.g. shared _assets).
 const photoSrc = join(ROOT, "johan-proust.webp");
-if (existsSync(photoSrc)) copyFileSync(photoSrc, join(outDir, "johan-proust.webp"));
+if (existsSync(photoSrc) && cvData.photo === "johan-proust.webp") copyFileSync(photoSrc, join(outDir, "johan-proust.webp"));
 
 // Keep the design-preview data snapshot in sync with the library (generic runs only).
 if (!args.offer) writeFileSync(join(ROOT, "factory/designs/data.js"), dataJs);
@@ -96,6 +102,22 @@ if (args.offer) {
 }
 
 // --- helpers --------------------------------------------------------------
+// Merge a private per-application overrides.json into the compiled CV data.
+// Supported keys: summary (string), photo (string path), references (array of
+// { name, title, org, email?, phone?, note? }). Unknown keys are ignored.
+function applyOverrides(data, overridesPath) {
+  if (!existsSync(overridesPath)) return;
+  try {
+    const ov = JSON.parse(readFileSync(overridesPath, "utf8"));
+    if (typeof ov.summary === "string" && ov.summary.trim()) data.summary = ov.summary;
+    if (typeof ov.photo === "string" && ov.photo.trim()) data.photo = ov.photo;
+    if (Array.isArray(ov.references) && ov.references.length) data.references = ov.references;
+    console.log("✓ Overrides →", overridesPath);
+  } catch (e) {
+    console.error("overrides.json ignored (parse error):", String(e.message || e));
+  }
+}
+
 function renderTemplate(m) {
   const tplFile = m.variant === "premium"
     ? (args.offer ? "factory/designs/cv-b.html" : "factory/designs/cv-a.html")
