@@ -261,7 +261,7 @@ window.CV_DATA = {
         "Conception d'agents IA personnels",
         "Intégration LLMs / MCP / prompt engineering",
         "Veille architecture AI",
-        "Orchestration d'agents multi-agents"
+        "Orchestration de systèmes multi-agents"
       ]
     ],
     [
@@ -316,7 +316,7 @@ window.CV_DATA = {
     "Conception d'agents IA personnels",
     "Intégration LLMs / MCP / prompt engineering",
     "Veille architecture AI",
-    "Orchestration d'agents multi-agents",
+    "Orchestration de systèmes multi-agents",
     "Model Context Protocol (MCP)",
     "Audit d'invite (Prompt Security & Hardening)",
     "Développement commercial international",
