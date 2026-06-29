@@ -264,7 +264,9 @@ async function toPdf(htmlPath) {
     const page = await browser.newPage();
     await page.goto("file://" + htmlPath, { waitUntil: "networkidle" });
     const pdfPath = htmlPath.replace(/\.html$/, ".pdf");
-    await page.pdf({ path: pdfPath, format: "A4", printBackground: true, margin: { top: "0", bottom: "0", left: "0", right: "0" } });
+    // preferCSSPageSize honours each design's @page rules (size + margins),
+    // so multi-page CVs get clean top/bottom breathing room at page breaks.
+    await page.pdf({ path: pdfPath, printBackground: true, preferCSSPageSize: true });
     await browser.close();
     console.log("✓ PDF  →", pdfPath);
   } catch (e) {
