@@ -22,7 +22,7 @@ tags: [project/phoenix, career-os, baseline]
 ### Content sources (overlapping — to consolidate into `library/`)
 | Source | Items | Quality | Action |
 |--------|-------|---------|--------|
-| `CV/*.docx` (parent dir) | 12 (CV NORGAY, Dossier compétences, Skills Portfolio, 9 expériences) | raw, ~320–1490 words each | extract content → condense, then **retire docx** |
+| ~~`CV/*.docx` (parent dir)~~ | ~~12 + 10 `drafts/docx/`~~ | extracted | ✅ condensed → `library/`, **docx retired & pruned 2026-06-29** |
 | Vault `Career/Missions/*.md` | 10 missions + `00-Dossier-de-competences.md` | already condensed, structured | **primary import** |
 | Vault `Career/Johan - Working Profile.md` | identity/profile (9.2K) | structured | → `library/profile.md` |
 | Vault `Career/Career - MOC.md` + `Online CV.md` | maps of content | index | reference |
