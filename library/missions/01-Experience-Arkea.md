@@ -16,7 +16,7 @@ Up: [[Career - MOC]]
 *Mission prévisionnelle 12-18 mois*
 
 **Profil** : [Johan PROUST](mailto:johanproust@gmail.com)
-**Dossier de compétences complet** : [01- Dossier de compétences](https://docs.google.com/document/d/1JqAik7TN7-DBs5k37pxGNWCC0NdA1nxw6pprdNChWjA)
+**Dossier de compétences complet** : [01- Dossier de compétences](https://bobcat88.github.io/cv/premium/cv-premium.html)
 
 ---
 
@@ -81,7 +81,7 @@ Enjeu : transformer des intentions stratégiques en un portefeuille d'initiative
 - Synthèses décisionnelles, supports de qualification, tableaux de suivi, plans d'action, recommandations de structuration départementale.
 - Application PMO (Apps Script) déployée et adoptée.
 - POC ComitéAuto cadré.
-- [DDM - Plan de développement 2026.pdf](file:///home/_johan/Documents/Borg/300%20Entities/Career/Missions/DDM%20-%20Plan%20de%20developpement%202026.pdf) — Plan de développement stratégique de la Banque de Détail.
+- DDM — Plan de développement 2026 — Plan de développement stratégique de la Banque de Détail.
 
 ## ENVIRONNEMENT TECHNIQUE & FONCTIONNEL
 

@@ -25,7 +25,7 @@ window.CASE_STUDIES = {
   "cases": {
     "arkea": {
       "accent": "#ef4444",
-      "doc": "https://docs.google.com/document/d/1IMbDitXQVkhThj8OEU_OJxWEX9xzpcZg49NObkJ4sIo/edit?usp=drive_link",
+      "doc": "missions/index.html?id=arkea",
       "kicker": {
         "fr": "Crédit Mutuel Arkéa · Mars 2026 → Présent",
         "en": "Crédit Mutuel Arkéa · Mar 2026 → Present"
@@ -122,7 +122,7 @@ window.CASE_STUDIES = {
     },
     "neosoft": {
       "accent": "#3b82f6",
-      "doc": "https://docs.google.com/document/d/1xxzyoGqOU6SiQq8ci9xPORed7DPamUyGA2Xxg_xhwEA/edit?usp=drive_link",
+      "doc": "missions/index.html?id=neosoft",
       "kicker": {
         "fr": "NeoSoft · Oct 2025 → Déc 2025",
         "en": "NeoSoft · Oct 2025 → Dec 2025"
@@ -161,7 +161,7 @@ window.CASE_STUDIES = {
     },
     "thales": {
       "accent": "#a855f7",
-      "doc": "https://docs.google.com/document/d/13LURIzIYDEVGRZU5gprV16Lhpt4zj_yfUqO1joVTVhw/edit?usp=drive_link",
+      "doc": "missions/index.html?id=thales",
       "kicker": {
         "fr": "Thales ISR (via MIGSO-PCUBED) · Oct 2024 → Oct 2025",
         "en": "Thales ISR (via MIGSO-PCUBED) · Oct 2024 → Oct 2025"
@@ -213,7 +213,7 @@ window.CASE_STUDIES = {
     },
     "epsi": {
       "accent": "#10b981",
-      "doc": "https://docs.google.com/document/d/18pWjCAtyOMRExgEGMnvHBI772hxGsIZtfomSjvaS4t4/edit?usp=drive_link",
+      "doc": "missions/index.html?id=epsi",
       "kicker": {
         "fr": "EPSI (client Capgemini) · Avr 2024 → Juil 2024",
         "en": "EPSI (Capgemini client) · Apr 2024 → Jul 2024"
@@ -252,7 +252,7 @@ window.CASE_STUDIES = {
     },
     "gestion-locative": {
       "accent": "#f97316",
-      "doc": "https://docs.google.com/document/d/1ol-LDjmEQJhorYPO4kL01Zx-NNv1tXec8wUHrufqFgg/edit?usp=drive_link",
+      "doc": "missions/index.html?id=gestion-locative",
       "kicker": {
         "fr": "Indépendant (EI) · Juil 2022 → Sept 2023",
         "en": "Self-employed · Jul 2022 → Sep 2023"
@@ -286,7 +286,7 @@ window.CASE_STUDIES = {
     },
     "shuhan": {
       "accent": "#ec4899",
-      "doc": "https://docs.google.com/document/d/1YrwQRrBlTZ2I9lxNmwhOv0kSdqsAalw34sNbqmhaTbk/edit?usp=drive_link",
+      "doc": "missions/index.html?id=shuhan",
       "kicker": {
         "fr": "Sichuan Shuhan Plastics (Chine) · Juin 2015 → Janv 2020",
         "en": "Sichuan Shuhan Plastics (China) · Jun 2015 → Jan 2020"
@@ -324,7 +324,7 @@ window.CASE_STUDIES = {
     },
     "vacorda": {
       "accent": "#06b6d4",
-      "doc": "https://docs.google.com/document/d/1PTNCRD_HBE4nENYdqwEFyFRPh0hM-eWsMrAhi75rGIM/edit?tab=t.0",
+      "doc": "missions/index.html?id=vacorda",
       "kicker": {
         "fr": "Vacorda Instruments (Chine) · Janv 2015 → Juin 2015",
         "en": "Vacorda Instruments (China) · Jan 2015 → Jun 2015"
@@ -358,7 +358,7 @@ window.CASE_STUDIES = {
     },
     "diadom": {
       "accent": "#eab308",
-      "doc": "https://docs.google.com/document/d/1PTNCRD_HBE4nENYdqwEFyFRPh0hM-eWsMrAhi75rGIM/edit?usp=drive_link",
+      "doc": "missions/index.html?id=diadom",
       "kicker": {
         "fr": "Diadom SAS · Sept 2012 → Oct 2014",
         "en": "Diadom SAS · Sep 2012 → Oct 2014"
@@ -393,7 +393,7 @@ window.CASE_STUDIES = {
     },
     "justrade": {
       "accent": "#ef4444",
-      "doc": "https://docs.google.com/document/d/1JaOHl9brR_uOtd7ZPcN10GEvG5e1CPWp11Ufm67uctM/edit?usp=drive_link",
+      "doc": "missions/index.html?id=justrade",
       "kicker": {
         "fr": "Justrade International (Chine) · Sept 2011 → Août 2012",
         "en": "Justrade International (China) · Sep 2011 → Aug 2012"
