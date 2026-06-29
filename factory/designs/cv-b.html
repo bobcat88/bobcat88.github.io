@@ -52,6 +52,12 @@ h2{ font-size:9.4pt; text-transform:uppercase; letter-spacing:.9px; color:var(--
 .exp li::before{ content:"▸"; position:absolute; left:0; color:var(--accent); font-size:7pt; top:1.5pt; }
 .exp-stack{ display:flex; flex-wrap:wrap; gap:3pt; margin-top:4pt; }
 .exp-stack .tag{ background:var(--soft); border:1px solid var(--line); color:var(--slate); border-radius:4px; padding:1.5pt 6pt; font-size:7.6pt; font-weight:600; }
+.ref{ background:var(--soft); border-left:2.5px solid var(--accent); border-radius:0 4px 4px 0; padding:3pt 7pt; margin-bottom:3.5pt; page-break-inside:avoid; break-inside:avoid; }
+.ref:last-child{ margin-bottom:0; }
+.ref-top{ font-size:9pt; color:var(--ink); }
+.ref-role{ color:var(--accent); font-weight:600; }
+.ref-att{ font-size:8.2pt; font-style:italic; color:var(--muted); margin-top:1pt; }
+.ref-ct{ font-size:8.2pt; color:var(--slate); margin-top:1pt; }
 </style></head><body>
 <div class="toolbar no-print"><a href="gallery2.html">← Gallery</a><button onclick="print()">Print / PDF</button></div>
 <main>
@@ -80,6 +86,7 @@ h2{ font-size:9.4pt; text-transform:uppercase; letter-spacing:.9px; color:var(--
     <section class="main">
       <h2>Expérience <span style="font-weight:600;text-transform:none;letter-spacing:0;color:var(--muted)">(suite)</span></h2>
       <div id="exp2"></div>
+      <section id="ref-sec" hidden><h2>Références</h2><div id="referents"></div></section>
     </section>
   </section>
 </main>
@@ -117,4 +124,10 @@ $("metrics").innerHTML=d.metrics.map(([v,l,c])=>`<div class="metric"><b>${v}</b>
 const ex=d.experience, exHalf=Math.ceil(ex.length/2);
 $("exp1").innerHTML=renderExp(ex.slice(0,exHalf));
 $("exp2").innerHTML=renderExp(ex.slice(exHalf));
+// Références — present only on tailored CVs (referents come from the private offer.md).
+const refs=d.referents||[];
+if(refs.length){
+  $("referents").innerHTML=refs.map(r=>`<div class="ref"><div class="ref-top"><b>${r.name}</b>${r.role?` — <span class="ref-role">${r.role}</span>`:""}</div>${r.attests?`<div class="ref-att">${r.attests}</div>`:""}${r.contact?`<div class="ref-ct">${r.contact}</div>`:""}</div>`).join("");
+  $("ref-sec").hidden=false;
+}
 </script></body></html>

@@ -6,6 +6,7 @@
       "problem": "Le vrai problème",
       "approach": "Approche — et pourquoi ces choix",
       "results": "Résultats",
+      "deliverables": "Réalisations · livrables",
       "stack": "Stack & méthodes",
       "doc": "Document complet",
       "cta": "Étude de cas",
@@ -16,6 +17,7 @@
       "problem": "The real problem",
       "approach": "Approach — and why",
       "results": "Results",
+      "deliverables": "Deliverables",
       "stack": "Stack & methods",
       "doc": "Full document",
       "cta": "Case study",
@@ -110,6 +112,20 @@
           "Agentic chain: indexed context, impact analysis, phased execution, final human validation.",
           "Quality loop (adversarial review) before any deliverable.",
           "A decision-systems positioning carried across every support."
+        ]
+      },
+      "deliverables": {
+        "fr": [
+          "Écosystème Phoenix — site, factory CV multi-formats et dossiers de mission générés depuis une source unique.",
+          "Harness agentique & Quality Loop — contexte indexé, analyse d'impact, revue contradictoire avant chaque livrable.",
+          "Pilotage d'investissement assisté par IA — thèses documentées, gates Go/No-go, audit trail.",
+          "Automatisation PMO & delivery — Kanban, KPI, jalons, reporting avec vérification humaine."
+        ],
+        "en": [
+          "Phoenix ecosystem — site, multi-format CV factory and mission dossiers generated from a single source.",
+          "Agentic harness & Quality Loop — indexed context, impact analysis, adversarial review before every deliverable.",
+          "AI-assisted investment steering — documented theses, Go/No-go gates, audit trail.",
+          "PMO & delivery automation — Kanban, KPIs, milestones, reporting with human verification."
         ]
       },
       "stack": [

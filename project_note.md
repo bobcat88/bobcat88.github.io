@@ -38,6 +38,12 @@ Up: [[📍 Dashboard]]
 
 ## Patch Notes
 
+### v1.9 — Juin 2026 (Velocity Lab absorbe les projets perso + cartes Référent privées)
+Deux tracks, suivi beads PHX-li8 (DB au niveau docs root `../.beads`, pas dans ce repo).
+- **PUBLIC — Velocity Lab (Track A)** : la section `#ai-practice` est re-cadrée « // Velocity Lab · Founder track » / « IA appliquée — livrables Velocity Lab » : les projets perso (Écosystème Phoenix, harness agentique & Quality Loop, pilotage d'investissement IA, automatisation PMO) deviennent des **livrables Founder légitimes** de l'activité indépendante. La case study Velocity gagne une liste `deliverables` (SSOT `library/case-studies.json`), affichée dans la modale (label « Réalisations · livrables » / « Deliverables »), via un nouveau bloc `#case-deliverables-sec` + `setSec(...)`. i18n FR/EN complet (i282/i283/i284 + label modale). Regénéré `bun factory/build-site.js`.
+- **PRIVÉ — Cartes Référent (Track B)** : `factory/render.js` parse une section `## Référents` du **offer.md privé** (`parseReferents`, format `Nom | Rôle · Entreprise | Atteste | Contact`) → `CV_DATA.referents`. Bloc « Références » rendu dans `cv-b.html` (premium taillé) et `cv-ats.html` **uniquement** si `referents` non vide ; les runs génériques/publics restent vierges. Référents officiels (consentement donné, sourcés vault `300 Entities/People`) : Thomas Roué, Gaston Groux (Thales ISR Brest), Constance Friant (Arkéa DDM). **Confidentialité par construction** : noms/coordonnées jamais dans le repo public (symlink `application/` gitignoré ; leak-check = 0).
+- **VAULT** : correction typo `Frient → Friant` (note renommée, canonical + alias). Connaissance durable miroir sous `[[Velocity Lab]]` / `[[Career - MOC]]`.
+
 ### v1.8 — Juin 2026 (Internationalisation FR/EN + switcher drapeau)
 - **I18N** : Traduction professionnelle complète EN de tout le site (~297 chaînes). Mécanisme `data-i18n` (mode `html` pour le contenu riche, mode `text` pour les boutons à icône) + dictionnaire EN inline, fallback FR automatique pour les noms propres / dates internationales.
 - **SWITCHER** : Bouton bascule FR/EN avec drapeau, placé **au-dessus de la photo de profil**. Défaut = FR. En FR il affiche le drapeau UK + « Profile available in English » ; en EN il affiche le drapeau FR + « Profil disponible en français ». Choix mémorisé via localStorage (défaut FR sinon).

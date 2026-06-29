@@ -41,6 +41,7 @@ p.sum{ font-size:9.6pt; }
   <h2>Expérience professionnelle</h2><div id="exp"></div>
   <h2>Formation</h2><div class="two" id="edu"></div>
   <h2>Langues</h2><div id="lang"></div>
+  <section id="ref-sec" hidden><h2>Références</h2><div id="referents"></div></section>
 </main>
 <script src="data.js?b=2"></script>
 <script>
@@ -54,4 +55,10 @@ $("skills").innerHTML=d.skillGroups.map(([g,arr])=>`<div class="skline"><b>${g} 
 $("exp").innerHTML=d.experience.map(([r,o,dt,loc,b],i)=>{const bl=i>=4?b.slice(0,1):b;return `<div class="exp"><div class="exp-head"><div class="exp-role">${r} <span class="org">— ${o}</span></div><div class="exp-meta">${dt} · ${loc}</div></div><ul>${bl.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;}).join("");
 $("edu").innerHTML=d.education.map(([y,t,s])=>`<div class="kv"><b>${y}</b> · ${t}${s?" — "+s:""}</div>`).join("");
 $("lang").innerHTML=`<div class="kv">${d.languages.map(([l,v])=>`<b>${l}</b> — ${v}`).join(" &nbsp;·&nbsp; ")}</div>`;
+// Références — tailored CVs only (referents sourced from the private offer.md). ATS-safe: plain text, no color blocks.
+const refs=d.referents||[];
+if(refs.length){
+  $("referents").innerHTML=refs.map(r=>`<div class="kv"><b>${r.name}</b>${r.role?" — "+r.role:""}${r.attests?` · <i>${r.attests}</i>`:""}${r.contact?" · "+r.contact:""}</div>`).join("");
+  $("ref-sec").hidden=false;
+}
 </script></body></html>

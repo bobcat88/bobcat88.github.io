@@ -62,6 +62,7 @@ window.CV_DATA = {
       "Crédit Mutuel Arkéa"
     ]
   ],
+  "referents": [],
   "experience": [
     [
       "PMO Stratégique / Business Analyst",

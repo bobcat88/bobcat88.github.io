@@ -20,6 +20,10 @@ const experience = JSON.parse(read("library/experience.json"));
 const skills = parseSkills();
 
 const offerText = args.offer ? read(args.offer).toLowerCase() : "";
+// Raw (case-preserving) offer content — referent names/contacts live ONLY here,
+// in the PRIVATE offer.md, never in the public library/. Generic runs => no referents.
+const offerRaw = args.offer ? read(args.offer) : "";
+const referents = parseReferents(offerRaw);
 
 // --- assemble model -------------------------------------------------------
 const model = {
@@ -141,6 +145,21 @@ function parseFrontmatter(text) {
   return meta;
 }
 
+// Parse an optional `## Référents` section from the PRIVATE offer.md.
+// Each line: `- Nom | Rôle · Entreprise | Ce qu'il atteste | Contact`.
+// Returns [] when absent (generic/public CV runs never carry referents).
+function parseReferents(raw) {
+  if (!raw) return [];
+  const sec = parseSection(raw, "Référents");
+  if (!sec) return [];
+  return sec.split("\n")
+    .map(l => l.trim())
+    .filter(l => /^[-*]\s+/.test(l))
+    .map(l => l.replace(/^[-*]\s+/, "").split("|").map(s => s.trim()))
+    .filter(p => p[0])
+    .map(p => ({ name: p[0] || "", role: p[1] || "", attests: p[2] || "", contact: p[3] || "" }));
+}
+
 function parseSection(text, title) {
   const rx = new RegExp(`(?:##|###)\\s+${title}[\\s\\S]*?\\r?\\n([\\s\\S]*?)(?:\\r?\\n(?:##|###)|$)`, "i");
   const m = text.match(rx);
@@ -245,6 +264,7 @@ function compileCvData(profile) {
     ],
     summary: profile.summary.fr,
     metrics: profile.headlineMetrics.map(x => [x.value, x.label, x.context]),
+    referents,
     experience: filteredExp,
     skillGroups: skills.groups,
     skillsFlat: skills.flat,
