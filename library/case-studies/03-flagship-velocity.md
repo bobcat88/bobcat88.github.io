@@ -31,7 +31,7 @@ Concevoir un **System Harness** reposant sur les règles globales du coffre fort
 - **Automatisation & Templates** : Écriture de scripts Bun/Node de mise à jour de l'outillage, templates d'initialisation de projets et moteurs de compilation dynamique de livrables (CV, lettres de motivation, pitchs, documents de préparation et comptes rendus de comités, documentations, fichiers Excel complets, etc.).
 
 ## 6. Résultats
-- **Qualité Accrue** : Amélioration drastique de la précision des livrables (réduction maximale des hallucinations, structure homogène) par l'application systématique du Quality Loop.
+- **Qualité Accrue** : Amélioration drastique de la précision des livrables (réduction maximale des hallucinations, structure homogène) par l'application systématique d'une boucle qualité itérative avec effet adversarial. 
 - **Traçabilité Totale** : Audit trail complet et journalisé de chaque étape de cadrage, de décision et de modification.
 - **Effet Plateforme** : Réduction du temps de configuration de nouveaux workspaces grâce à l'outillage d'automatisation et aux templates réutilisables.
 
