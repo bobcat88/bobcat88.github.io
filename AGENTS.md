@@ -50,6 +50,8 @@ Tailored job applications **NEVER** live in this public repo (served via GitHub 
 - **Public** (this repo): factory, `library/`, master CV designs — generic, shareable.
 - **Private** (`career-applications`): per-company `offer.md`, tailored CVs, lettres, pitches, gap analyses, source captures — anything naming a target company or tied to a specific offer.
 
+**Référents.** `factory/render.js` (`parseReferents`) reads a `## Référents` section from the **private `offer.md`** and injects a "Références" block into tailored `cv-premium`/`cv-ats` **only when `--offer` is passed** — generic/public runs carry none (privacy by construction). **Never** put referent names/contacts in the public `library/`. Identities live in vault `Borg/300 Entities/People/`; see `[[Velocity Lab]]`.
+
 `.gitignore` must keep a **bare** `application` line. `application/` (trailing slash) only matches a real dir and would fail to ignore the symlink → leaks private data.
 
 ### Symlink (recreate if missing / fresh clone)

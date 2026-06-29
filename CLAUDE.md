@@ -101,6 +101,8 @@ Tailored job applications **NEVER** live in this public repo. This repo is serve
 - **Public** (`bobcat88.github.io`): factory, `library/`, master CV designs. Generic, shareable.
 - **Private** (`career-applications`): per-company `offer.md`, tailored CVs (premium + ATS), lettres, pitches, gap analyses, source captures. **Anything naming a target company or tailored to a specific offer.**
 
+**Référents.** Referent cards are HR-facing and private-only. `factory/render.js` (`parseReferents`) reads a `## Référents` section from the **private `offer.md`** and injects a "Références" block into the tailored `cv-premium`/`cv-ats` **only when `--offer` is passed**. Generic/public runs carry none — privacy by construction. **Never** put referent names/contacts in the public `library/`. Source of truth for referent identities: vault `Borg/300 Entities/People/`. See `[[Velocity Lab]]`.
+
 Never commit `application/` to this repo. `.gitignore` contains a **bare** `application` line — it must stay bare: `application/` (trailing slash) only matches a real directory and would **fail to ignore the symlink**, leaking private data.
 
 ### Recreate the symlink (if missing)
