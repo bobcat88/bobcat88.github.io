@@ -83,7 +83,7 @@ window.CASE_STUDIES = {
     },
     "velocity": {
       "accent": "#f59e0b",
-      "doc": "",
+      "doc": "missions/index.html?id=velocity",
       "kicker": {
         "fr": "Velocity Lab · Janvier 2026 → Présent",
         "en": "Velocity Lab · January 2026 → Present"

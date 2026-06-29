@@ -1491,11 +1491,19 @@
     }
   }
   modal.addEventListener('click',function(e){ if(e.target.closest('[data-close]')) close(); });
+  var MISS={fr:'Mission complète',en:'Full mission'};
   document.querySelectorAll('.case-btn').forEach(function(b){
     b.addEventListener('click',function(){ open(b.getAttribute('data-case')); });
+    var id=b.getAttribute('data-case'); if(!C[id]) return;
+    var a=document.createElement('a');
+    a.className='mission-btn inline-flex items-center gap-2 ml-2 px-5 py-2 border border-slate-600 hover:border-slate-400 hover:bg-white/5 text-slate-200 text-xs font-bold rounded-xl transition-all'+(b.classList.contains('mt-5')?' mt-5':'');
+    a.href='missions/index.html?id='+id; a.target='_blank'; a.rel='noopener';
+    a.innerHTML='<span class="mission-btn-label">'+MISS[lang()]+'</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>';
+    b.insertAdjacentElement('afterend', a);
   });
   function relabelBtns(){
     document.querySelectorAll('.case-btn .case-btn-label').forEach(function(n){ n.textContent=L[lang()].cta; });
+    document.querySelectorAll('.mission-btn-label').forEach(function(n){ n.textContent=MISS[lang()]; });
   }
   document.addEventListener('langchange',function(){ relabelBtns(); if(current) render(); });
   relabelBtns();

@@ -252,6 +252,143 @@ window.MISSIONS = {
         "en": "This mission showcases a dual posture: facilitator, methodological guardian and PMO-tooling builder. The ability to turn strategic intent into qualified, comparable and steerable initiatives, then convert that reliable base into an automation foundation for reporting, committees and departmental knowledge capture."
       }
     },
+    "velocity": {
+      "accent": "#f59e0b",
+      "title": {
+        "fr": "Founder — Conseil & systèmes de décision augmentés",
+        "en": "Founder — Consulting & augmented decision systems"
+      },
+      "org": {
+        "fr": "Velocity Lab",
+        "en": "Velocity Lab"
+      },
+      "meta": {
+        "fr": "Janvier 2026 → Présent · En parallèle · Projets personnels & R&D appliquée",
+        "en": "January 2026 → Present · In parallel · Personal projects & applied R&D"
+      },
+      "situation": {
+        "fr": [
+          "Pratique personnelle de conseil menée en parallèle des missions client : construire un système de travail agentique auditable et l'éprouver sur des réalisations réelles (PMO augmenté, finance, automatisation). Ces projets nourrissent directement la qualité des process que je mets en place en mission."
+        ],
+        "en": [
+          "Personal consulting practice run alongside client missions: building an auditable, agentic working system and proving it on real deliverables (augmented PMO, finance, automation). These projects feed directly into the quality of the processes I set up on assignment."
+        ]
+      },
+      "objectives": {
+        "fr": [
+          "Industrialiser une pratique reproductible : passer d'un savoir-faire personnel à un système qui produit, contrôle et documente la décision.",
+          "Imposer des gates explicites : aucune décision sans contexte, risque et preuve.",
+          "Appliquer la chaîne à des cas concrets à impact mesurable."
+        ],
+        "en": [
+          "Industrialize a repeatable practice: turn personal know-how into a system that produces, controls and documents decisions.",
+          "Enforce explicit gates: no decision without context, risk and evidence.",
+          "Apply the chain to concrete, measurable cases."
+        ]
+      },
+      "actions": [
+        {
+          "h": {
+            "fr": "Système d'agents personnels",
+            "en": "Personal agent systems"
+          },
+          "items": {
+            "fr": [
+              "Contexte indexé (code, notes, contrats) pour relier les décisions aux artefacts réels.",
+              "Analyse d'impact avant toute modification ou arbitrage.",
+              "Exécution par phases avec critères de validation et revue finale humaine."
+            ],
+            "en": [
+              "Indexed context (code, notes, contracts) to tie decisions to real artifacts.",
+              "Impact analysis before any change or trade-off.",
+              "Phased execution with validation criteria and a final human review."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Finance & investissement structuré assisté par IA",
+            "en": "AI-assisted structured investing"
+          },
+          "items": {
+            "fr": [
+              "Thèses documentées, scénarios et risques explicités, allocation raisonnée.",
+              "Journal de décision et revue périodique avant tout passage à l'action.",
+              "Audit trail complet : chaque décision reste traçable et justifiable."
+            ],
+            "en": [
+              "Documented theses, explicit scenarios and risks, reasoned allocation.",
+              "Decision log and periodic review before acting.",
+              "Full audit trail: every decision stays traceable and justifiable."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Automatisation PMO & delivery",
+            "en": "PMO & delivery automation"
+          },
+          "items": {
+            "fr": [
+              "Workflows augmentés : Kanban, KPI, jalons, alertes, reporting.",
+              "Synthèses décisionnelles produites avec vérification humaine systématique."
+            ],
+            "en": [
+              "Augmented workflows: Kanban, KPIs, milestones, alerts, reporting.",
+              "Decision summaries produced with systematic human verification."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Discipline de gates (chaîne de vérification)",
+            "en": "Gate discipline (verification chain)"
+          },
+          "items": {
+            "fr": [
+              "Contexte → Risque → Preuve → Décision journalisée → Revue contradictoire → Validation humaine.",
+              "Réduction du bruit et des coûts (tokens / API) sans perte de qualité."
+            ],
+            "en": [
+              "Context → Risk → Evidence → Logged decision → Adversarial review → Human validation.",
+              "Noise and cost reduction (tokens / API) with no quality loss."
+            ]
+          }
+        }
+      ],
+      "results": {
+        "items": {
+          "fr": [
+            "Décisions tracées et hypothèses rendues explicites sur chaque livrable.",
+            "Process plus fiables et auditables : moins d'oublis, moins de reprises.",
+            "Méthode directement réinvestie dans les missions client (Arkéa, Thales…)."
+          ],
+          "en": [
+            "Traced decisions and explicit assumptions on every deliverable.",
+            "More reliable, auditable processes: fewer omissions, less rework.",
+            "Method reinvested directly into client missions (Arkéa, Thales…)."
+          ]
+        },
+        "note": {
+          "fr": "Réalisations personnelles à impact réel sur la qualité des systèmes de décision que je conçois en mission.",
+          "en": "Personal work with real impact on the quality of the decision systems I design on assignment."
+        }
+      },
+      "environment": {
+        "tools": {
+          "fr": "Systèmes d'agents IA · Indexation de contexte · Automatisation Workspace",
+          "en": "AI agent systems · Context indexing · Workspace automation"
+        },
+        "methods": {
+          "fr": "Workflow agentique · Discipline de gates · Analyse d'impact · Boucle qualité (QLoop) · Vérification humaine",
+          "en": "Agentic workflow · Gate discipline · Impact analysis · Quality loop (QLoop) · Human verification"
+        },
+        "skills": {
+          "fr": "AI delivery · PMO augmenté · Conception de systèmes de décision · Gouvernance · Investissement structuré",
+          "en": "AI delivery · Augmented PMO · Decision-system design · Governance · Structured investing"
+        }
+      }
+    },
     "neosoft": {
       "accent": "#3b82f6",
       "title": {

@@ -47,420 +47,1695 @@
   "missions": {
     "arkea": {
       "accent": "#ef4444",
-      "title": {"fr": "PMO Stratégique / Business Analyst — Banque de Détail", "en": "Strategic PMO / Business Analyst — Retail Banking"},
-      "org": {"fr": "Crédit Mutuel Arkéa (Freelance)", "en": "Crédit Mutuel Arkéa (Freelance)"},
-      "meta": {"fr": "Mars 2026 – Présent · Brest · Mission prévisionnelle 12-18 mois", "en": "March 2026 – Present · Brest · Projected 12–18 month engagement"},
+      "title": {
+        "fr": "PMO Stratégique / Business Analyst — Banque de Détail",
+        "en": "Strategic PMO / Business Analyst — Retail Banking"
+      },
+      "org": {
+        "fr": "Crédit Mutuel Arkéa (Freelance)",
+        "en": "Crédit Mutuel Arkéa (Freelance)"
+      },
+      "meta": {
+        "fr": "Mars 2026 – Présent · Brest · Mission prévisionnelle 12-18 mois",
+        "en": "March 2026 – Present · Brest · Projected 12–18 month engagement"
+      },
       "situation": {
-        "fr": ["Réorganisation interne créant un département Support au Développement, en charge du Plan de Développement stratégique de la Banque de Détail sur un horizon 12/18 mois. Intervention transverse auprès des équipes marketing produits, data, expérience client, process & outils afin de fiabiliser la qualification, la priorisation et le pilotage des initiatives stratégiques.", "Enjeu : transformer des intentions stratégiques en un portefeuille d'initiatives qualifiées, comparables et pilotables — base fiable des arbitrages COMEX."],
-        "en": ["An internal reorganization created a Development Support department, owning the strategic Development Plan for Retail Banking over a 12/18-month horizon. Cross-functional work alongside product marketing, data, customer experience and process & tooling teams to make qualification, prioritization and steering of strategic initiatives reliable.", "Challenge: turn strategic intent into a portfolio of qualified, comparable and steerable initiatives — a reliable basis for COMEX trade-offs."]
+        "fr": [
+          "Réorganisation interne créant un département Support au Développement, en charge du Plan de Développement stratégique de la Banque de Détail sur un horizon 12/18 mois. Intervention transverse auprès des équipes marketing produits, data, expérience client, process & outils afin de fiabiliser la qualification, la priorisation et le pilotage des initiatives stratégiques.",
+          "Enjeu : transformer des intentions stratégiques en un portefeuille d'initiatives qualifiées, comparables et pilotables — base fiable des arbitrages COMEX."
+        ],
+        "en": [
+          "An internal reorganization created a Development Support department, owning the strategic Development Plan for Retail Banking over a 12/18-month horizon. Cross-functional work alongside product marketing, data, customer experience and process & tooling teams to make qualification, prioritization and steering of strategic initiatives reliable.",
+          "Challenge: turn strategic intent into a portfolio of qualified, comparable and steerable initiatives — a reliable basis for COMEX trade-offs."
+        ]
       },
       "objectives": {
-        "fr": ["Installer un cadre de qualification commun pour toutes les initiatives entrantes.", "Outiller le pilotage projet/portefeuille avec une source de vérité unique.", "Industrialiser les pratiques pour que le département devienne autonome et reproductible.", "Sécuriser le passage des initiatives vers l'exécution sans perte de contexte."],
-        "en": ["Set up a shared qualification framework for every incoming initiative.", "Equip project/portfolio steering with a single source of truth.", "Industrialize practices so the department becomes autonomous and repeatable.", "Secure the handover of initiatives into execution with no loss of context."]
+        "fr": [
+          "Installer un cadre de qualification commun pour toutes les initiatives entrantes.",
+          "Outiller le pilotage projet/portefeuille avec une source de vérité unique.",
+          "Industrialiser les pratiques pour que le département devienne autonome et reproductible.",
+          "Sécuriser le passage des initiatives vers l'exécution sans perte de contexte."
+        ],
+        "en": [
+          "Set up a shared qualification framework for every incoming initiative.",
+          "Equip project/portfolio steering with a single source of truth.",
+          "Industrialize practices so the department becomes autonomous and repeatable.",
+          "Secure the handover of initiatives into execution with no loss of context."
+        ]
       },
       "actions": [
-        {"h": {"fr": "Structuration de la gouvernance et du cadre de qualification", "en": "Governance & qualification framework"}, "items": {
-          "fr": ["Cadrage des initiatives : formalisation des objectifs, irritants métier, populations cibles, hypothèses de valeur, dépendances, prérequis.", "Qualification de la valeur : analyse de la contribution aux priorités Banque de Détail (développement commercial, expérience client, efficacité opérationnelle, data, transformation des processus).", "Préparation des arbitrages : consolidation des éléments de décision pour lecture homogène et priorisation sur l'horizon 12/18 mois."],
-          "en": ["Initiative framing: formalizing objectives, business pain points, target populations, value hypotheses, dependencies and prerequisites.", "Value qualification: analyzing each initiative's contribution to Retail Banking priorities (commercial growth, customer experience, operational efficiency, data, process transformation).", "Trade-off preparation: consolidating decision inputs for a consistent reading and prioritization over the 12/18-month horizon."]
-        }},
-        {"h": {"fr": "Facilitation transverse et alignement métier", "en": "Cross-functional facilitation & business alignment"}, "items": {
-          "fr": ["Interface équipes contributrices : coordination marketing produits / data / expérience client / process & outils pour clarifier besoins, challenger hypothèses, lever ambiguïtés.", "Industrialisation du suivi : supports de qualification, trames de synthèse, tableaux de suivi centralisant l'information et évitant les pertes de contexte.", "Assurance qualité : garantie de cohérence et de complétude des fiches initiatives avant passage en instances."],
-          "en": ["Interface with contributing teams: coordinating product marketing / data / customer experience / process & tooling to clarify needs, challenge assumptions and remove ambiguity.", "Industrialized tracking: qualification templates, synthesis frames and tracking boards centralizing information and preventing loss of context.", "Quality assurance: ensuring initiative sheets are consistent and complete before review boards."]
-        }},
-        {"h": {"fr": "Outillage du pilotage et capitalisation", "en": "Steering tooling & knowledge capture"}, "items": {
-          "fr": ["Application PMO sur mesure (Google Apps Script) : Kanban / backlog des initiatives, tableaux de bord, KPI, indicateurs de santé de l'information, jalons, alertes, responsables, segments, décisions attendues.", "Source de vérité unique exploitable pour reporting, comités et automatisations.", "Visualisation des flux : initiatives à instruire / en cours de qualification / prêtes à arbitrer / à planifier, détection des goulots d'étranglement par département.", "POC ComitéAuto : génération automatique de comptes rendus de comité depuis Workspace (sections par segment, graphique de synthèse, préparation des destinataires)."],
-          "en": ["Custom PMO application (Google Apps Script): initiative Kanban / backlog, dashboards, KPIs, information-health indicators, milestones, alerts, owners, segments and expected decisions.", "A single source of truth usable for reporting, committees and automations.", "Flow visualization: initiatives to be scoped / under qualification / ready for trade-off / to be planned, with bottleneck detection per department.", "ComitéAuto PoC: automatic generation of committee minutes from Workspace (per-segment sections, synthesis chart, recipient preparation)."]
-        }},
-        {"h": {"fr": "Industrialisation des processus et méthodes PMO", "en": "Industrializing PMO processes & methods"}, "items": {
-          "fr": ["Standardisation documentaire : modèles réutilisables (fiches initiatives, CR, supports comité, plans d'action, matrices de suivi, méthodologie de priorisation).", "Automatisation Workspace : pré-remplissage des livrables depuis la base projet.", "Montée en compétence : accompagnement des contributeurs sur les outils de pilotage et les standards de qualification."],
-          "en": ["Documentation standardization: reusable templates (initiative sheets, minutes, committee decks, action plans, tracking matrices, prioritization methodology).", "Workspace automation: pre-filling deliverables from the project database.", "Upskilling: coaching contributors on steering tools and qualification standards."]
-        }},
-        {"h": {"fr": "Analyse stratégique et aide à la décision", "en": "Strategic analysis & decision support"}, "items": {
-          "fr": ["Analyse de portefeuille : identification des redondances, dépendances, sujets structurants et points de vigilance.", "Transition vers l'exécution : préparation du passage des initiatives qualifiées vers les équipes de mise en œuvre, clarification des hypothèses / jalons / risques / responsabilités."],
-          "en": ["Portfolio analysis: identifying redundancies, dependencies, structuring topics and watch points.", "Transition to execution: preparing the handover of qualified initiatives to delivery teams, clarifying assumptions / milestones / risks / responsibilities."]
-        }}
+        {
+          "h": {
+            "fr": "Structuration de la gouvernance et du cadre de qualification",
+            "en": "Governance & qualification framework"
+          },
+          "items": {
+            "fr": [
+              "Cadrage des initiatives : formalisation des objectifs, irritants métier, populations cibles, hypothèses de valeur, dépendances, prérequis.",
+              "Qualification de la valeur : analyse de la contribution aux priorités Banque de Détail (développement commercial, expérience client, efficacité opérationnelle, data, transformation des processus).",
+              "Préparation des arbitrages : consolidation des éléments de décision pour lecture homogène et priorisation sur l'horizon 12/18 mois."
+            ],
+            "en": [
+              "Initiative framing: formalizing objectives, business pain points, target populations, value hypotheses, dependencies and prerequisites.",
+              "Value qualification: analyzing each initiative's contribution to Retail Banking priorities (commercial growth, customer experience, operational efficiency, data, process transformation).",
+              "Trade-off preparation: consolidating decision inputs for a consistent reading and prioritization over the 12/18-month horizon."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Facilitation transverse et alignement métier",
+            "en": "Cross-functional facilitation & business alignment"
+          },
+          "items": {
+            "fr": [
+              "Interface équipes contributrices : coordination marketing produits / data / expérience client / process & outils pour clarifier besoins, challenger hypothèses, lever ambiguïtés.",
+              "Industrialisation du suivi : supports de qualification, trames de synthèse, tableaux de suivi centralisant l'information et évitant les pertes de contexte.",
+              "Assurance qualité : garantie de cohérence et de complétude des fiches initiatives avant passage en instances."
+            ],
+            "en": [
+              "Interface with contributing teams: coordinating product marketing / data / customer experience / process & tooling to clarify needs, challenge assumptions and remove ambiguity.",
+              "Industrialized tracking: qualification templates, synthesis frames and tracking boards centralizing information and preventing loss of context.",
+              "Quality assurance: ensuring initiative sheets are consistent and complete before review boards."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Outillage du pilotage et capitalisation",
+            "en": "Steering tooling & knowledge capture"
+          },
+          "items": {
+            "fr": [
+              "Application PMO sur mesure (Google Apps Script) : Kanban / backlog des initiatives, tableaux de bord, KPI, indicateurs de santé de l'information, jalons, alertes, responsables, segments, décisions attendues.",
+              "Source de vérité unique exploitable pour reporting, comités et automatisations.",
+              "Visualisation des flux : initiatives à instruire / en cours de qualification / prêtes à arbitrer / à planifier, détection des goulots d'étranglement par département.",
+              "POC ComitéAuto : génération automatique de comptes rendus de comité depuis Workspace (sections par segment, graphique de synthèse, préparation des destinataires)."
+            ],
+            "en": [
+              "Custom PMO application (Google Apps Script): initiative Kanban / backlog, dashboards, KPIs, information-health indicators, milestones, alerts, owners, segments and expected decisions.",
+              "A single source of truth usable for reporting, committees and automations.",
+              "Flow visualization: initiatives to be scoped / under qualification / ready for trade-off / to be planned, with bottleneck detection per department.",
+              "ComitéAuto PoC: automatic generation of committee minutes from Workspace (per-segment sections, synthesis chart, recipient preparation)."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Industrialisation des processus et méthodes PMO",
+            "en": "Industrializing PMO processes & methods"
+          },
+          "items": {
+            "fr": [
+              "Standardisation documentaire : modèles réutilisables (fiches initiatives, CR, supports comité, plans d'action, matrices de suivi, méthodologie de priorisation).",
+              "Automatisation Workspace : pré-remplissage des livrables depuis la base projet.",
+              "Montée en compétence : accompagnement des contributeurs sur les outils de pilotage et les standards de qualification."
+            ],
+            "en": [
+              "Documentation standardization: reusable templates (initiative sheets, minutes, committee decks, action plans, tracking matrices, prioritization methodology).",
+              "Workspace automation: pre-filling deliverables from the project database.",
+              "Upskilling: coaching contributors on steering tools and qualification standards."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Analyse stratégique et aide à la décision",
+            "en": "Strategic analysis & decision support"
+          },
+          "items": {
+            "fr": [
+              "Analyse de portefeuille : identification des redondances, dépendances, sujets structurants et points de vigilance.",
+              "Transition vers l'exécution : préparation du passage des initiatives qualifiées vers les équipes de mise en œuvre, clarification des hypothèses / jalons / risques / responsabilités."
+            ],
+            "en": [
+              "Portfolio analysis: identifying redundancies, dependencies, structuring topics and watch points.",
+              "Transition to execution: preparing the handover of qualified initiatives to delivery teams, clarifying assumptions / milestones / risks / responsibilities."
+            ]
+          }
+        }
       ],
       "results": {
         "table": [
-          {"k": {"fr": "Gain capacitaire", "en": "Capacity gain"}, "v": {"fr": "440 à 2 760 h/an évitées selon adoption (≈ 0,24 à 1,52 ETP)", "en": "440 to 2,760 h/year saved depending on adoption (≈ 0.24 to 1.52 FTE)"}},
-          {"k": {"fr": "Valorisation socle PMO", "en": "Core PMO value"}, "v": {"fr": "8 à 61 k€/an", "en": "€8–61k/year"}},
-          {"k": {"fr": "Valorisation globale (+ comités auto)", "en": "Overall value (+ auto committees)"}, "v": {"fr": "31 à 135 k€/an", "en": "€31–135k/year"}},
-          {"k": {"fr": "Effet plateforme", "en": "Platform effect"}, "v": {"fr": "La valeur croît avec chaque usage branché (CR auto, exports, alertes, graphiques, diffusion email)", "en": "Value grows with every connected use case (auto minutes, exports, alerts, charts, email distribution)"}}
+          {
+            "k": {
+              "fr": "Gain capacitaire",
+              "en": "Capacity gain"
+            },
+            "v": {
+              "fr": "440 à 2 760 h/an évitées selon adoption (≈ 0,24 à 1,52 ETP)",
+              "en": "440 to 2,760 h/year saved depending on adoption (≈ 0.24 to 1.52 FTE)"
+            }
+          },
+          {
+            "k": {
+              "fr": "Valorisation socle PMO",
+              "en": "Core PMO value"
+            },
+            "v": {
+              "fr": "8 à 61 k€/an",
+              "en": "€8–61k/year"
+            }
+          },
+          {
+            "k": {
+              "fr": "Valorisation globale (+ comités auto)",
+              "en": "Overall value (+ auto committees)"
+            },
+            "v": {
+              "fr": "31 à 135 k€/an",
+              "en": "€31–135k/year"
+            }
+          },
+          {
+            "k": {
+              "fr": "Effet plateforme",
+              "en": "Platform effect"
+            },
+            "v": {
+              "fr": "La valeur croît avec chaque usage branché (CR auto, exports, alertes, graphiques, diffusion email)",
+              "en": "Value grows with every connected use case (auto minutes, exports, alerts, charts, email distribution)"
+            }
+          }
         ],
-        "note": {"fr": "Gains qualitatifs : fiabilisation massive de l'information, réduction des versions concurrentes, traçabilité des décisions, homogénéisation des vues de pilotage, réduction du risque d'oubli, accélération de la préparation des instances.", "en": "Qualitative gains: drastically more reliable information, fewer competing versions, decision traceability, standardized steering views, lower risk of oversight, faster preparation of review boards."}
+        "note": {
+          "fr": "Gains qualitatifs : fiabilisation massive de l'information, réduction des versions concurrentes, traçabilité des décisions, homogénéisation des vues de pilotage, réduction du risque d'oubli, accélération de la préparation des instances.",
+          "en": "Qualitative gains: drastically more reliable information, fewer competing versions, decision traceability, standardized steering views, lower risk of oversight, faster preparation of review boards."
+        }
       },
       "deliverables": {
-        "fr": ["Synthèses décisionnelles, supports de qualification, tableaux de suivi, plans d'action, recommandations de structuration départementale.", "Application PMO (Apps Script) déployée et adoptée.", "POC ComitéAuto cadré.", "Plan de développement stratégique de la Banque de Détail (2026)."],
-        "en": ["Decision syntheses, qualification decks, tracking boards, action plans, departmental-structuring recommendations.", "PMO application (Apps Script) deployed and adopted.", "Scoped ComitéAuto PoC.", "Strategic Development Plan for Retail Banking (2026)."]
+        "fr": [
+          "Synthèses décisionnelles, supports de qualification, tableaux de suivi, plans d'action, recommandations de structuration départementale.",
+          "Application PMO (Apps Script) déployée et adoptée.",
+          "POC ComitéAuto cadré.",
+          "Plan de développement stratégique de la Banque de Détail (2026)."
+        ],
+        "en": [
+          "Decision syntheses, qualification decks, tracking boards, action plans, departmental-structuring recommendations.",
+          "PMO application (Apps Script) deployed and adopted.",
+          "Scoped ComitéAuto PoC.",
+          "Strategic Development Plan for Retail Banking (2026)."
+        ]
       },
       "environment": {
-        "tools": {"fr": "Google Suite/Workspace · Google Apps Script · HTML/CSS/JavaScript · Sheets-as-DB · Docs automation.", "en": "Google Suite/Workspace · Google Apps Script · HTML/CSS/JavaScript · Sheets-as-DB · Docs automation."},
-        "skills": {"fr": "PMO stratégique · Business Analysis · cadrage d'initiatives · gouvernance de portefeuille · facilitation transverse · priorisation · reporting de direction · amélioration continue · conduite du changement.", "en": "Strategic PMO · Business Analysis · initiative framing · portfolio governance · cross-functional facilitation · prioritization · executive reporting · continuous improvement · change management."}
+        "tools": {
+          "fr": "Google Suite/Workspace · Google Apps Script · HTML/CSS/JavaScript · Sheets-as-DB · Docs automation.",
+          "en": "Google Suite/Workspace · Google Apps Script · HTML/CSS/JavaScript · Sheets-as-DB · Docs automation."
+        },
+        "skills": {
+          "fr": "PMO stratégique · Business Analysis · cadrage d'initiatives · gouvernance de portefeuille · facilitation transverse · priorisation · reporting de direction · amélioration continue · conduite du changement.",
+          "en": "Strategic PMO · Business Analysis · initiative framing · portfolio governance · cross-functional facilitation · prioritization · executive reporting · continuous improvement · change management."
+        }
       },
-      "note": {"fr": "Cette mission valorise une double posture de facilitateur, garant méthodologique et concepteur d'outillage PMO. Capacité à transformer des intentions stratégiques en initiatives qualifiées, comparables et pilotables, puis à convertir cette base fiable en socle d'automatisation pour le reporting, les comités et la capitalisation départementale.", "en": "This mission showcases a dual posture: facilitator, methodological guardian and PMO-tooling builder. The ability to turn strategic intent into qualified, comparable and steerable initiatives, then convert that reliable base into an automation foundation for reporting, committees and departmental knowledge capture."}
+      "note": {
+        "fr": "Cette mission valorise une double posture de facilitateur, garant méthodologique et concepteur d'outillage PMO. Capacité à transformer des intentions stratégiques en initiatives qualifiées, comparables et pilotables, puis à convertir cette base fiable en socle d'automatisation pour le reporting, les comités et la capitalisation départementale.",
+        "en": "This mission showcases a dual posture: facilitator, methodological guardian and PMO-tooling builder. The ability to turn strategic intent into qualified, comparable and steerable initiatives, then convert that reliable base into an automation foundation for reporting, committees and departmental knowledge capture."
+      }
+    },
+    "velocity": {
+      "accent": "#f59e0b",
+      "title": {
+        "fr": "Founder — Conseil & systèmes de décision augmentés",
+        "en": "Founder — Consulting & augmented decision systems"
+      },
+      "org": {
+        "fr": "Velocity Lab",
+        "en": "Velocity Lab"
+      },
+      "meta": {
+        "fr": "Janvier 2026 → Présent · En parallèle · Projets personnels & R&D appliquée",
+        "en": "January 2026 → Present · In parallel · Personal projects & applied R&D"
+      },
+      "situation": {
+        "fr": [
+          "Pratique personnelle de conseil menée en parallèle des missions client : construire un système de travail agentique auditable et l'éprouver sur des réalisations réelles (PMO augmenté, finance, automatisation). Ces projets nourrissent directement la qualité des process que je mets en place en mission."
+        ],
+        "en": [
+          "Personal consulting practice run alongside client missions: building an auditable, agentic working system and proving it on real deliverables (augmented PMO, finance, automation). These projects feed directly into the quality of the processes I set up on assignment."
+        ]
+      },
+      "objectives": {
+        "fr": [
+          "Industrialiser une pratique reproductible : passer d'un savoir-faire personnel à un système qui produit, contrôle et documente la décision.",
+          "Imposer des gates explicites : aucune décision sans contexte, risque et preuve.",
+          "Appliquer la chaîne à des cas concrets à impact mesurable."
+        ],
+        "en": [
+          "Industrialize a repeatable practice: turn personal know-how into a system that produces, controls and documents decisions.",
+          "Enforce explicit gates: no decision without context, risk and evidence.",
+          "Apply the chain to concrete, measurable cases."
+        ]
+      },
+      "actions": [
+        {
+          "h": {
+            "fr": "Système d'agents personnels",
+            "en": "Personal agent systems"
+          },
+          "items": {
+            "fr": [
+              "Contexte indexé (code, notes, contrats) pour relier les décisions aux artefacts réels.",
+              "Analyse d'impact avant toute modification ou arbitrage.",
+              "Exécution par phases avec critères de validation et revue finale humaine."
+            ],
+            "en": [
+              "Indexed context (code, notes, contracts) to tie decisions to real artifacts.",
+              "Impact analysis before any change or trade-off.",
+              "Phased execution with validation criteria and a final human review."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Finance & investissement structuré assisté par IA",
+            "en": "AI-assisted structured investing"
+          },
+          "items": {
+            "fr": [
+              "Thèses documentées, scénarios et risques explicités, allocation raisonnée.",
+              "Journal de décision et revue périodique avant tout passage à l'action.",
+              "Audit trail complet : chaque décision reste traçable et justifiable."
+            ],
+            "en": [
+              "Documented theses, explicit scenarios and risks, reasoned allocation.",
+              "Decision log and periodic review before acting.",
+              "Full audit trail: every decision stays traceable and justifiable."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Automatisation PMO & delivery",
+            "en": "PMO & delivery automation"
+          },
+          "items": {
+            "fr": [
+              "Workflows augmentés : Kanban, KPI, jalons, alertes, reporting.",
+              "Synthèses décisionnelles produites avec vérification humaine systématique."
+            ],
+            "en": [
+              "Augmented workflows: Kanban, KPIs, milestones, alerts, reporting.",
+              "Decision summaries produced with systematic human verification."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Discipline de gates (chaîne de vérification)",
+            "en": "Gate discipline (verification chain)"
+          },
+          "items": {
+            "fr": [
+              "Contexte → Risque → Preuve → Décision journalisée → Revue contradictoire → Validation humaine.",
+              "Réduction du bruit et des coûts (tokens / API) sans perte de qualité."
+            ],
+            "en": [
+              "Context → Risk → Evidence → Logged decision → Adversarial review → Human validation.",
+              "Noise and cost reduction (tokens / API) with no quality loss."
+            ]
+          }
+        }
+      ],
+      "results": {
+        "items": {
+          "fr": [
+            "Décisions tracées et hypothèses rendues explicites sur chaque livrable.",
+            "Process plus fiables et auditables : moins d'oublis, moins de reprises.",
+            "Méthode directement réinvestie dans les missions client (Arkéa, Thales…)."
+          ],
+          "en": [
+            "Traced decisions and explicit assumptions on every deliverable.",
+            "More reliable, auditable processes: fewer omissions, less rework.",
+            "Method reinvested directly into client missions (Arkéa, Thales…)."
+          ]
+        },
+        "note": {
+          "fr": "Réalisations personnelles à impact réel sur la qualité des systèmes de décision que je conçois en mission.",
+          "en": "Personal work with real impact on the quality of the decision systems I design on assignment."
+        }
+      },
+      "environment": {
+        "tools": {
+          "fr": "Systèmes d'agents IA · Indexation de contexte · Automatisation Workspace",
+          "en": "AI agent systems · Context indexing · Workspace automation"
+        },
+        "methods": {
+          "fr": "Workflow agentique · Discipline de gates · Analyse d'impact · Boucle qualité (QLoop) · Vérification humaine",
+          "en": "Agentic workflow · Gate discipline · Impact analysis · Quality loop (QLoop) · Human verification"
+        },
+        "skills": {
+          "fr": "AI delivery · PMO augmenté · Conception de systèmes de décision · Gouvernance · Investissement structuré",
+          "en": "AI delivery · Augmented PMO · Decision-system design · Governance · Structured investing"
+        }
+      }
     },
     "neosoft": {
       "accent": "#3b82f6",
-      "title": {"fr": "Product Owner — MVP Application Interne", "en": "Product Owner — Internal App MVP"},
-      "org": {"fr": "NeoSoft", "en": "NeoSoft"},
-      "meta": {"fr": "Octobre 2025 – Décembre 2025 · Brest / Rennes · 2 mois", "en": "October 2025 – December 2025 · Brest / Rennes · 2 months"},
+      "title": {
+        "fr": "Product Owner — MVP Application Interne",
+        "en": "Product Owner — Internal App MVP"
+      },
+      "org": {
+        "fr": "NeoSoft",
+        "en": "NeoSoft"
+      },
+      "meta": {
+        "fr": "Octobre 2025 – Décembre 2025 · Brest / Rennes · 2 mois",
+        "en": "October 2025 – December 2025 · Brest / Rennes · 2 months"
+      },
       "situation": {
-        "fr": ["Projet d'application interne en phase amont (Discovery). Besoin de transformer une intention métier en concept testable, de sécuriser la valeur, et de préparer un backlog exploitable par l'équipe de développement avant la phase de build."],
-        "en": ["Internal application project in the upstream Discovery phase. The need was to turn business intent into a testable concept, secure the value, and prepare a backlog the development team could use before the build phase."]
+        "fr": [
+          "Projet d'application interne en phase amont (Discovery). Besoin de transformer une intention métier en concept testable, de sécuriser la valeur, et de préparer un backlog exploitable par l'équipe de développement avant la phase de build."
+        ],
+        "en": [
+          "Internal application project in the upstream Discovery phase. The need was to turn business intent into a testable concept, secure the value, and prepare a backlog the development team could use before the build phase."
+        ]
       },
       "objectives": {
-        "fr": ["Cadrer le produit : traduire les besoins métier en interfaces fonctionnelles.", "Valider le concept (POC) avant engagement de la phase de réalisation.", "Préparer le backlog : sortir de la mission avec un livrable directement exploitable par les développeurs."],
-        "en": ["Frame the product: translate business needs into functional interfaces.", "Validate the concept (PoC) before committing to the build phase.", "Prepare the backlog: leave the mission with a deliverable the developers can use directly."]
+        "fr": [
+          "Cadrer le produit : traduire les besoins métier en interfaces fonctionnelles.",
+          "Valider le concept (POC) avant engagement de la phase de réalisation.",
+          "Préparer le backlog : sortir de la mission avec un livrable directement exploitable par les développeurs."
+        ],
+        "en": [
+          "Frame the product: translate business needs into functional interfaces.",
+          "Validate the concept (PoC) before committing to the build phase.",
+          "Prepare the backlog: leave the mission with a deliverable the developers can use directly."
+        ]
       },
       "actions": [
-        {"h": {"fr": "Cadrage produit et prototypage (Design Thinking)", "en": "Product framing & prototyping (Design Thinking)"}, "items": {
-          "fr": ["Conception de prototype : pilotage de la phase design sous Figma, en collaboration étroite avec l'équipe de développement.", "Validation de concept (POC) : traduction des besoins métier en interfaces fonctionnelles pour valider la viabilité produit avant la phase de build.", "Cadrage UX/UI : définition du parcours utilisateur et des interfaces, en adéquation avec les besoins des utilisateurs internes."],
-          "en": ["Prototype design: leading the design phase in Figma, in close collaboration with the development team.", "Concept validation (PoC): translating business needs into functional interfaces to validate product viability before the build phase.", "UX/UI framing: defining the user journey and interfaces, aligned with internal users' needs."]
-        }},
-        {"h": {"fr": "Interface design-développement et agilité", "en": "Design–development interface & agility"}, "items": {
-          "fr": ["Facilitation technique : pivot entre les enjeux de design et les contraintes de développement, garantissant la faisabilité technique des maquettes.", "Préparation du backlog : alignement des visuels avec les futures User Stories pour une transition fluide vers la réalisation.", "Gestion de flux Kanban : suivi des itérations de design et des validations intermédiaires."],
-          "en": ["Technical facilitation: pivoting between design goals and development constraints, ensuring the mockups were technically feasible.", "Backlog preparation: aligning visuals with the future User Stories for a smooth transition into build.", "Kanban flow management: tracking design iterations and interim validations."]
-        }}
+        {
+          "h": {
+            "fr": "Cadrage produit et prototypage (Design Thinking)",
+            "en": "Product framing & prototyping (Design Thinking)"
+          },
+          "items": {
+            "fr": [
+              "Conception de prototype : pilotage de la phase design sous Figma, en collaboration étroite avec l'équipe de développement.",
+              "Validation de concept (POC) : traduction des besoins métier en interfaces fonctionnelles pour valider la viabilité produit avant la phase de build.",
+              "Cadrage UX/UI : définition du parcours utilisateur et des interfaces, en adéquation avec les besoins des utilisateurs internes."
+            ],
+            "en": [
+              "Prototype design: leading the design phase in Figma, in close collaboration with the development team.",
+              "Concept validation (PoC): translating business needs into functional interfaces to validate product viability before the build phase.",
+              "UX/UI framing: defining the user journey and interfaces, aligned with internal users' needs."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Interface design-développement et agilité",
+            "en": "Design–development interface & agility"
+          },
+          "items": {
+            "fr": [
+              "Facilitation technique : pivot entre les enjeux de design et les contraintes de développement, garantissant la faisabilité technique des maquettes.",
+              "Préparation du backlog : alignement des visuels avec les futures User Stories pour une transition fluide vers la réalisation.",
+              "Gestion de flux Kanban : suivi des itérations de design et des validations intermédiaires."
+            ],
+            "en": [
+              "Technical facilitation: pivoting between design goals and development constraints, ensuring the mockups were technically feasible.",
+              "Backlog preparation: aligning visuals with the future User Stories for a smooth transition into build.",
+              "Kanban flow management: tracking design iterations and interim validations."
+            ]
+          }
+        }
       ],
       "results": {
         "table": [
-          {"k": {"fr": "Prototype Figma", "en": "Figma prototype"}, "v": {"fr": "Livré, validé métier", "en": "Delivered, business-validated"}},
-          {"k": {"fr": "POC", "en": "PoC"}, "v": {"fr": "Validé, viabilité confirmée", "en": "Validated, viability confirmed"}},
-          {"k": {"fr": "Backlog initial", "en": "Initial backlog"}, "v": {"fr": "Prêt pour la phase build", "en": "Ready for the build phase"}},
-          {"k": {"fr": "Méthodologie", "en": "Methodology"}, "v": {"fr": "Design Thinking + Agile Kanban en place", "en": "Design Thinking + Agile Kanban in place"}}
+          {
+            "k": {
+              "fr": "Prototype Figma",
+              "en": "Figma prototype"
+            },
+            "v": {
+              "fr": "Livré, validé métier",
+              "en": "Delivered, business-validated"
+            }
+          },
+          {
+            "k": {
+              "fr": "POC",
+              "en": "PoC"
+            },
+            "v": {
+              "fr": "Validé, viabilité confirmée",
+              "en": "Validated, viability confirmed"
+            }
+          },
+          {
+            "k": {
+              "fr": "Backlog initial",
+              "en": "Initial backlog"
+            },
+            "v": {
+              "fr": "Prêt pour la phase build",
+              "en": "Ready for the build phase"
+            }
+          },
+          {
+            "k": {
+              "fr": "Méthodologie",
+              "en": "Methodology"
+            },
+            "v": {
+              "fr": "Design Thinking + Agile Kanban en place",
+              "en": "Design Thinking + Agile Kanban in place"
+            }
+          }
         ],
-        "note": {"fr": "Positionnement opéré : pivot entre besoins utilisateurs et équipe de réalisation, en sortant une vision testable en moins de 2 mois.", "en": "Positioning held: a pivot between user needs and the delivery team, producing a testable vision in under 2 months."}
+        "note": {
+          "fr": "Positionnement opéré : pivot entre besoins utilisateurs et équipe de réalisation, en sortant une vision testable en moins de 2 mois.",
+          "en": "Positioning held: a pivot between user needs and the delivery team, producing a testable vision in under 2 months."
+        }
       },
       "environment": {
-        "tools": {"fr": "Figma (prototypage) · Kanban · Discord · Teams · Suite Office.", "en": "Figma (prototyping) · Kanban · Discord · Teams · Office suite."},
-        "skills": {"fr": "Design Thinking · prototypage rapide · interface Dev-Design · UX/UI stratégique · agilité.", "en": "Design Thinking · rapid prototyping · dev–design interface · strategic UX/UI · agility."}
+        "tools": {
+          "fr": "Figma (prototypage) · Kanban · Discord · Teams · Suite Office.",
+          "en": "Figma (prototyping) · Kanban · Discord · Teams · Office suite."
+        },
+        "skills": {
+          "fr": "Design Thinking · prototypage rapide · interface Dev-Design · UX/UI stratégique · agilité.",
+          "en": "Design Thinking · rapid prototyping · dev–design interface · strategic UX/UI · agility."
+        }
       },
-      "note": {"fr": "Mission courte mais intensive en phase de lancement produit : forte réactivité et capacité à transformer une vision abstraite en livrable concret et testable. Renforce l'expertise sur les phases critiques de Discovery et la coordination entre équipes créatives et techniques.", "en": "A short but intense product-launch mission: high responsiveness and the ability to turn an abstract vision into a concrete, testable deliverable. It strengthens expertise on critical Discovery phases and on coordinating creative and technical teams."}
+      "note": {
+        "fr": "Mission courte mais intensive en phase de lancement produit : forte réactivité et capacité à transformer une vision abstraite en livrable concret et testable. Renforce l'expertise sur les phases critiques de Discovery et la coordination entre équipes créatives et techniques.",
+        "en": "A short but intense product-launch mission: high responsiveness and the ability to turn an abstract vision into a concrete, testable deliverable. It strengthens expertise on critical Discovery phases and on coordinating creative and technical teams."
+      }
     },
     "thales": {
       "accent": "#a855f7",
-      "title": {"fr": "PMO & Support Bid Management (ISR)", "en": "PMO & Bid Management Support (ISR)"},
-      "org": {"fr": "Thales ISR (via MIGSO-PCUBED)", "en": "Thales ISR (via MIGSO-PCUBED)"},
-      "meta": {"fr": "Octobre 2024 – Octobre 2025 · Brest (multi-sites Groupe) · 1 an", "en": "October 2024 – October 2025 · Brest (multi-site, Group) · 1 year"},
+      "title": {
+        "fr": "PMO & Support Bid Management (ISR)",
+        "en": "PMO & Bid Management Support (ISR)"
+      },
+      "org": {
+        "fr": "Thales ISR (via MIGSO-PCUBED)",
+        "en": "Thales ISR (via MIGSO-PCUBED)"
+      },
+      "meta": {
+        "fr": "Octobre 2024 – Octobre 2025 · Brest (multi-sites Groupe) · 1 an",
+        "en": "October 2024 – October 2025 · Brest (multi-site, Group) · 1 year"
+      },
       "situation": {
-        "fr": ["Mission à haute intensité en environnement Défense multi-milieux : Terrestre · Naval · Aéroporté · Spatial. Support stratégique à 4 Bid Managers et interventions transverses sur plusieurs sites du Groupe Thales.", "Portefeuille : +50 offres sur la mission, budgets unitaires de quelques centaines de k€ à >1Md€, durées de 2 mois à plusieurs décennies. Couverture allant de la fourniture ponctuelle au contrat de service longue durée."],
-        "en": ["A high-intensity mission in a multi-domain Defense environment: Land · Naval · Air · Space. Strategic support to 4 Bid Managers and cross-functional work across several Thales Group sites.", "Portfolio: 50+ bids over the mission, unit budgets from a few hundred k€ to >€1Bn, durations from 2 months to several decades. Coverage ranging from one-off supply to long-term service contracts."]
+        "fr": [
+          "Mission à haute intensité en environnement Défense multi-milieux : Terrestre · Naval · Aéroporté · Spatial. Support stratégique à 4 Bid Managers et interventions transverses sur plusieurs sites du Groupe Thales.",
+          "Portefeuille : +50 offres sur la mission, budgets unitaires de quelques centaines de k€ à >1Md€, durées de 2 mois à plusieurs décennies. Couverture allant de la fourniture ponctuelle au contrat de service longue durée."
+        ],
+        "en": [
+          "A high-intensity mission in a multi-domain Defense environment: Land · Naval · Air · Space. Strategic support to 4 Bid Managers and cross-functional work across several Thales Group sites.",
+          "Portfolio: 50+ bids over the mission, unit budgets from a few hundred k€ to >€1Bn, durations from 2 months to several decades. Coverage ranging from one-off supply to long-term service contracts."
+        ]
       },
       "objectives": {
-        "fr": ["Sécuriser la fiabilité financière des devis (cohérence chiffrage, plan de charge, risques).", "Industrialiser le traitement des risques et la production des plannings.", "Standardiser les pratiques bid à travers la Business Unit pour gagner en réactivité.", "Capitaliser sur les RETEX d'offres stratégiques pour améliorer le Win Rate."],
-        "en": ["Secure the financial reliability of quotes (costing consistency, workload plan, risks).", "Industrialize risk handling and schedule production.", "Standardize bid practices across the Business Unit for greater responsiveness.", "Capitalize on lessons learned from strategic bids to improve the Win Rate."]
+        "fr": [
+          "Sécuriser la fiabilité financière des devis (cohérence chiffrage, plan de charge, risques).",
+          "Industrialiser le traitement des risques et la production des plannings.",
+          "Standardiser les pratiques bid à travers la Business Unit pour gagner en réactivité.",
+          "Capitaliser sur les RETEX d'offres stratégiques pour améliorer le Win Rate."
+        ],
+        "en": [
+          "Secure the financial reliability of quotes (costing consistency, workload plan, risks).",
+          "Industrialize risk handling and schedule production.",
+          "Standardize bid practices across the Business Unit for greater responsiveness.",
+          "Capitalize on lessons learned from strategic bids to improve the Win Rate."
+        ]
       },
       "actions": [
-        {"h": {"fr": "Pilotage financier et optimisation des coûts", "en": "Financial steering & cost optimization"}, "note": {"fr": "Sous la responsabilité du Directeur Offre ISR.", "en": "Under the responsibility of the ISR Bid Director."}, "items": {
-          "fr": ["Structures de coûts : analyse et ventilation précise RC (Recurring Costs) série / NRC (Non-Recurring Costs) développement-ingénierie.", "Optimisation de la rentabilité : leviers de marge, adéquation des codes achats, optimisation logistique (Supply Chain) intégrée au chiffrage.", "Ingénierie des devis : adaptation Fixed Price / Cost-Plus selon le contrat pour maximiser la robustesse."],
-          "en": ["Cost structures: precise analysis and breakdown of RC (Recurring Costs, series) vs NRC (Non-Recurring Costs, development & engineering).", "Profitability optimization: margin levers, purchasing-code alignment, supply-chain optimization built into the costing.", "Quote engineering: tailoring Fixed Price / Cost-Plus by contract to maximize robustness."]
-        }},
-        {"h": {"fr": "Maîtrise des risques et opportunités (ROR)", "en": "Risk & opportunity management (ROR)"}, "items": {
-          "fr": ["Animation ROR (Risk & Opportunity Reviews) : organisation et conduite des revues avec experts techniques, achats et Bid Manager pour identifier, quantifier et provisionner les risques critiques.", "Industrialisation Excel/VBA : outils d'automatisation pour l'extraction et la synthèse des données risques depuis les devis.", "Assurance qualité : réduction drastique du taux d'erreur sur les imputations Centres de Taux, minimisation des cycles de correction manuelle."],
-          "en": ["ROR facilitation (Risk & Opportunity Reviews): organizing and running reviews with technical experts, purchasing and the Bid Manager to identify, quantify and provision critical risks.", "Excel/VBA industrialization: automation tools to extract and synthesize risk data from quotes.", "Quality assurance: drastically reduced error rate on Rate-Center allocations, minimizing manual correction cycles."]
-        }},
-        {"h": {"fr": "Gestion relation client & fournisseurs (international)", "en": "Client & supplier relations (international)"}, "items": {
-          "fr": ["Pilotage RFI / RFP : coordination des réponses aux Requests for Information / Proposal pour clients et fournisseurs étrangers.", "Interface interculturelle : support linguistique lors des réceptions de délégations internationales."],
-          "en": ["RFI / RFP management: coordinating responses to Requests for Information / Proposal for foreign clients and suppliers.", "Cross-cultural interface: language support when hosting international delegations."]
-        }},
-        {"h": {"fr": "Industrialisation des processus et agilité", "en": "Process industrialization & agility"}, "items": {
-          "fr": ["Standardisation (briques réutilisables) : templates de planning (QDV) et structures de devis types par produit (ex : RESM Frégate Export) avec dépendances et élongations standards pré-remplies — focus sur les spécificités projet et le chemin critique.", "Workshops : animation d'ateliers QDV et RiskX pour les centres de compétences, harmonisation des pratiques BU."],
-          "en": ["Standardization (reusable building blocks): schedule templates (QDV) and standard quote structures by product (e.g. RESM Export Frigate) with standard dependencies and lead times pre-filled — focusing on project specifics and the critical path.", "Workshops: running QDV and RiskX workshops for competence centers, harmonizing BU practices."]
-        }},
-        {"h": {"fr": "Gestion documentaire & conduite du changement (EIM/GED)", "en": "Document management & change management (EIM/EDM)"}, "items": {
-          "fr": ["Administration des droits d'accès en contexte « Besoin de Savoir ».", "Compliance des offres pour l'audit interne.", "Key User chez le client pour la gestion du changement — 2 projets niveau Groupe."],
-          "en": ["Access-rights administration in a need-to-know context.", "Bid compliance for internal audit.", "Key User at the client for change management — 2 Group-level projects."]
-        }},
-        {"h": {"fr": "Analyse stratégique et capitalisation (RETEX)", "en": "Strategic analysis & lessons learned (RETEX)"}, "note": {"fr": "Mandaté par la GBU ISR — mission de haute confiance.", "en": "Mandated by the ISR GBU — a high-trust assignment."}, "items": {
-          "fr": ["Audit Post-Mortem sur une offre stratégique perdue : cadrage, interviews des acteurs clés, analyse documentaire approfondie.", "Livrable : rapport de recommandations stratégiques pour améliorer le Win Rate et la gouvernance des offres critiques futures.", "Transition phase projet (HOR) : participation aux Hand Over Reviews pour un transfert sans couture des hypothèses de chiffrage et des risques."],
-          "en": ["Post-mortem audit on a lost strategic bid: scoping, interviews of key stakeholders, in-depth documentary analysis.", "Deliverable: a strategic-recommendations report to improve the Win Rate and the governance of future critical bids.", "Project-phase transition (HOR): taking part in Hand Over Reviews for a seamless transfer of costing assumptions and risks."]
-        }}
+        {
+          "h": {
+            "fr": "Pilotage financier et optimisation des coûts",
+            "en": "Financial steering & cost optimization"
+          },
+          "note": {
+            "fr": "Sous la responsabilité du Directeur Offre ISR.",
+            "en": "Under the responsibility of the ISR Bid Director."
+          },
+          "items": {
+            "fr": [
+              "Structures de coûts : analyse et ventilation précise RC (Recurring Costs) série / NRC (Non-Recurring Costs) développement-ingénierie.",
+              "Optimisation de la rentabilité : leviers de marge, adéquation des codes achats, optimisation logistique (Supply Chain) intégrée au chiffrage.",
+              "Ingénierie des devis : adaptation Fixed Price / Cost-Plus selon le contrat pour maximiser la robustesse."
+            ],
+            "en": [
+              "Cost structures: precise analysis and breakdown of RC (Recurring Costs, series) vs NRC (Non-Recurring Costs, development & engineering).",
+              "Profitability optimization: margin levers, purchasing-code alignment, supply-chain optimization built into the costing.",
+              "Quote engineering: tailoring Fixed Price / Cost-Plus by contract to maximize robustness."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Maîtrise des risques et opportunités (ROR)",
+            "en": "Risk & opportunity management (ROR)"
+          },
+          "items": {
+            "fr": [
+              "Animation ROR (Risk & Opportunity Reviews) : organisation et conduite des revues avec experts techniques, achats et Bid Manager pour identifier, quantifier et provisionner les risques critiques.",
+              "Industrialisation Excel/VBA : outils d'automatisation pour l'extraction et la synthèse des données risques depuis les devis.",
+              "Assurance qualité : réduction drastique du taux d'erreur sur les imputations Centres de Taux, minimisation des cycles de correction manuelle."
+            ],
+            "en": [
+              "ROR facilitation (Risk & Opportunity Reviews): organizing and running reviews with technical experts, purchasing and the Bid Manager to identify, quantify and provision critical risks.",
+              "Excel/VBA industrialization: automation tools to extract and synthesize risk data from quotes.",
+              "Quality assurance: drastically reduced error rate on Rate-Center allocations, minimizing manual correction cycles."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Gestion relation client & fournisseurs (international)",
+            "en": "Client & supplier relations (international)"
+          },
+          "items": {
+            "fr": [
+              "Pilotage RFI / RFP : coordination des réponses aux Requests for Information / Proposal pour clients et fournisseurs étrangers.",
+              "Interface interculturelle : support linguistique lors des réceptions de délégations internationales."
+            ],
+            "en": [
+              "RFI / RFP management: coordinating responses to Requests for Information / Proposal for foreign clients and suppliers.",
+              "Cross-cultural interface: language support when hosting international delegations."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Industrialisation des processus et agilité",
+            "en": "Process industrialization & agility"
+          },
+          "items": {
+            "fr": [
+              "Standardisation (briques réutilisables) : templates de planning (QDV) et structures de devis types par produit (ex : RESM Frégate Export) avec dépendances et élongations standards pré-remplies — focus sur les spécificités projet et le chemin critique.",
+              "Workshops : animation d'ateliers QDV et RiskX pour les centres de compétences, harmonisation des pratiques BU."
+            ],
+            "en": [
+              "Standardization (reusable building blocks): schedule templates (QDV) and standard quote structures by product (e.g. RESM Export Frigate) with standard dependencies and lead times pre-filled — focusing on project specifics and the critical path.",
+              "Workshops: running QDV and RiskX workshops for competence centers, harmonizing BU practices."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Gestion documentaire & conduite du changement (EIM/GED)",
+            "en": "Document management & change management (EIM/EDM)"
+          },
+          "items": {
+            "fr": [
+              "Administration des droits d'accès en contexte « Besoin de Savoir ».",
+              "Compliance des offres pour l'audit interne.",
+              "Key User chez le client pour la gestion du changement — 2 projets niveau Groupe."
+            ],
+            "en": [
+              "Access-rights administration in a need-to-know context.",
+              "Bid compliance for internal audit.",
+              "Key User at the client for change management — 2 Group-level projects."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Analyse stratégique et capitalisation (RETEX)",
+            "en": "Strategic analysis & lessons learned (RETEX)"
+          },
+          "note": {
+            "fr": "Mandaté par la GBU ISR — mission de haute confiance.",
+            "en": "Mandated by the ISR GBU — a high-trust assignment."
+          },
+          "items": {
+            "fr": [
+              "Audit Post-Mortem sur une offre stratégique perdue : cadrage, interviews des acteurs clés, analyse documentaire approfondie.",
+              "Livrable : rapport de recommandations stratégiques pour améliorer le Win Rate et la gouvernance des offres critiques futures.",
+              "Transition phase projet (HOR) : participation aux Hand Over Reviews pour un transfert sans couture des hypothèses de chiffrage et des risques."
+            ],
+            "en": [
+              "Post-mortem audit on a lost strategic bid: scoping, interviews of key stakeholders, in-depth documentary analysis.",
+              "Deliverable: a strategic-recommendations report to improve the Win Rate and the governance of future critical bids.",
+              "Project-phase transition (HOR): taking part in Hand Over Reviews for a seamless transfer of costing assumptions and risks."
+            ]
+          }
+        }
       ],
       "results": {
         "table": [
-          {"k": {"fr": "Traitement des risques / offre", "en": "Risk handling / bid"}, "v": {"fr": "3 h → 15 min (-92%)", "en": "3 h → 15 min (-92%)"}},
-          {"k": {"fr": "Taux d'erreur imputations Centres de Taux", "en": "Rate-Center allocation error rate"}, "v": {"fr": "Élevé → drastiquement réduit", "en": "High → drastically reduced"}},
-          {"k": {"fr": "Cycle de production des plannings", "en": "Schedule production cycle"}, "v": {"fr": "Spécifique par offre → templates pré-remplis (focus chemin critique)", "en": "Bespoke per bid → pre-filled templates (critical-path focus)"}}
+          {
+            "k": {
+              "fr": "Traitement des risques / offre",
+              "en": "Risk handling / bid"
+            },
+            "v": {
+              "fr": "3 h → 15 min (-92%)",
+              "en": "3 h → 15 min (-92%)"
+            }
+          },
+          {
+            "k": {
+              "fr": "Taux d'erreur imputations Centres de Taux",
+              "en": "Rate-Center allocation error rate"
+            },
+            "v": {
+              "fr": "Élevé → drastiquement réduit",
+              "en": "High → drastically reduced"
+            }
+          },
+          {
+            "k": {
+              "fr": "Cycle de production des plannings",
+              "en": "Schedule production cycle"
+            },
+            "v": {
+              "fr": "Spécifique par offre → templates pré-remplis (focus chemin critique)",
+              "en": "Bespoke per bid → pre-filled templates (critical-path focus)"
+            }
+          }
         ],
         "items": {
-          "fr": ["Rapport RETEX livré au CODIR DMS France avec recommandations Win Rate.", "Templates QDV/MS Project industrialisés et adoptés par les centres de compétences.", "Animation de workshops de formation interne."],
-          "en": ["RETEX report delivered to the CODIR DMS France with Win-Rate recommendations.", "Industrialized QDV/MS Project templates adopted by the competence centers.", "Internal training workshops facilitated."]
+          "fr": [
+            "Rapport RETEX livré au CODIR DMS France avec recommandations Win Rate.",
+            "Templates QDV/MS Project industrialisés et adoptés par les centres de compétences.",
+            "Animation de workshops de formation interne."
+          ],
+          "en": [
+            "RETEX report delivered to the CODIR DMS France with Win-Rate recommendations.",
+            "Industrialized QDV/MS Project templates adopted by the competence centers.",
+            "Internal training workshops facilitated."
+          ]
         }
       },
-      "testimonial": {"fr": "« Au-dessus des attentes sur 7 livrables sur 10. » — Revue de clôture de mission. Haut niveau de satisfaction client et équipe offre.", "en": "\"Above expectations on 7 deliverables out of 10.\" — Mission closure review. High satisfaction from both the client and the bid team."},
-      "environment": {
-        "tools": {"fr": "QDV (chiffrage expert) · MS Project · SAP · Primavera P6 · RiskX · OpenText (EIM/GED) · PowerBI · Suite Office (expertise Macros/VBA).", "en": "QDV (expert costing) · MS Project · SAP · Primavera P6 · RiskX · OpenText (EIM/EDM) · Power BI · Office suite (Macros/VBA expertise)."},
-        "skills": {"fr": "Gestion documentaire EIM/GED « Besoin de Savoir » · plan de charge · justification d'hypothèses · maîtrise du cycle de vie des offres complexes · conduite du changement · Coach Agile · RETEX stratégique.", "en": "EIM/EDM need-to-know document management · workload planning · assumption justification · mastery of the complex-bid lifecycle · change management · Agile coaching · strategic lessons-learned."}
+      "testimonial": {
+        "fr": "« Au-dessus des attentes sur 7 livrables sur 10. » — Revue de clôture de mission. Haut niveau de satisfaction client et équipe offre.",
+        "en": "\"Above expectations on 7 deliverables out of 10.\" — Mission closure review. High satisfaction from both the client and the bid team."
       },
-      "note": {"fr": "Mission d'un an équivalente, par sa densité et le niveau de responsabilité accordé (budgets jusqu'à >1Md€ et missions RETEX stratégiques), à 2-3 ans d'apprentissage accéléré. Vision 360° des enjeux industriels, financiers et contractuels d'un grand groupe de défense — posture PMO senior validée par le client et l'équipe offre.", "en": "A one-year mission whose density and level of responsibility (budgets up to >€1Bn and strategic lessons-learned assignments) made it equivalent to 2–3 years of accelerated learning. A 360° view of the industrial, financial and contractual stakes of a major defense group — a senior PMO posture validated by both client and bid team."}
+      "environment": {
+        "tools": {
+          "fr": "QDV (chiffrage expert) · MS Project · SAP · Primavera P6 · RiskX · OpenText (EIM/GED) · PowerBI · Suite Office (expertise Macros/VBA).",
+          "en": "QDV (expert costing) · MS Project · SAP · Primavera P6 · RiskX · OpenText (EIM/EDM) · Power BI · Office suite (Macros/VBA expertise)."
+        },
+        "skills": {
+          "fr": "Gestion documentaire EIM/GED « Besoin de Savoir » · plan de charge · justification d'hypothèses · maîtrise du cycle de vie des offres complexes · conduite du changement · Coach Agile · RETEX stratégique.",
+          "en": "EIM/EDM need-to-know document management · workload planning · assumption justification · mastery of the complex-bid lifecycle · change management · Agile coaching · strategic lessons-learned."
+        }
+      },
+      "note": {
+        "fr": "Mission d'un an équivalente, par sa densité et le niveau de responsabilité accordé (budgets jusqu'à >1Md€ et missions RETEX stratégiques), à 2-3 ans d'apprentissage accéléré. Vision 360° des enjeux industriels, financiers et contractuels d'un grand groupe de défense — posture PMO senior validée par le client et l'équipe offre.",
+        "en": "A one-year mission whose density and level of responsibility (budgets up to >€1Bn and strategic lessons-learned assignments) made it equivalent to 2–3 years of accelerated learning. A 360° view of the industrial, financial and contractual stakes of a major defense group — a senior PMO posture validated by both client and bid team."
+      }
     },
     "epsi": {
       "accent": "#10b981",
-      "title": {"fr": "Product Owner + Coach Agile — CRM sécurisé (MVP)", "en": "Product Owner + Agile Coach — Secure CRM (MVP)"},
-      "org": {"fr": "EPSI Rennes (projet formation · client Capgemini)", "en": "EPSI Rennes (training project · Capgemini client)"},
-      "meta": {"fr": "Avril 2024 – Juillet 2024 · Rennes · 4 mois", "en": "April 2024 – July 2024 · Rennes · 4 months"},
+      "title": {
+        "fr": "Product Owner + Coach Agile — CRM sécurisé (MVP)",
+        "en": "Product Owner + Agile Coach — Secure CRM (MVP)"
+      },
+      "org": {
+        "fr": "EPSI Rennes (projet formation · client Capgemini)",
+        "en": "EPSI Rennes (training project · Capgemini client)"
+      },
+      "meta": {
+        "fr": "Avril 2024 – Juillet 2024 · Rennes · 4 mois",
+        "en": "April 2024 – July 2024 · Rennes · 4 months"
+      },
       "situation": {
-        "fr": ["Volonté d'enrichir mes compétences en ingénierie logicielle et culture tech dans le cadre de la formation Développeur Cybersécurité (EPSI). Projet : CRM sécurisé pour un client (Capgemini), pilotage de 2 équipes de développement en parallèle (sur 5 équipes au total dans la promotion). Exigences fortes : cybersécurité, ergonomie, respect des délais."],
-        "en": ["A drive to deepen my software-engineering and tech-culture skills during the Cybersecurity Developer program (EPSI). Project: a secure CRM for a client (Capgemini), steering 2 development teams in parallel (out of 5 teams in the cohort). Strong requirements: cybersecurity, usability, on-time delivery."]
+        "fr": [
+          "Volonté d'enrichir mes compétences en ingénierie logicielle et culture tech dans le cadre de la formation Développeur Cybersécurité (EPSI). Projet : CRM sécurisé pour un client (Capgemini), pilotage de 2 équipes de développement en parallèle (sur 5 équipes au total dans la promotion). Exigences fortes : cybersécurité, ergonomie, respect des délais."
+        ],
+        "en": [
+          "A drive to deepen my software-engineering and tech-culture skills during the Cybersecurity Developer program (EPSI). Project: a secure CRM for a client (Capgemini), steering 2 development teams in parallel (out of 5 teams in the cohort). Strong requirements: cybersecurity, usability, on-time delivery."
+        ]
       },
       "objectives": {
-        "fr": ["Cadrer le produit : transformer un besoin client en backlog priorisé et critères d'acceptation testables.", "Animer l'agilité sur deux équipes en parallèle, en présentiel et distanciel.", "Livrer un MVP fonctionnel intégrant gestion client, BDD produits, stocks/commandes, fournisseurs.", "Sécuriser : intégrer les exigences cybersécurité dans le cycle de développement."],
-        "en": ["Frame the product: turn a client need into a prioritized backlog and testable acceptance criteria.", "Run agility across two teams in parallel, on-site and remote.", "Deliver a functional MVP covering client management, product DB, stock/orders and suppliers.", "Secure it: build cybersecurity requirements into the development cycle."]
+        "fr": [
+          "Cadrer le produit : transformer un besoin client en backlog priorisé et critères d'acceptation testables.",
+          "Animer l'agilité sur deux équipes en parallèle, en présentiel et distanciel.",
+          "Livrer un MVP fonctionnel intégrant gestion client, BDD produits, stocks/commandes, fournisseurs.",
+          "Sécuriser : intégrer les exigences cybersécurité dans le cycle de développement."
+        ],
+        "en": [
+          "Frame the product: turn a client need into a prioritized backlog and testable acceptance criteria.",
+          "Run agility across two teams in parallel, on-site and remote.",
+          "Deliver a functional MVP covering client management, product DB, stock/orders and suppliers.",
+          "Secure it: build cybersecurity requirements into the development cycle."
+        ]
       },
       "actions": [
-        {"h": {"fr": "Pilotage Agile et animation d'équipes (rôle dual PO + Coach Agile)", "en": "Agile steering & team facilitation (dual PO + Agile Coach role)"}, "items": {
-          "fr": ["Gouvernance Scrum : animation intégrale des cérémonies (Sprint Planning, Daily, Review, Rétrospective) sur deux équipes.", "Management opérationnel : présentiel + distanciel via outils visuels Kanban / Miro pour maintenir un flux tendu.", "Résolution des blocages : identification et levée des irritants techniques et relationnels ; renforcement de la cohésion d'équipe ; promotion d'une culture de collaboration."],
-          "en": ["Scrum governance: fully facilitating the ceremonies (Sprint Planning, Daily, Review, Retrospective) across two teams.", "Operational management: on-site + remote via Kanban / Miro visual tools to keep a tight flow.", "Unblocking: spotting and removing technical and relational friction; strengthening team cohesion; fostering a collaborative culture."]
-        }},
-        {"h": {"fr": "Gestion du produit et delivery", "en": "Product management & delivery"}, "items": {
-          "fr": ["Ingénierie du backlog : rédaction et priorisation des User Stories en collaboration avec le client et les équipes techniques (méthode INVEST).", "Pilotage MVP : livraison en < 2 mois d'une solution fonctionnelle (gestion client · BDD produits MySQL · suivi stocks/commandes · gestion fournisseurs).", "Critères d'acceptation et pilotage des tests avec Postman.", "Architecture N-tiers sécurisée : participation active au développement (Java 21 / Spring Boot 3.3) et application des principes de sécurité applicative."],
-          "en": ["Backlog engineering: writing and prioritizing User Stories with the client and technical teams (INVEST method).", "MVP delivery: shipping a functional solution in < 2 months (client management · MySQL product DB · stock/order tracking · supplier management).", "Acceptance criteria and test management with Postman.", "Secure N-tier architecture: hands-on contribution to development (Java 21 / Spring Boot 3.3) and application of application-security principles."]
-        }},
-        {"h": {"fr": "Sécurisation et qualité", "en": "Security & quality"}, "items": {
-          "fr": ["Intégration des exigences cybersécurité dans le SDLC.", "Interface UI/UX moderne respectant les standards du secteur."],
-          "en": ["Building cybersecurity requirements into the SDLC.", "A modern UI/UX interface meeting industry standards."]
-        }}
+        {
+          "h": {
+            "fr": "Pilotage Agile et animation d'équipes (rôle dual PO + Coach Agile)",
+            "en": "Agile steering & team facilitation (dual PO + Agile Coach role)"
+          },
+          "items": {
+            "fr": [
+              "Gouvernance Scrum : animation intégrale des cérémonies (Sprint Planning, Daily, Review, Rétrospective) sur deux équipes.",
+              "Management opérationnel : présentiel + distanciel via outils visuels Kanban / Miro pour maintenir un flux tendu.",
+              "Résolution des blocages : identification et levée des irritants techniques et relationnels ; renforcement de la cohésion d'équipe ; promotion d'une culture de collaboration."
+            ],
+            "en": [
+              "Scrum governance: fully facilitating the ceremonies (Sprint Planning, Daily, Review, Retrospective) across two teams.",
+              "Operational management: on-site + remote via Kanban / Miro visual tools to keep a tight flow.",
+              "Unblocking: spotting and removing technical and relational friction; strengthening team cohesion; fostering a collaborative culture."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Gestion du produit et delivery",
+            "en": "Product management & delivery"
+          },
+          "items": {
+            "fr": [
+              "Ingénierie du backlog : rédaction et priorisation des User Stories en collaboration avec le client et les équipes techniques (méthode INVEST).",
+              "Pilotage MVP : livraison en < 2 mois d'une solution fonctionnelle (gestion client · BDD produits MySQL · suivi stocks/commandes · gestion fournisseurs).",
+              "Critères d'acceptation et pilotage des tests avec Postman.",
+              "Architecture N-tiers sécurisée : participation active au développement (Java 21 / Spring Boot 3.3) et application des principes de sécurité applicative."
+            ],
+            "en": [
+              "Backlog engineering: writing and prioritizing User Stories with the client and technical teams (INVEST method).",
+              "MVP delivery: shipping a functional solution in < 2 months (client management · MySQL product DB · stock/order tracking · supplier management).",
+              "Acceptance criteria and test management with Postman.",
+              "Secure N-tier architecture: hands-on contribution to development (Java 21 / Spring Boot 3.3) and application of application-security principles."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Sécurisation et qualité",
+            "en": "Security & quality"
+          },
+          "items": {
+            "fr": [
+              "Intégration des exigences cybersécurité dans le SDLC.",
+              "Interface UI/UX moderne respectant les standards du secteur."
+            ],
+            "en": [
+              "Building cybersecurity requirements into the SDLC.",
+              "A modern UI/UX interface meeting industry standards."
+            ]
+          }
+        }
       ],
       "results": {
         "table": [
-          {"k": {"fr": "Taux de réussite", "en": "Success rate"}, "v": {"fr": "100% — 2 équipes livrées sur 2 (seul PO sur 5 à y parvenir)", "en": "100% — 2 of 2 teams delivered (the only PO out of 5 to do so)"}},
-          {"k": {"fr": "Délai MVP", "en": "MVP lead time"}, "v": {"fr": "< 2 mois", "en": "< 2 months"}},
-          {"k": {"fr": "Reconnaissance jury", "en": "Panel recognition"}, "v": {"fr": "Félicitations formelles Lead Tech Capgemini + Expert Cyber Orange", "en": "Formal commendation from the Capgemini Lead Tech + Orange Cyber expert"}},
-          {"k": {"fr": "Bonus", "en": "Bonus"}, "v": {"fr": "Fonctionnalités additionnelles à haute valeur ajoutée livrées dans les délais", "en": "High-value additional features delivered on time"}}
+          {
+            "k": {
+              "fr": "Taux de réussite",
+              "en": "Success rate"
+            },
+            "v": {
+              "fr": "100% — 2 équipes livrées sur 2 (seul PO sur 5 à y parvenir)",
+              "en": "100% — 2 of 2 teams delivered (the only PO out of 5 to do so)"
+            }
+          },
+          {
+            "k": {
+              "fr": "Délai MVP",
+              "en": "MVP lead time"
+            },
+            "v": {
+              "fr": "< 2 mois",
+              "en": "< 2 months"
+            }
+          },
+          {
+            "k": {
+              "fr": "Reconnaissance jury",
+              "en": "Panel recognition"
+            },
+            "v": {
+              "fr": "Félicitations formelles Lead Tech Capgemini + Expert Cyber Orange",
+              "en": "Formal commendation from the Capgemini Lead Tech + Orange Cyber expert"
+            }
+          },
+          {
+            "k": {
+              "fr": "Bonus",
+              "en": "Bonus"
+            },
+            "v": {
+              "fr": "Fonctionnalités additionnelles à haute valeur ajoutée livrées dans les délais",
+              "en": "High-value additional features delivered on time"
+            }
+          }
         ]
       },
       "environment": {
-        "tools": {"fr": "Java 21 · Spring Boot 3.3 · Maven · MySQL · Postman · Wireshark (analyse réseau / sécurité).", "en": "Java 21 · Spring Boot 3.3 · Maven · MySQL · Postman · Wireshark (network/security analysis)."},
-        "methods": {"fr": "Scrum · Kanban · Notion · Miro.", "en": "Scrum · Kanban · Notion · Miro."},
-        "skills": {"fr": "Priorisation stratégique · médiation et résolution de conflits · leadership d'équipe · maîtrise du cycle de vie logiciel (SDLC) · cybersécurité applicative · Coach Agile.", "en": "Strategic prioritization · mediation and conflict resolution · team leadership · mastery of the software lifecycle (SDLC) · application cybersecurity · Agile coaching."}
+        "tools": {
+          "fr": "Java 21 · Spring Boot 3.3 · Maven · MySQL · Postman · Wireshark (analyse réseau / sécurité).",
+          "en": "Java 21 · Spring Boot 3.3 · Maven · MySQL · Postman · Wireshark (network/security analysis)."
+        },
+        "methods": {
+          "fr": "Scrum · Kanban · Notion · Miro.",
+          "en": "Scrum · Kanban · Notion · Miro."
+        },
+        "skills": {
+          "fr": "Priorisation stratégique · médiation et résolution de conflits · leadership d'équipe · maîtrise du cycle de vie logiciel (SDLC) · cybersécurité applicative · Coach Agile.",
+          "en": "Strategic prioritization · mediation and conflict resolution · team leadership · mastery of the software lifecycle (SDLC) · application cybersecurity · Agile coaching."
+        }
       },
-      "note": {"fr": "Démontre la capacité à fédérer des profils techniques autour d'un objectif commun en temps record. La réussite critique et la validation par des experts de premier plan (Capgemini, Orange) attestent de la rigueur en gestion produit et de la maîtrise des enjeux de cybersécurité applicative. Rôle dual PO + Coach Agile assumé sur 2 équipes simultanément.", "en": "Demonstrates the ability to rally technical profiles around a shared goal in record time. The critical success and validation by leading experts (Capgemini, Orange) attest to rigorous product management and command of application-security stakes. A dual PO + Agile Coach role held across 2 teams simultaneously."}
+      "note": {
+        "fr": "Démontre la capacité à fédérer des profils techniques autour d'un objectif commun en temps record. La réussite critique et la validation par des experts de premier plan (Capgemini, Orange) attestent de la rigueur en gestion produit et de la maîtrise des enjeux de cybersécurité applicative. Rôle dual PO + Coach Agile assumé sur 2 équipes simultanément.",
+        "en": "Demonstrates the ability to rally technical profiles around a shared goal in record time. The critical success and validation by leading experts (Capgemini, Orange) attest to rigorous product management and command of application-security stakes. A dual PO + Agile Coach role held across 2 teams simultaneously."
+      }
     },
     "gestion-locative": {
       "accent": "#f97316",
-      "title": {"fr": "Project Manager — Gestion locative opérationnelle & logistique", "en": "Project Manager — Rental operations & logistics"},
-      "org": {"fr": "Indépendant (EI) — Location saisonnière", "en": "Self-employed (sole proprietor) — Seasonal rental"},
-      "meta": {"fr": "Juillet 2022 – Septembre 2023 · Luz-Saint-Sauveur · 1 an 3 mois", "en": "July 2022 – September 2023 · Luz-Saint-Sauveur · 1 year 3 months"},
+      "title": {
+        "fr": "Project Manager — Gestion locative opérationnelle & logistique",
+        "en": "Project Manager — Rental operations & logistics"
+      },
+      "org": {
+        "fr": "Indépendant (EI) — Location saisonnière",
+        "en": "Self-employed (sole proprietor) — Seasonal rental"
+      },
+      "meta": {
+        "fr": "Juillet 2022 – Septembre 2023 · Luz-Saint-Sauveur · 1 an 3 mois",
+        "en": "July 2022 – September 2023 · Luz-Saint-Sauveur · 1 year 3 months"
+      },
       "situation": {
-        "fr": ["Gestion complète en autonomie totale d'un parc immobilier en location saisonnière (AirBnB). Activité indépendante exigeant polyvalence et rigueur opérationnelle. Enjeux : continuité de service, expérience client premium, optimisation de la rentabilité des actifs pour les propriétaires."],
-        "en": ["End-to-end, fully autonomous management of a short-term rental property portfolio (AirBnB). An independent activity demanding versatility and operational rigor. Stakes: service continuity, a premium guest experience, and optimizing asset profitability for the owners."]
+        "fr": [
+          "Gestion complète en autonomie totale d'un parc immobilier en location saisonnière (AirBnB). Activité indépendante exigeant polyvalence et rigueur opérationnelle. Enjeux : continuité de service, expérience client premium, optimisation de la rentabilité des actifs pour les propriétaires."
+        ],
+        "en": [
+          "End-to-end, fully autonomous management of a short-term rental property portfolio (AirBnB). An independent activity demanding versatility and operational rigor. Stakes: service continuity, a premium guest experience, and optimizing asset profitability for the owners."
+        ]
       },
       "objectives": {
-        "fr": ["Piloter de bout en bout le cycle locatif courte durée pour plusieurs biens.", "Garantir un haut taux d'occupation en haute saison.", "Maintenir la valeur des actifs via un asset management proactif.", "Sécuriser la relation propriétaires/locataires en interface unique."],
-        "en": ["Run the short-term rental cycle end-to-end across several properties.", "Ensure a high occupancy rate in high season.", "Maintain asset value through proactive asset management.", "Secure the owner/guest relationship as the single point of contact."]
+        "fr": [
+          "Piloter de bout en bout le cycle locatif courte durée pour plusieurs biens.",
+          "Garantir un haut taux d'occupation en haute saison.",
+          "Maintenir la valeur des actifs via un asset management proactif.",
+          "Sécuriser la relation propriétaires/locataires en interface unique."
+        ],
+        "en": [
+          "Run the short-term rental cycle end-to-end across several properties.",
+          "Ensure a high occupancy rate in high season.",
+          "Maintain asset value through proactive asset management.",
+          "Secure the owner/guest relationship as the single point of contact."
+        ]
       },
       "actions": [
-        {"h": {"fr": "Pilotage opérationnel et logistique", "en": "Operational & logistics steering"}, "items": {
-          "fr": ["Gestion end-to-end du cycle locatif courte durée sur plusieurs biens immobiliers.", "Coordination logistique : planification rigoureuse des flux (entrées/sorties), supervision de la maintenance pour garantir la disponibilité constante des actifs.", "Asset management : suivi des interventions techniques et des travaux de réparation, maintien de la valeur et de la conformité des biens."],
-          "en": ["End-to-end management of the short-term rental cycle across several properties.", "Logistics coordination: rigorous scheduling of check-in/check-out flows, maintenance supervision to keep the assets constantly available.", "Asset management: tracking technical interventions and repairs, preserving the value and compliance of the properties."]
-        }},
-        {"h": {"fr": "Stakeholder management & relation client", "en": "Stakeholder management & client relations"}, "items": {
-          "fr": ["Interface unique entre propriétaires (investisseurs) et locataires (utilisateurs finaux).", "Gestion des litiges : résolution proactive des points de friction, médiation pour assurer la satisfaction globale.", "Communication adaptée à des profils variés, favorisant la fidélisation et la réputation des biens."],
-          "en": ["Single point of contact between owners (investors) and guests (end users).", "Dispute management: proactive resolution of friction points, mediation to ensure overall satisfaction.", "Communication tailored to varied profiles, driving loyalty and the properties' reputation."]
-        }},
-        {"h": {"fr": "Analyse de performance et amélioration continue", "en": "Performance analysis & continuous improvement"}, "items": {
-          "fr": ["Optimisation de la rentabilité : analyse des données marché et des retours clients pour orienter les investissements stratégiques des propriétaires (mobilier, services).", "Maximisation du taux d'occupation : actions correctives basées sur le feedback utilisateur pour accroître l'attractivité."],
-          "en": ["Profitability optimization: analyzing market data and guest feedback to guide owners' strategic investments (furniture, services).", "Occupancy maximization: corrective actions based on user feedback to boost attractiveness."]
-        }}
+        {
+          "h": {
+            "fr": "Pilotage opérationnel et logistique",
+            "en": "Operational & logistics steering"
+          },
+          "items": {
+            "fr": [
+              "Gestion end-to-end du cycle locatif courte durée sur plusieurs biens immobiliers.",
+              "Coordination logistique : planification rigoureuse des flux (entrées/sorties), supervision de la maintenance pour garantir la disponibilité constante des actifs.",
+              "Asset management : suivi des interventions techniques et des travaux de réparation, maintien de la valeur et de la conformité des biens."
+            ],
+            "en": [
+              "End-to-end management of the short-term rental cycle across several properties.",
+              "Logistics coordination: rigorous scheduling of check-in/check-out flows, maintenance supervision to keep the assets constantly available.",
+              "Asset management: tracking technical interventions and repairs, preserving the value and compliance of the properties."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Stakeholder management & relation client",
+            "en": "Stakeholder management & client relations"
+          },
+          "items": {
+            "fr": [
+              "Interface unique entre propriétaires (investisseurs) et locataires (utilisateurs finaux).",
+              "Gestion des litiges : résolution proactive des points de friction, médiation pour assurer la satisfaction globale.",
+              "Communication adaptée à des profils variés, favorisant la fidélisation et la réputation des biens."
+            ],
+            "en": [
+              "Single point of contact between owners (investors) and guests (end users).",
+              "Dispute management: proactive resolution of friction points, mediation to ensure overall satisfaction.",
+              "Communication tailored to varied profiles, driving loyalty and the properties' reputation."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Analyse de performance et amélioration continue",
+            "en": "Performance analysis & continuous improvement"
+          },
+          "items": {
+            "fr": [
+              "Optimisation de la rentabilité : analyse des données marché et des retours clients pour orienter les investissements stratégiques des propriétaires (mobilier, services).",
+              "Maximisation du taux d'occupation : actions correctives basées sur le feedback utilisateur pour accroître l'attractivité."
+            ],
+            "en": [
+              "Profitability optimization: analyzing market data and guest feedback to guide owners' strategic investments (furniture, services).",
+              "Occupancy maximization: corrective actions based on user feedback to boost attractiveness."
+            ]
+          }
+        }
       ],
       "results": {
         "table": [
-          {"k": {"fr": "Taux d'occupation (haute saison)", "en": "Occupancy rate (high season)"}, "v": {"fr": "> 90%", "en": "> 90%"}},
-          {"k": {"fr": "Taux de satisfaction client", "en": "Guest satisfaction rate"}, "v": {"fr": "88%", "en": "88%"}},
-          {"k": {"fr": "Gestion des litiges", "en": "Dispute management"}, "v": {"fr": "Résolution proactive, médiation autonome", "en": "Proactive resolution, autonomous mediation"}},
-          {"k": {"fr": "Gouvernance", "en": "Governance"}, "v": {"fr": "Interface unique propriétaires / locataires / prestataires", "en": "Single point of contact for owners / guests / vendors"}}
+          {
+            "k": {
+              "fr": "Taux d'occupation (haute saison)",
+              "en": "Occupancy rate (high season)"
+            },
+            "v": {
+              "fr": "> 90%",
+              "en": "> 90%"
+            }
+          },
+          {
+            "k": {
+              "fr": "Taux de satisfaction client",
+              "en": "Guest satisfaction rate"
+            },
+            "v": {
+              "fr": "88%",
+              "en": "88%"
+            }
+          },
+          {
+            "k": {
+              "fr": "Gestion des litiges",
+              "en": "Dispute management"
+            },
+            "v": {
+              "fr": "Résolution proactive, médiation autonome",
+              "en": "Proactive resolution, autonomous mediation"
+            }
+          },
+          {
+            "k": {
+              "fr": "Gouvernance",
+              "en": "Governance"
+            },
+            "v": {
+              "fr": "Interface unique propriétaires / locataires / prestataires",
+              "en": "Single point of contact for owners / guests / vendors"
+            }
+          }
         ]
       },
       "environment": {
-        "tools": {"fr": "AirBnB · Booking · Notion · Google Workspace · gestion budgétaire simplifiée.", "en": "AirBnB · Booking · Notion · Google Workspace · lightweight budget management."},
-        "skills": {"fr": "Orientation service · résolution de problèmes complexes · autonomie décisionnelle · organisation multitâches · écoute active · adaptabilité · asset management opérationnel.", "en": "Service orientation · complex problem-solving · decision autonomy · multitasking organization · active listening · adaptability · operational asset management."}
+        "tools": {
+          "fr": "AirBnB · Booking · Notion · Google Workspace · gestion budgétaire simplifiée.",
+          "en": "AirBnB · Booking · Notion · Google Workspace · lightweight budget management."
+        },
+        "skills": {
+          "fr": "Orientation service · résolution de problèmes complexes · autonomie décisionnelle · organisation multitâches · écoute active · adaptabilité · asset management opérationnel.",
+          "en": "Service orientation · complex problem-solving · decision autonomy · multitasking organization · active listening · adaptability · operational asset management."
+        }
       },
-      "note": {"fr": "Période entrepreneuriale exigeant polyvalence totale et rigueur organisationnelle. Développement d'une forte capacité d'adaptation et d'une vision résultat / satisfaction client, essentielle à la gestion de projets complexes. Démontre une autonomie opérationnelle complète et une intelligence relationnelle en contexte de service à haute exigence.", "en": "An entrepreneurial period demanding total versatility and organizational rigor. It built strong adaptability and a results / client-satisfaction mindset, essential to managing complex projects. It demonstrates complete operational autonomy and relational intelligence in a high-demand service context."}
+      "note": {
+        "fr": "Période entrepreneuriale exigeant polyvalence totale et rigueur organisationnelle. Développement d'une forte capacité d'adaptation et d'une vision résultat / satisfaction client, essentielle à la gestion de projets complexes. Démontre une autonomie opérationnelle complète et une intelligence relationnelle en contexte de service à haute exigence.",
+        "en": "An entrepreneurial period demanding total versatility and organizational rigor. It built strong adaptability and a results / client-satisfaction mindset, essential to managing complex projects. It demonstrates complete operational autonomy and relational intelligence in a high-demand service context."
+      }
     },
     "shuhan": {
       "accent": "#ec4899",
-      "title": {"fr": "Responsable Développement Commercial International (Asie)", "en": "Head of International Business Development (Asia)"},
-      "org": {"fr": "Sichuan Shuhan Plastics Co., LTD.", "en": "Sichuan Shuhan Plastics Co., LTD."},
-      "meta": {"fr": "Juin 2015 – Janvier 2020 · Deyang (Chine) · 4 ans 7 mois", "en": "June 2015 – January 2020 · Deyang (China) · 4 years 7 months"},
+      "title": {
+        "fr": "Responsable Développement Commercial International (Asie)",
+        "en": "Head of International Business Development (Asia)"
+      },
+      "org": {
+        "fr": "Sichuan Shuhan Plastics Co., LTD.",
+        "en": "Sichuan Shuhan Plastics Co., LTD."
+      },
+      "meta": {
+        "fr": "Juin 2015 – Janvier 2020 · Deyang (Chine) · 4 ans 7 mois",
+        "en": "June 2015 – January 2020 · Deyang (China) · 4 years 7 months"
+      },
       "situation": {
-        "fr": ["PME industrielle chinoise (plasturgie) sur-dépendante du marché domestique, export limité à 5% du CA global. Mission stratégique : piloter le développement commercial international avec un focus sur la zone Asie émergente, créer et fidéliser un portefeuille clients export, et assurer le reporting stratégique direct à la Direction Générale."],
-        "en": ["A Chinese industrial SME (plastics) over-dependent on its domestic market, with exports limited to 5% of global revenue. Strategic mission: lead international business development with a focus on emerging Asia, build and retain an export client portfolio, and provide strategic reporting directly to top management."]
+        "fr": [
+          "PME industrielle chinoise (plasturgie) sur-dépendante du marché domestique, export limité à 5% du CA global. Mission stratégique : piloter le développement commercial international avec un focus sur la zone Asie émergente, créer et fidéliser un portefeuille clients export, et assurer le reporting stratégique direct à la Direction Générale."
+        ],
+        "en": [
+          "A Chinese industrial SME (plastics) over-dependent on its domestic market, with exports limited to 5% of global revenue. Strategic mission: lead international business development with a focus on emerging Asia, build and retain an export client portfolio, and provide strategic reporting directly to top management."
+        ]
       },
       "objectives": {
-        "fr": ["Définir et exécuter une stratégie export sur les marchés émergents asiatiques.", "Structurer une force commerciale internationale (équipe + processus + KPI).", "Sécuriser des contrats à forte valeur ajoutée via une négociation complexe.", "Industrialiser la performance commerciale par la donnée (NPS, cycle de vente, taux de transformation)."],
-        "en": ["Define and execute an export strategy across emerging Asian markets.", "Build an international sales force (team + processes + KPIs).", "Secure high-value contracts through complex negotiation.", "Industrialize sales performance through data (NPS, sales cycle, conversion rate)."]
+        "fr": [
+          "Définir et exécuter une stratégie export sur les marchés émergents asiatiques.",
+          "Structurer une force commerciale internationale (équipe + processus + KPI).",
+          "Sécuriser des contrats à forte valeur ajoutée via une négociation complexe.",
+          "Industrialiser la performance commerciale par la donnée (NPS, cycle de vente, taux de transformation)."
+        ],
+        "en": [
+          "Define and execute an export strategy across emerging Asian markets.",
+          "Build an international sales force (team + processes + KPIs).",
+          "Secure high-value contracts through complex negotiation.",
+          "Industrialize sales performance through data (NPS, sales cycle, conversion rate)."
+        ]
       },
       "actions": [
-        {"h": {"fr": "Stratégie export & expansion", "en": "Export strategy & expansion"}, "items": {
-          "fr": ["Définition et mise en œuvre d'une stratégie commerciale ciblant les marchés émergents asiatiques (Chine, Malaisie, Cambodge, Indonésie).", "Présence terrain : participation active aux salons professionnels internationaux pour la visibilité et la génération de leads."],
-          "en": ["Defining and rolling out a sales strategy targeting emerging Asian markets (China, Malaysia, Cambodia, Indonesia).", "On-the-ground presence: active participation in international trade shows for visibility and lead generation."]
-        }},
-        {"h": {"fr": "Management d'équipe (5 personnes — multiculturelle)", "en": "Team management (5 people — multicultural)"}, "items": {
-          "fr": ["Animation régulière de réunions d'équipe et de points individuels : fixation d'objectifs, suivi de la performance, accompagnement de la montée en compétence.", "Management par objectifs : pilotage sur résultats mensuels avec pleine liberté d'organisation.", "Culture de la réussite : reconnaissance des succès, partage des bonnes pratiques, retours terrain illustrant défis et solutions."],
-          "en": ["Running regular team meetings and one-on-ones: goal setting, performance tracking, upskilling support.", "Management by objectives: steering on monthly results with full organizational freedom.", "A success culture: recognizing wins, sharing best practices, field feedback illustrating challenges and solutions."]
-        }},
-        {"h": {"fr": "Gestion des appels d'offres & négociation", "en": "Tender management & negotiation"}, "items": {
-          "fr": ["Pilotage des réponses RFP via la plateforme SAP Ariba.", "Négociation commerciale : contrats à forte valeur ajoutée à l'international, conduite de négociations multiculturelles complexes."],
-          "en": ["Managing RFP responses through the SAP Ariba platform.", "Commercial negotiation: high-value international contracts, leading complex multicultural negotiations."]
-        }},
-        {"h": {"fr": "Pilotage par la donnée", "en": "Data-driven steering"}, "items": {
-          "fr": ["Volume de prospection et taux de transformation (closing).", "Analyse de la valeur des contrats (CA Export vs marché local).", "Cycle de vente : optimisation du délai entre 1er contact et signature.", "NPS (Net Promoter Score) pour la fidélisation long terme."],
-          "en": ["Prospecting volume and conversion (closing) rate.", "Contract-value analysis (export revenue vs local market).", "Sales cycle: optimizing the time from first contact to signature.", "NPS (Net Promoter Score) for long-term loyalty."]
-        }}
+        {
+          "h": {
+            "fr": "Stratégie export & expansion",
+            "en": "Export strategy & expansion"
+          },
+          "items": {
+            "fr": [
+              "Définition et mise en œuvre d'une stratégie commerciale ciblant les marchés émergents asiatiques (Chine, Malaisie, Cambodge, Indonésie).",
+              "Présence terrain : participation active aux salons professionnels internationaux pour la visibilité et la génération de leads."
+            ],
+            "en": [
+              "Defining and rolling out a sales strategy targeting emerging Asian markets (China, Malaysia, Cambodia, Indonesia).",
+              "On-the-ground presence: active participation in international trade shows for visibility and lead generation."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Management d'équipe (5 personnes — multiculturelle)",
+            "en": "Team management (5 people — multicultural)"
+          },
+          "items": {
+            "fr": [
+              "Animation régulière de réunions d'équipe et de points individuels : fixation d'objectifs, suivi de la performance, accompagnement de la montée en compétence.",
+              "Management par objectifs : pilotage sur résultats mensuels avec pleine liberté d'organisation.",
+              "Culture de la réussite : reconnaissance des succès, partage des bonnes pratiques, retours terrain illustrant défis et solutions."
+            ],
+            "en": [
+              "Running regular team meetings and one-on-ones: goal setting, performance tracking, upskilling support.",
+              "Management by objectives: steering on monthly results with full organizational freedom.",
+              "A success culture: recognizing wins, sharing best practices, field feedback illustrating challenges and solutions."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Gestion des appels d'offres & négociation",
+            "en": "Tender management & negotiation"
+          },
+          "items": {
+            "fr": [
+              "Pilotage des réponses RFP via la plateforme SAP Ariba.",
+              "Négociation commerciale : contrats à forte valeur ajoutée à l'international, conduite de négociations multiculturelles complexes."
+            ],
+            "en": [
+              "Managing RFP responses through the SAP Ariba platform.",
+              "Commercial negotiation: high-value international contracts, leading complex multicultural negotiations."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Pilotage par la donnée",
+            "en": "Data-driven steering"
+          },
+          "items": {
+            "fr": [
+              "Volume de prospection et taux de transformation (closing).",
+              "Analyse de la valeur des contrats (CA Export vs marché local).",
+              "Cycle de vente : optimisation du délai entre 1er contact et signature.",
+              "NPS (Net Promoter Score) pour la fidélisation long terme."
+            ],
+            "en": [
+              "Prospecting volume and conversion (closing) rate.",
+              "Contract-value analysis (export revenue vs local market).",
+              "Sales cycle: optimizing the time from first contact to signature.",
+              "NPS (Net Promoter Score) for long-term loyalty."
+            ]
+          }
+        }
       ],
       "results": {
         "table": [
-          {"k": {"fr": "Part Export / CA global", "en": "Export share / global revenue"}, "v": {"fr": "5% → 20% en 5 ans", "en": "5% → 20% in 5 years"}},
-          {"k": {"fr": "CA Export 2019", "en": "Export revenue 2019"}, "v": {"fr": "~15 M$", "en": "~$15M"}},
-          {"k": {"fr": "Marchés actifs", "en": "Active markets"}, "v": {"fr": "Chine · Malaisie · Cambodge · Indonésie", "en": "China · Malaysia · Cambodia · Indonesia"}},
-          {"k": {"fr": "Équipe", "en": "Team"}, "v": {"fr": "5 personnes multiculturelles", "en": "5 multicultural people"}},
-          {"k": {"fr": "Langue de travail", "en": "Working language"}, "v": {"fr": "100% Anglais", "en": "100% English"}}
+          {
+            "k": {
+              "fr": "Part Export / CA global",
+              "en": "Export share / global revenue"
+            },
+            "v": {
+              "fr": "5% → 20% en 5 ans",
+              "en": "5% → 20% in 5 years"
+            }
+          },
+          {
+            "k": {
+              "fr": "CA Export 2019",
+              "en": "Export revenue 2019"
+            },
+            "v": {
+              "fr": "~15 M$",
+              "en": "~$15M"
+            }
+          },
+          {
+            "k": {
+              "fr": "Marchés actifs",
+              "en": "Active markets"
+            },
+            "v": {
+              "fr": "Chine · Malaisie · Cambodge · Indonésie",
+              "en": "China · Malaysia · Cambodia · Indonesia"
+            }
+          },
+          {
+            "k": {
+              "fr": "Équipe",
+              "en": "Team"
+            },
+            "v": {
+              "fr": "5 personnes multiculturelles",
+              "en": "5 multicultural people"
+            }
+          },
+          {
+            "k": {
+              "fr": "Langue de travail",
+              "en": "Working language"
+            },
+            "v": {
+              "fr": "100% Anglais",
+              "en": "100% English"
+            }
+          }
         ]
       },
       "environment": {
-        "tools": {"fr": "Suite Office chinoise (WPS) · YonYou (CRM leader du marché chinois) · SAP Ariba.", "en": "Chinese Office suite (WPS) · YonYou (China's market-leading CRM) · SAP Ariba."},
-        "skills": {"fr": "Stratégie commerciale internationale · management d'équipe multiculturelle · recrutement · négociation de contrats · gestion de la relation client (CRM) secteur Asie · pilotage de l'activité par KPI.", "en": "International sales strategy · multicultural team management · recruitment · contract negotiation · customer relationship management (CRM) in Asia · KPI-based activity steering."}
+        "tools": {
+          "fr": "Suite Office chinoise (WPS) · YonYou (CRM leader du marché chinois) · SAP Ariba.",
+          "en": "Chinese Office suite (WPS) · YonYou (China's market-leading CRM) · SAP Ariba."
+        },
+        "skills": {
+          "fr": "Stratégie commerciale internationale · management d'équipe multiculturelle · recrutement · négociation de contrats · gestion de la relation client (CRM) secteur Asie · pilotage de l'activité par KPI.",
+          "en": "International sales strategy · multicultural team management · recruitment · contract negotiation · customer relationship management (CRM) in Asia · KPI-based activity steering."
+        }
       },
-      "note": {"fr": "Quadruplement de la part export en 5 ans (5% → 20% du CA, ~15M$) — démontre une capacité d'exécution stratégique end-to-end en environnement multiculturel complexe. Connaissance approfondie de la culture et des négociations en environnement asiatique. Poste exercé à 100% en anglais sur 5 ans.", "en": "A fourfold increase in export share in 5 years (5% → 20% of revenue, ~$15M) — demonstrating end-to-end strategic execution in a complex multicultural environment. Deep knowledge of culture and negotiation in an Asian setting. A role held 100% in English over 5 years."}
+      "note": {
+        "fr": "Quadruplement de la part export en 5 ans (5% → 20% du CA, ~15M$) — démontre une capacité d'exécution stratégique end-to-end en environnement multiculturel complexe. Connaissance approfondie de la culture et des négociations en environnement asiatique. Poste exercé à 100% en anglais sur 5 ans.",
+        "en": "A fourfold increase in export share in 5 years (5% → 20% of revenue, ~$15M) — demonstrating end-to-end strategic execution in a complex multicultural environment. Deep knowledge of culture and negotiation in an Asian setting. A role held 100% in English over 5 years."
+      }
     },
     "vacorda": {
       "accent": "#06b6d4",
-      "title": {"fr": "Stratégie Digitale & Business Development", "en": "Digital Strategy & Business Development"},
-      "org": {"fr": "Vacorda Instruments", "en": "Vacorda Instruments"},
-      "meta": {"fr": "Janvier 2015 – Juin 2015 · Chengdu (Chine) · 6 mois", "en": "January 2015 – June 2015 · Chengdu (China) · 6 months"},
+      "title": {
+        "fr": "Stratégie Digitale & Business Development",
+        "en": "Digital Strategy & Business Development"
+      },
+      "org": {
+        "fr": "Vacorda Instruments",
+        "en": "Vacorda Instruments"
+      },
+      "meta": {
+        "fr": "Janvier 2015 – Juin 2015 · Chengdu (Chine) · 6 mois",
+        "en": "January 2015 – June 2015 · Chengdu (China) · 6 months"
+      },
       "situation": {
-        "fr": ["Entreprise industrielle (instrumentation scientifique) sans présence digitale. Mission de création et de structuration from-scratch de la première vitrine digitale et de la fondation de la stratégie webmarketing internationale (SEO, SEA, KPI). Double mandat : interface commerciale francophone et soutien à l'expansion internationale."],
-        "en": ["An industrial company (scientific instrumentation) with no digital presence. The mission was to build and structure from scratch its first digital storefront and the foundations of an international web-marketing strategy (SEO, SEA, KPIs). A dual mandate: French-speaking commercial interface and support for international expansion."]
+        "fr": [
+          "Entreprise industrielle (instrumentation scientifique) sans présence digitale. Mission de création et de structuration from-scratch de la première vitrine digitale et de la fondation de la stratégie webmarketing internationale (SEO, SEA, KPI). Double mandat : interface commerciale francophone et soutien à l'expansion internationale."
+        ],
+        "en": [
+          "An industrial company (scientific instrumentation) with no digital presence. The mission was to build and structure from scratch its first digital storefront and the foundations of an international web-marketing strategy (SEO, SEA, KPIs). A dual mandate: French-speaking commercial interface and support for international expansion."
+        ]
       },
       "objectives": {
-        "fr": ["Concevoir et déployer l'écosystème digital de l'entreprise (site multilingue).", "Définir la stratégie d'acquisition (SEO/SEA, budget Ads piloté).", "Animer le cycle commercial francophone end-to-end (qualification → closing).", "Outiller le pilotage par un tableau de bord performance."],
-        "en": ["Design and deploy the company's digital ecosystem (multilingual website).", "Define the acquisition strategy (SEO/SEA, managed Ads budget).", "Run the French-speaking sales cycle end-to-end (qualification → closing).", "Equip steering with a performance dashboard."]
+        "fr": [
+          "Concevoir et déployer l'écosystème digital de l'entreprise (site multilingue).",
+          "Définir la stratégie d'acquisition (SEO/SEA, budget Ads piloté).",
+          "Animer le cycle commercial francophone end-to-end (qualification → closing).",
+          "Outiller le pilotage par un tableau de bord performance."
+        ],
+        "en": [
+          "Design and deploy the company's digital ecosystem (multilingual website).",
+          "Define the acquisition strategy (SEO/SEA, managed Ads budget).",
+          "Run the French-speaking sales cycle end-to-end (qualification → closing).",
+          "Equip steering with a performance dashboard."
+        ]
       },
       "actions": [
-        {"h": {"fr": "Création de l'écosystème digital", "en": "Building the digital ecosystem"}, "items": {
-          "fr": ["Conception et déploiement du site multilingue vacorda.com en low-code (WIX).", "Architecture multilingue : FR / EN avec adaptation des contenus aux marchés cibles."],
-          "en": ["Designing and deploying the multilingual site vacorda.com in low-code (WIX).", "Multilingual architecture: FR / EN with content adapted to target markets."]
-        }},
-        {"h": {"fr": "Stratégie webmarketing & acquisition", "en": "Web-marketing & acquisition strategy"}, "items": {
-          "fr": ["SEO : optimisation organique, intégration et gestion de mots-clés stratégiques.", "SEA : gestion d'un budget publicitaire annuel de 24 000 $ sur Google Ads."],
-          "en": ["SEO: organic optimization, integration and management of strategic keywords.", "SEA: managing a $24,000 annual ad budget on Google Ads."]
-        }},
-        {"h": {"fr": "Business Development (zone francophone)", "en": "Business Development (French-speaking markets)"}, "items": {
-          "fr": ["Cycle de vente complet sur leads francophones : qualification, présentation de l'offre, suivi des demandes, closing.", "Coordination interne avec les équipes industrielles pour la valorisation technique des produits sur les supports digitaux."],
-          "en": ["Full sales cycle on French-speaking leads: qualification, offer presentation, request follow-up, closing.", "Internal coordination with the industrial teams to showcase products technically on digital channels."]
-        }},
-        {"h": {"fr": "Support recrutement international", "en": "International recruitment support"}, "items": {
-          "fr": ["Participation au recrutement de profils internationaux (hispanophones) pour soutenir l'expansion vers l'Amérique Latine."],
-          "en": ["Helping recruit international (Spanish-speaking) profiles to support expansion into Latin America."]
-        }},
-        {"h": {"fr": "Pilotage par la donnée", "en": "Data-driven steering"}, "items": {
-          "fr": ["Trafic (visiteurs uniques par langue / pays).", "Taux de conversion + réduction du taux de rebond.", "Coût d'Acquisition Client (CAC) vs budget Ads.", "Monitoring du positionnement par mots-clés (ranking)."],
-          "en": ["Traffic (unique visitors by language / country).", "Conversion rate + bounce-rate reduction.", "Customer Acquisition Cost (CAC) vs ad budget.", "Keyword-ranking monitoring."]
-        }},
-        {"h": {"fr": "Gouvernance & reporting", "en": "Governance & reporting"}, "items": {
-          "fr": ["Reporting stratégique régulier au sponsor du projet pour arbitrage.", "Acculturation digitale : transmission des bonnes pratiques webmarketing pour pérenniser la stratégie."],
-          "en": ["Regular strategic reporting to the project sponsor for decision-making.", "Digital acculturation: passing on web-marketing best practices to make the strategy sustainable."]
-        }}
+        {
+          "h": {
+            "fr": "Création de l'écosystème digital",
+            "en": "Building the digital ecosystem"
+          },
+          "items": {
+            "fr": [
+              "Conception et déploiement du site multilingue vacorda.com en low-code (WIX).",
+              "Architecture multilingue : FR / EN avec adaptation des contenus aux marchés cibles."
+            ],
+            "en": [
+              "Designing and deploying the multilingual site vacorda.com in low-code (WIX).",
+              "Multilingual architecture: FR / EN with content adapted to target markets."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Stratégie webmarketing & acquisition",
+            "en": "Web-marketing & acquisition strategy"
+          },
+          "items": {
+            "fr": [
+              "SEO : optimisation organique, intégration et gestion de mots-clés stratégiques.",
+              "SEA : gestion d'un budget publicitaire annuel de 24 000 $ sur Google Ads."
+            ],
+            "en": [
+              "SEO: organic optimization, integration and management of strategic keywords.",
+              "SEA: managing a $24,000 annual ad budget on Google Ads."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Business Development (zone francophone)",
+            "en": "Business Development (French-speaking markets)"
+          },
+          "items": {
+            "fr": [
+              "Cycle de vente complet sur leads francophones : qualification, présentation de l'offre, suivi des demandes, closing.",
+              "Coordination interne avec les équipes industrielles pour la valorisation technique des produits sur les supports digitaux."
+            ],
+            "en": [
+              "Full sales cycle on French-speaking leads: qualification, offer presentation, request follow-up, closing.",
+              "Internal coordination with the industrial teams to showcase products technically on digital channels."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Support recrutement international",
+            "en": "International recruitment support"
+          },
+          "items": {
+            "fr": [
+              "Participation au recrutement de profils internationaux (hispanophones) pour soutenir l'expansion vers l'Amérique Latine."
+            ],
+            "en": [
+              "Helping recruit international (Spanish-speaking) profiles to support expansion into Latin America."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Pilotage par la donnée",
+            "en": "Data-driven steering"
+          },
+          "items": {
+            "fr": [
+              "Trafic (visiteurs uniques par langue / pays).",
+              "Taux de conversion + réduction du taux de rebond.",
+              "Coût d'Acquisition Client (CAC) vs budget Ads.",
+              "Monitoring du positionnement par mots-clés (ranking)."
+            ],
+            "en": [
+              "Traffic (unique visitors by language / country).",
+              "Conversion rate + bounce-rate reduction.",
+              "Customer Acquisition Cost (CAC) vs ad budget.",
+              "Keyword-ranking monitoring."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Gouvernance & reporting",
+            "en": "Governance & reporting"
+          },
+          "items": {
+            "fr": [
+              "Reporting stratégique régulier au sponsor du projet pour arbitrage.",
+              "Acculturation digitale : transmission des bonnes pratiques webmarketing pour pérenniser la stratégie."
+            ],
+            "en": [
+              "Regular strategic reporting to the project sponsor for decision-making.",
+              "Digital acculturation: passing on web-marketing best practices to make the strategy sustainable."
+            ]
+          }
+        }
       ],
       "results": {
         "table": [
-          {"k": {"fr": "Présence digitale", "en": "Digital presence"}, "v": {"fr": "0 → plateforme multilingue opérationnelle", "en": "0 → live multilingual platform"}},
-          {"k": {"fr": "Budget Ads piloté", "en": "Ad budget managed"}, "v": {"fr": "24 000 $/an", "en": "$24,000/year"}},
-          {"k": {"fr": "Génération de leads qualifiés", "en": "Qualified lead generation"}, "v": {"fr": "Active sur la zone francophone", "en": "Active across French-speaking markets"}},
-          {"k": {"fr": "Langue de travail", "en": "Working language"}, "v": {"fr": "90% Anglais · 10% Français", "en": "90% English · 10% French"}}
+          {
+            "k": {
+              "fr": "Présence digitale",
+              "en": "Digital presence"
+            },
+            "v": {
+              "fr": "0 → plateforme multilingue opérationnelle",
+              "en": "0 → live multilingual platform"
+            }
+          },
+          {
+            "k": {
+              "fr": "Budget Ads piloté",
+              "en": "Ad budget managed"
+            },
+            "v": {
+              "fr": "24 000 $/an",
+              "en": "$24,000/year"
+            }
+          },
+          {
+            "k": {
+              "fr": "Génération de leads qualifiés",
+              "en": "Qualified lead generation"
+            },
+            "v": {
+              "fr": "Active sur la zone francophone",
+              "en": "Active across French-speaking markets"
+            }
+          },
+          {
+            "k": {
+              "fr": "Langue de travail",
+              "en": "Working language"
+            },
+            "v": {
+              "fr": "90% Anglais · 10% Français",
+              "en": "90% English · 10% French"
+            }
+          }
         ]
       },
       "environment": {
-        "tools": {"fr": "WIX (développement) · Google Search · Google Analytics · Google Ads · Lighthouse.", "en": "WIX (development) · Google Search · Google Analytics · Google Ads · Lighthouse."},
-        "skills": {"fr": "Webmarketing stratégique · développement commercial international · analyse de données (KPI) · recrutement international · gestion de projet digital · adaptabilité multiculturelle.", "en": "Strategic web marketing · international business development · data analysis (KPIs) · international recruitment · digital project management · multicultural adaptability."}
+        "tools": {
+          "fr": "WIX (développement) · Google Search · Google Analytics · Google Ads · Lighthouse.",
+          "en": "WIX (development) · Google Search · Google Analytics · Google Ads · Lighthouse."
+        },
+        "skills": {
+          "fr": "Webmarketing stratégique · développement commercial international · analyse de données (KPI) · recrutement international · gestion de projet digital · adaptabilité multiculturelle.",
+          "en": "Strategic web marketing · international business development · data analysis (KPIs) · international recruitment · digital project management · multicultural adaptability."
+        }
       },
-      "note": {"fr": "Mission from-zéro à plateforme génératrice de leads, conjuguant compétences techniques marketing digital et dimension commerciale opérationnelle. Démontre la capacité à bâtir une stratégie de visibilité globale à partir de rien et à piloter des budgets d'acquisition significatifs en contexte multiculturel.", "en": "A from-zero-to-lead-generating-platform mission combining digital-marketing technical skills with hands-on commercial work. It demonstrates the ability to build a global visibility strategy from scratch and to manage significant acquisition budgets in a multicultural context."}
+      "note": {
+        "fr": "Mission from-zéro à plateforme génératrice de leads, conjuguant compétences techniques marketing digital et dimension commerciale opérationnelle. Démontre la capacité à bâtir une stratégie de visibilité globale à partir de rien et à piloter des budgets d'acquisition significatifs en contexte multiculturel.",
+        "en": "A from-zero-to-lead-generating-platform mission combining digital-marketing technical skills with hands-on commercial work. It demonstrates the ability to build a global visibility strategy from scratch and to manage significant acquisition budgets in a multicultural context."
+      }
     },
     "diadom": {
       "accent": "#eab308",
-      "title": {"fr": "Chef de Projet Digital / Business Analyst", "en": "Digital Project Manager / Business Analyst"},
-      "org": {"fr": "Diadom SAS", "en": "Diadom SAS"},
-      "meta": {"fr": "Septembre 2012 – Octobre 2014 · Montpellier · 2 ans 1 mois", "en": "September 2012 – October 2014 · Montpellier · 2 years 1 month"},
+      "title": {
+        "fr": "Chef de Projet Digital / Business Analyst",
+        "en": "Digital Project Manager / Business Analyst"
+      },
+      "org": {
+        "fr": "Diadom SAS",
+        "en": "Diadom SAS"
+      },
+      "meta": {
+        "fr": "Septembre 2012 – Octobre 2014 · Montpellier · 2 ans 1 mois",
+        "en": "September 2012 – October 2014 · Montpellier · 2 years 1 month"
+      },
       "situation": {
-        "fr": ["Pilotage d'une stratégie de modernisation digitale globale incluant la refonte complète du site institutionnel et du portail e-commerce. Mission rattachée directement à la Direction Générale (sponsor PDG) — alignement obligatoire avec les objectifs de croissance."],
-        "en": ["Steering a global digital-modernization strategy including the complete redesign of the corporate site and the e-commerce portal. The mission reported directly to top management (CEO sponsor) — mandatory alignment with growth objectives."]
+        "fr": [
+          "Pilotage d'une stratégie de modernisation digitale globale incluant la refonte complète du site institutionnel et du portail e-commerce. Mission rattachée directement à la Direction Générale (sponsor PDG) — alignement obligatoire avec les objectifs de croissance."
+        ],
+        "en": [
+          "Steering a global digital-modernization strategy including the complete redesign of the corporate site and the e-commerce portal. The mission reported directly to top management (CEO sponsor) — mandatory alignment with growth objectives."
+        ]
       },
       "objectives": {
-        "fr": ["Refondre le site institutionnel et le portail e-commerce dans les jalons fixés.", "Garantir l'alignement des livrables avec la stratégie de croissance (sponsor PDG).", "Piloter l'acquisition digitale (SEO/SEA, communication multicanale).", "Accompagner les équipes métier vers l'autonomie sur les nouveaux outils."],
-        "en": ["Redesign the corporate site and the e-commerce portal within the set milestones.", "Ensure deliverables aligned with the growth strategy (CEO sponsor).", "Steer digital acquisition (SEO/SEA, multichannel communication).", "Support business teams toward autonomy on the new tools."]
+        "fr": [
+          "Refondre le site institutionnel et le portail e-commerce dans les jalons fixés.",
+          "Garantir l'alignement des livrables avec la stratégie de croissance (sponsor PDG).",
+          "Piloter l'acquisition digitale (SEO/SEA, communication multicanale).",
+          "Accompagner les équipes métier vers l'autonomie sur les nouveaux outils."
+        ],
+        "en": [
+          "Redesign the corporate site and the e-commerce portal within the set milestones.",
+          "Ensure deliverables aligned with the growth strategy (CEO sponsor).",
+          "Steer digital acquisition (SEO/SEA, multichannel communication).",
+          "Support business teams toward autonomy on the new tools."
+        ]
       },
       "actions": [
-        {"h": {"fr": "Pilotage de projet et gouvernance", "en": "Project steering & governance"}, "items": {
-          "fr": ["Maîtrise d'œuvre complète du cycle de vie projet : cadrage, sélection et coordination des prestataires techniques, déploiement, recette, mise en production.", "Gestion du planning : élaboration et suivi rigoureux du chemin critique via MS Project, respect des jalons de mise en production.", "Accompagnement au changement : sessions de formation pour les équipes métier (personnel soignant) pour l'autonomie sur le nouveau CMS."],
-          "en": ["Full project-lifecycle delivery lead: scoping, selecting and coordinating technical vendors, deployment, acceptance testing, go-live.", "Schedule management: building and rigorously tracking the critical path via MS Project, hitting go-live milestones.", "Change support: training sessions for business teams (care staff) to gain autonomy on the new CMS."]
-        }},
-        {"h": {"fr": "Stratégie marketing & performance digitale", "en": "Marketing strategy & digital performance"}, "items": {
-          "fr": ["Acquisition & visibilité : stratégie SEO/SEA, budget annuel 30 K€. Création et animation des canaux sociaux pour l'engagement communautaire.", "Communication multicanale : campagnes emailing et newsletters mensuelles dans un cadre RGPD strict.", "Mesure d'efficacité : KPI critiques — taux de conversion, CAC, panier moyen, positionnement sémantique."],
-          "en": ["Acquisition & visibility: SEO/SEA strategy, €30k annual budget. Creating and running social channels for community engagement.", "Multichannel communication: emailing campaigns and monthly newsletters under a strict GDPR framework.", "Effectiveness measurement: critical KPIs — conversion rate, CAC, average basket, semantic ranking."]
-        }},
-        {"h": {"fr": "Reporting stratégique et aide à la décision", "en": "Strategic reporting & decision support"}, "items": {
-          "fr": ["Gouvernance CODIR : reporting mensuel au Comité de Direction et au PDG sur l'avancement et l'atteinte des objectifs.", "Analyse de la valeur : suivi post-mise en ligne pour ajuster les stratégies digitales selon les résultats réels."],
-          "en": ["CODIR governance: monthly reporting to the executive committee and the CEO on progress and goal attainment.", "Value analysis: post-launch monitoring to adjust digital strategies based on real results."]
-        }}
+        {
+          "h": {
+            "fr": "Pilotage de projet et gouvernance",
+            "en": "Project steering & governance"
+          },
+          "items": {
+            "fr": [
+              "Maîtrise d'œuvre complète du cycle de vie projet : cadrage, sélection et coordination des prestataires techniques, déploiement, recette, mise en production.",
+              "Gestion du planning : élaboration et suivi rigoureux du chemin critique via MS Project, respect des jalons de mise en production.",
+              "Accompagnement au changement : sessions de formation pour les équipes métier (personnel soignant) pour l'autonomie sur le nouveau CMS."
+            ],
+            "en": [
+              "Full project-lifecycle delivery lead: scoping, selecting and coordinating technical vendors, deployment, acceptance testing, go-live.",
+              "Schedule management: building and rigorously tracking the critical path via MS Project, hitting go-live milestones.",
+              "Change support: training sessions for business teams (care staff) to gain autonomy on the new CMS."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Stratégie marketing & performance digitale",
+            "en": "Marketing strategy & digital performance"
+          },
+          "items": {
+            "fr": [
+              "Acquisition & visibilité : stratégie SEO/SEA, budget annuel 30 K€. Création et animation des canaux sociaux pour l'engagement communautaire.",
+              "Communication multicanale : campagnes emailing et newsletters mensuelles dans un cadre RGPD strict.",
+              "Mesure d'efficacité : KPI critiques — taux de conversion, CAC, panier moyen, positionnement sémantique."
+            ],
+            "en": [
+              "Acquisition & visibility: SEO/SEA strategy, €30k annual budget. Creating and running social channels for community engagement.",
+              "Multichannel communication: emailing campaigns and monthly newsletters under a strict GDPR framework.",
+              "Effectiveness measurement: critical KPIs — conversion rate, CAC, average basket, semantic ranking."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Reporting stratégique et aide à la décision",
+            "en": "Strategic reporting & decision support"
+          },
+          "items": {
+            "fr": [
+              "Gouvernance CODIR : reporting mensuel au Comité de Direction et au PDG sur l'avancement et l'atteinte des objectifs.",
+              "Analyse de la valeur : suivi post-mise en ligne pour ajuster les stratégies digitales selon les résultats réels."
+            ],
+            "en": [
+              "CODIR governance: monthly reporting to the executive committee and the CEO on progress and goal attainment.",
+              "Value analysis: post-launch monitoring to adjust digital strategies based on real results."
+            ]
+          }
+        }
       ],
       "results": {
         "table": [
-          {"k": {"fr": "Trafic site", "en": "Site traffic"}, "v": {"fr": "+196% (sur 2 ans)", "en": "+196% (over 2 years)"}},
-          {"k": {"fr": "Taux de conversion", "en": "Conversion rate"}, "v": {"fr": "+23% (sur 2 ans)", "en": "+23% (over 2 years)"}},
-          {"k": {"fr": "Budget SEA piloté", "en": "SEA budget managed"}, "v": {"fr": "30 K€/an", "en": "€30k/year"}},
-          {"k": {"fr": "Périmètre", "en": "Scope"}, "v": {"fr": "Refonte complète (institutionnel + e-commerce)", "en": "Full redesign (corporate + e-commerce)"}},
-          {"k": {"fr": "Reporting", "en": "Reporting"}, "v": {"fr": "Mensuel · CODIR / PDG", "en": "Monthly · CODIR / CEO"}}
+          {
+            "k": {
+              "fr": "Trafic site",
+              "en": "Site traffic"
+            },
+            "v": {
+              "fr": "+196% (sur 2 ans)",
+              "en": "+196% (over 2 years)"
+            }
+          },
+          {
+            "k": {
+              "fr": "Taux de conversion",
+              "en": "Conversion rate"
+            },
+            "v": {
+              "fr": "+23% (sur 2 ans)",
+              "en": "+23% (over 2 years)"
+            }
+          },
+          {
+            "k": {
+              "fr": "Budget SEA piloté",
+              "en": "SEA budget managed"
+            },
+            "v": {
+              "fr": "30 K€/an",
+              "en": "€30k/year"
+            }
+          },
+          {
+            "k": {
+              "fr": "Périmètre",
+              "en": "Scope"
+            },
+            "v": {
+              "fr": "Refonte complète (institutionnel + e-commerce)",
+              "en": "Full redesign (corporate + e-commerce)"
+            }
+          },
+          {
+            "k": {
+              "fr": "Reporting",
+              "en": "Reporting"
+            },
+            "v": {
+              "fr": "Mensuel · CODIR / PDG",
+              "en": "Monthly · CODIR / CEO"
+            }
+          }
         ]
       },
       "environment": {
-        "tools": {"fr": "CMS Drupal · HTML/CSS · MS Project · Photoshop · Suite Office.", "en": "Drupal CMS · HTML/CSS · MS Project · Photoshop · Office suite."},
-        "methods": {"fr": "Recueil du besoin · stratégie de communication · management de prestataires · pilotage budgétaire · change management.", "en": "Requirements gathering · communication strategy · vendor management · budget steering · change management."},
-        "skills": {"fr": "Reporting de direction · marketing digital · pilotage budgétaire · SEO/SEA · conduite du changement.", "en": "Executive reporting · digital marketing · budget steering · SEO/SEA · change management."}
+        "tools": {
+          "fr": "CMS Drupal · HTML/CSS · MS Project · Photoshop · Suite Office.",
+          "en": "Drupal CMS · HTML/CSS · MS Project · Photoshop · Office suite."
+        },
+        "methods": {
+          "fr": "Recueil du besoin · stratégie de communication · management de prestataires · pilotage budgétaire · change management.",
+          "en": "Requirements gathering · communication strategy · vendor management · budget steering · change management."
+        },
+        "skills": {
+          "fr": "Reporting de direction · marketing digital · pilotage budgétaire · SEO/SEA · conduite du changement.",
+          "en": "Executive reporting · digital marketing · budget steering · SEO/SEA · change management."
+        }
       },
-      "note": {"fr": "Mission de 2 ans marquant un tournant numérique pour Diadom. Pivot entre prestataires techniques et direction générale → vision transverse du business digital, de la technique au reporting financier. Démontre la capacité à porter un projet de transformation de bout en bout avec rattachement COMEX et résultats quantifiés (+196% trafic / +23% conversion).", "en": "A 2-year mission marking a digital turning point for Diadom. A pivot between technical vendors and top management → a cross-functional view of the digital business, from tech to financial reporting. It demonstrates the ability to carry an end-to-end transformation project with executive-committee reporting and quantified results (+196% traffic / +23% conversion)."}
+      "note": {
+        "fr": "Mission de 2 ans marquant un tournant numérique pour Diadom. Pivot entre prestataires techniques et direction générale → vision transverse du business digital, de la technique au reporting financier. Démontre la capacité à porter un projet de transformation de bout en bout avec rattachement COMEX et résultats quantifiés (+196% trafic / +23% conversion).",
+        "en": "A 2-year mission marking a digital turning point for Diadom. A pivot between technical vendors and top management → a cross-functional view of the digital business, from tech to financial reporting. It demonstrates the ability to carry an end-to-end transformation project with executive-committee reporting and quantified results (+196% traffic / +23% conversion)."
+      }
     },
     "justrade": {
       "accent": "#ef4444",
-      "title": {"fr": "Chargé de Projet Webmarketing — International", "en": "Web Marketing Project Officer — International"},
-      "org": {"fr": "Justrade International", "en": "Justrade International"},
-      "meta": {"fr": "Septembre 2011 – Août 2012 · Yiwu (Chine) · 1 an", "en": "September 2011 – August 2012 · Yiwu (China) · 1 year"},
+      "title": {
+        "fr": "Chargé de Projet Webmarketing — International",
+        "en": "Web Marketing Project Officer — International"
+      },
+      "org": {
+        "fr": "Justrade International",
+        "en": "Justrade International"
+      },
+      "meta": {
+        "fr": "Septembre 2011 – Août 2012 · Yiwu (Chine) · 1 an",
+        "en": "September 2011 – August 2012 · Yiwu (China) · 1 year"
+      },
       "situation": {
-        "fr": ["Première mission en immersion en Chine. Pilotage de la stratégie digitale dans le cadre de l'expansion internationale de Justrade : refonte multilingue du site institutionnel et développement de la visibilité sur les marchés exports."],
-        "en": ["First immersion mission in China. Steering the digital strategy as part of Justrade's international expansion: a multilingual redesign of the corporate site and growing visibility across export markets."]
+        "fr": [
+          "Première mission en immersion en Chine. Pilotage de la stratégie digitale dans le cadre de l'expansion internationale de Justrade : refonte multilingue du site institutionnel et développement de la visibilité sur les marchés exports."
+        ],
+        "en": [
+          "First immersion mission in China. Steering the digital strategy as part of Justrade's international expansion: a multilingual redesign of the corporate site and growing visibility across export markets."
+        ]
       },
       "objectives": {
-        "fr": ["Refondre le site institutionnel multilingue pour soutenir l'export.", "Adapter l'ergonomie aux standards des marchés étrangers.", "Déployer une stratégie d'acquisition (SEO/SEA, social media) internationale.", "Reporter la performance digitale au CODIR."],
-        "en": ["Redesign the multilingual corporate site to support exports.", "Adapt usability to foreign-market standards.", "Roll out an international acquisition strategy (SEO/SEA, social media).", "Report digital performance to the executive committee."]
+        "fr": [
+          "Refondre le site institutionnel multilingue pour soutenir l'export.",
+          "Adapter l'ergonomie aux standards des marchés étrangers.",
+          "Déployer une stratégie d'acquisition (SEO/SEA, social media) internationale.",
+          "Reporter la performance digitale au CODIR."
+        ],
+        "en": [
+          "Redesign the multilingual corporate site to support exports.",
+          "Adapt usability to foreign-market standards.",
+          "Roll out an international acquisition strategy (SEO/SEA, social media).",
+          "Report digital performance to the executive committee."
+        ]
       },
       "actions": [
-        {"h": {"fr": "Pilotage de projet et transformation digitale", "en": "Project steering & digital transformation"}, "items": {
-          "fr": ["Refonte multilingue : coordination complète du projet de refonte justrade-int.com — recueil des besoins des parties prenantes internationales, supervision de la production (prestataires techniques + traducteurs).", "Adaptation multiculturelle : ajustement du design et de l'ergonomie (UI/UX) aux standards et attentes des marchés étrangers ciblés.", "Gouvernance projet : pilotage du planning, garantie de l'alignement entre livrables techniques et stratégie de croissance export."],
-          "en": ["Multilingual redesign: end-to-end coordination of the justrade-int.com redesign — gathering requirements from international stakeholders, supervising production (technical vendors + translators).", "Multicultural adaptation: adjusting design and usability (UI/UX) to the standards and expectations of the targeted foreign markets.", "Project governance: steering the schedule, ensuring alignment between technical deliverables and the export-growth strategy."]
-        }},
-        {"h": {"fr": "Performance digitale et acquisition", "en": "Digital performance & acquisition"}, "items": {
-          "fr": ["SEO/SEA internationale : audit et recherche de mots-clés spécifiques par marché, optimisation du référencement naturel, pilotage des campagnes payantes pour un trafic qualifié.", "Social Media Management : création, animation et gestion de communautés en anglais et en français pour la notoriété internationale.", "Analyse de données : suivi des KPI via les suites analytiques pour mesurer l'impact des actions."],
-          "en": ["International SEO/SEA: audit and per-market keyword research, organic-ranking optimization, managing paid campaigns for qualified traffic.", "Social media management: creating, running and managing communities in English and French for international awareness.", "Data analysis: tracking KPIs via analytics suites to measure the impact of actions."]
-        }},
-        {"h": {"fr": "Reporting et aide à la décision", "en": "Reporting & decision support"}, "items": {
-          "fr": ["Reporting CODIR mensuel : performances digitales et bilans de campagne.", "Recommandations stratégiques : optimisations pour maximiser le ROI des leviers webmarketing."],
-          "en": ["Monthly CODIR reporting: digital performance and campaign reviews.", "Strategic recommendations: optimizations to maximize the ROI of web-marketing levers."]
-        }}
+        {
+          "h": {
+            "fr": "Pilotage de projet et transformation digitale",
+            "en": "Project steering & digital transformation"
+          },
+          "items": {
+            "fr": [
+              "Refonte multilingue : coordination complète du projet de refonte justrade-int.com — recueil des besoins des parties prenantes internationales, supervision de la production (prestataires techniques + traducteurs).",
+              "Adaptation multiculturelle : ajustement du design et de l'ergonomie (UI/UX) aux standards et attentes des marchés étrangers ciblés.",
+              "Gouvernance projet : pilotage du planning, garantie de l'alignement entre livrables techniques et stratégie de croissance export."
+            ],
+            "en": [
+              "Multilingual redesign: end-to-end coordination of the justrade-int.com redesign — gathering requirements from international stakeholders, supervising production (technical vendors + translators).",
+              "Multicultural adaptation: adjusting design and usability (UI/UX) to the standards and expectations of the targeted foreign markets.",
+              "Project governance: steering the schedule, ensuring alignment between technical deliverables and the export-growth strategy."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Performance digitale et acquisition",
+            "en": "Digital performance & acquisition"
+          },
+          "items": {
+            "fr": [
+              "SEO/SEA internationale : audit et recherche de mots-clés spécifiques par marché, optimisation du référencement naturel, pilotage des campagnes payantes pour un trafic qualifié.",
+              "Social Media Management : création, animation et gestion de communautés en anglais et en français pour la notoriété internationale.",
+              "Analyse de données : suivi des KPI via les suites analytiques pour mesurer l'impact des actions."
+            ],
+            "en": [
+              "International SEO/SEA: audit and per-market keyword research, organic-ranking optimization, managing paid campaigns for qualified traffic.",
+              "Social media management: creating, running and managing communities in English and French for international awareness.",
+              "Data analysis: tracking KPIs via analytics suites to measure the impact of actions."
+            ]
+          }
+        },
+        {
+          "h": {
+            "fr": "Reporting et aide à la décision",
+            "en": "Reporting & decision support"
+          },
+          "items": {
+            "fr": [
+              "Reporting CODIR mensuel : performances digitales et bilans de campagne.",
+              "Recommandations stratégiques : optimisations pour maximiser le ROI des leviers webmarketing."
+            ],
+            "en": [
+              "Monthly CODIR reporting: digital performance and campaign reviews.",
+              "Strategic recommendations: optimizations to maximize the ROI of web-marketing levers."
+            ]
+          }
+        }
       ],
       "results": {
         "table": [
-          {"k": {"fr": "Plateforme", "en": "Platform"}, "v": {"fr": "Refonte multilingue (EN/FR) opérationnelle", "en": "Live multilingual redesign (EN/FR)"}},
-          {"k": {"fr": "Acquisition", "en": "Acquisition"}, "v": {"fr": "Stratégie SEO/SEA internationale active", "en": "Active international SEO/SEA strategy"}},
-          {"k": {"fr": "Reporting", "en": "Reporting"}, "v": {"fr": "Mensuel · CODIR", "en": "Monthly · CODIR"}},
-          {"k": {"fr": "Périmètre", "en": "Scope"}, "v": {"fr": "Projet international bilingue · focus export", "en": "Bilingual international project · export focus"}}
+          {
+            "k": {
+              "fr": "Plateforme",
+              "en": "Platform"
+            },
+            "v": {
+              "fr": "Refonte multilingue (EN/FR) opérationnelle",
+              "en": "Live multilingual redesign (EN/FR)"
+            }
+          },
+          {
+            "k": {
+              "fr": "Acquisition",
+              "en": "Acquisition"
+            },
+            "v": {
+              "fr": "Stratégie SEO/SEA internationale active",
+              "en": "Active international SEO/SEA strategy"
+            }
+          },
+          {
+            "k": {
+              "fr": "Reporting",
+              "en": "Reporting"
+            },
+            "v": {
+              "fr": "Mensuel · CODIR",
+              "en": "Monthly · CODIR"
+            }
+          },
+          {
+            "k": {
+              "fr": "Périmètre",
+              "en": "Scope"
+            },
+            "v": {
+              "fr": "Projet international bilingue · focus export",
+              "en": "Bilingual international project · export focus"
+            }
+          }
         ]
       },
-      "testimonial": {"fr": "« Dedicated employee with good IT and communication skills. It was a pleasure to work with him during his time in Justrade. I highly recommend him and wish him the best. » — Recommandation LinkedIn.", "en": "\"Dedicated employee with good IT and communication skills. It was a pleasure to work with him during his time in Justrade. I highly recommend him and wish him the best.\" — LinkedIn recommendation."},
-      "environment": {
-        "tools": {"fr": "CMS WordPress · HTML/CSS · Photoshop · Google Analytics · Google Ads · AdSense.", "en": "WordPress CMS · HTML/CSS · Photoshop · Google Analytics · Google Ads · AdSense."},
-        "methods": {"fr": "Recueil du besoin · pilotage de prestataires · stratégie de communication internationale.", "en": "Requirements gathering · vendor management · international communication strategy."},
-        "skills": {"fr": "Marketing multiculturel · gestion de projet web · reporting stratégique · SEO/SEA international.", "en": "Multicultural marketing · web project management · strategic reporting · international SEO/SEA."}
+      "testimonial": {
+        "fr": "« Dedicated employee with good IT and communication skills. It was a pleasure to work with him during his time in Justrade. I highly recommend him and wish him the best. » — Recommandation LinkedIn.",
+        "en": "\"Dedicated employee with good IT and communication skills. It was a pleasure to work with him during his time in Justrade. I highly recommend him and wish him the best.\" — LinkedIn recommendation."
       },
-      "note": {"fr": "Mission en immersion Chine exigeant agilité culturelle et coordination d'acteurs variés en contexte de forte croissance. Consolidation des compétences en gestion de projet end-to-end et capacité à traduire des objectifs commerciaux en leviers digitaux concrets. Première validation de la posture profil hybride tech / international.", "en": "An immersion mission in China demanding cultural agility and the coordination of varied stakeholders in a high-growth context. It consolidated end-to-end project-management skills and the ability to translate commercial objectives into concrete digital levers. A first validation of the hybrid tech / international profile."}
+      "environment": {
+        "tools": {
+          "fr": "CMS WordPress · HTML/CSS · Photoshop · Google Analytics · Google Ads · AdSense.",
+          "en": "WordPress CMS · HTML/CSS · Photoshop · Google Analytics · Google Ads · AdSense."
+        },
+        "methods": {
+          "fr": "Recueil du besoin · pilotage de prestataires · stratégie de communication internationale.",
+          "en": "Requirements gathering · vendor management · international communication strategy."
+        },
+        "skills": {
+          "fr": "Marketing multiculturel · gestion de projet web · reporting stratégique · SEO/SEA international.",
+          "en": "Multicultural marketing · web project management · strategic reporting · international SEO/SEA."
+        }
+      },
+      "note": {
+        "fr": "Mission en immersion Chine exigeant agilité culturelle et coordination d'acteurs variés en contexte de forte croissance. Consolidation des compétences en gestion de projet end-to-end et capacité à traduire des objectifs commerciaux en leviers digitaux concrets. Première validation de la posture profil hybride tech / international.",
+        "en": "An immersion mission in China demanding cultural agility and the coordination of varied stakeholders in a high-growth context. It consolidated end-to-end project-management skills and the ability to translate commercial objectives into concrete digital levers. A first validation of the hybrid tech / international profile."
+      }
     }
   }
 }
