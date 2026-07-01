@@ -34,12 +34,12 @@ window.CV_DATA = {
       "https://bobcat88.github.io/"
     ]
   ],
-  "summary": "Senior PMO et Product Owner, 13 ans d'expérience dont 7 ans en Asie, sur tout le cycle projet — du cadrage stratégique (Business Analysis) au pilotage opérationnel (PMO) jusqu'à la livraison produit (Product Ownership). Profil hybride tech × business : aussi à l'aise pour structurer un plan stratégique en COMEX que pour coder l'outil PMO qui le pilote.",
+  "summary": "Senior PMO et Product Owner, 13 ans d'expérience dont 7 ans en Asie, sur tout le cycle projet, du cadrage stratégique (Business Analysis) au pilotage opérationnel (PMO) jusqu'à la livraison produit (Product Ownership). Profil hybride tech × business : aussi à l'aise pour structurer un plan stratégique en COMEX que pour coder l'outil PMO qui le pilote.",
   "metrics": [
     [
       "> 1 Md€",
       "Portefeuilles pilotés",
-      "Défense — Thales ISR"
+      "Défense, Thales ISR"
     ],
     [
       "5% → 20% (~15M$)",
@@ -67,12 +67,12 @@ window.CV_DATA = {
     [
       "PMO Stratégique / Business Analyst",
       "Crédit Mutuel Arkéa | Banque de Détail",
-      "Mars 2026 – Présent",
+      "Mars 2026 - Présent",
       "Brest",
       [
         "Cadre commun de qualification des initiatives du Plan stratégique (12-18 mois), alignant marketing, data, expérience client et process.",
         "Application PMO sur mesure (Apps Script : Kanban, KPI, jalons, alertes) + POC génération auto de comptes rendus.",
-        "Gain capacitaire estimé 440–2760 h/an (~31–135 k€/an), traçabilité des décisions, effet plateforme."
+        "Gain capacitaire estimé 440-2760 h/an (~31-135 k€/an), traçabilité des décisions, effet plateforme."
       ],
       "Direction d'un cadre commun de pilotage des initiatives du Plan stratégique en banque de détail.",
       [
@@ -87,7 +87,7 @@ window.CV_DATA = {
     [
       "Product Owner | MVP application interne",
       "NeoSoft",
-      "Oct. 2025 – Déc. 2025",
+      "Oct. 2025 - Déc. 2025",
       "Brest / Rennes",
       [
         "Design Thinking, prototypage Figma, parcours UX/UI, backlog Kanban itératif, facilitation Dev-Design.",
@@ -105,11 +105,11 @@ window.CV_DATA = {
     [
       "PMO & Support Bid Management",
       "Thales ISR (via MIGSO-PCUBED)",
-      "Oct. 2024 – Oct. 2025",
+      "Oct. 2024 - Oct. 2025",
       "Brest",
       [
         "Portefeuille +50 offres Défense multi-milieux, budgets jusqu'à >1Md€ ; pilotage financier RC/NRC, optimisation marge.",
-        "Industrialisation Excel/VBA de la gestion des risques (ROR) : 3h → 15 min par offre (-92%).",
+        "Industrialisation Excel/VBA de la gestion des risques (ROR) : 3h -> 15 min par offre (-92%).",
         "RETEX stratégique mandaté par la GBU ISR, rapport CODIR ; « au-dessus des attentes sur 7 livrables / 10 »."
       ],
       "Support bid management sur un portefeuille d'offres Défense multi-milieux à forts enjeux financiers.",
@@ -125,7 +125,7 @@ window.CV_DATA = {
     [
       "Product Owner + Coach Agile | CRM sécurisé",
       "EPSI (client Capgemini)",
-      "Avr. 2024 – Juil. 2024",
+      "Avr. 2024 - Juil. 2024",
       "Rennes",
       [
         "Double rôle PO + Coach Agile sur 2 équipes ; cérémonies Scrum, User Stories, critères d'acceptation, tests Postman.",
@@ -139,42 +139,31 @@ window.CV_DATA = {
         "User Stories",
         "Tests Postman"
       ]
-    ],
-    [
-      "Resp. Développement Commercial International",
-      "Sichuan Shuhan Plastics (Chine)",
-      "Juin 2015 – Janv. 2020",
-      "Deyang",
-      [
-        "Stratégie export marchés émergents asiatiques, management équipe multiculturelle de 5, appels d'offres SAP Ariba.",
-        "Part export 5% → 20% du CA (~15M$ en 2019) ; poste exercé 100% en anglais."
-      ],
-      "Développement commercial export sur marchés émergents asiatiques, poste exercé 100% en anglais.",
-      [
-        "Business Dev International",
-        "Management interculturel",
-        "Appels d'offres SAP Ariba",
-        "Export"
-      ]
-    ],
-    [
-      "Chef de Projet Digital / Business Analyst",
-      "Diadom SAS",
-      "Sept. 2012 – Oct. 2014",
-      "Montpellier",
-      [
-        "MOE refonte e-commerce (sponsor PDG), chemin critique MS Project, SEO/SEA 30 k€/an, reporting CODIR.",
-        "Trafic +196% · conversion +23% sur 2 ans, livré dans les jalons."
-      ],
-      "MOE d'une refonte e-commerce sponsorisée par la direction générale.",
-      [
-        "Chef de projet",
-        "Business Analysis",
-        "MS Project",
-        "SEO / SEA",
-        "Reporting CODIR"
-      ]
     ]
+  ],
+  "passionProjects": [
+    {
+      "name": "Système d'aide à la décision de carrière",
+      "proof": "Graphe de connaissances personnel transformant un parcours professionnel en système d'aide à la décision : analyse d'offres, sélection d'évidences, génération de CV ciblés et préparation d'entretiens.",
+      "signal": "Transforms scattered career knowledge into a structured decision-support system, with evidence selection and controlled AI assistance.",
+      "tags": [
+        "career intelligence",
+        "knowledge graph",
+        "CV factory",
+        "offer analysis"
+      ]
+    },
+    {
+      "name": "Stack trading algorithmique",
+      "proof": "Stack personnel de trading algorithmique, screening et automatisation investisseur : backtests, live sentinel, télémétrie, baselines de performance, intégrations broker et boucle d'apprentissage pour revue de stratégie.",
+      "signal": "Applies systems thinking to finance through hypothesis testing, telemetry, scenario comparison, automation and evidence-based decisions.",
+      "tags": [
+        "trading algorithm",
+        "backtesting",
+        "telemetry",
+        "investor automation"
+      ]
+    }
   ],
   "skillGroups": [
     [
@@ -287,7 +276,7 @@ window.CV_DATA = {
   "education": [
     [
       "2014",
-      "Master 2 — Gestion de Projet IT & Business Intelligence",
+      "Master 2, Gestion de Projet IT & Business Intelligence",
       "ESC Montpellier (Bac+5)"
     ],
     [

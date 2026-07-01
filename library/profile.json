@@ -133,5 +133,142 @@
     "Gestion portefeuille familial (PnL +35%)",
     "Veille AI : agents autonomes, LLMs, MCP, prompt engineering",
     "25+ pays, 7 ans d'expatriation"
+  ],
+  "passionProjects": [
+    {
+      "id": "career-intelligence-system",
+      "name": "Career Intelligence System",
+      "labelFr": "Système d'aide à la décision de carrière",
+      "descriptionEn": "Personal knowledge graph and AI-assisted decision support system that analyzes job offers, maps them against a structured career database, and generates tailored CVs, interview briefs and positioning strategies.",
+      "descriptionFr": "Graphe de connaissances personnel transformant un parcours professionnel en système d'aide à la décision : analyse d'offres, sélection d'évidences, génération de CV ciblés et préparation d'entretiens.",
+      "valueSignal": "Transforms scattered career knowledge into a structured decision-support system, with evidence selection and controlled AI assistance.",
+      "selection": {
+        "proofWeight": 9,
+        "scopeWeight": 9,
+        "themes": ["decision support", "knowledge graph", "career intelligence", "evidence selection", "cv factory", "ai", "governance"],
+        "keywords": ["système d'aide à la décision", "graphe de connaissances", "analyse d'offres", "sélection d'évidences", "CV ciblés", "préparation d'entretiens", "knowledge graph", "decision support"]
+      },
+      "tags": ["career intelligence", "knowledge graph", "CV factory", "offer analysis", "decision support", "positioning"]
+    },
+    {
+      "id": "ai-knowledge-graph",
+      "name": "AI Knowledge Graph",
+      "labelFr": "Knowledge Graph pour gouvernance IA",
+      "descriptionEn": "Continuous experimentation with knowledge management, LLM orchestration, MCP, governance, retrieval and automation to improve context quality and decision-making.",
+      "descriptionFr": "Expérimentation continue autour de la gestion de connaissances, de l'orchestration LLM, du MCP, du retrieval et de l'automatisation pour améliorer la qualité du contexte, la traçabilité et la prise de décision.",
+      "valueSignal": "Shows hands-on understanding of context quality, retrieval, AI governance, orchestration and human validation.",
+      "selection": {
+        "proofWeight": 9,
+        "scopeWeight": 8,
+        "themes": ["ai governance", "knowledge management", "llm orchestration", "retrieval", "mcp", "automation", "traceability"],
+        "keywords": ["gouvernance IA", "Knowledge Graph", "LLM", "MCP", "retrieval", "automatisation", "qualité du contexte", "traçabilité", "prise de décision"]
+      },
+      "tags": ["AI governance", "LLM orchestration", "MCP", "retrieval", "automation", "context engineering"]
+    },
+    {
+      "id": "borginvestor-trading-algo",
+      "name": "BorgInvestor / Trading Algo Stack",
+      "labelFr": "Stack trading algorithmique",
+      "descriptionEn": "Personal trading, screener and investor-automation stack with backtesting, live sentinel, telemetry, benchmark baselines, broker integrations and a learning loop for strategy review.",
+      "descriptionFr": "Stack personnel de trading algorithmique, screening et automatisation investisseur : backtests, live sentinel, télémétrie, baselines de performance, intégrations broker et boucle d'apprentissage pour revue de stratégie.",
+      "valueSignal": "Applies systems thinking to finance through hypothesis testing, telemetry, scenario comparison, automation and evidence-based decisions.",
+      "selection": {
+        "proofWeight": 8,
+        "scopeWeight": 9,
+        "themes": ["finance", "trading", "backtesting", "automation", "telemetry", "risk", "decision systems"],
+        "keywords": ["trading algorithmique", "backtesting", "screening", "live sentinel", "télémétrie", "broker", "risk", "finance", "decision systems"]
+      },
+      "tags": ["trading algorithm", "backtesting", "telemetry", "investor automation", "risk", "decision systems"]
+    },
+    {
+      "id": "ai-bonanza",
+      "name": "AI-Bonanza",
+      "labelFr": "Benchmark d'outils IA",
+      "descriptionEn": "Benchmark suite for AI tooling, measuring wall time, memory, output quality and cold start across real fixtures, with promotion rules and a living winner matrix.",
+      "descriptionFr": "Banc d'essai personnel pour outillage IA : mesure du temps d'exécution, mémoire, qualité de sortie et cold start sur données réelles, avec règles de promotion et matrice de référence.",
+      "valueSignal": "Evidence-first approach to AI tooling: tools are selected on measured performance and output quality, not hype.",
+      "selection": {
+        "proofWeight": 7,
+        "scopeWeight": 7,
+        "themes": ["ai tooling", "benchmarking", "measurement", "quality gates", "technical due diligence"],
+        "keywords": ["benchmark", "outillage IA", "mesure", "qualité", "cold start", "hyperfine", "pytest-benchmark", "evidence"]
+      },
+      "tags": ["AI benchmarking", "tool evaluation", "hyperfine", "pytest-benchmark", "quality gates", "technical due diligence"]
+    },
+    {
+      "id": "datahealth",
+      "name": "DataHealth",
+      "labelFr": "Santé de données du vault",
+      "descriptionEn": "Personal data-health script for keeping a knowledge vault clean, auditable and usable by checking metadata, structure and consistency before retrieval or AI-assisted reasoning.",
+      "descriptionFr": "Script personnel de santé de données pour maintenir un vault de connaissances propre, auditable et exploitable : contrôles de métadonnées, structure et cohérence avant retrieval ou raisonnement assisté par IA.",
+      "valueSignal": "Shows that AI quality depends on data quality, taxonomy hygiene and maintainable knowledge systems.",
+      "selection": {
+        "proofWeight": 7,
+        "scopeWeight": 6,
+        "themes": ["data quality", "knowledge management", "metadata", "retrieval", "governance", "automation"],
+        "keywords": ["data quality", "santé de données", "métadonnées", "vault", "retrieval", "cohérence", "gouvernance", "automation"]
+      },
+      "tags": ["data quality", "metadata", "vault governance", "retrieval readiness", "knowledge hygiene", "automation"]
+    },
+    {
+      "id": "rusty-miro-squid",
+      "name": "RustyMiroSquid",
+      "labelFr": "Simulation multi-agents investissement",
+      "descriptionEn": "Fork and redesign of a multi-agent simulation engine for predictive investment analysis, adding Rust-native data processing, market integration, semantic cache, prompt compression and sentiment-velocity concepts.",
+      "descriptionFr": "Fork et refonte d'un moteur de simulation multi-agents orienté analyse prédictive d'investissement : data processing Rust-native, intégration marché, cache sémantique, compression de prompts et suivi de vitesse de sentiment.",
+      "valueSignal": "Shows ability to analyze an AI system architecture, identify bottlenecks and redesign it for a financial decision-support use case.",
+      "selection": {
+        "proofWeight": 7,
+        "scopeWeight": 8,
+        "themes": ["multi-agent systems", "finance", "simulation", "performance", "market data", "ai architecture"],
+        "keywords": ["multi-agents", "simulation", "investissement", "Polars", "cache sémantique", "market data", "sentiment", "performance"]
+      },
+      "tags": ["multi-agent systems", "investment simulation", "Polars", "semantic cache", "prompt compression", "market data"]
+    },
+    {
+      "id": "financial-dossier-structuration",
+      "name": "Financial Dossier Structuration",
+      "labelFr": "Structuration de dossier financier",
+      "descriptionEn": "Personal financial dossier workflow for turning raw financial evidence into a structured, bank-readable 10-year simulation with scenarios, sourced annexes and a polished presentation package.",
+      "descriptionFr": "Workflow personnel de structuration de dossier financier : transformation de justificatifs bruts en simulation 10 ans, scénarios défavorable / central / favorable, annexes sourcées et présentation claire pour interlocuteurs bancaires.",
+      "valueSignal": "Turns scattered evidence into a decision-ready dossier through extraction, modeling, scenario analysis, visual presentation and auditability.",
+      "selection": {
+        "proofWeight": 7,
+        "scopeWeight": 7,
+        "themes": ["finance", "evidence", "scenario analysis", "banking", "decision package", "audit trail"],
+        "keywords": ["dossier financier", "simulation", "scénarios", "banque", "justificatifs", "annexes", "auditabilité", "modélisation financière"]
+      },
+      "tags": ["financial modeling", "evidence extraction", "scenario analysis", "banking dossier", "decision package", "audit trail"]
+    },
+    {
+      "id": "open-project-participation",
+      "name": "Open Project Participation",
+      "labelFr": "Participation et veille open projects",
+      "descriptionEn": "Continuous participation in and monitoring of open AI/dev-tooling projects, including agent frameworks, MCP servers, retrieval tools, code intelligence systems, UI workflows and developer productivity stacks.",
+      "descriptionFr": "Participation et veille continue sur des projets ouverts IA / tooling développeur : agents, MCP, retrieval, code intelligence, workflows UI et stacks de productivité.",
+      "valueSignal": "Maintains a live technical radar and translates ecosystem noise into practical tooling decisions.",
+      "selection": {
+        "proofWeight": 5,
+        "scopeWeight": 6,
+        "themes": ["open source", "ai ecosystem", "tooling", "mcp", "code intelligence", "developer productivity"],
+        "keywords": ["open source", "MCP", "agents", "retrieval", "code intelligence", "tooling", "veille", "productivité"]
+      },
+      "tags": ["open source", "AI ecosystem", "MCP", "code intelligence", "developer productivity", "tool scouting"]
+    },
+    {
+      "id": "personal-scripts-automation",
+      "name": "Personal Scripts & Workspace Automation",
+      "labelFr": "Scripts et automatisation workspace",
+      "descriptionEn": "Collection of personal scripts and workspace automations used to reduce repetitive work, clean data, structure decisions and create reusable workflows across career, finance, knowledge management and project steering.",
+      "descriptionFr": "Collection de scripts personnels et d'automatisations de workspace pour réduire le travail répétitif, nettoyer la donnée, structurer les décisions et créer des workflows réutilisables dans la carrière, la finance, la connaissance et le pilotage projet.",
+      "valueSignal": "Builder-operator behavior: not just recommending process improvements, but building the tooling layer that makes them repeatable.",
+      "selection": {
+        "proofWeight": 6,
+        "scopeWeight": 6,
+        "themes": ["automation", "scripting", "workflow", "data cleaning", "workspace", "pmo"],
+        "keywords": ["scripts", "automatisation", "workspace", "workflow", "data cleaning", "Google Workspace", "répétabilité", "PMO"]
+      },
+      "tags": ["automation", "scripting", "workflow design", "data cleaning", "Google Workspace", "repeatability"]
+    }
   ]
 }

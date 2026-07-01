@@ -8,7 +8,7 @@
 :root{ --ink:#1c1b22; --muted:#5b6573; --accent:#6d28d9; --plum:#4c1d95; --rule:#e6def7; --soft:#eef0f4; --slate:#334155; }
 /* Margins live on @page so every sheet — including the top of page 2 — gets the
    same breathing room (same fix as the Dossier). .page just flows the content. */
-@page{ size:A4; margin:10mm 14mm; }
+@page{ size:A4; margin:8mm 14mm; }
 .page{ padding:0; font-size:9.5pt; line-height:1.34; min-height:auto; overflow:visible; }
 @media print{ .page{ overflow:visible; min-height:auto; } }
 .nm{ font-size:20pt; font-weight:800; color:var(--plum); letter-spacing:.2px; }
@@ -28,6 +28,8 @@ p.sum{ font-size:9.6pt; }
 .skline{ font-size:9.4pt; } .skline b{ color:var(--slate); }
 .kv{ font-size:9.3pt; margin-bottom:1.5pt; } .kv b{ color:var(--slate); }
 .two{ display:grid; grid-template-columns:1fr 1fr; gap:2pt 18pt; }
+.pp{ font-size:8.7pt; margin-bottom:1pt; line-height:1.28; }
+.pp b{ color:var(--slate); }
 </style></head><body>
 <div class="toolbar no-print"><button onclick="print()">Print / PDF</button></div>
 <main class="page">
@@ -40,6 +42,7 @@ p.sum{ font-size:9.6pt; }
   <h2>Compétences</h2><div id="skills"></div>
   <h2>Expérience professionnelle</h2><div id="exp"></div>
   <h2>Formation</h2><div class="two" id="edu"></div>
+  <section id="pp-sec" hidden><h2>Projets personnels IA / data</h2><div id="passionProjects"></div></section>
   <h2>Langues</h2><div id="lang"></div>
   <section id="ref-sec" hidden><h2>Références</h2><div id="referents"></div></section>
 </main>
@@ -49,16 +52,17 @@ const d=window.CV_DATA, $=id=>document.getElementById(id);
 $("name").textContent=d.name; $("title").textContent=d.title;
 $("contact").innerHTML=d.contact.map(([k,t,h])=>`${k} : ${h?`<a href="${h}">${t}</a>`:t}`).join(" &nbsp;|&nbsp; ");
 $("summary").textContent=d.summary;
-$("metrics").innerHTML=d.metrics.map(([v,l,c])=>`<li><b>${v}</b> — ${l} (${c})</li>`).join("");
+$("metrics").innerHTML=d.metrics.map(([v,l,c])=>`<li><b>${v}</b>, ${l} (${c})</li>`).join("");
 $("skills").innerHTML=d.skillGroups.map(([g,arr])=>`<div class="skline"><b>${g} :</b> ${arr.join(", ")}</div>`).join("");
-// ATS keeps keyword density; trim only the 2 oldest roles to 1 bullet to fit 1 page
-$("exp").innerHTML=d.experience.map(([r,o,dt,loc,b],i)=>{const bl=i>=4?b.slice(0,1):b;return `<div class="exp"><div class="exp-head"><div class="exp-role">${r} <span class="org">— ${o}</span></div><div class="exp-meta">${dt} · ${loc}</div></div><ul>${bl.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;}).join("");
-$("edu").innerHTML=d.education.map(([y,t,s])=>`<div class="kv"><b>${y}</b> · ${t}${s?" — "+s:""}</div>`).join("");
-$("lang").innerHTML=`<div class="kv">${d.languages.map(([l,v])=>`<b>${l}</b> — ${v}`).join(" &nbsp;·&nbsp; ")}</div>`;
-// Références — tailored CVs only (referents sourced from the private offer.md). ATS-safe: plain text, no color blocks.
-const refs=d.referents||[];
-if(refs.length){
-  $("referents").innerHTML=refs.map(r=>`<div class="kv"><b>${r.name}</b>${r.role?" — "+r.role:""}${r.attests?` · <i>${r.attests}</i>`:""}${r.contact?" · "+r.contact:""}</div>`).join("");
-  $("ref-sec").hidden=false;
+// ATS keeps keyword density while protecting page fit: keep full proof on the two closest roles.
+$("exp").innerHTML=d.experience.map(([r,o,dt,loc,b],i)=>{const bl=i>=2?b.slice(0,1):b;return `<div class="exp"><div class="exp-head"><div class="exp-role">${r} <span class="org">| ${o}</span></div><div class="exp-meta">${dt} · ${loc}</div></div><ul>${bl.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;}).join("");
+$("edu").innerHTML=d.education.map(([y,t,s])=>`<div class="kv"><b>${y}</b> · ${t}${s?" | "+s:""}</div>`).join("");
+const pps=d.passionProjects||[];
+if(pps.length){
+  const tags=[...new Set(pps.flatMap(p=>p.tags||[]))].slice(0,6).join(", ");
+  $("passionProjects").innerHTML=`<div class="pp"><b>${pps.map(p=>p.name).join(" · ")} :</b> ${tags}</div>`;
+  $("pp-sec").hidden=false;
 }
+$("lang").innerHTML=`<div class="kv">${d.languages.map(([l,v])=>`<b>${l}</b>, ${v}`).join(" &nbsp;·&nbsp; ")}</div>`;
+// ATS stays one page and parser-focused. Detailed references live in the HR/premium CV.
 </script></body></html>

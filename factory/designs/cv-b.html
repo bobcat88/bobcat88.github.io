@@ -42,6 +42,8 @@ h2{ font-size:9.4pt; text-transform:uppercase; letter-spacing:.9px; color:var(--
 .main > h2:first-child{ margin-top:0; }
 .metrics{ display:grid; grid-template-columns:1fr 1fr; gap:3pt 6pt; }
 .metric{ border-left:2.5px solid var(--accent); background:var(--soft); padding:3pt 6pt; font-size:8.4pt; border-radius:0 4px 4px 0; }
+.metric{ display:grid; grid-template-columns:13pt 1fr; gap:4pt; align-items:start; }
+.metric svg{ width:11pt; height:11pt; margin-top:1pt; stroke:var(--accent); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 .metric b{ color:var(--slate); }
 .exp{ margin-bottom:6pt; page-break-inside:avoid; break-inside:avoid; }
 .exp:last-child{ margin-bottom:0; }
@@ -54,10 +56,14 @@ h2{ font-size:9.4pt; text-transform:uppercase; letter-spacing:.9px; color:var(--
 .exp-stack .tag{ background:var(--soft); border:1px solid var(--line); color:var(--slate); border-radius:4px; padding:1.5pt 6pt; font-size:7.6pt; font-weight:600; }
 .ref{ background:var(--soft); border-left:2.5px solid var(--accent); border-radius:0 4px 4px 0; padding:3pt 7pt; margin-bottom:3.5pt; page-break-inside:avoid; break-inside:avoid; }
 .ref:last-child{ margin-bottom:0; }
-.ref-top{ font-size:9pt; color:var(--ink); }
+.ref-top{ font-size:8pt; color:var(--ink); }
+.ref-name{ color:var(--ink); font-weight:700; }
 .ref-role{ color:var(--accent); font-weight:600; }
-.ref-att{ font-size:8.2pt; font-style:italic; color:var(--muted); margin-top:1pt; }
-.ref-ct{ font-size:8.2pt; color:var(--slate); margin-top:1pt; }
+.ref-ct{ font-size:7.7pt; color:var(--slate); margin-top:1pt; overflow-wrap:anywhere; }
+.pp-grid{ display:grid; grid-template-columns:1fr 1fr; gap:4pt; margin-bottom:5pt; }
+.pp{ background:var(--soft); border-left:2.5px solid var(--accent); border-radius:0 4px 4px 0; padding:4pt 6pt; font-size:7.9pt; line-height:1.25; }
+.pp b{ color:var(--ink); font-size:8.2pt; }
+.pp-tags{ margin-top:2pt; color:var(--slate); font-weight:600; font-size:7.2pt; }
 </style></head><body>
 <div class="toolbar no-print"><a href="gallery2.html">← Gallery</a><button onclick="print()">Print / PDF</button></div>
 <main>
@@ -86,6 +92,7 @@ h2{ font-size:9.4pt; text-transform:uppercase; letter-spacing:.9px; color:var(--
     <section class="main">
       <h2>Expérience <span style="font-weight:600;text-transform:none;letter-spacing:0;color:var(--muted)">(suite)</span></h2>
       <div id="exp2"></div>
+      <section id="pp-sec" hidden><h2>Projets personnels IA / data</h2><div class="pp-grid" id="passionProjects"></div></section>
       <section id="ref-sec" hidden><h2>Références</h2><div id="referents"></div></section>
     </section>
   </section>
@@ -102,7 +109,8 @@ const icons={
 };
 const iconFor=g=>{const s=g.toLowerCase();return s.includes("gouvernance")||s.includes("pilotage")?icons.gouvernance:s.includes("product")||s.includes("agile")?icons.product:s.includes("tech")||s.includes("ai")?icons.tech:s.includes("leadership")?icons.leadership:icons.default;};
 const skillBlock=([g,arr])=>`<div class="block"><h3>${iconFor(g)}${g}</h3>`+arr.map(s=>`<div class="sk">${s}</div>`).join("")+`</div>`;
-const renderExp=list=>list.map(([r,o,dt,loc,b,ctx,stack])=>`<div class="exp"><div class="exp-head"><div class="exp-role"><b>${r}</b> — ${o}</div><div class="exp-meta">${dt} · ${loc}</div></div>${ctx?`<div class="exp-context">${ctx}</div>`:""}<ul>${b.map(x=>`<li>${x}</li>`).join("")}</ul>${stack&&stack.length?`<div class="exp-stack">${stack.map(s=>`<span class="tag">${s}</span>`).join("")}</div>`:""}</div>`).join("");
+const metricIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16"/><path d="m6 15 4-4 3 3 5-7"/><path d="M18 7h-4M18 7v4"/></svg>';
+const renderExp=list=>list.map(([r,o,dt,loc,b,ctx,stack])=>`<div class="exp"><div class="exp-head"><div class="exp-role"><b>${r}</b> | ${o}</div><div class="exp-meta">${dt} · ${loc}</div></div>${ctx?`<div class="exp-context">${ctx}</div>`:""}<ul>${b.map(x=>`<li>${x}</li>`).join("")}</ul>${stack&&stack.length?`<div class="exp-stack">${stack.map(s=>`<span class="tag">${s}</span>`).join("")}</div>`:""}</div>`).join("");
 if (d.photo) {
   $("photo").src = d.photo;
   $("photo").style.display = "block";
@@ -117,17 +125,22 @@ const sg=d.skillGroups, half=Math.ceil(sg.length/2);
 $("skillGroups1").innerHTML=sg.slice(0,half).map(skillBlock).join("");
 $("skillGroups2").innerHTML=sg.slice(half).map(skillBlock).join("");
 $("edu").innerHTML=d.education.map(([y,t,s])=>`<div class="kv"><b style="color:#cdaed0">${y}</b> ${t}${s?" · "+s:""}</div>`).join("");
-$("lang").innerHTML=d.languages.map(([l,v])=>`<div class="kv">${l} — ${v}</div>`).join("");
+$("lang").innerHTML=d.languages.map(([l,v])=>`<div class="kv">${l} - ${v}</div>`).join("");
 $("summary").textContent=d.summary;
-$("metrics").innerHTML=d.metrics.map(([v,l,c])=>`<div class="metric"><b>${v}</b> — ${l} <span style="color:var(--muted)">(${c})</span></div>`).join("");
+$("metrics").innerHTML=d.metrics.map(([v,l,c])=>`<div class="metric">${metricIcon}<div><b>${v}</b>, ${l} <span style="color:var(--muted)">(${c})</span></div></div>`).join("");
 // Experience flows across both sheets: first half on sheet 1, remainder under "(suite)".
 const ex=d.experience, exHalf=Math.ceil(ex.length/2);
 $("exp1").innerHTML=renderExp(ex.slice(0,exHalf));
 $("exp2").innerHTML=renderExp(ex.slice(exHalf));
+const pps=d.passionProjects||[];
+if(pps.length){
+  $("passionProjects").innerHTML=pps.map(p=>`<div class="pp"><b>${p.name}</b><br>${p.proof}${p.tags&&p.tags.length?`<div class="pp-tags">${p.tags.join(" · ")}</div>`:""}</div>`).join("");
+  $("pp-sec").hidden=false;
+}
 // Références — present only on tailored CVs (referents come from the private offer.md).
 const refs=d.referents||[];
 if(refs.length){
-  $("referents").innerHTML=refs.map(r=>`<div class="ref"><div class="ref-top"><b>${r.name}</b>${r.role?` — <span class="ref-role">${r.role}</span>`:""}</div>${r.attests?`<div class="ref-att">${r.attests}</div>`:""}${r.contact?`<div class="ref-ct">${r.contact}</div>`:""}</div>`).join("");
+  $("referents").innerHTML=refs.map(r=>`<div class="ref"><div class="ref-top">${r.name?`<span class="ref-name">${r.name}</span>`:""}${r.role?` | <span class="ref-role">${r.role}</span>`:""}${r.company?` | ${r.company}`:""}</div>${r.contact?`<div class="ref-ct">${r.contact}</div>`:""}</div>`).join("");
   $("ref-sec").hidden=false;
 }
 </script></body></html>

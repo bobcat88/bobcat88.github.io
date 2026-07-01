@@ -29,12 +29,12 @@
     <div class="recipient"><b id="recip">{{OFFER_RECIPIENT}}</b><br><span id="company">{{OFFER_COMPANY}}</span></div>
     <div id="place">Brest, le {{DATE}}</div>
   </div>
-  <div class="subject" id="subject">Objet : candidature — {{OFFER_TITLE}}</div>
+  <div class="subject" id="subject">Objet : candidature, {{OFFER_TITLE}}</div>
   <div class="body" id="body">
     <p>Madame, Monsieur,</p>
     <p>{{OFFER_HOOK — pourquoi cette organisation / ce poste, 1-2 phrases liées à l'offre}}</p>
-    <p>Senior PMO et Product Owner avec <span class="accent">13 ans d'expérience</span> dont 7 à l'international, j'interviens sur tout le cycle projet — du cadrage stratégique au pilotage et à la livraison. {{OFFER_FIT — 2-3 réalisations de la bibliothèque qui matchent les besoins de l'offre}}</p>
-    <p>{{OFFER_VALUE — ce que j'apporte concrètement : posture, outillage, livraison ; problèmes avant outils, résultats avant missions}}</p>
+    <p>Chef de projet MOA et PMO senior avec <span class="accent">13 ans d'expérience</span> dont 7 à l'international, j'interviens sur tout le cycle projet, du cadrage stratégique au pilotage et à la livraison. {{OFFER_FIT}}</p>
+    <p>{{OFFER_VALUE}}</p>
     <p>Je serais ravi d'échanger sur la manière dont je peux contribuer à {{OFFER_COMPANY}}. Disponible {{AVAILABILITY}}, j'attache plus d'importance à l'adéquation de la mission qu'au format.</p>
     <p>Dans l'attente de votre retour, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.</p>
   </div>
@@ -44,7 +44,7 @@
 <script src="../designs/data.js?b=3"></script>
 <script>
 const d=window.CV_DATA, $=id=>document.getElementById(id);
-$("nm").textContent=d.name; $("ttl").textContent="Chef de projet senior · PMO · Product Owner";
+$("nm").textContent=d.name; $("ttl").textContent=d.title;
 $("ct").innerHTML=d.contact.map(([k,t,h])=>h?`<a href="${h}">${t}</a>`:t).join("<br>");
 $("sign").textContent=d.name;
 </script></body></html>

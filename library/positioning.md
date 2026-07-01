@@ -30,6 +30,22 @@ L'éclectisme apparent du parcours (Défense, Banque de détail, Plasturgie cros
 2. **Gain capacitaire extrême** : Économie de 440 à 2760 h/an grâce à des outils PMO sur-mesure (Arkéa).
 3. **Optimisation opérationnelle** : Réduction du temps de traitement des risques de 3h à 15 min par offre (VBA, -92%).
 4. **Bilinguisme opérationnel** : 7 ans d'expatriation en Asie, conduite de projets 100% en anglais.
+5. **Passion projects IA / data / finance** : systèmes personnels construits hors mission, notamment Career Intelligence System, AI Knowledge Graph, trading algo, DataHealth, RustyMiroSquid, AI-Bonanza et Dossier Financier. Ils prouvent l'autonomie, la curiosité appliquée et la capacité à transformer des données dispersées en systèmes de décision gouvernés.
+
+## 4bis. Passion Projects : What Johan Builds When No One Is Looking
+
+Ces projets sont des signaux de positionnement. Ils ne remplacent pas les missions client, mais montrent la direction naturelle du profil : structurer la connaissance, améliorer la qualité du contexte, orchestrer les outils IA et rendre la décision plus fiable.
+
+- **Système d'aide à la décision de carrière** : graphe de connaissances personnel transformant un parcours professionnel en système d'aide à la décision : analyse d'offres, sélection d'évidences, génération de CV ciblés et préparation d'entretiens.
+- **Knowledge Graph pour gouvernance IA** : expérimentation continue sur knowledge management, orchestration LLM, MCP, gouvernance, retrieval et automatisation pour améliorer la qualité du contexte, la traçabilité et la prise de décision.
+- **Trading algo / BorgInvestor** : backtests, screening, live sentinel, télémétrie, baselines et boucle d'apprentissage appliqués à l'investissement.
+- **AI-Bonanza** : benchmark d'outils IA, approche evidence-first pour sélectionner les bons outils au lieu de suivre la hype.
+- **DataHealth** : script de qualité de données pour garder un vault exploitable, cohérent et prêt pour le retrieval.
+- **RustyMiroSquid** : fork / redesign d'un moteur multi-agents orienté simulation d'investissement, performance et intégration marché.
+- **Financial Dossier Structuration** : transformation de justificatifs financiers bruts en dossier bancaire lisible, scénarios et présentation décisionnelle.
+- **Scripts & open project participation** : automatisations personnelles, veille open source et participation aux écosystèmes IA / dev tooling.
+
+Usage recommandé : les mobiliser pour les offres Data & IA, gouvernance IA, Data Office, PMO augmenté, knowledge management, transformation ou internal consulting. Les présenter comme systèmes personnels et prototypes actifs, pas comme déploiements entreprise.
 
 ## 5. Stratégie Bilingue
 Pour maximiser l'impact sur les différents marchés cibles :

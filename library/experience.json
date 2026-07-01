@@ -6,6 +6,14 @@
     "period": "Mars 2026 – Présent",
     "location": "Brest",
     "context": "Direction d'un cadre commun de pilotage des initiatives du Plan stratégique en banque de détail.",
+    "selection": {
+      "proofWeight": 10,
+      "proofType": "flagship",
+      "durationMonths": 12,
+      "recency": 10,
+      "themes": ["banque", "strategie", "pmo", "business analysis", "data", "ia", "gouvernance", "transformation", "automation", "outillage", "processus", "rituels", "adoption"],
+      "keywords": ["Crédit Mutuel Arkéa", "PMO stratégique", "Business Analyst", "Plan stratégique", "KPI", "jalons", "Apps Script", "POC IA", "gouvernance", "comités", "data", "outils", "processus", "rituels", "référentiels", "traçabilité", "adoption", "pilotage transverse"]
+    },
     "stack": ["PMO", "Business Analysis", "Apps Script", "Kanban / KPI", "POC IA", "Gouvernance"],
     "bullets": [
       "Cadre commun de qualification des initiatives du Plan stratégique (12-18 mois), alignant marketing, data, expérience client et process.",
@@ -20,6 +28,14 @@
     "period": "Oct. 2025 – Déc. 2025",
     "location": "Brest / Rennes",
     "context": "Cadrage amont et prototypage d'un MVP d'application interne métier.",
+    "selection": {
+      "proofWeight": 6,
+      "proofType": "solid",
+      "durationMonths": 3,
+      "recency": 9,
+      "themes": ["product ownership", "cadrage", "mvp", "design thinking", "ux", "backlog", "facilitation"],
+      "keywords": ["Product Owner", "MVP", "POC", "Figma", "Design Thinking", "backlog", "roadmap", "pré-cadrage", "besoin métier"]
+    },
     "stack": ["Product Owner", "Design Thinking", "Figma", "UX / UI", "Backlog Kanban"],
     "bullets": [
       "Design Thinking, prototypage Figma, parcours UX/UI, backlog Kanban itératif, facilitation Dev-Design.",
@@ -33,6 +49,14 @@
     "period": "Oct. 2024 – Oct. 2025",
     "location": "Brest",
     "context": "Support bid management sur un portefeuille d'offres Défense multi-milieux à forts enjeux financiers.",
+    "selection": {
+      "proofWeight": 10,
+      "proofType": "flagship",
+      "durationMonths": 12,
+      "recency": 9,
+      "themes": ["pmo", "gouvernance", "finance", "risque", "defense", "reporting", "codir", "automation", "configuration", "multi-sites", "conduite du changement"],
+      "keywords": ["PMO", "Bid Management", "Thales", "Défense", "portefeuille", ">1Md€", "risques", "ROR", "Excel", "VBA", "RETEX", "CODIR", "reporting", "configuration d'offres", "QDV", "EIM", "GED", "Besoin de Savoir", "multi-sites", "conduite du changement"]
+    },
     "stack": ["PMO", "Bid Management", "Pilotage financier RC / NRC", "Excel / VBA", "Gestion des risques (ROR)", "RETEX CODIR"],
     "bullets": [
       "Portefeuille +50 offres Défense multi-milieux, budgets jusqu'à >1Md€ ; pilotage financier RC/NRC, optimisation marge.",
@@ -47,6 +71,14 @@
     "period": "Avr. 2024 – Juil. 2024",
     "location": "Rennes",
     "context": "Double rôle PO + Coach Agile sur la livraison d'un CRM sécurisé pour un client grand compte.",
+    "selection": {
+      "proofWeight": 7,
+      "proofType": "solid",
+      "durationMonths": 4,
+      "recency": 8,
+      "themes": ["product ownership", "agile", "delivery", "cyber", "tests", "user stories", "it"],
+      "keywords": ["Product Owner", "Coach Agile", "Scrum", "User Stories", "critères d'acceptation", "Postman", "CRM sécurisé", "MVP", "Capgemini", "Orange Cyber"]
+    },
     "stack": ["Product Owner", "Coaching Agile", "Scrum", "User Stories", "Tests Postman"],
     "bullets": [
       "Double rôle PO + Coach Agile sur 2 équipes ; cérémonies Scrum, User Stories, critères d'acceptation, tests Postman.",
@@ -60,6 +92,14 @@
     "period": "Juil. 2022 – Sept. 2023",
     "location": "Luz-Saint-Sauveur",
     "context": "Gestion d'actifs locatifs courte durée en autonomie totale, du cycle locatif à la relation client.",
+    "selection": {
+      "proofWeight": 4,
+      "proofType": "support",
+      "durationMonths": 15,
+      "recency": 5,
+      "themes": ["operations", "autonomie", "asset management", "relation client", "coordination"],
+      "keywords": ["gestion locative", "asset management", "AirBnB", "autonomie", "coordination", "satisfaction", "occupation"]
+    },
     "stack": ["Asset Management", "Coordination logistique", "Relation client", "Ops AirBnB"],
     "bullets": [
       "Pilotage intégralité du cycle locatif courte durée (AirBnB) en autonomie totale.",
@@ -74,6 +114,14 @@
     "period": "Juin 2015 – Janv. 2020",
     "location": "Deyang",
     "context": "Développement commercial export sur marchés émergents asiatiques, poste exercé 100% en anglais.",
+    "selection": {
+      "proofWeight": 8,
+      "proofType": "flagship",
+      "durationMonths": 55,
+      "recency": 4,
+      "themes": ["business development", "international", "management", "strategie", "export", "vente", "anglais", "industrie"],
+      "keywords": ["développement commercial", "international", "export", "management multiculturel", "SAP Ariba", "anglais", "Asie", "Chine", "15M$", "industrie", "multi-pays"]
+    },
     "stack": ["Business Dev International", "Management interculturel", "Appels d'offres SAP Ariba", "Export"],
     "bullets": [
       "Stratégie export marchés émergents asiatiques, management équipe multiculturelle de 5, appels d'offres SAP Ariba.",
@@ -87,6 +135,14 @@
     "period": "Janv. 2015 – Juin 2015",
     "location": "Chengdu",
     "context": "Création d'un écosystème digital from-scratch pour la conquête de la zone francophone.",
+    "selection": {
+      "proofWeight": 3,
+      "proofType": "support",
+      "durationMonths": 6,
+      "recency": 2,
+      "themes": ["digital", "marketing", "seo", "sea", "lead generation", "international"],
+      "keywords": ["stratégie digitale", "SEO", "SEA", "Google Ads", "lead generation", "francophone", "anglais"]
+    },
     "stack": ["Stratégie digitale", "SEO / SEA", "Google Ads", "Lead Generation"],
     "bullets": [
       "Création écosystème digital from-scratch, SEO/SEA, lead generation zone francophone.",
@@ -100,6 +156,14 @@
     "period": "Sept. 2012 – Oct. 2014",
     "location": "Montpellier",
     "context": "MOE d'une refonte e-commerce sponsorisée par la direction générale.",
+    "selection": {
+      "proofWeight": 6,
+      "proofType": "solid",
+      "durationMonths": 25,
+      "recency": 2,
+      "themes": ["digital", "business analysis", "project management", "ecommerce", "codir", "seo"],
+      "keywords": ["Chef de Projet Digital", "Business Analyst", "MOE", "e-commerce", "MS Project", "SEO", "SEA", "CODIR", "trafic", "conversion"]
+    },
     "stack": ["Chef de projet", "Business Analysis", "MS Project", "SEO / SEA", "Reporting CODIR"],
     "bullets": [
       "MOE refonte e-commerce (sponsor PDG), chemin critique MS Project, SEO/SEA 30 k€/an, reporting CODIR.",
@@ -113,6 +177,14 @@
     "period": "Sept. 2011 – Août 2012",
     "location": "Yiwu",
     "context": "Coordination d'une refonte web multilingue et du social media bilingue à l'international.",
+    "selection": {
+      "proofWeight": 3,
+      "proofType": "support",
+      "durationMonths": 12,
+      "recency": 1,
+      "themes": ["webmarketing", "international", "coordination", "multilingue", "communication"],
+      "keywords": ["webmarketing", "multilingue", "social media", "coordination", "reporting", "anglais"]
+    },
     "stack": ["Webmarketing", "Coordination prestataires", "Social Media", "International"],
     "bullets": [
       "Coordination refonte site internet multilingue (supervision prestataires, traducteurs) et social media bilingue EN/FR.",
