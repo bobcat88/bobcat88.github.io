@@ -159,7 +159,7 @@
             <a href="#contact" class="nav-link" data-i18n="i006" data-i18n-mode="text">Contact</a>
         </div>
         <div class="flex items-center gap-3">
-            <a href="cv/premium/cv-premium.pdf" download="Johan-Proust-Dossier-de-competences.pdf" class="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-full border border-amber-500/40 hover:border-amber-400 hover:bg-amber-500/10 text-amber-200 text-xs font-semibold transition-all" title="Télécharger le dossier de compétences (PDF)">
+            <a href="cv/premium/cv-premium.pdf" download="Johan-Proust-Dossier-de-competences.pdf" data-cv-action="download" class="hidden md:inline-flex items-center gap-2 px-3 py-2 rounded-full border border-amber-500/40 hover:border-amber-400 hover:bg-amber-500/10 text-amber-200 text-xs font-semibold transition-all" title="Télécharger le dossier de compétences (PDF)">
                 <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 CV
             </a>
@@ -1271,11 +1271,11 @@
 
                 <div class="flex flex-col sm:flex-row gap-3 justify-center items-center mb-10">
                     <span class="mono text-[10px] uppercase tracking-[0.25em] text-slate-500" data-i18n="i343" data-i18n-mode="text">// Dossier de compétences</span>
-                    <a href="cv/premium/cv-premium.pdf" download="Johan-Proust-Dossier-de-competences.pdf" class="inline-flex items-center gap-2 px-6 py-3 glass-effect border border-amber-500/40 hover:border-amber-400 hover:bg-amber-500/5 text-white text-sm font-semibold rounded-full transition-all" data-i18n="i344" data-i18n-mode="text">
+                    <a href="cv/premium/cv-premium.pdf" download="Johan-Proust-Dossier-de-competences.pdf" data-cv-action="download" class="inline-flex items-center gap-2 px-6 py-3 glass-effect border border-amber-500/40 hover:border-amber-400 hover:bg-amber-500/5 text-white text-sm font-semibold rounded-full transition-all" data-i18n="i344" data-i18n-mode="text">
                         <svg class="svg-icon text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                         Télécharger (PDF)
                     </a>
-                    <a href="cv/premium/cv-premium.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 glass-effect border border-slate-700 hover:border-slate-500 text-slate-300 text-sm font-medium rounded-full transition-all" data-i18n="i345" data-i18n-mode="text">
+                    <a href="cv/premium/cv-premium.html" target="_blank" rel="noopener noreferrer" data-cv-action="view" class="inline-flex items-center gap-2 px-6 py-3 glass-effect border border-slate-700 hover:border-slate-500 text-slate-300 text-sm font-medium rounded-full transition-all" data-i18n="i345" data-i18n-mode="text">
                         <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                         Voir en ligne
                     </a>
@@ -1322,6 +1322,7 @@
   var FRFLAG = "<svg viewBox=\"0 0 9 6\" class=\"w-full h-full\" preserveAspectRatio=\"none\"><rect width=\"3\" height=\"6\" fill=\"#0055A4\"/><rect x=\"3\" width=\"3\" height=\"6\" fill=\"#fff\"/><rect x=\"6\" width=\"3\" height=\"6\" fill=\"#EF4135\"/></svg>";
   var GBFLAG = "<svg viewBox=\"0 0 60 30\" class=\"w-full h-full\" preserveAspectRatio=\"none\"><clipPath id=\"ujc\"><rect width=\"60\" height=\"30\"/></clipPath><g clip-path=\"url(#ujc)\"><rect width=\"60\" height=\"30\" fill=\"#012169\"/><path d=\"M0,0 60,30 M60,0 0,30\" stroke=\"#fff\" stroke-width=\"6\"/><path d=\"M0,0 60,30 M60,0 0,30\" stroke=\"#C8102E\" stroke-width=\"4\"/><path d=\"M30,0 V30 M0,15 H60\" stroke=\"#fff\" stroke-width=\"10\"/><path d=\"M30,0 V30 M0,15 H60\" stroke=\"#C8102E\" stroke-width=\"6\"/></g></svg>";
   var nodes = [].slice.call(document.querySelectorAll('[data-i18n]'));
+  var cvLinks = [].slice.call(document.querySelectorAll('[data-cv-action]'));
   var rec = nodes.map(function(el){
     var mode = el.getAttribute('data-i18n-mode');
     var id = el.getAttribute('data-i18n');
@@ -1350,6 +1351,24 @@
       if(lang==='fr'){ if(flag) flag.innerHTML = GBFLAG; if(label) label.textContent = 'Profile available in English'; }
       else { if(flag) flag.innerHTML = FRFLAG; if(label) label.textContent = 'Profil disponible en français'; }
     }
+    cvLinks.forEach(function(a){
+      var action = a.getAttribute('data-cv-action');
+      if(action === 'download'){
+        a.style.display = lang === 'en' ? 'none' : '';
+        return;
+      }
+      if(action === 'view'){
+        if(lang === 'en'){
+          a.href = './?lang=en#top';
+          a.removeAttribute('target');
+          a.removeAttribute('rel');
+        } else {
+          a.href = 'cv/premium/cv-premium.html';
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
+      }
+    });
     try{ localStorage.setItem('jp-lang', lang); }catch(e){}
     window.__lang = lang;
     try{ document.dispatchEvent(new CustomEvent('langchange',{detail:lang})); }catch(e){}
@@ -1357,6 +1376,7 @@
   window.toggleLang = function(){ apply(window.__lang==='en' ? 'fr' : 'en'); };
   var init='fr';
   try{ var s=localStorage.getItem('jp-lang'); if(s==='en'||s==='fr') init=s; }catch(e){}
+  try{ var q=new URLSearchParams(window.location.search).get('lang'); if(q==='en'||q==='fr') init=q; }catch(e){}
   apply(init);
 })();
 </script>

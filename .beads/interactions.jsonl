@@ -1,0 +1,1 @@
+{"id":"int-de2d1b54","kind":"field_change","created_at":"2026-07-04T12:29:22.659459003Z","actor":"Johan.P","issue_id":"SITE-mcc","extra":{"field":"status","new_value":"closed","old_value":"in_progress","reason":"Fixed English-mode CV links: hide French-only PDF download and route online view to English portfolio state."}}
