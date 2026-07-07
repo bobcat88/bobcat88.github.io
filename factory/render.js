@@ -186,6 +186,49 @@ function buildOfferProfile(raw, meta) {
     && /configuration management/i.test(raw)
     && /responsable projet/i.test(raw);
   const isArkeaMoa = /cr[ée]dit mutuel ark[ée]a/i.test(raw) && /chef de projet moa/i.test(raw);
+  const isEquansCnnMco = /cnn mco/i.test(raw) && /offres et chiffrage/i.test(raw);
+  if (isEquansCnnMco) {
+    return {
+      title: "Responsable Projet Offres et Chiffrages",
+      summary: "Responsable pilotage d'offres et chiffrage, habitué aux environnements industriels complexes à forts enjeux financiers. Chez Thales ISR, j'ai piloté un portefeuille de plus de 50 offres Défense jusqu'à 1Md€, du chiffrage RC/NRC à la remise client, en fédérant achats, ingénierie et finance sans lien hiérarchique direct. Je transpose cette rigueur de chiffrage et de coordination transverse au MCO naval.",
+      brand: "Offres chiffrées avec rigueur, contributeurs fédérés, décisions arbitrées jusqu'à la remise.",
+      letterHook: "Le poste de Responsable Projet Offres et Chiffrages chez CNN MCO correspond directement à ce que j'ai déjà piloté chez Thales : construire des offres robustes et compétitives en fédérant des contributeurs multi-métiers sans lien hiérarchique, du chiffrage à la remise client.",
+      letterFit: "Chez Thales ISR, j'ai soutenu 4 Bid Managers sur un portefeuille de plus de 50 offres Défense (quelques centaines de k€ à plus d'1Md€) : structures de coûts RC/NRC, animation des revues de risques et opportunités (ROR) avec experts techniques, achats et finance, industrialisation des outils de chiffrage (-92% de temps de traitement des risques), et RETEX entre offres remises et exécution des projets, jusqu'au rapport CODIR.",
+      letterValue: "J'apporte une capacité directement mobilisable : chiffrer en propre, fédérer des contributeurs multiples sans autorité hiérarchique, consolider des hypothèses techniques, économiques et contractuelles, sécuriser la cohérence de l'offre avant remise et capitaliser le RETEX pour améliorer le taux de transformation.",
+      experienceIds: ["thales", "shuhan", "arkea", "epsi"],
+      passionProjectIds: ["datahealth", "personal-scripts-automation"],
+      metrics: [
+        [">1 Md€", "Portefeuille d'offres piloté", "Thales ISR"],
+        ["+50 offres", "Chiffrage RC/NRC, Fixed Price/Cost-Plus", "Thales ISR"],
+        ["3h -> 15 min", "Industrialisation gestion des risques (ROR)", "Thales ISR"],
+        ["5% -> 20% (~15M$)", "Appels d'offres internationaux (SAP Ariba)", "Sichuan Shuhan Plastics"]
+      ],
+      skillGroups: [
+        ["Offres & chiffrage", ["Chiffrage RC/NRC", "Fixed Price / Cost-Plus", "Structures de coûts", "Hypothèses techniques/économiques"]],
+        ["Pilotage des risques", ["Revues risques & opportunités (ROR)", "Provisionnement", "Points de vigilance", "Arbitrages"]],
+        ["Coordination transverse", ["Fédération sans lien hiérarchique", "Achats / Finance / Ingénierie / HSE", "Validation formelle des offres", "Amélioration continue"]],
+        ["Outillage", ["QDV (chiffrage expert)", "Excel / VBA", "MS Project", "RETEX / post-mortem"]],
+        ["Industriel & international", ["Environnements industriels complexes", "Défense multi-milieux", "Appels d'offres SAP Ariba", "Anglais C1-C2"]]
+      ],
+      experienceOverrides: {
+        thales: {
+          role: "PMO & Support Bid Management | Offres, chiffrage, risques",
+          context: "Thales ISR Brest : portefeuille Défense multi-milieux, chiffrage RC/NRC, risques et opportunités, coordination transverse jusqu'à la remise client.",
+          stack: ["Chiffrage QDV", "RC / NRC", "ROR", "Fixed Price / Cost-Plus", "RETEX CODIR"],
+          bullets: [
+            "Support à 4 Bid Managers sur un portefeuille de +50 offres Défense, budgets jusqu'à >1Md€, chiffrage RC/NRC et optimisation de la rentabilité.",
+            "Animation des revues de risques et opportunités (ROR) avec experts techniques, achats et finance ; industrialisation Excel/VBA : 3h -> 15 min par offre (-92%).",
+            "RETEX stratégique mandaté par la GBU ISR sur une offre perdue, rapport de recommandations livré au CODIR DMS France pour améliorer le Win Rate."
+          ]
+        },
+        shuhan: {
+          bullets: [
+            "Réponses aux appels d'offres internationaux (SAP Ariba), négociation de contrats, part export du CA portée de 5% à 20% (~15M$ en 2019)."
+          ]
+        }
+      }
+    };
+  }
   const isArkeaDataIa = /cr[ée]dit mutuel ark[ée]a/i.test(raw)
     && /consultant interne/i.test(raw)
     && /strat[ée]gie data\s*&\s*ia/i.test(raw);
