@@ -194,7 +194,8 @@ function buildOfferProfile(raw, meta) {
   const isThalesConfigDelivery = /thales/i.test(raw)
     && /configuration management/i.test(raw)
     && /responsable projet/i.test(raw);
-  const isArkeaMoa = /cr[ée]dit mutuel ark[ée]a/i.test(raw) && /chef de projet moa/i.test(raw);
+  const isArkeaAssetManagementMoa = /ark[ée]a asset management/i.test(raw) && /chef de projet moa/i.test(raw);
+  const isArkeaMoa = !isArkeaAssetManagementMoa && /cr[ée]dit mutuel ark[ée]a/i.test(raw) && /chef de projet moa/i.test(raw);
   const isEquansCnnMco = /cnn mco/i.test(raw) && /offres et chiffrage/i.test(raw);
   if (isEquansCnnMco) {
     return {
@@ -359,6 +360,66 @@ function buildOfferProfile(raw, meta) {
           context: "Livraison d'un CRM sécurisé, rôle de Product Owner et Coach Agile sur deux équipes en environnement contraint.",
           bullets: [
             "Traduction du besoin en User Stories, critères d'acceptation, tests Postman et coordination entre équipes techniques.",
+            "Seul Product Owner ayant livré ses 2 équipes sur 5, MVP livré en moins de 2 mois, félicitations du jury Capgemini / Orange Cyber."
+          ]
+        }
+      }
+    };
+  }
+  if (isArkeaAssetManagementMoa) {
+    return {
+      title: "Chef de projet MOA",
+      fileSlug: "ChefProjetMOAPerformance",
+      summary: "Chef de projet MOA orienté cadrage métier, cahier des charges, recette et pilotage de déploiement outillé. Déjà mobilisé chez Crédit Mutuel Arkéa sur le pilotage d'initiatives stratégiques, je transpose cette maîtrise du groupe à l'implémentation d'un outil de calcul de performance : cadrer le besoin, formaliser le cahier des charges, piloter la recette avec l'éditeur et accompagner le déploiement jusqu'aux utilisateurs.",
+      brand: "Besoin cadré, cahier des charges actionnable, recette pilotée, déploiement accompagné.",
+      letterHook: "Je travaille déjà au Crédit Mutuel Arkéa et je connais ses référentiels, sa gouvernance et ses méthodologies projet. Le poste de Chef de projet MOA chez Arkéa Asset Management correspond à mon terrain naturel : faire émerger le besoin métier, le traduire en cahier des charges, piloter la recette avec l'éditeur retenu et accompagner le déploiement de l'outil de calcul de performance jusqu'aux utilisateurs.",
+      letterFit: "Chez Diadom, j'ai piloté un projet SI de bout en bout : cadrage, sélection et coordination de prestataires techniques, déploiement, recette et mise en production, puis formation des équipes métier. Chez Thales, j'ai industrialisé les processus de pilotage (risques, plannings) et animé des comités et ateliers avec reporting CODIR. Chez Arkéa, je structure déjà un cadre de qualification, des KPI et des comités pour la direction. Chez EPSI, j'ai sécurisé une recette applicative avec critères d'acceptation et tests.",
+      letterValue: "J'apporte une posture MOA concrète directement mobilisable : formaliser les besoins métiers en cahier des charges actionnable, piloter le plan de recette et le suivi des anomalies avec l'éditeur, coordonner IT/métiers/éditeur, organiser les comités de pilotage, produire le reporting d'avancement et accompagner le changement (formation, documentation) jusqu'au démarrage.",
+      experienceIds: ["arkea", "diadom", "thales", "epsi"],
+      metrics: [
+        ["Cadrage à mise en production", "Cycle projet complet : cahier des charges, recette, déploiement, formation", "Diadom SAS"],
+        ["440-2760 h/an", "Gain capacitaire PMO, KPI et comités", "Crédit Mutuel Arkéa"],
+        ["3h -> 15 min", "Industrialisation du pilotage des risques", "Thales ISR"],
+        ["2 équipes livrées", "Recette et critères d'acceptation", "EPSI | CRM sécurisé"]
+      ],
+      skillGroups: [
+        ["MOA & cadrage", ["Recueil du besoin", "Cahier des charges fonctionnel", "Traduction besoin -> MOE", "Documentation"]],
+        ["Recette & déploiement", ["Plan de recette", "Scénarios de tests", "Suivi des anomalies", "Mise en production"]],
+        ["Gouvernance & reporting", ["Comités de pilotage", "Ateliers métiers", "Indicateurs de suivi", "Reporting direction"]],
+        ["Coordination", ["IT / éditeur / métiers", "Conduite du changement", "Formation utilisateurs", "Multi-parties prenantes"]],
+        ["Outillage & groupe", ["Jira", "Excel / VBA", "Google Workspace", "Méthodologies groupe Crédit Mutuel Arkéa"]]
+      ],
+      experienceOverrides: {
+        arkea: {
+          context: "Groupe Crédit Mutuel Arkéa : cadre de qualification d'initiatives, KPI, jalons et comités pour la direction du plan de développement.",
+          bullets: [
+            "Cadrage des initiatives : objectifs, besoins métiers, dépendances et prérequis formalisés pour une lecture homogène.",
+            "Application PMO sur mesure (Google Apps Script) : Kanban, KPI, jalons, alertes, source de vérité unique pour reporting et comités.",
+            "Industrialisation documentaire et méthodologique adoptée par les contributeurs, gain capacitaire 440-2760 h/an."
+          ]
+        },
+        diadom: {
+          role: "Chef de Projet MOA / Business Analyst",
+          context: "Refonte SI (site institutionnel + portail e-commerce) : cadrage du besoin, coordination prestataires, recette, déploiement, formation.",
+          stack: ["Cahier des charges", "Coordination éditeur", "Recette", "Mise en production", "Formation utilisateurs"],
+          bullets: [
+            "Maîtrise d'œuvre complète du cycle projet : cadrage, sélection et coordination des prestataires techniques, déploiement, recette, mise en production.",
+            "Gestion rigoureuse du planning et du chemin critique (MS Project), respect des jalons de mise en production.",
+            "Formation des équipes métier pour l'autonomie sur le nouvel outil ; reporting mensuel à la direction (CODIR/PDG)."
+          ]
+        },
+        thales: {
+          context: "Industrialisation des processus de pilotage (risques, plannings), animation de comités et ateliers, reporting CODIR.",
+          bullets: [
+            "Animation de revues (ROR) et de workshops avec experts techniques, achats et métiers pour cadrer et arbitrer.",
+            "Industrialisation Excel/VBA du traitement des risques : 3h -> 15 min par offre (-92%), templates standardisés adoptés par les centres de compétences.",
+            "RETEX stratégique livré au CODIR DMS France avec recommandations actionnables."
+          ]
+        },
+        epsi: {
+          context: "Delivery logiciel sécurisé : plan de recette, critères d'acceptation et tests sur deux équipes.",
+          bullets: [
+            "Traduction du besoin en User Stories, critères d'acceptation et tests Postman pour sécuriser la recette.",
             "Seul Product Owner ayant livré ses 2 équipes sur 5, MVP livré en moins de 2 mois, félicitations du jury Capgemini / Orange Cyber."
           ]
         }
