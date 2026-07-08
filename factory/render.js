@@ -46,7 +46,16 @@ const outDir = args.offer
 
 mkdirSync(outDir, { recursive: true });
 
-const htmlPath = join(outDir, `cv-${model.variant}.html`);
+// Tailored runs write straight to the final deliverable name (J.PROUST_<Slug>_<TYPE>_DD.MM.YY.*) —
+// no intermediate cv-ats.html/lettre.html left behind to duplicate after a manual rename.
+const fileDateStr = filenameDate(offerMeta.captured || offerMeta.posted);
+function finalName(type, ext) {
+  return `J.PROUST_${offerProfile.fileSlug || "Candidature"}_${type}_${fileDateStr}.${ext}`;
+}
+
+const htmlPath = args.offer
+  ? join(outDir, finalName(model.variant === "premium" ? "CV" : "ATS", "html"))
+  : join(outDir, `cv-${model.variant}.html`);
 writeFileSync(htmlPath, html);
 console.log("✓ HTML (CV) →", htmlPath);
 
@@ -88,7 +97,7 @@ if (args.offer) {
   // Letter
   const lettreTpl = read("factory/templates/lettre.html");
   const lettreHtml = renderLetter(lettreTpl, offerMeta, hook, fit, value, profile, dateStr);
-  const lettrePath = join(outDir, "lettre.html");
+  const lettrePath = join(outDir, finalName("LM", "html"));
   writeFileSync(lettrePath, lettreHtml);
   console.log("✓ HTML (Letter) →", lettrePath);
   if (args.pdf) await toPdf(lettrePath);
@@ -98,7 +107,7 @@ if (args.offer) {
   const pitchHtml = pitchTpl
     .replaceAll("../designs/base.css", "base.css")
     .replaceAll("../designs/data.js", "data.js");
-  const pitchPath = join(outDir, "pitch.html");
+  const pitchPath = join(outDir, finalName("PITCH", "html"));
   writeFileSync(pitchPath, pitchHtml);
   console.log("✓ HTML (Pitch) →", pitchPath);
   if (args.pdf) await toPdf(pitchPath);
@@ -190,6 +199,7 @@ function buildOfferProfile(raw, meta) {
   if (isEquansCnnMco) {
     return {
       title: "Responsable Projet Offres et Chiffrages",
+      fileSlug: "RespProjetOffresChiffrages",
       summary: "Responsable pilotage d'offres et chiffrage, habitué aux environnements industriels complexes à forts enjeux financiers. Chez Thales ISR, j'ai piloté un portefeuille de plus de 50 offres Défense jusqu'à 1Md€, du chiffrage RC/NRC à la remise client, en fédérant achats, ingénierie et finance sans lien hiérarchique direct. Je transpose cette rigueur de chiffrage et de coordination transverse au MCO naval.",
       brand: "Offres chiffrées avec rigueur, contributeurs fédérés, décisions arbitrées jusqu'à la remise.",
       letterHook: "Le poste de Responsable Projet Offres et Chiffrages chez CNN MCO correspond directement à ce que j'ai déjà piloté chez Thales : construire des offres robustes et compétitives en fédérant des contributeurs multi-métiers sans lien hiérarchique, du chiffrage à la remise client.",
@@ -235,6 +245,7 @@ function buildOfferProfile(raw, meta) {
   if (isThalesConfigDelivery) {
     return {
       title: "Responsable Projet & Delivery - Configuration Management",
+      fileSlug: "RespProjetDeliveryCM",
       summary: "PMO et responsable delivery habitué aux environnements Défense, multi-sites et multi-acteurs. Déjà intervenu chez Thales ISR Brest, je sais remettre sous contrôle un système complexe : clarifier les rôles, installer les rituels, fiabiliser les référentiels, structurer l'outillage et rendre les arbitrages lisibles jusqu'aux instances.",
       brand: "Task force structurée, configuration fiabilisée, acteurs alignés.",
       letterHook: "Je connais déjà le site de Brest et l'univers Défense multi-milieux de Thales. Mon métier consiste à transformer des environnements complexes multi-partenaires en systèmes pilotables, exactement l'enjeu de la task force configuration du programme MMCM.",
@@ -296,6 +307,7 @@ function buildOfferProfile(raw, meta) {
   if (isArkeaDataIa) {
     return {
       title: "Consultant interne - Stratégie Data & IA",
+      fileSlug: "ConsultantStrategieDataIA",
       summary: "Consultant interne orienté stratégie Data & IA, PMO transverse et gouvernance. Déjà mobilisé chez Crédit Mutuel Arkéa sur le cadrage d'initiatives stratégiques, l'animation de comités et l'industrialisation d'outils de pilotage, je structure des sujets flous en cas d'usage priorisés, arbitrables et déployables, avec une posture hybride métier, data, IT et décision.",
       brand: "Feuille de route IA structurée, gouvernance éclairée, cas d'usage rendus pilotables.",
       letterHook: "Ce poste de Consultant interne en Stratégie Data & IA correspond précisément à l'ouverture que j'attendais chez Crédit Mutuel Arkéa. Il combine mon expérience de PMO transverse, de cadrage stratégique et de structuration de dispositifs de pilotage avec le terrain Data & IA sur lequel je veux concentrer mon évolution.",
@@ -356,6 +368,7 @@ function buildOfferProfile(raw, meta) {
   if (isArkeaMoa) {
     return {
       title: "Chef de projet MOA",
+      fileSlug: "ChefProjetMOA",
       summary: "Chef de projet MOA orienté cadrage métier, cahier des charges, recette, homologation et déploiement. Déjà mobilisé chez Crédit Mutuel Arkéa sur le pilotage d'initiatives stratégiques, je fais le lien entre métiers, MOE et gouvernance avec une forte appétence pour les données, les chiffres et les environnements SI.",
       brand: "MOA opérationnel, besoin clarifié, solution recettée, gouvernance informée.",
       letterHook: "Je travaille déjà au Crédit Mutuel Arkéa et je connais ses référentiels, ses modes de gouvernance et son niveau d'exigence. Le poste de Chef de projet MOA correspond à mon terrain naturel : faire émerger le besoin, le traduire en cahier des charges, recetter la solution et accompagner son déploiement auprès des utilisateurs.",
@@ -370,7 +383,20 @@ function buildOfferProfile(raw, meta) {
       ]
     };
   }
-  return { title };
+  return { title, fileSlug: slugifyTitle(title) };
+}
+
+// Fallback PascalCase slug for offers without a hand-tuned profile (e.g. "Chef de projet MOA" -> "ChefProjetMOA").
+function slugifyTitle(title) {
+  const stop = new Set(["de", "du", "des", "le", "la", "les", "et", "en", "à", "au", "aux", "un", "une", "the", "of", "and", "for"]);
+  return String(title || "")
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/\([^)]*\)/g, " ")
+    .split(/[^a-zA-Z0-9]+/)
+    .filter(Boolean)
+    .filter(w => !stop.has(w.toLowerCase()))
+    .map(w => w[0].toUpperCase() + w.slice(1))
+    .join("") || "Candidature";
 }
 
 function normalizeOfferTitle(title) {
@@ -701,6 +727,16 @@ async function toPdf(htmlPath) {
     console.error("PDF export failed:");
     console.error(String(e.message || e));
   }
+}
+
+// "2026-07-07" (or "captured 2026-07-07" from a "posted" field) -> "07.07.26"; falls back to today.
+function filenameDate(raw) {
+  const m = String(raw || "").match(/(\d{4})-(\d{2})-(\d{2})/);
+  const d = m ? new Date(`${m[1]}-${m[2]}-${m[3]}T00:00:00`) : new Date();
+  const dd = String(d.getDate()).padStart(2, "0");
+  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const yy = String(d.getFullYear()).slice(-2);
+  return `${dd}.${mm}.${yy}`;
 }
 
 function read(p) { return readFileSync(join(ROOT, p), "utf8"); }
