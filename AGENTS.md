@@ -62,6 +62,13 @@ git check-ignore application               # must print: application
 ```
 Relative target (`../career-applications`) so both repos move together. Full rule + the parallel rule in `CLAUDE.md` and `career-applications/AGENTS.md`.
 
+## Beads routing rule
+
+Use the Beads database of the repo targeted by the work:
+- Public portfolio / factory / generic CV work: track in `bobcat88.github.io/.beads`.
+- Private per-company applications / private source captures: track in `career-applications/.beads`.
+- Work spanning both public and private repos: track in `bobcat88.github.io/.beads`.
+
 <!-- BEGIN BEADS INTEGRATION v:1 profile:minimal hash:7510c1e2 -->
 ## Beads Issue Tracker
 
