@@ -5,8 +5,8 @@ window.CV_DATA = {
   "last": "PROUST",
   "monogram": "JP",
   "title": "Chef de projet senior · PMO · Program Manager · Product Owner · Business Analyst",
-  "brand": "J'aide les organisations à reprendre le contrôle de systèmes complexes.",
-  "tagline": "Je transforme des environnements complexes en systèmes pilotables, compréhensibles et évolutifs.",
+  "brand": "J'aide les organisations à reprendre le contrôle de leurs décisions complexes.",
+  "tagline": "Je transforme des environnements complexes en systèmes de décision pilotables, compréhensibles et évolutifs.",
   "contact": [
     [
       "Localisation",
@@ -34,7 +34,7 @@ window.CV_DATA = {
       "https://bobcat88.github.io/"
     ]
   ],
-  "summary": "Senior PMO et Product Owner, 13 ans d'expérience dont 7 ans en Asie, sur tout le cycle projet, du cadrage stratégique (Business Analysis) au pilotage opérationnel (PMO) jusqu'à la livraison produit (Product Ownership). Profil hybride tech × business : aussi à l'aise pour structurer un plan stratégique en COMEX que pour coder l'outil PMO qui le pilote.",
+  "summary": "Senior PMO et Product Owner, 13 ans d'expérience dont 7 ans en Asie, sur tout le cycle projet, du cadrage stratégique (Business Analysis) au pilotage opérationnel (PMO) jusqu'à la livraison produit (Product Ownership). Profil hybride tech × business, factuel et participatif : aussi à l'aise pour fiabiliser des arbitrages en COMEX que pour coder l'outil PMO qui les rend pilotables.",
   "metrics": [
     [
       "> 1 Md€",

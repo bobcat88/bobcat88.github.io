@@ -11,10 +11,20 @@ L'angle différenciateur propre de Johan Proust repose sur l'**hybridation Tech 
 L'éclectisme apparent du parcours (Défense, Banque de détail, Plasturgie cross-culturelle en Chine, Immobilier, Cybersécurité) est valorisé comme la preuve ultime d'adaptation systémique :
 > *« J'apporte de la gouvernance et de la structure de delivery dans des environnements radicalement différents et désordonnés. Cette amplitude prouve que je structure des systèmes, pas simplement des industries spécifiques. »*
 
+## 2bis. Signal AssessFirst : Coordinateur factuel, builder d'arbitrage
+
+Le profil AssessFirst renforce l'angle "systèmes de décision" plus que l'angle pur "manager de projet" :
+- **Comportement** : coordinateur affirmé, collectif, factuel, prudent sur la décision, concentré sur la fiabilité du travail.
+- **Motivation** : impact positif, analyse de données, nouveaux défis ; faible appétence pour les environnements trop sécurisés ou les tâches trop prescrites.
+- **Activités naturelles** : concevoir, évaluer, analyser — idéal pour cadrer des sujets flous, challenger des options, transformer des données en arbitrages.
+- **Leadership** : préférence pour un management participatif / visionnaire : donner du sens, impliquer, fédérer autour d'un cap plutôt que pousser uniquement par les chiffres.
+
+Usage recommandé : viser les rôles où il faut structurer des décisions collectives sous incertitude — PMO stratégique, BA/PO amont, transformation, Data/IA governance, internal consulting. Éviter de se vendre comme simple exécutant process, contrôleur de conformité ou chef de projet très prescriptif.
+
 ## 3. Proposition de Valeur & Taglines
 
 ### Proposition de valeur (Cible COMEX)
-> « Je transforme des environnements complexes en systèmes pilotables, compréhensibles et évolutifs. »
+> « Je transforme des environnements complexes en systèmes de décision pilotables, compréhensibles et évolutifs. »
 
 ### Tagline / Brand Descriptors (Humain / LinkedIn)
 - **Strategic Program Architect**
