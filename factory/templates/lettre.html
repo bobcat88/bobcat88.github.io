@@ -26,14 +26,14 @@
     <div class="ct" id="ct"></div>
   </div>
   <div class="meta">
-    <div class="recipient"><b id="recip">{{OFFER_RECIPIENT}}</b><br><span id="company">{{OFFER_COMPANY}}</span></div>
+    {{RECIPIENT_BLOCK}}
     <div id="place">{{PLACE_DATE}}</div>
   </div>
   <div class="subject" id="subject">{{SUBJECT_PREFIX}} {{OFFER_TITLE}}</div>
   <div class="body" id="body">
     <p>{{GREETING}}</p>
     {{LETTER_BODY}}
-    <p>{{WOULD_LIKE}} {{OFFER_COMPANY}}. {{AVAILABILITY_SENTENCE}}</p>
+    {{LETTER_CLOSING}}
     <p id="salaryPara" hidden></p>
     <p>{{REGARDS}}</p>
   </div>

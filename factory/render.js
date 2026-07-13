@@ -254,9 +254,9 @@ if (args.offer) {
   // Letter
   const lettreTpl = read("factory/templates/lettre.html");
   const letterParagraphs = directLetter
-    ? directLetter.split(/\r?\n\s*\r?\n/).map(cleanGeneratedText).filter(Boolean)
+    ? directLetter.split(/\r?\n\s*\r?\n/).map(cleanGeneratedText).filter(p => p && p !== L.letter.greeting)
     : composeLetter(hook, fit, value);
-  const lettreHtml = renderLetter(lettreTpl, offerMeta, letterParagraphs, profile, dateStr);
+  const lettreHtml = renderLetter(lettreTpl, offerMeta, letterParagraphs, profile, dateStr, Boolean(directLetter));
   const lettrePath = join(outDir, finalName("LM", "html"));
   writeFileSync(lettrePath, lettreHtml);
   console.log("✓ HTML (Letter) →", lettrePath);
@@ -288,26 +288,28 @@ function renderTemplate(m) {
   return applyI18n(htmlContent, i18nKey, m.lang);
 }
 
-function renderLetter(tpl, meta, paragraphs, profile, dateStr) {
+function renderLetter(tpl, meta, paragraphs, profile, dateStr, hasDirectLetter) {
   const availability = args.offer
     ? (lang === "en" ? profile.availabilityOfferEn : profile.availabilityOfferFr)
     : (lang === "en" ? profile.availabilityEn : profile.availability);
   const availabilitySentence = /permanent/i.test(meta.contract || "") ? "" : `${L.letter.availabilityPrefix} ${availability}.`;
+  const recipientBlock = meta.recipient
+    ? `<div class="recipient"><b id="recip">${meta.recipient}</b><br><span id="company">${cleanTerminalPunctuation(meta.company || L.letter.company)}</span></div>`
+    : "";
+  const closingParagraph = hasDirectLetter ? "" : `<p>${L.letter.wouldLike} ${cleanTerminalPunctuation(meta.company || L.letter.company)}. ${availabilitySentence}</p>`;
   return applyI18n(tpl, "lettre", lang)
     .replaceAll("../designs/base.css", "base.css")
     .replaceAll("../designs/data.js", "data.js")
-    .replaceAll("{{OFFER_RECIPIENT}}", meta.recipient || L.letter.recipient)
-    .replaceAll("{{OFFER_COMPANY}}", cleanTerminalPunctuation(meta.company || L.letter.company))
+    .replace("{{RECIPIENT_BLOCK}}", recipientBlock)
     .replaceAll("{{OFFER_TITLE}}", offerProfile.title || meta.title || L.letter.title)
     .replaceAll("{{DATE}}", dateStr)
     .replaceAll("{{PLACE_DATE}}", lang === "en" ? `Brest, ${dateStr}` : `Brest, le ${dateStr}`)
-    .replaceAll("{{AVAILABILITY_SENTENCE}}", availabilitySentence)
     .replaceAll("{{GREETING}}", L.letter.greeting)
     .replaceAll("{{CLOSING}}", L.letter.closing)
     .replaceAll("{{SUBJECT_PREFIX}}", L.letter.subject)
-    .replaceAll("{{WOULD_LIKE}}", L.letter.wouldLike)
     .replaceAll("{{REGARDS}}", L.letter.regards)
-    .replace("{{LETTER_BODY}}", paragraphs.map(p => `<p>${p}</p>`).join(""));
+    .replace("{{LETTER_BODY}}", paragraphs.map(p => `<p>${p}</p>`).join(""))
+    .replace("{{LETTER_CLOSING}}", closingParagraph);
 }
 
 // A letter has three jobs: motivation, one proof, then one contribution.
@@ -977,8 +979,7 @@ function compileCvData(profile) {
       [L.contactLabels.linkedin, "in/johan-proust", profile.contact.linkedin],
       [L.contactLabels.portfolio, "johanproust.me", profile.contact.portfolio],
       ...(isForeignOffer(offerMeta.country) ? [
-        [L.contactLabels.citizenship, lang === "en" ? profile.identity.citizenshipEn : profile.identity.citizenship, null],
-        [L.contactLabels.residence, profile.identity.residenceCountry, null],
+        [L.contactLabels.citizenship, lang === "en" ? "EU Citizen" : "Citoyen UE", null],
         [L.contactLabels.relocation, lang === "en" ? profile.identity.relocationStanceEn : profile.identity.relocationStance, null],
       ] : []),
     ],
