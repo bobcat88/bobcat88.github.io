@@ -189,6 +189,7 @@ const L = STRINGS[lang];
 
 const skills = parseSkills(lang);
 const offerProfile = buildOfferProfile(offerRaw, offerMeta, lang);
+const offerPitchSeek = buildPitchSeek(offerMeta, lang);
 
 // --- assemble model -------------------------------------------------------
 const model = {
@@ -340,6 +341,27 @@ function sentenceSimilarity(a, b) {
 
 function cleanTerminalPunctuation(text) {
   return cleanGeneratedText(text).replace(/[.]+$/, "");
+}
+
+function buildPitchSeek(meta, curLang) {
+  const title = normalizeOfferTitle(meta.title || (curLang === "en" ? "senior role" : "role senior"));
+  const salary = cleanGeneratedText(meta.salary_expectation || "");
+  const country = String(meta.country || "").toLowerCase();
+  const contract = cleanGeneratedText(meta.contract || "");
+  if (country === "switzerland") {
+    return curLang === "en"
+      ? [`A senior ${title} mandate with clear ownership and scope.`, salary ? `A Swiss package aligned with the stated scope: ${salary}, with bonus, pension and relocation terms assessed separately.` : "A Swiss package aligned with senior market conventions, with bonus, pension and relocation terms assessed separately.", "A French-English environment where measurable delivery matters."]
+      : [`Un mandat senior de ${title}, avec un perimetre et une responsabilite clairs.`, salary ? `Un package suisse aligne avec le perimetre annonce : ${salary}, bonus, LPP et relocation evalues separement.` : "Un package suisse aligne avec les conventions senior du marche, bonus, LPP et relocation evalues separement.", "Un environnement francais-anglais ou la valeur se mesure dans l'execution."];
+  }
+  if (/retainer/i.test(contract)) {
+    const band = (meta.title || "").match(/\(([^)]*(?:ICS|LICA)[^)]*)\)/i)?.[1] || "UNOPS contract";
+    return [
+      `A ${title} mandate with clear delivery ownership.`,
+      `A retainer structure and compensation aligned with the advertised ${band} level, workload and responsibility.`,
+      "An international environment where reliable data improves delivery."
+    ];
+  }
+  return [];
 }
 
 function parseFrontmatter(text) {
@@ -1017,7 +1039,7 @@ function compileCvData(profile) {
     pitch: {
       p30: profile.pitch.p30[lang],
       solve: profile.pitch.solve[lang],
-      seek: profile.pitch.seek[lang],
+      seek: offerPitchSeek.length ? offerPitchSeek : profile.pitch.seek[lang],
     },
     // Compensation belongs in a letter only when the posting explicitly asks for it.
     salaryExpectation: offerMeta.salary_requested === "true" ? cleanGeneratedText(offerMeta.salary_expectation) : null,
