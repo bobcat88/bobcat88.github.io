@@ -1,33 +1,40 @@
 [
   {
     "id": "arkea",
-    "role": "PMO Stratégique / Business Analyst",
-    "company": "Crédit Mutuel Arkéa | Banque de Détail",
-    "period": "Mars 2026 – Présent",
-    "location": "Brest",
-    "context": "Direction d'un cadre commun de pilotage des initiatives du Plan stratégique en banque de détail.",
+    "role": { "fr": "PMO Stratégique / Business Analyst", "en": "Strategic PMO / Business Analyst" },
+    "company": { "fr": "Crédit Mutuel Arkéa | Banque de Détail", "en": "Crédit Mutuel Arkéa | Retail Banking" },
+    "period": { "fr": "Mars 2026 – Présent", "en": "March 2026 – Present" },
+    "location": { "fr": "Brest", "en": "Brest" },
+    "context": { "fr": "Direction d'un cadre commun de pilotage des initiatives du Plan stratégique en banque de détail.", "en": "Leading a shared steering framework for Retail Banking's strategic-plan initiatives." },
     "selection": {
       "proofWeight": 10,
       "proofType": "flagship",
       "durationMonths": 12,
       "recency": 10,
-      "themes": ["banque", "strategie", "pmo", "business analysis", "data", "ia", "gouvernance", "transformation", "automation", "outillage", "processus", "rituels", "adoption"],
-      "keywords": ["Crédit Mutuel Arkéa", "PMO stratégique", "Business Analyst", "Plan stratégique", "KPI", "jalons", "Apps Script", "POC IA", "gouvernance", "comités", "data", "outils", "processus", "rituels", "référentiels", "traçabilité", "adoption", "pilotage transverse"]
+      "themes": ["banque", "strategie", "pmo", "business analysis", "data", "ia", "gouvernance", "transformation", "automation", "outillage", "processus", "rituels", "adoption", "banking", "strategy", "governance", "dashboards", "monitoring"],
+      "keywords": ["Crédit Mutuel Arkéa", "PMO stratégique", "Business Analyst", "Plan stratégique", "KPI", "jalons", "Apps Script", "POC IA", "gouvernance", "comités", "data", "outils", "processus", "rituels", "référentiels", "traçabilité", "adoption", "pilotage transverse", "dashboards", "data analysis", "monitoring"]
     },
-    "stack": ["PMO", "Business Analysis", "Apps Script", "Kanban / KPI", "POC IA", "Gouvernance"],
-    "bullets": [
-      "Cadre commun de qualification des initiatives du Plan stratégique (12-18 mois), alignant marketing, data, expérience client et process.",
-      "Application PMO sur mesure (Apps Script : Kanban, KPI, jalons, alertes) + POC génération auto de comptes rendus.",
-      "Gain capacitaire estimé 440–2760 h/an (~31–135 k€/an), traçabilité des décisions, effet plateforme."
-    ]
+    "stack": { "fr": ["PMO", "Business Analysis", "Apps Script", "Kanban / KPI", "POC IA", "Gouvernance"], "en": ["PMO", "Business Analysis", "Apps Script", "Kanban / KPI", "AI PoC", "Governance"] },
+    "bullets": {
+      "fr": [
+        "Cadre commun de qualification des initiatives du Plan stratégique (12-18 mois), alignant marketing, data, expérience client et process.",
+        "Application PMO sur mesure (Apps Script : Kanban, KPI, jalons, alertes) + POC génération auto de comptes rendus.",
+        "Gain capacitaire estimé 440–2760 h/an (~31–135 k€/an), traçabilité des décisions, effet plateforme."
+      ],
+      "en": [
+        "Built a shared qualification framework for the strategic plan (12-18 months), aligning marketing, data, customer experience and process teams.",
+        "Built a custom PMO application (Apps Script: Kanban, KPIs, milestones, alerts) plus a committee-minutes automation PoC.",
+        "Delivered an estimated capacity gain of 440-2,760 h/year (~EUR 31-135k/year) through decision traceability and process standardization."
+      ]
+    }
   },
   {
     "id": "neosoft",
-    "role": "Product Owner | MVP application interne",
-    "company": "NeoSoft",
-    "period": "Oct. 2025 – Déc. 2025",
-    "location": "Brest / Rennes",
-    "context": "Cadrage amont et prototypage d'un MVP d'application interne métier.",
+    "role": { "fr": "Product Owner | MVP application interne", "en": "Product Owner | Internal MVP Application" },
+    "company": { "fr": "NeoSoft", "en": "NeoSoft" },
+    "period": { "fr": "Oct. 2025 – Déc. 2025", "en": "Oct. 2025 – Dec. 2025" },
+    "location": { "fr": "Brest / Rennes", "en": "Brest / Rennes" },
+    "context": { "fr": "Cadrage amont et prototypage d'un MVP d'application interne métier.", "en": "Upstream framing and prototyping of an internal business-application MVP." },
     "selection": {
       "proofWeight": 6,
       "proofType": "solid",
@@ -36,41 +43,54 @@
       "themes": ["product ownership", "cadrage", "mvp", "design thinking", "ux", "backlog", "facilitation"],
       "keywords": ["Product Owner", "MVP", "POC", "Figma", "Design Thinking", "backlog", "roadmap", "pré-cadrage", "besoin métier"]
     },
-    "stack": ["Product Owner", "Design Thinking", "Figma", "UX / UI", "Backlog Kanban"],
-    "bullets": [
-      "Design Thinking, prototypage Figma, parcours UX/UI, backlog Kanban itératif, facilitation Dev-Design.",
-      "POC validé + prototype livré + roadmap MVP exploitable sans retro-cadrage."
-    ]
+    "stack": { "fr": ["Product Owner", "Design Thinking", "Figma", "UX / UI", "Backlog Kanban"], "en": ["Product Owner", "Design Thinking", "Figma", "UX / UI", "Kanban Backlog"] },
+    "bullets": {
+      "fr": [
+        "Design Thinking, prototypage Figma, parcours UX/UI, backlog Kanban itératif, facilitation Dev-Design.",
+        "POC validé + prototype livré + roadmap MVP exploitable sans retro-cadrage."
+      ],
+      "en": [
+        "Design thinking, Figma prototyping, UX/UI journeys, iterative Kanban backlog, Dev-Design facilitation.",
+        "Validated PoC, delivered prototype, and an actionable MVP roadmap with no rework."
+      ]
+    }
   },
   {
     "id": "thales",
-    "role": "PMO & Support Bid Management",
-    "company": "Thales ISR (via MIGSO-PCUBED)",
-    "period": "Oct. 2024 – Oct. 2025",
-    "location": "Brest",
-    "context": "Support bid management sur un portefeuille d'offres Défense multi-milieux à forts enjeux financiers.",
+    "role": { "fr": "PMO & Support Bid Management", "en": "PMO & Bid Management Support" },
+    "company": { "fr": "Thales ISR (via MIGSO-PCUBED)", "en": "Thales ISR (via MIGSO-PCUBED)" },
+    "period": { "fr": "Oct. 2024 – Oct. 2025", "en": "Oct. 2024 – Oct. 2025" },
+    "location": { "fr": "Brest", "en": "Brest" },
+    "context": { "fr": "Support bid management sur un portefeuille d'offres Défense multi-milieux à forts enjeux financiers.", "en": "Bid management support on a high-stakes, multi-domain Defense bid portfolio." },
     "selection": {
       "proofWeight": 10,
       "proofType": "flagship",
       "durationMonths": 12,
       "recency": 9,
-      "themes": ["pmo", "gouvernance", "finance", "risque", "defense", "reporting", "codir", "automation", "configuration", "multi-sites", "conduite du changement"],
-      "keywords": ["PMO", "Bid Management", "Thales", "Défense", "portefeuille", ">1Md€", "risques", "ROR", "Excel", "VBA", "RETEX", "CODIR", "reporting", "configuration d'offres", "QDV", "EIM", "GED", "Besoin de Savoir", "multi-sites", "conduite du changement"]
+      "themes": ["pmo", "gouvernance", "finance", "risque", "defense", "reporting", "codir", "automation", "configuration", "multi-sites", "conduite du changement", "data", "monitoring", "procurement"],
+      "keywords": ["PMO", "Bid Management", "Thales", "Défense", "portefeuille", ">1Md€", "risques", "ROR", "Excel", "VBA", "RETEX", "CODIR", "reporting", "configuration d'offres", "QDV", "EIM", "GED", "Besoin de Savoir", "multi-sites", "conduite du changement", "data management", "monitoring", "procurement", "RFI", "RFP"]
     },
-    "stack": ["PMO", "Bid Management", "Pilotage financier RC / NRC", "Excel / VBA", "Gestion des risques (ROR)", "RETEX CODIR"],
-    "bullets": [
-      "Portefeuille +50 offres Défense multi-milieux, budgets jusqu'à >1Md€ ; pilotage financier RC/NRC, optimisation marge.",
-      "Industrialisation Excel/VBA de la gestion des risques (ROR) : 3h → 15 min par offre (-92%).",
-      "RETEX stratégique mandaté par la GBU ISR, rapport CODIR ; « au-dessus des attentes sur 7 livrables / 10 »."
-    ]
+    "stack": { "fr": ["PMO", "Bid Management", "Pilotage financier RC / NRC", "Excel / VBA", "Gestion des risques (ROR)", "RETEX CODIR"], "en": ["PMO", "Bid Management", "RC / NRC Financial Steering", "Excel / VBA", "Risk Management (ROR)", "CODIR Lessons-Learned"] },
+    "bullets": {
+      "fr": [
+        "Portefeuille +50 offres Défense multi-milieux, budgets jusqu'à >1Md€ ; pilotage financier RC/NRC, optimisation marge.",
+        "Industrialisation Excel/VBA de la gestion des risques (ROR) : 3h → 15 min par offre (-92%).",
+        "RETEX stratégique mandaté par la GBU ISR, rapport CODIR ; « au-dessus des attentes sur 7 livrables / 10 »."
+      ],
+      "en": [
+        "Managed a 50+ bid multi-domain Defense portfolio, budgets up to >EUR 1B; RC/NRC financial steering, margin optimization.",
+        "Industrialized Excel/VBA risk management (ROR): 3h to 15 min per bid (-92%).",
+        "Delivered a strategic lessons-learned audit mandated by the ISR GBU to CODIR DMS France; \"above expectations on 7 of 10 deliverables\"."
+      ]
+    }
   },
   {
     "id": "epsi",
-    "role": "Product Owner + Coach Agile | CRM sécurisé",
-    "company": "EPSI (client Capgemini)",
-    "period": "Avr. 2024 – Juil. 2024",
-    "location": "Rennes",
-    "context": "Double rôle PO + Coach Agile sur la livraison d'un CRM sécurisé pour un client grand compte.",
+    "role": { "fr": "Product Owner + Coach Agile | CRM sécurisé", "en": "Product Owner + Agile Coach | Secure CRM" },
+    "company": { "fr": "EPSI (client Capgemini)", "en": "EPSI (Capgemini client)" },
+    "period": { "fr": "Avr. 2024 – Juil. 2024", "en": "Apr. 2024 – Jul. 2024" },
+    "location": { "fr": "Rennes", "en": "Rennes" },
+    "context": { "fr": "Double rôle PO + Coach Agile sur la livraison d'un CRM sécurisé pour un client grand compte.", "en": "Dual PO + Agile Coach role delivering a secure CRM for a major account." },
     "selection": {
       "proofWeight": 7,
       "proofType": "solid",
@@ -79,62 +99,81 @@
       "themes": ["product ownership", "agile", "delivery", "cyber", "tests", "user stories", "it"],
       "keywords": ["Product Owner", "Coach Agile", "Scrum", "User Stories", "critères d'acceptation", "Postman", "CRM sécurisé", "MVP", "Capgemini", "Orange Cyber"]
     },
-    "stack": ["Product Owner", "Coaching Agile", "Scrum", "User Stories", "Tests Postman"],
-    "bullets": [
-      "Double rôle PO + Coach Agile sur 2 équipes ; cérémonies Scrum, User Stories, critères d'acceptation, tests Postman.",
-      "Seul PO ayant livré ses 2 équipes (sur 5), MVP < 2 mois ; félicitations jury (Lead Tech Capgemini + Expert Cyber Orange)."
-    ]
+    "stack": { "fr": ["Product Owner", "Coaching Agile", "Scrum", "User Stories", "Tests Postman"], "en": ["Product Owner", "Agile Coaching", "Scrum", "User Stories", "Postman Tests"] },
+    "bullets": {
+      "fr": [
+        "Double rôle PO + Coach Agile sur 2 équipes ; cérémonies Scrum, User Stories, critères d'acceptation, tests Postman.",
+        "Seul PO ayant livré ses 2 équipes (sur 5), MVP < 2 mois ; félicitations jury (Lead Tech Capgemini + Expert Cyber Orange)."
+      ],
+      "en": [
+        "Dual PO + Agile Coach role across 2 teams; Scrum ceremonies, user stories, acceptance criteria, Postman tests.",
+        "Only PO to deliver both of his teams (out of 5), MVP in < 2 months; jury commendation (Capgemini Lead Tech + Orange Cyber Expert)."
+      ]
+    }
   },
   {
     "id": "gestion-locative",
-    "role": "Project Manager — Gestion Locative",
-    "company": "Indépendant (EI) | Location Saisonnière",
-    "period": "Juil. 2022 – Sept. 2023",
-    "location": "Luz-Saint-Sauveur",
-    "context": "Gestion d'actifs locatifs courte durée en autonomie totale, du cycle locatif à la relation client.",
+    "role": { "fr": "Project Manager — Gestion Locative", "en": "Project Manager, Rental Operations" },
+    "company": { "fr": "Indépendant (EI) | Location Saisonnière", "en": "Self-employed | Short-Term Rental" },
+    "period": { "fr": "Juil. 2022 – Sept. 2023", "en": "Jul. 2022 – Sept. 2023" },
+    "location": { "fr": "Luz-Saint-Sauveur", "en": "Luz-Saint-Sauveur" },
+    "context": { "fr": "Gestion d'actifs locatifs courte durée en autonomie totale, du cycle locatif à la relation client.", "en": "Fully autonomous short-term rental asset management, from the rental cycle to guest relations." },
     "selection": {
       "proofWeight": 4,
       "proofType": "support",
       "durationMonths": 15,
       "recency": 5,
-      "themes": ["operations", "autonomie", "asset management", "relation client", "coordination"],
-      "keywords": ["gestion locative", "asset management", "AirBnB", "autonomie", "coordination", "satisfaction", "occupation"]
+      "themes": ["operations", "autonomie", "asset management", "relation client", "coordination", "budget monitoring"],
+      "keywords": ["gestion locative", "asset management", "AirBnB", "autonomie", "coordination", "satisfaction", "occupation", "operations", "stakeholder management"]
     },
-    "stack": ["Asset Management", "Coordination logistique", "Relation client", "Ops AirBnB"],
-    "bullets": [
-      "Pilotage intégralité du cycle locatif courte durée (AirBnB) en autonomie totale.",
-      "Coordination logistique, maintenance, asset management et interface unique propriétaires/locataires.",
-      "Taux d'occupation >90% en période haute, taux de satisfaction 88%."
-    ]
+    "stack": { "fr": ["Asset Management", "Coordination logistique", "Relation client", "Ops AirBnB"], "en": ["Asset Management", "Logistics Coordination", "Guest Relations", "Airbnb Ops"] },
+    "bullets": {
+      "fr": [
+        "Pilotage intégralité du cycle locatif courte durée (AirBnB) en autonomie totale.",
+        "Coordination logistique, maintenance, asset management et interface unique propriétaires/locataires.",
+        "Taux d'occupation >90% en période haute, taux de satisfaction 88%."
+      ],
+      "en": [
+        "Ran the entire short-term rental cycle (Airbnb) end-to-end and fully autonomously.",
+        "Logistics coordination, maintenance and asset management; single point of contact for owners and guests.",
+        "Delivered >90% occupancy in high season and an 88% guest satisfaction rate."
+      ]
+    }
   },
   {
     "id": "shuhan",
-    "role": "Resp. Développement Commercial International",
-    "company": "Sichuan Shuhan Plastics (Chine)",
-    "period": "Juin 2015 – Janv. 2020",
-    "location": "Deyang",
-    "context": "Développement commercial export sur marchés émergents asiatiques, poste exercé 100% en anglais.",
+    "role": { "fr": "Resp. Développement Commercial International", "en": "Head of International Business Development" },
+    "company": { "fr": "Sichuan Shuhan Plastics (Chine)", "en": "Sichuan Shuhan Plastics (China)" },
+    "period": { "fr": "Juin 2015 – Janv. 2020", "en": "June 2015 – Jan. 2020" },
+    "location": { "fr": "Deyang", "en": "Deyang, China" },
+    "context": { "fr": "Développement commercial export sur marchés émergents asiatiques, poste exercé 100% en anglais.", "en": "Export business development across emerging Asian markets, role carried out 100% in English." },
     "selection": {
       "proofWeight": 8,
       "proofType": "flagship",
       "durationMonths": 55,
       "recency": 4,
-      "themes": ["business development", "international", "management", "strategie", "export", "vente", "anglais", "industrie"],
-      "keywords": ["développement commercial", "international", "export", "management multiculturel", "SAP Ariba", "anglais", "Asie", "Chine", "15M$", "industrie", "multi-pays"]
+      "themes": ["business development", "international", "management", "strategie", "export", "vente", "anglais", "industrie", "procurement", "market research"],
+      "keywords": ["développement commercial", "international", "export", "management multiculturel", "SAP Ariba", "anglais", "Asie", "Chine", "15M$", "industrie", "multi-pays", "procurement", "RFI", "RFP", "market research"]
     },
-    "stack": ["Business Dev International", "Management interculturel", "Appels d'offres SAP Ariba", "Export"],
-    "bullets": [
-      "Stratégie export marchés émergents asiatiques, management équipe multiculturelle de 5, appels d'offres SAP Ariba.",
-      "Part export 5% → 20% du CA (~15M$ en 2019) ; poste exercé 100% en anglais."
-    ]
+    "stack": { "fr": ["Business Dev International", "Management interculturel", "Appels d'offres SAP Ariba", "Export"], "en": ["International Business Dev", "Multicultural Management", "SAP Ariba Tenders", "Export"] },
+    "bullets": {
+      "fr": [
+        "Stratégie export marchés émergents asiatiques, management équipe multiculturelle de 5, appels d'offres SAP Ariba.",
+        "Part export 5% → 20% du CA (~15M$ en 2019) ; poste exercé 100% en anglais."
+      ],
+      "en": [
+        "Led an export strategy across emerging Asian markets; managed a 5-person multicultural team; coordinated SAP Ariba tenders.",
+        "Grew export revenue share from 5% to 20% (~USD 15M in 2019); role carried out 100% in English."
+      ]
+    }
   },
   {
     "id": "vacorda",
-    "role": "Chargé de Stratégie Digitale & Business Dev",
-    "company": "Vacorda Instruments (Chine)",
-    "period": "Janv. 2015 – Juin 2015",
-    "location": "Chengdu",
-    "context": "Création d'un écosystème digital from-scratch pour la conquête de la zone francophone.",
+    "role": { "fr": "Chargé de Stratégie Digitale & Business Dev", "en": "Digital Strategy & Business Dev Lead" },
+    "company": { "fr": "Vacorda Instruments (Chine)", "en": "Vacorda Instruments (China)" },
+    "period": { "fr": "Janv. 2015 – Juin 2015", "en": "Jan. 2015 – Jun. 2015" },
+    "location": { "fr": "Chengdu", "en": "Chengdu, China" },
+    "context": { "fr": "Création d'un écosystème digital from-scratch pour la conquête de la zone francophone.", "en": "Built a digital ecosystem from scratch to enter the French-speaking market." },
     "selection": {
       "proofWeight": 3,
       "proofType": "support",
@@ -143,19 +182,25 @@
       "themes": ["digital", "marketing", "seo", "sea", "lead generation", "international"],
       "keywords": ["stratégie digitale", "SEO", "SEA", "Google Ads", "lead generation", "francophone", "anglais"]
     },
-    "stack": ["Stratégie digitale", "SEO / SEA", "Google Ads", "Lead Generation"],
-    "bullets": [
-      "Création écosystème digital from-scratch, SEO/SEA, lead generation zone francophone.",
-      "Gestion budget publicitaire 24k$/an Google Ads ; poste exercé 90% en anglais."
-    ]
+    "stack": { "fr": ["Stratégie digitale", "SEO / SEA", "Google Ads", "Lead Generation"], "en": ["Digital Strategy", "SEO / SEA", "Google Ads", "Lead Generation"] },
+    "bullets": {
+      "fr": [
+        "Création écosystème digital from-scratch, SEO/SEA, lead generation zone francophone.",
+        "Gestion budget publicitaire 24k$/an Google Ads ; poste exercé 90% en anglais."
+      ],
+      "en": [
+        "Built a digital ecosystem from scratch: SEO/SEA and lead generation for the French-speaking market.",
+        "Managed a USD 24k/year Google Ads budget; role carried out 90% in English."
+      ]
+    }
   },
   {
     "id": "diadom",
-    "role": "Chef de Projet Digital / Business Analyst",
-    "company": "Diadom SAS",
-    "period": "Sept. 2012 – Oct. 2014",
-    "location": "Montpellier",
-    "context": "MOE d'une refonte e-commerce sponsorisée par la direction générale.",
+    "role": { "fr": "Chef de Projet Digital / Business Analyst", "en": "Digital Project Manager / Business Analyst" },
+    "company": { "fr": "Diadom SAS", "en": "Diadom SAS" },
+    "period": { "fr": "Sept. 2012 – Oct. 2014", "en": "Sept. 2012 – Oct. 2014" },
+    "location": { "fr": "Montpellier", "en": "Montpellier" },
+    "context": { "fr": "MOE d'une refonte e-commerce sponsorisée par la direction générale.", "en": "Project ownership of an e-commerce revamp sponsored by the CEO." },
     "selection": {
       "proofWeight": 6,
       "proofType": "solid",
@@ -164,19 +209,25 @@
       "themes": ["digital", "business analysis", "project management", "ecommerce", "codir", "seo"],
       "keywords": ["Chef de Projet Digital", "Business Analyst", "MOE", "e-commerce", "MS Project", "SEO", "SEA", "CODIR", "trafic", "conversion"]
     },
-    "stack": ["Chef de projet", "Business Analysis", "MS Project", "SEO / SEA", "Reporting CODIR"],
-    "bullets": [
-      "MOE refonte e-commerce (sponsor PDG), chemin critique MS Project, SEO/SEA 30 k€/an, reporting CODIR.",
-      "Trafic +196% · conversion +23% sur 2 ans, livré dans les jalons."
-    ]
+    "stack": { "fr": ["Chef de projet", "Business Analysis", "MS Project", "SEO / SEA", "Reporting CODIR"], "en": ["Project Manager", "Business Analysis", "MS Project", "SEO / SEA", "Board Reporting"] },
+    "bullets": {
+      "fr": [
+        "MOE refonte e-commerce (sponsor PDG), chemin critique MS Project, SEO/SEA 30 k€/an, reporting CODIR.",
+        "Trafic +196% · conversion +23% sur 2 ans, livré dans les jalons."
+      ],
+      "en": [
+        "Owned an e-commerce revamp (CEO-sponsored): MS Project critical path, EUR 30k/year SEO/SEA, board reporting.",
+        "Delivered +196% traffic and +23% conversion over 2 years, on schedule."
+      ]
+    }
   },
   {
     "id": "justrade",
-    "role": "Chargé de Projet Webmarketing — International",
-    "company": "Justrade International (Chine)",
-    "period": "Sept. 2011 – Août 2012",
-    "location": "Yiwu",
-    "context": "Coordination d'une refonte web multilingue et du social media bilingue à l'international.",
+    "role": { "fr": "Chargé de Projet Webmarketing — International", "en": "International Webmarketing Project Officer" },
+    "company": { "fr": "Justrade International (Chine)", "en": "Justrade International (China)" },
+    "period": { "fr": "Sept. 2011 – Août 2012", "en": "Sept. 2011 – Aug. 2012" },
+    "location": { "fr": "Yiwu", "en": "Yiwu, China" },
+    "context": { "fr": "Coordination d'une refonte web multilingue et du social media bilingue à l'international.", "en": "Coordinating a multilingual website revamp and bilingual social media internationally." },
     "selection": {
       "proofWeight": 3,
       "proofType": "support",
@@ -185,10 +236,16 @@
       "themes": ["webmarketing", "international", "coordination", "multilingue", "communication"],
       "keywords": ["webmarketing", "multilingue", "social media", "coordination", "reporting", "anglais"]
     },
-    "stack": ["Webmarketing", "Coordination prestataires", "Social Media", "International"],
-    "bullets": [
-      "Coordination refonte site internet multilingue (supervision prestataires, traducteurs) et social media bilingue EN/FR.",
-      "Reporting mensuel CODIR et recommandation LinkedIn client."
-    ]
+    "stack": { "fr": ["Webmarketing", "Coordination prestataires", "Social Media", "International"], "en": ["Webmarketing", "Vendor Coordination", "Social Media", "International"] },
+    "bullets": {
+      "fr": [
+        "Coordination refonte site internet multilingue (supervision prestataires, traducteurs) et social media bilingue EN/FR.",
+        "Reporting mensuel CODIR et recommandation LinkedIn client."
+      ],
+      "en": [
+        "Coordinated a multilingual website revamp (vendor and translator supervision) and bilingual EN/FR social media.",
+        "Monthly board reporting and a client LinkedIn recommendation."
+      ]
+    }
   }
 ]

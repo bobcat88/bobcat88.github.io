@@ -26,6 +26,7 @@
   },
   "positioning": {
     "valueProposition": "J'aide les organisations à reprendre le contrôle de leurs décisions complexes.",
+    "valuePropositionEn": "I help organizations regain control of their complex decisions.",
     "scope": [
       "gouvernance",
       "organisation",
@@ -36,11 +37,18 @@
       "programmes"
     ],
     "tagline": "Je transforme des environnements complexes en systèmes de décision pilotables, compréhensibles et évolutifs.",
+    "taglineEn": "I turn complex environments into decision systems that are steerable, understandable, and built to evolve.",
     "narrativeThread": "J'apporte gouvernance, méthode et fiabilité de décision dans des environnements radicalement différents et désordonnés — défense/aéro, banque de détail, industrie cross-culturelle, fintech, open source. Cette amplitude prouve que je structure des systèmes, pas des industries.",
+    "narrativeThreadEn": "I bring governance, method and decision reliability into radically different, unstructured environments: Defense/aerospace, retail banking, cross-cultural industry, fintech, open source. That range proves I structure systems, not industries.",
     "principles": [
       "problèmes avant outils",
       "résultats avant missions",
       "valeur avant responsabilités"
+    ],
+    "principlesEn": [
+      "problems before tools",
+      "results before missions",
+      "value before responsibilities"
     ]
   },
   "summary": {
@@ -58,66 +66,96 @@
   "headlineMetrics": [
     {
       "label": "Portefeuilles pilotés",
+      "labelEn": "Project portfolios managed",
       "value": "> 1 Md€",
-      "context": "Défense — Thales ISR"
+      "valueEn": "> EUR 1B",
+      "context": "Défense — Thales ISR",
+      "contextEn": "Defense, Thales ISR"
     },
     {
       "label": "CA Export piloté",
+      "labelEn": "Export revenue managed",
       "value": "5% → 20% (~15M$)",
-      "context": "Sichuan Shuhan Plastics"
+      "valueEn": "5% -> 20% (~USD 15M)",
+      "context": "Sichuan Shuhan Plastics",
+      "contextEn": "Sichuan Shuhan Plastics"
     },
     {
       "label": "Refonte e-commerce",
+      "labelEn": "E-commerce revamp",
       "value": "+196% trafic / +23% conversion",
-      "context": "Diadom"
+      "valueEn": "+196% traffic / +23% conversion",
+      "context": "Diadom",
+      "contextEn": "Diadom"
     },
     {
       "label": "Industrialisation risques",
+      "labelEn": "Risk processing industrialized",
       "value": "3h → 15 min / offre (-92%)",
-      "context": "Thales ISR"
+      "valueEn": "3h -> 15 min / bid (-92%)",
+      "context": "Thales ISR",
+      "contextEn": "Thales ISR"
     },
     {
       "label": "Gain capacitaire PMO",
+      "labelEn": "PMO capacity gain",
       "value": "440–2760 h/an (~31–135 k€/an)",
-      "context": "Crédit Mutuel Arkéa"
+      "valueEn": "440-2,760 h/year (~EUR 31-135k/year)",
+      "context": "Crédit Mutuel Arkéa",
+      "contextEn": "Credit Mutuel Arkea"
     }
   ],
   "languages": [
     {
       "name": "Français",
-      "level": "Natif"
+      "nameEn": "French",
+      "level": "Natif",
+      "levelEn": "Native"
     },
     {
       "name": "Anglais",
+      "nameEn": "English",
       "level": "Professionnel C1-C2",
-      "note": "Postes exercés 90-100% en anglais sur 7 ans"
+      "levelEn": "Professional, C1-C2",
+      "note": "Postes exercés 90-100% en anglais sur 7 ans",
+      "noteEn": "Roles carried out 90-100% in English over 7 years"
     }
   ],
   "education": [
     {
       "year": "2014",
       "title": "Master 2 — Gestion de Projet IT & Business Intelligence",
-      "school": "ESC Montpellier (Bac+5)"
+      "titleEn": "Master's Degree, IT & Business Intelligence Project Management",
+      "school": "ESC Montpellier (Bac+5)",
+      "schoolEn": "ESC Montpellier (Bac+5)"
     },
     {
       "year": "2024",
       "title": "Développeur Cybersécurité",
-      "school": "EPSI Rennes"
+      "titleEn": "Cybersecurity Developer",
+      "school": "EPSI Rennes",
+      "schoolEn": "EPSI Rennes"
     },
     {
       "year": "2024",
       "title": "Certified Agile Master (Scrum / Kanban)",
-      "school": ""
+      "titleEn": "Certified Agile Master (Scrum / Kanban)",
+      "school": "",
+      "schoolEn": ""
     },
     {
       "year": "2024",
       "title": "Career Essentials in Project Management",
-      "school": "LinkedIn Learning · Microsoft"
+      "titleEn": "Career Essentials in Project Management",
+      "school": "LinkedIn Learning · Microsoft",
+      "schoolEn": "LinkedIn Learning · Microsoft"
     },
     {
       "year": "2023",
       "title": "Microsoft Project Management",
-      "school": "Microsoft"
+      "titleEn": "Microsoft Project Management",
+      "school": "Microsoft",
+      "schoolEn": "Microsoft"
     }
   ],
   "compensation": {
@@ -128,12 +166,29 @@
     "stanceEn": "Open to discussion — mission fit matters most."
   },
   "availability": "Freelance (Velocity Lab — EI) ou CDI",
+  "availabilityEn": "Freelance (Velocity Lab, sole proprietorship) or permanent contract",
+  "availabilityOfferFr": "en Freelance, CDI ou CDD selon les possibilités",
+  "availabilityOfferEn": "on a Freelance, permanent, or fixed-term basis depending on the opportunity",
   "engagements": [
     "Missions humanitaires (Cambodge, Chine)",
     "Gestion portefeuille familial (PnL +35%)",
     "Veille AI : agents autonomes, LLMs, MCP, prompt engineering",
     "25+ pays, 7 ans d'expatriation"
   ],
+  "pitch": {
+    "p30": {
+      "fr": "Senior PMO & Product Owner, 13 ans dont 7 en Asie. J'entre dans des environnements complexes (défense, banque, industrie cross-culturelle, fintech) et j'en fais des systèmes pilotables : gouvernance, processus, données, équipes, IA. Profil hybride tech × business : je structure en COMEX comme je code l'outil qui exécute.",
+      "en": "Senior PMO & Product Owner, 13 years including 7 in Asia. I go into complex environments (Defense, banking, cross-cultural industry, fintech) and turn them into steerable systems: governance, process, data, teams, AI. Hybrid tech x business profile: as comfortable structuring board-level trade-offs as coding the tool that runs them."
+    },
+    "solve": {
+      "fr": ["Programmes exposés & arbitrages à structurer", "Gouvernance & pilotage de portefeuilles à risque", "Processus & données à rendre pilotables", "Delivery produit + conduite du changement", "Automatisation / IA contrôlée dans le pilotage"],
+      "en": ["Exposed programs & trade-offs to structure", "Governance & steering of at-risk portfolios", "Processes & data to make steerable", "Product delivery + change management", "Controlled automation / AI in steering"]
+    },
+    "seek": {
+      "fr": ["Sujets où complexité humaine + technique se rejoignent", "Mission > intitulé de poste", "Freelance (TJM 465 €/j) ou CDI (~55-62 k€, ouvert)", "Impact mesurable, autonomie, exposition stratégique"],
+      "en": ["Topics where human and technical complexity meet", "Mission fit over job title", "Freelance (EUR 465/day) or permanent (~EUR 55-62k, open)", "Measurable impact, autonomy, strategic exposure"]
+    }
+  },
   "passionProjects": [
     {
       "id": "career-intelligence-system",

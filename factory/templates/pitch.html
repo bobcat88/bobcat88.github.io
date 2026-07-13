@@ -39,10 +39,10 @@ li::before{ content:"▸"; position:absolute; left:0; color:var(--accent); font-
 <script src="../designs/data.js?b=3"></script>
 <script>
 const d=window.CV_DATA, $=id=>document.getElementById(id);
-$("nm").textContent=d.name; $("ttl").textContent=d.title; $("vp").textContent="« "+d.brand+" »";
-$("p30").innerHTML=`Senior PMO & Product Owner, <span class="accent">13 ans</span> dont 7 en Asie. J'entre dans des environnements complexes — défense, banque, industrie cross-culturelle, fintech — et j'en fais des <span class="accent">systèmes pilotables</span> : gouvernance, processus, données, équipes, IA. Profil hybride tech × business : je structure en COMEX comme je code l'outil qui exécute. ${d.tagline}`;
-$("proof").innerHTML=d.metrics.slice(0,3).map(([v,l,c])=>`<div class="p"><b>${v}</b><span>${l} — ${c}</span></div>`).join("");
-$("solve").innerHTML=["Programmes exposés & arbitrages à structurer","Gouvernance & pilotage de portefeuilles à risque","Processus & données à rendre pilotables","Delivery produit + conduite du changement","Automatisation / IA contrôlée dans le pilotage"].map(x=>`<li>${x}</li>`).join("");
-$("seek").innerHTML=["Sujets où complexité humaine + technique se rejoignent","Mission > intitulé de poste","Freelance (TJM 465 €/j) ou CDI (~55-62 k€, ouvert)","Impact mesurable, autonomie, exposition stratégique"].map(x=>`<li>${x}</li>`).join("");
+$("nm").textContent=d.name; $("ttl").textContent=d.title; $("vp").textContent=d.ui.quoteOpen+d.brand+d.ui.quoteClose;
+$("p30").innerHTML=`${d.pitch.p30} ${d.tagline}`;
+$("proof").innerHTML=d.metrics.slice(0,3).map(([v,l,c])=>`<div class="p"><b>${v}</b><span>${l} | ${c}</span></div>`).join("");
+$("solve").innerHTML=d.pitch.solve.map(x=>`<li>${x}</li>`).join("");
+$("seek").innerHTML=d.pitch.seek.map(x=>`<li>${x}</li>`).join("");
 $("foot").innerHTML=d.contact.map(([k,t,h])=>h?`<a href="${h}">${t}</a>`:t).join(" &nbsp;·&nbsp; ");
 </script></body></html>

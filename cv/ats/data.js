@@ -230,7 +230,7 @@ window.CV_DATA = {
     "Standardisation documentaire & templates",
     "RETEX / Post-Mortem stratégique",
     "Gouvernance EIM/GED (\"Besoin de Savoir\")",
-    "Planification de charge & capacité (workload/capacity planning)",
+    "Planification de charge & capacité",
     "Gestion de configuration & traçabilité (As-Built, As-Designed, ECP/ECR)",
     "Cadrage amont (ateliers, cahier des charges, specs)",
     "Backlog & User Stories (INVEST)",
@@ -327,5 +327,81 @@ window.CV_DATA = {
       "> 1 Md€",
       "Pilotés"
     ]
-  ]
+  ],
+  "pitch": {
+    "p30": "Senior PMO & Product Owner, 13 ans dont 7 en Asie. J'entre dans des environnements complexes (défense, banque, industrie cross-culturelle, fintech) et j'en fais des systèmes pilotables : gouvernance, processus, données, équipes, IA. Profil hybride tech × business : je structure en COMEX comme je code l'outil qui exécute.",
+    "solve": [
+      "Programmes exposés & arbitrages à structurer",
+      "Gouvernance & pilotage de portefeuilles à risque",
+      "Processus & données à rendre pilotables",
+      "Delivery produit + conduite du changement",
+      "Automatisation / IA contrôlée dans le pilotage"
+    ],
+    "seek": [
+      "Sujets où complexité humaine + technique se rejoignent",
+      "Mission > intitulé de poste",
+      "Freelance (TJM 465 €/j) ou CDI (~55-62 k€, ouvert)",
+      "Impact mesurable, autonomie, exposition stratégique"
+    ]
+  },
+  "ui": {
+    "profile": "Profil",
+    "keyResults": "Résultats clés",
+    "skills": "Compétences",
+    "experience": "Expérience professionnelle",
+    "experienceShort": "Expérience",
+    "experienceCont": "(suite)",
+    "education": "Formation",
+    "languages": "Langues",
+    "personalProjects": "Projets personnels IA / data",
+    "references": "Références",
+    "detailedTrack": "Parcours détaillé",
+    "skillsByDomain": "Compétences par domaine",
+    "educationLanguages": "Formation & Langues",
+    "docKind": "Dossier de compétences",
+    "resumeTitleAts": "CV ATS",
+    "resumeTitlePremium": "CV",
+    "dossierTitle": "Dossier de Compétences",
+    "quoteOpen": "« ",
+    "quoteClose": " »",
+    "contactLabels": {
+      "location": "Localisation",
+      "phone": "Téléphone",
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "portfolio": "Portfolio"
+    },
+    "factsExperience": "Expérience",
+    "factsAsiaExpat": "Asie · Expat",
+    "factsBilingual": "Bilingue Biz",
+    "factsManaged": "Pilotés",
+    "yearsSuffix": "ans",
+    "sections": {
+      "hook": "Angle lettre / pitch",
+      "fit": "Fit analysis",
+      "value": "Angle de positionnement"
+    },
+    "letter": {
+      "recipient": "Madame, Monsieur, le Responsable du Recrutement",
+      "company": "votre organisation",
+      "title": "ce poste",
+      "subject": "Objet : candidature,",
+      "greeting": "Madame, Monsieur,",
+      "closing": "Cordialement,",
+      "wouldLike": "Je serais ravi d'échanger sur la manière dont je peux contribuer à",
+      "availabilityPrefix": "Disponible",
+      "priorityNote": "j'attache plus d'importance à l'adéquation de la mission qu'au format.",
+      "regards": "Dans l'attente de votre retour, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.",
+      "defaultHook": "Je souhaite proposer ma candidature pour ce rôle.",
+      "defaultFit": "Mon parcours PMO / Business Analyst couvre le cadrage, le pilotage et la livraison de projets transverses.",
+      "defaultValue": "J'apporte une capacité directement mobilisable : clarifier les besoins, sécuriser la livraison et fédérer les parties prenantes."
+    },
+    "pitch": {
+      "pitch30": "Pitch 30 secondes",
+      "proofPoints": "3 preuves",
+      "whatISolve": "Ce que je résous",
+      "whatImLookingFor": "Ce que je cherche"
+    },
+    "dateLocale": "fr-FR"
+  }
 };

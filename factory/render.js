@@ -7,6 +7,7 @@
 //   bun factory/render.js --variant premium                   # narrative CV
 //   bun factory/render.js --variant ats --offer application/thales/responsable-projet-delivery-cm-2026-04-28/offer.md --pdf
 //   bun factory/render.js --variant ats --pdf                 # also export PDF (needs playwright)
+//   bun factory/render.js --variant ats --lang en              # force English (default: fr, or offer.md `lang:` frontmatter)
 //
 
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync } from "node:fs";
@@ -15,9 +16,152 @@ import { join, dirname } from "node:path";
 const ROOT = join(import.meta.dir, "..");
 const args = parseArgs(Bun.argv.slice(2));
 
+// --- i18n --------------------------------------------------------------
+// UI chrome strings (headers, contact labels, letter/pitch boilerplate). This is the
+// engine-level language switch: templates read {{TOKEN}}/d.ui.* — no per-offer hand edits.
+function normalizeLang(v) {
+  const s = String(v || "fr").toLowerCase();
+  return s.startsWith("en") ? "en" : "fr";
+}
+
+const STRINGS = {
+  fr: {
+    profile: "Profil", keyResults: "Résultats clés", skills: "Compétences",
+    experience: "Expérience professionnelle", experienceShort: "Expérience", experienceCont: "(suite)",
+    education: "Formation", languages: "Langues", personalProjects: "Projets personnels IA / data",
+    references: "Références", detailedTrack: "Parcours détaillé", skillsByDomain: "Compétences par domaine",
+    educationLanguages: "Formation & Langues", docKind: "Dossier de compétences",
+    resumeTitleAts: "CV ATS", resumeTitlePremium: "CV", dossierTitle: "Dossier de Compétences",
+    quoteOpen: "« ", quoteClose: " »",
+    contactLabels: { location: "Localisation", phone: "Téléphone", email: "Email", linkedin: "LinkedIn", portfolio: "Portfolio" },
+    factsExperience: "Expérience", factsAsiaExpat: "Asie · Expat", factsBilingual: "Bilingue Biz", factsManaged: "Pilotés",
+    yearsSuffix: "ans",
+    sections: { hook: "Angle lettre / pitch", fit: "Fit analysis", value: "Angle de positionnement" },
+    letter: {
+      recipient: "Madame, Monsieur, le Responsable du Recrutement",
+      company: "votre organisation",
+      title: "ce poste",
+      subject: "Objet : candidature,",
+      greeting: "Madame, Monsieur,",
+      closing: "Cordialement,",
+      wouldLike: "Je serais ravi d'échanger sur la manière dont je peux contribuer à",
+      availabilityPrefix: "Disponible",
+      priorityNote: "j'attache plus d'importance à l'adéquation de la mission qu'au format.",
+      regards: "Dans l'attente de votre retour, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.",
+      defaultHook: "Je souhaite proposer ma candidature pour ce rôle.",
+      defaultFit: "Mon parcours PMO / Business Analyst couvre le cadrage, le pilotage et la livraison de projets transverses.",
+      defaultValue: "J'apporte une capacité directement mobilisable : clarifier les besoins, sécuriser la livraison et fédérer les parties prenantes.",
+    },
+    pitch: { pitch30: "Pitch 30 secondes", proofPoints: "3 preuves", whatISolve: "Ce que je résous", whatImLookingFor: "Ce que je cherche" },
+    dateLocale: "fr-FR",
+  },
+  en: {
+    profile: "Profile", keyResults: "Key Results", skills: "Skills",
+    experience: "Professional Experience", experienceShort: "Experience", experienceCont: "(cont'd)",
+    education: "Education", languages: "Languages", personalProjects: "Personal AI / Data Projects",
+    references: "References", detailedTrack: "Detailed Track Record", skillsByDomain: "Skills by Domain",
+    educationLanguages: "Education & Languages", docKind: "Skills Portfolio",
+    resumeTitleAts: "Resume (ATS)", resumeTitlePremium: "Resume", dossierTitle: "Skills Portfolio",
+    quoteOpen: "\"", quoteClose: "\"",
+    contactLabels: { location: "Location", phone: "Phone", email: "Email", linkedin: "LinkedIn", portfolio: "Portfolio" },
+    factsExperience: "Experience", factsAsiaExpat: "Asia · Expat", factsBilingual: "Bilingual, business-fluent", factsManaged: "Managed",
+    yearsSuffix: "years",
+    sections: { hook: "Letter / pitch angle", fit: "Fit analysis", value: "Positioning angle" },
+    letter: {
+      recipient: "Dear Hiring Manager",
+      company: "your organization",
+      title: "this role",
+      subject: "Subject: Application,",
+      greeting: "Dear Hiring Manager,",
+      closing: "Sincerely,",
+      wouldLike: "I would welcome the opportunity to discuss how I can contribute to",
+      availabilityPrefix: "Available",
+      priorityNote: "I place more importance on the fit of the mission than on the contract format.",
+      regards: "Thank you for considering my application. I look forward to hearing from you.",
+      defaultHook: "I would like to apply for this role.",
+      defaultFit: "My PMO / Business Analyst track record covers framing, steering and delivery of cross-functional projects.",
+      defaultValue: "I bring a directly mobilizable capability: clarifying needs, securing delivery and aligning stakeholders.",
+    },
+    pitch: { pitch30: "30-Second Pitch", proofPoints: "3 Proof Points", whatISolve: "What I Solve", whatImLookingFor: "What I'm Looking For" },
+    dateLocale: "en-US",
+  },
+};
+
+// Static header/meta replacements applied to each template when lang === "en".
+// FR templates are the source of truth and need no rewrite when lang === "fr".
+const TEMPLATE_I18N = {
+  ats: {
+    en: [
+      ['<html lang="fr">', '<html lang="en">'],
+      ["<title>Johan Proust — CV ATS</title>", "<title>Johan Proust — Resume (ATS)</title>"],
+      ["<h2>Profil</h2>", "<h2>Profile</h2>"],
+      ["<h2>Résultats clés</h2>", "<h2>Key Results</h2>"],
+      ["<h2>Compétences</h2>", "<h2>Skills</h2>"],
+      ["<h2>Expérience professionnelle</h2>", "<h2>Professional Experience</h2>"],
+      ["<h2>Formation</h2>", "<h2>Education</h2>"],
+      ["Projets personnels IA / data", "Personal AI / Data Projects"],
+      ["<h2>Langues</h2>", "<h2>Languages</h2>"],
+      ["<h2>Références</h2>", "<h2>References</h2>"],
+    ],
+  },
+  premium: {
+    en: [
+      ['<html lang="fr">', '<html lang="en">'],
+      ["<title>Johan Proust — CV (B · Plum Sidebar)</title>", "<title>Johan Proust — Resume</title>"],
+      ["<h2>Profil</h2>", "<h2>Profile</h2>"],
+      ["<h2>Résultats clés</h2>", "<h2>Key Results</h2>"],
+      [">Formation</h3>", ">Education</h3>"],
+      [">Langues</h3>", ">Languages</h3>"],
+      ["<h2>Expérience <span", "<h2>Experience <span"],
+      ["<h2>Expérience</h2>", "<h2>Experience</h2>"],
+      [">(suite)<", ">(cont'd)<"],
+      ["Projets personnels IA / data", "Personal AI / Data Projects"],
+      ["<h2>Références</h2>", "<h2>References</h2>"],
+    ],
+  },
+  dossier: {
+    en: [
+      ['<html lang="fr">', '<html lang="en">'],
+      ["<title>Johan Proust — CV (A · Header Band)</title>", "<title>Johan Proust — Skills Portfolio</title>"],
+      ["<title>Johan Proust — Dossier de Compétences</title>", "<title>Johan Proust — Skills Portfolio</title>"],
+      ["<h2>Profil</h2>", "<h2>Profile</h2>"],
+      ["<h2>Résultats clés</h2>", "<h2>Key Results</h2>"],
+      ["<h2>Parcours détaillé</h2>", "<h2>Detailed Track Record</h2>"],
+      ["Projets personnels IA / data", "Personal AI / Data Projects"],
+      ["<h2>Compétences par domaine</h2>", "<h2>Skills by Domain</h2>"],
+      ["<h2>Formation & Langues</h2>", "<h2>Education & Languages</h2>"],
+      [">Dossier de compétences<", ">Skills Portfolio<"],
+    ],
+  },
+  lettre: {
+    en: [
+      ['<html lang="fr">', '<html lang="en">'],
+      ["<title>Johan Proust — Lettre de motivation</title>", "<title>Johan Proust — Cover Letter</title>"],
+    ],
+  },
+  pitch: {
+    en: [
+      ['<html lang="fr">', '<html lang="en">'],
+      ["<h2>Pitch 30 secondes</h2>", "<h2>30-Second Pitch</h2>"],
+      ["<h2>3 preuves</h2>", "<h2>3 Proof Points</h2>"],
+      ["<h2>Ce que je résous</h2>", "<h2>What I Solve</h2>"],
+      ["<h2>Ce que je cherche</h2>", "<h2>What I'm Looking For</h2>"],
+    ],
+  },
+};
+
+function applyI18n(html, key, curLang) {
+  if (curLang === "fr") return html;
+  const pairs = TEMPLATE_I18N[key]?.[curLang] || [];
+  let out = html;
+  for (const [from, to] of pairs) out = out.split(from).join(to);
+  return out;
+}
+
+
 const profile = JSON.parse(read("library/profile.json"));
-const experience = JSON.parse(read("library/experience.json"));
-const skills = parseSkills();
+const experienceLib = JSON.parse(read("library/experience.json"));
+const skillsLib = JSON.parse(read("library/skills.json"));
 
 const offerText = args.offer ? read(args.offer).toLowerCase() : "";
 // Raw (case-preserving) offer content — referent names/contacts live ONLY here,
@@ -25,16 +169,21 @@ const offerText = args.offer ? read(args.offer).toLowerCase() : "";
 const offerRaw = args.offer ? read(args.offer) : "";
 const referents = parseReferents(offerRaw);
 const offerMeta = args.offer ? parseFrontmatter(offerRaw) : {};
-const offerProfile = buildOfferProfile(offerRaw, offerMeta);
+
+// --- language resolution ----------------------------------------------------
+// Priority: --lang flag > offer.md `lang:` frontmatter > default fr.
+// This is the ONLY place language is decided — no per-offer manual translation.
+const lang = normalizeLang(args.lang || offerMeta.lang || "fr");
+const L = STRINGS[lang];
+
+const skills = parseSkills(lang);
+const offerProfile = buildOfferProfile(offerRaw, offerMeta, lang);
 
 // --- assemble model -------------------------------------------------------
 const model = {
   profile,
   variant: args.variant || "ats",
-  tagline:
-    args.variant === "premium"
-      ? profile.positioning.tagline
-      : profile.identity.headlineFr,
+  lang,
 };
 
 const html = renderTemplate(model);
@@ -42,7 +191,7 @@ const html = renderTemplate(model);
 // --- write ----------------------------------------------------------------
 const outDir = args.offer
   ? dirname(join(ROOT, args.offer))
-  : join(ROOT, "cv", model.variant);
+  : join(ROOT, "cv", lang === "en" ? `${model.variant}-en` : model.variant);
 
 mkdirSync(outDir, { recursive: true });
 
@@ -71,28 +220,24 @@ console.log("✓ Data →", join(outDir, "data.js"));
 const photoSrc = join(ROOT, "johan-proust.webp");
 if (existsSync(photoSrc)) copyFileSync(photoSrc, join(outDir, "johan-proust.webp"));
 
-// Keep the design-preview data snapshot in sync with the library (generic runs only).
-if (!args.offer) writeFileSync(join(ROOT, "factory/designs/data.js"), dataJs);
+// Keep the design-preview data snapshot in sync with the library (generic FR runs only).
+if (!args.offer && lang === "fr") writeFileSync(join(ROOT, "factory/designs/data.js"), dataJs);
 
 if (args.pdf) await toPdf(htmlPath);
 
 // --- generate offer letter & pitch if applicable --------------------------
 if (args.offer) {
   const offerContent = read(args.offer);
-  const dateStr = new Date().toLocaleDateString("fr-FR", { year: "numeric", month: "long", day: "numeric" });
+  const dateStr = new Date().toLocaleDateString(L.dateLocale, { year: "numeric", month: "long", day: "numeric" });
 
-  const hookRaw = parseSection(offerContent, "Angle lettre / pitch") || "Je souhaite proposer ma candidature pour ce rôle.";
-  const hook = offerProfile.letterHook || cleanGeneratedText(hookRaw.split(/mission\s+18/i)[0].split("Mission")[0].split("Objet")[0]);
+  const hookRaw = parseSection(offerContent, L.sections.hook) || "";
+  const hook = offerProfile.letterHook || cleanGeneratedText(hookRaw) || L.letter.defaultHook;
 
-  const fitRaw = parseSection(offerContent, "Fit analysis") || "";
-  const fit = offerProfile.letterFit || (fitRaw || args.offer
-    ? "Chez Arkéa, Thales et EPSI, j'ai déjà cadré des besoins, structuré des cahiers des charges, animé les échanges métier et MOE, préparé des recettes et rendu compte à la gouvernance."
-    : "");
+  const fitRaw = parseSection(offerContent, L.sections.fit);
+  const fit = offerProfile.letterFit || cleanGeneratedText(fitRaw) || L.letter.defaultFit;
 
-  const valRaw = parseSection(offerContent, "Angle de positionnement") || "";
-  const value = offerProfile.letterValue || (valRaw || args.offer
-    ? "J'apporte une posture MOA concrète : clarifier le besoin, traduire les attentes en livrables actionnables, sécuriser la recette, documenter le déploiement et piloter les arbitrages jusqu'à la phase de garantie."
-    : "");
+  const valRaw = parseSection(offerContent, L.sections.value);
+  const value = offerProfile.letterValue || cleanGeneratedText(valRaw) || L.letter.defaultValue;
 
   // Letter
   const lettreTpl = read("factory/templates/lettre.html");
@@ -103,7 +248,7 @@ if (args.offer) {
   if (args.pdf) await toPdf(lettrePath);
 
   // Pitch
-  const pitchTpl = read("factory/templates/pitch.html");
+  const pitchTpl = applyI18n(read("factory/templates/pitch.html"), "pitch", lang);
   const pitchHtml = pitchTpl
     .replaceAll("../designs/base.css", "base.css")
     .replaceAll("../designs/data.js", "data.js");
@@ -124,21 +269,28 @@ function renderTemplate(m) {
   }
   // Published outputs are standalone (no design gallery): drop the gallery link, keep Print.
   htmlContent = htmlContent.replace(/<a href="gallery2\.html"[^>]*>[\s\S]*?<\/a>/, "");
-  return htmlContent;
+  const i18nKey = m.variant === "premium" ? (args.offer ? "premium" : "dossier") : "ats";
+  return applyI18n(htmlContent, i18nKey, m.lang);
 }
 
 function renderLetter(tpl, meta, hook, fit, value, profile, dateStr) {
   const availability = args.offer
-    ? "en Freelance, CDI ou CDD selon les possibilités"
-    : profile.availability;
-  return tpl
+    ? (lang === "en" ? profile.availabilityOfferEn : profile.availabilityOfferFr)
+    : (lang === "en" ? profile.availabilityEn : profile.availability);
+  return applyI18n(tpl, "lettre", lang)
     .replaceAll("../designs/base.css", "base.css")
     .replaceAll("../designs/data.js", "data.js")
-    .replaceAll("{{OFFER_RECIPIENT}}", meta.recipient || "Madame, Monsieur, le Responsable du Recrutement")
-    .replaceAll("{{OFFER_COMPANY}}", meta.company || "votre organisation")
-    .replaceAll("{{OFFER_TITLE}}", offerProfile.title || meta.title || "ce poste")
+    .replaceAll("{{OFFER_RECIPIENT}}", meta.recipient || L.letter.recipient)
+    .replaceAll("{{OFFER_COMPANY}}", meta.company || L.letter.company)
+    .replaceAll("{{OFFER_TITLE}}", offerProfile.title || meta.title || L.letter.title)
     .replaceAll("{{DATE}}", dateStr)
-    .replaceAll("{{AVAILABILITY}}", availability)
+    .replaceAll("{{PLACE_DATE}}", lang === "en" ? `Brest, ${dateStr}` : `Brest, le ${dateStr}`)
+    .replaceAll("{{AVAILABILITY_SENTENCE}}", `${L.letter.availabilityPrefix} ${availability}, ${L.letter.priorityNote}`)
+    .replaceAll("{{GREETING}}", L.letter.greeting)
+    .replaceAll("{{CLOSING}}", L.letter.closing)
+    .replaceAll("{{SUBJECT_PREFIX}}", L.letter.subject)
+    .replaceAll("{{WOULD_LIKE}}", L.letter.wouldLike)
+    .replaceAll("{{REGARDS}}", L.letter.regards)
     .replace(/\{\{OFFER_HOOK[^}]*\}\}/, cleanGeneratedText(hook))
     .replace(/\{\{OFFER_FIT[^}]*\}\}/, cleanGeneratedText(fit))
     .replace(/\{\{OFFER_VALUE[^}]*\}\}/, cleanGeneratedText(value));
@@ -168,7 +320,7 @@ function parseFrontmatter(text) {
 // Returns [] when absent (generic/public CV runs never carry referents).
 function parseReferents(raw) {
   if (!raw) return [];
-  const sec = parseSection(raw, "Référents");
+  const sec = parseSection(raw, "Référents") || parseSection(raw, "References");
   if (!sec) return [];
   return sec.split("\n")
     .map(l => l.trim())
@@ -188,9 +340,14 @@ function parseReferents(raw) {
     });
 }
 
-function buildOfferProfile(raw, meta) {
+// Bespoke, hand-tuned per-offer copy (used for a handful of historical French applications).
+// These blocks are FR-only by construction — English offers always use the generic,
+// scoring-based tailoring pipeline below instead of a hand-written override.
+function buildOfferProfile(raw, meta, curLang) {
   if (!raw) return {};
   const title = normalizeOfferTitle(meta.title || "");
+  if (curLang !== "fr") return { title, fileSlug: slugifyTitle(title) };
+
   const isThalesConfigDelivery = /thales/i.test(raw)
     && /configuration management/i.test(raw)
     && /responsable projet/i.test(raw);
@@ -485,37 +642,35 @@ function cvText(text) {
 }
 
 function parseSection(text, title) {
-  const rx = new RegExp(`(?:##|###)\\s+${title}[\\s\\S]*?\\r?\\n([\\s\\S]*?)(?:\\r?\\n(?:##|###)|$)`, "i");
+  if (!title) return "";
+  const rx = new RegExp(`(?:##|###)\\s+${title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[\\s\\S]*?\\r?\\n([\\s\\S]*?)(?:\\r?\\n(?:##|###)|$)`, "i");
   const m = text.match(rx);
   return m ? m[1].trim() : "";
 }
 
-function parseSkills() {
-  const content = read("library/skills.md");
-  const sections = content.split(/^##\s+/m).slice(1);
-  const groups = [];
-  const flat = [];
-  for (const sect of sections) {
-    const lines = sect.split("\n");
-    const titleLine = lines[0].trim();
-    if (titleLine.startsWith("Tech stack reference")) continue;
-    const groupName = titleLine.replace(/^\d+\.\s+/, "");
-    const groupSkills = [];
-    for (const line of lines.slice(1)) {
-      if (line.trim().startsWith("|") && !line.includes("---") && !line.includes("Skill |")) {
-        const parts = line.split("|");
-        if (parts.length >= 3) {
-          const skillName = parts[1].trim();
-          groupSkills.push(skillName);
-          flat.push(skillName);
-        }
-      }
-    }
-    if (groupSkills.length > 0) {
-      groups.push([groupName, groupSkills.slice(0, 4)]);
-    }
-  }
+// Reads the bilingual skills.json and projects it down to a single language.
+function parseSkills(curLang) {
+  const groups = skillsLib.groups.map(g => [
+    g.group[curLang] || g.group.fr,
+    g.skills.map(s => s.skill[curLang] || s.skill.fr).slice(0, 4),
+  ]);
+  const flat = skillsLib.groups.flatMap(g => g.skills.map(s => s.skill[curLang] || s.skill.fr));
   return { groups, flat };
+}
+
+// Projects a bilingual experience.json entry down to a single language.
+function pickExperience(exp, curLang) {
+  return {
+    id: exp.id,
+    role: exp.role[curLang] || exp.role.fr,
+    company: exp.company[curLang] || exp.company.fr,
+    period: exp.period[curLang] || exp.period.fr,
+    location: exp.location[curLang] || exp.location.fr,
+    context: (exp.context && (exp.context[curLang] || exp.context.fr)) || "",
+    bullets: exp.bullets[curLang] || exp.bullets.fr,
+    stack: (exp.stack && (exp.stack[curLang] || exp.stack.fr)) || [],
+    selection: exp.selection || {},
+  };
 }
 
 function selectTailoredExperiences(offer, exps) {
@@ -600,7 +755,8 @@ function scoreAndSelect(items, offer, options) {
 
 function scoreItem(item, normalizedOffer, offerTokens, options) {
   const selection = options.getSelection(item);
-  const stack = item.stack || item.tags || [];
+  const rawStack = item.stack || item.tags || [];
+  const stack = Array.isArray(rawStack) ? rawStack : (rawStack[lang] || rawStack.fr || []);
   const text = normalizeForScore([
     options.getText(item),
     ...(selection.themes || []),
@@ -671,13 +827,22 @@ function debugSelection(label, scored) {
   }
 }
 
+// Scoring runs against the raw bilingual library entry (before language projection).
+// Pick only the render language's text — an offer written in French should score
+// against French copy, an English offer against English copy. Mixing both would let
+// shared tokens (numbers, brand names) double-count and skew the ranking.
+function langField(field) {
+  if (!field) return "";
+  if (typeof field === "string") return field;
+  return field[lang] || field.fr || "";
+}
 function experienceText(exp) {
   return [
-    exp.role,
-    exp.company,
-    exp.context,
-    ...(exp.bullets || []),
-    ...(exp.stack || [])
+    langField(exp.role),
+    langField(exp.company),
+    langField(exp.context),
+    ...((exp.bullets && (exp.bullets[lang] || exp.bullets.fr)) || []),
+    ...((exp.stack && (exp.stack[lang] || exp.stack.fr)) || []),
   ].join(" ");
 }
 
@@ -702,40 +867,54 @@ function normalizeForScore(text) {
 }
 
 function formatPassionProject(project) {
+  const label = lang === "en" ? (project.name || project.labelFr) : (project.labelFr || project.name);
+  const desc = lang === "en" ? (project.descriptionEn || project.descriptionFr) : (project.descriptionFr || project.descriptionEn);
   return {
-    name: cvText(project.labelFr || project.name),
-    proof: cvText(project.descriptionFr || project.descriptionEn),
+    name: cvText(label),
+    proof: cvText(desc),
     signal: cvText(project.valueSignal || ""),
     tags: (project.tags || []).slice(0, 4).map(cvText)
   };
 }
 
 function compileCvData(profile) {
-  let filteredExp;
+  // scoreAndSelect works on the language-neutral experienceLib (selection metadata is
+  // shared across languages); only the DISPLAY text is picked per-language, at the end.
+  let filteredExpRaw;
   if (args.offer) {
-    filteredExp = selectTailoredExperiences(offerText, experience)
-      .map(x => {
-        const override = offerProfile.experienceOverrides?.[x.id] || {};
-        return [
-          cvText(override.role || x.role),
-          cvText(override.company || x.company),
-          cvText(override.period || x.period),
-          cvText(override.location || x.location),
-          (override.bullets || x.bullets).map(cvText),
-          cvText(override.context || x.context || ""),
-          (override.stack || x.stack || []).map(cvText)
-        ];
-      });
+    filteredExpRaw = selectTailoredExperiences(offerText, experienceLib);
   } else if (model.variant === "premium") {
     // Generic Premium is a Dossier de Compétences: export all 9 experiences!
-    filteredExp = experience
-      .map(x => [x.role, x.company, x.period, x.location, x.bullets, x.context || "", x.stack || []].map((value, idx) => idx === 4 || idx === 6 ? value.map(cvText) : cvText(value)));
+    filteredExpRaw = experienceLib;
   } else {
     // Generic ATS is a single-page CV: export the tightest top 4 experiences.
     const genericExperienceIds = ["arkea", "thales", "neosoft", "epsi"];
-    filteredExp = experience.filter(x => genericExperienceIds.includes(x.id))
-      .map(x => [x.role, x.company, x.period, x.location, x.bullets, x.context || "", x.stack || []].map((value, idx) => idx === 4 || idx === 6 ? value.map(cvText) : cvText(value)));
+    filteredExpRaw = experienceLib.filter(x => genericExperienceIds.includes(x.id));
   }
+
+  const filteredExp = filteredExpRaw.map(x => {
+    const picked = pickExperience(x, lang);
+    // Bespoke per-offer overrides are FR-only (gated in buildOfferProfile: never present when lang!=='fr').
+    const override = offerProfile.experienceOverrides?.[x.id] || {};
+    return [
+      cvText(override.role || picked.role),
+      cvText(override.company || picked.company),
+      cvText(override.period || picked.period),
+      cvText(override.location || picked.location),
+      (override.bullets || picked.bullets).map(cvText),
+      cvText(override.context || picked.context || ""),
+      (override.stack || picked.stack || []).map(cvText)
+    ];
+  });
+
+  const titleAts = lang === "en" ? (profile.identity.titleAtsEn || profile.identity.titleAts) : profile.identity.titleAts;
+  const brandValue = offerProfile.brand || (lang === "en" ? profile.positioning.valuePropositionEn : profile.positioning.valueProposition);
+  const taglineValue = lang === "en" ? profile.positioning.taglineEn : profile.positioning.tagline;
+  const summaryValue = offerProfile.summary || (lang === "en" ? profile.summary.en : profile.summary.fr);
+  const metricsValue = offerProfile.metrics
+    || profile.headlineMetrics.map(x => lang === "en"
+      ? [x.valueEn || x.value, x.labelEn || x.label, x.contextEn || x.context]
+      : [x.value, x.label, x.context]);
 
   return {
     name: cvText(profile.identity.fullName),
@@ -743,32 +922,41 @@ function compileCvData(profile) {
     first: profile.identity.fullName.split(" ")[0],
     last: profile.identity.fullName.split(" ").slice(1).join(" "),
     monogram: profile.identity.fullName.split(" ").map(x => x[0]).join(""),
-    title: cvText(offerProfile.title || profile.identity.titleAts.join(" · ")),
-    brand: cvText(offerProfile.brand || profile.positioning.valueProposition),
-    tagline: cvText(profile.positioning.tagline),
+    title: cvText(offerProfile.title || titleAts.join(" · ")),
+    brand: cvText(brandValue),
+    tagline: cvText(taglineValue),
     contact: [
-      ["Localisation", profile.identity.location, null],
-      ["Téléphone", profile.contact.phone, null],
-      ["Email", profile.contact.email, `mailto:${profile.contact.email}`],
-      ["LinkedIn", "in/johan-proust", profile.contact.linkedin],
-      ["Portfolio", "johanproust.me", profile.contact.portfolio]
+      [L.contactLabels.location, profile.identity.location, null],
+      [L.contactLabels.phone, profile.contact.phone, null],
+      [L.contactLabels.email, profile.contact.email, `mailto:${profile.contact.email}`],
+      [L.contactLabels.linkedin, "in/johan-proust", profile.contact.linkedin],
+      [L.contactLabels.portfolio, "johanproust.me", profile.contact.portfolio]
     ],
-    summary: cleanGeneratedText(offerProfile.summary || profile.summary.fr),
-    metrics: (offerProfile.metrics || profile.headlineMetrics.map(x => [x.value, x.label, x.context]))
-      .map(([value, label, context]) => [cleanGeneratedText(value), cleanGeneratedText(label), cleanGeneratedText(context)]),
+    summary: cleanGeneratedText(summaryValue),
+    metrics: metricsValue.map(([value, label, context]) => [cleanGeneratedText(value), cleanGeneratedText(label), cleanGeneratedText(context)]),
     referents,
     experience: filteredExp,
     passionProjects: selectPassionProjects(offerText, profile.passionProjects || []),
     skillGroups: (offerProfile.skillGroups || skills.groups).map(([group, items]) => [cvText(group), items.map(cvText)]),
     skillsFlat: skills.flat.map(cvText),
-    education: profile.education.map(x => [x.year, cvText(x.title), cvText(x.school)]),
-    languages: profile.languages.map(x => [cvText(x.name), cvText(x.level)]),
+    education: profile.education.map(x => lang === "en"
+      ? [x.year, cvText(x.titleEn || x.title), cvText(x.schoolEn ?? x.school)]
+      : [x.year, cvText(x.title), cvText(x.school)]),
+    languages: profile.languages.map(x => lang === "en"
+      ? [cvText(x.nameEn || x.name), cvText(x.levelEn || x.level)]
+      : [cvText(x.name), cvText(x.level)]),
     facts: [
-      [`${profile.summary.experienceYears} ans`, "Expérience"],
-      [`${profile.summary.internationalYears} ans`, "Asie · Expat"],
-      ["FR · EN", "Bilingue Biz"],
-      ["> 1 Md€", "Pilotés"]
-    ]
+      [`${profile.summary.experienceYears} ${L.yearsSuffix}`, L.factsExperience],
+      [`${profile.summary.internationalYears} ${L.yearsSuffix}`, L.factsAsiaExpat],
+      ["FR · EN", L.factsBilingual],
+      [lang === "en" ? "> EUR 1B" : "> 1 Md€", L.factsManaged]
+    ],
+    pitch: {
+      p30: profile.pitch.p30[lang],
+      solve: profile.pitch.solve[lang],
+      seek: profile.pitch.seek[lang],
+    },
+    ui: L,
   };
 }
 

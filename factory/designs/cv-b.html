@@ -118,7 +118,7 @@ if (d.photo) {
 } else {
   $("mono").textContent = d.monogram;
 }
-$("name").textContent=d.name; $("title").textContent=d.title; $("brand").textContent="« "+d.brand+" »";
+$("name").textContent=d.name; $("title").textContent=d.title; $("brand").textContent=d.ui.quoteOpen+d.brand+d.ui.quoteClose;
 $("contact").innerHTML=d.contact.map(([k,t,h])=>`<div class="kv">${h?`<a href="${h}">${t}</a>`:t}</div>`).join("");
 // Split sidebar skill groups across the two sheets; keep full bullet detail per role.
 const sg=d.skillGroups, half=Math.ceil(sg.length/2);

@@ -1,0 +1,85 @@
+{
+  "_comment": "Bilingual SSOT for skills, mirrors skills.md structure. render.js reads this (skills.md kept as human-readable reference).",
+  "groups": [
+    {
+      "group": { "fr": "Pilotage de projet & gouvernance PMO", "en": "Project Governance & PMO" },
+      "skills": [
+        { "skill": { "fr": "Contrôle de gestion projet (EVM, WBS/OBS)", "en": "Project cost control (EVM, WBS/OBS)" }, "proof": { "fr": "Budgets jusqu'à >1Md€", "en": "Budgets up to >EUR 1B" }, "missions": "Thales ISR" },
+        { "skill": { "fr": "Management des risques (ROR, EMV)", "en": "Risk management (Risk & Opportunity Reviews, EMV)" }, "proof": { "fr": "Industrialisation 3h -> 15 min/offre (-92%)", "en": "Industrialized 3h -> 15 min per bid (-92%)" }, "missions": "Thales ISR" },
+        { "skill": { "fr": "Pilotage financier d'offres (RC/NRC, Fixed Price/Cost-Plus)", "en": "Bid financial steering (RC/NRC, Fixed Price/Cost-Plus)" }, "proof": { "fr": "Portefeuille +50 offres, marge optimisée", "en": "50+ bid portfolio, optimized margin" }, "missions": "Thales ISR" },
+        { "skill": { "fr": "Planification stratégique (chemin critique, jalons Gate)", "en": "Strategic planning (critical path, gate milestones)" }, "proof": { "fr": "Multi-sites, multi-milieux Défense", "en": "Multi-site, multi-domain Defense" }, "missions": "Thales ISR, Diadom" },
+        { "skill": { "fr": "Reporting COPIL/COMEX/CODIR", "en": "Steering committee / executive / board reporting" }, "proof": { "fr": "Dashboards décisionnels, comités automatisés", "en": "Decision dashboards, automated committees" }, "missions": "Arkéa, Thales, Diadom" },
+        { "skill": { "fr": "Standardisation documentaire & templates", "en": "Documentation standardization & templates" }, "proof": { "fr": "Templates QDV/MS Project pré-remplis par produit", "en": "Pre-filled QDV/MS Project templates by product" }, "missions": "Thales ISR, Arkéa" },
+        { "skill": { "fr": "RETEX / Post-Mortem stratégique", "en": "Strategic lessons-learned / post-mortem" }, "proof": { "fr": "Audit offre perdue mandaté GBU, rapport CODIR DMS France", "en": "Lost-bid audit mandated by GBU, report to CODIR DMS France" }, "missions": "Thales ISR" },
+        { "skill": { "fr": "Gouvernance EIM/GED (\"Besoin de Savoir\")", "en": "EIM/EDM document governance (need-to-know)" }, "proof": { "fr": "Compliance audit interne, Key User change", "en": "Internal audit compliance, Key User change management" }, "missions": "Thales ISR" },
+        { "skill": { "fr": "Planification de charge & capacité", "en": "Workload & capacity planning" }, "proof": { "fr": "Modélisation plan de charge multi-sites", "en": "Multi-site workload modeling" }, "missions": "Thales ISR, Arkéa" },
+        { "skill": { "fr": "Gestion de configuration & traçabilité (As-Built, As-Designed, ECP/ECR)", "en": "Configuration management & traceability (As-Built, As-Designed, ECP/ECR)" }, "proof": { "fr": "Logique de configuration d'offres complexes dans QDV, spares et formations associés", "en": "Complex bid configuration logic in QDV, associated spares and training" }, "missions": "Thales ISR" }
+      ]
+    },
+    {
+      "group": { "fr": "Product Ownership & Business Analysis", "en": "Product Ownership & Business Analysis" },
+      "skills": [
+        { "skill": { "fr": "Cadrage amont (ateliers, cahier des charges, specs)", "en": "Upstream framing (workshops, requirements, specs)" }, "proof": { "fr": "Qualification de valeur avant industrialisation", "en": "Value qualification before industrialization" }, "missions": "Arkéa, NeoSoft, Diadom" },
+        { "skill": { "fr": "Backlog & User Stories (INVEST)", "en": "Backlog & user stories (INVEST)" }, "proof": { "fr": "Roadmap MVP exploitable sans retro-cadrage", "en": "Usable MVP roadmap with no rework" }, "missions": "NeoSoft, EPSI" },
+        { "skill": { "fr": "Pilotage MVP", "en": "MVP delivery" }, "proof": { "fr": "Livraison MVP < 2 mois", "en": "MVP delivered in < 2 months" }, "missions": "EPSI, NeoSoft" },
+        { "skill": { "fr": "Coach Agile (Scrum/Kanban)", "en": "Agile coaching (Scrum/Kanban)" }, "proof": { "fr": "Seul PO ayant livré ses 2 équipes (sur 5), félicitations jury", "en": "Only PO to deliver both teams (out of 5), jury commendation" }, "missions": "EPSI, Thales" },
+        { "skill": { "fr": "Design Thinking / prototypage Figma", "en": "Design thinking / Figma prototyping" }, "proof": { "fr": "POC validé, prototype livré", "en": "Validated PoC, delivered prototype" }, "missions": "NeoSoft" },
+        { "skill": { "fr": "Critères d'acceptation & pilotage tests (Postman)", "en": "Acceptance criteria & test coordination (Postman)" }, "proof": { "fr": "Architecture N-tiers sécurisée validée", "en": "Validated secure N-tier architecture" }, "missions": "EPSI" },
+        { "skill": { "fr": "Conduite du changement / Key User", "en": "Change management / Key User role" }, "proof": { "fr": "2 projets Groupe Thales", "en": "2 Thales Group-level projects" }, "missions": "Thales ISR, Arkéa" },
+        { "skill": { "fr": "Facilitation d'ateliers & Design Sprint", "en": "Workshop facilitation & design sprints" }, "proof": { "fr": "Alignement transverse marketing, data, UX, process", "en": "Cross-functional alignment across marketing, data, UX, process" }, "missions": "Arkéa, NeoSoft" },
+        { "skill": { "fr": "Spécification fonctionnelle & technique", "en": "Functional & technical specification" }, "proof": { "fr": "Interface avec développeurs et architectes", "en": "Interface with developers and architects" }, "missions": "EPSI, Arkéa, Diadom" }
+      ]
+    },
+    {
+      "group": { "fr": "Tech, data & automatisation", "en": "Tech, Data & Automation" },
+      "skills": [
+        { "skill": { "fr": "Apps Script (apps PMO sur mesure)", "en": "Apps Script (custom PMO apps)" }, "proof": { "fr": "App PMO Kanban/KPI/jalons ; gain 440-2760 h/an", "en": "Kanban/KPI/milestone PMO app; 440-2,760 h/year saved" }, "missions": "Arkéa" },
+        { "skill": { "fr": "VBA / Excel (industrialisation)", "en": "VBA / Excel (industrialization)" }, "proof": { "fr": "Risques 3h -> 15 min ; chiffrage industrialisé", "en": "Risk processing 3h -> 15 min; industrialized costing" }, "missions": "Thales ISR" },
+        { "skill": { "fr": "Java / Spring Boot", "en": "Java / Spring Boot" }, "proof": { "fr": "MVP CRM sécurisé livré", "en": "Delivered secure CRM MVP" }, "missions": "EPSI" },
+        { "skill": { "fr": "SQL (MySQL, MongoDB)", "en": "SQL (MySQL, MongoDB)" }, "proof": { "fr": "BDD produits/stocks/commandes", "en": "Product/stock/order databases" }, "missions": "EPSI" },
+        { "skill": { "fr": "HTML/CSS/JS", "en": "HTML/CSS/JS" }, "proof": { "fr": "App PMO front, sites web", "en": "PMO app front end, websites" }, "missions": "Arkéa, Diadom, Vacorda" },
+        { "skill": { "fr": "Python", "en": "Python" }, "proof": { "fr": "Outils, automatisation, trading", "en": "Tools, automation, trading" }, "missions": "Veille / perso" },
+        { "skill": { "fr": "Modélisation workflows & optimisation process", "en": "Workflow modeling & process optimization" }, "proof": { "fr": "Automatisation chaîne de valeur", "en": "Value-chain automation" }, "missions": "Arkéa, Thales" },
+        { "skill": { "fr": "Data & KPI (dashboards, PowerBI)", "en": "Data & KPI (dashboards, Power BI)" }, "proof": { "fr": "EVM, santé info, comités auto", "en": "EVM, information health, automated committees" }, "missions": "Thales, Arkéa" },
+        { "skill": { "fr": "Administration systèmes (Linux/Windows)", "en": "Systems administration (Linux/Windows)" }, "proof": { "fr": "Gestion environnements de dev sécurisés", "en": "Managing secure dev environments" }, "missions": "EPSI" },
+        { "skill": { "fr": "Conception & requêtage d'APIs REST", "en": "REST API design & querying" }, "proof": { "fr": "Tests d'intégration et sécurité applicative", "en": "Integration testing and application security" }, "missions": "EPSI" }
+      ]
+    },
+    {
+      "group": { "fr": "AI & automatisation", "en": "AI & Automation" },
+      "skills": [
+        { "skill": { "fr": "Conception d'agents IA personnels", "en": "Personal AI agent design" }, "proof": { "fr": "Agents autonomes, intégration LLMs au pilotage PMO", "en": "Autonomous agents, LLM integration into PMO steering" }, "missions": "Veille / perso, Arkéa (POC ComitéAuto)" },
+        { "skill": { "fr": "Intégration LLMs / MCP / prompt engineering", "en": "LLM / MCP integration / prompt engineering" }, "proof": { "fr": "Automatisation Workspace, génération CR auto", "en": "Workspace automation, auto-generated minutes" }, "missions": "Arkéa" },
+        { "skill": { "fr": "Veille architecture AI", "en": "AI architecture watch" }, "proof": { "fr": "Agents, automatisation, MCP", "en": "Agents, automation, MCP" }, "missions": "Continu" },
+        { "skill": { "fr": "Orchestration de systèmes multi-agents", "en": "Multi-agent system orchestration" }, "proof": { "fr": "Création de workflows d'agents collaboratifs", "en": "Building collaborative agent workflows" }, "missions": "Perso / Veille" },
+        { "skill": { "fr": "Model Context Protocol (MCP)", "en": "Model Context Protocol (MCP)" }, "proof": { "fr": "Intégration de serveurs de contexte pour IA", "en": "Integrating context servers for AI" }, "missions": "Perso / Veille" },
+        { "skill": { "fr": "Audit d'invite (Prompt Security & Hardening)", "en": "Prompt security & hardening" }, "proof": { "fr": "Sécurisation des interactions LLM contre injection", "en": "Securing LLM interactions against injection" }, "missions": "Perso / Veille (EPSI)" }
+      ]
+    },
+    {
+      "group": { "fr": "Stratégie, commerce & digital", "en": "Strategy, Commercial & Digital" },
+      "skills": [
+        { "skill": { "fr": "Développement commercial international", "en": "International business development" }, "proof": { "fr": "Export 5% -> 20% du CA (~15M$)", "en": "Export share 5% -> 20% of revenue (~USD 15M)" }, "missions": "Sichuan Shuhan" },
+        { "skill": { "fr": "Stratégie SEO/SEA", "en": "SEO/SEA strategy" }, "proof": { "fr": "Budgets 24-30 k€/an Google Ads ; +196% trafic", "en": "EUR 24-30k/year Google Ads budgets; +196% traffic" }, "missions": "Diadom, Vacorda, Justrade" },
+        { "skill": { "fr": "Négociation contrats internationaux (SAP Ariba)", "en": "International contract negotiation (SAP Ariba)" }, "proof": { "fr": "Appels d'offres, marchés émergents asiatiques", "en": "Tenders, emerging Asian markets" }, "missions": "Sichuan Shuhan" },
+        { "skill": { "fr": "Déploiement plateformes web multilingues", "en": "Multilingual web platform deployment" }, "proof": { "fr": "Sites multilingues opérationnels, leads qualifiés", "en": "Live multilingual sites, qualified leads" }, "missions": "Vacorda, Justrade, Diadom" },
+        { "skill": { "fr": "Asset / gestion locative (end-to-end)", "en": "Asset / rental management (end-to-end)" }, "proof": { "fr": "Occupation >90%, satisfaction 88%", "en": ">90% occupancy, 88% satisfaction" }, "missions": "Gestion Locative" },
+        { "skill": { "fr": "Gestion budgétaire marketing", "en": "Marketing budget management" }, "proof": { "fr": "Budgets pub 24k$-30k€/an optimisés", "en": "Optimized ad budgets, USD 24k-EUR 30k/year" }, "missions": "Diadom, Vacorda" },
+        { "skill": { "fr": "E-commerce Project Management", "en": "E-commerce project management" }, "proof": { "fr": "Refonte e-commerce et optimisation du tunnel de conversion", "en": "E-commerce revamp and conversion-funnel optimization" }, "missions": "Diadom" },
+        { "skill": { "fr": "Business development B2B", "en": "B2B business development" }, "proof": { "fr": "Prospection internationale et qualification de leads", "en": "International prospecting and lead qualification" }, "missions": "Sichuan Shuhan, Vacorda, Justrade" }
+      ]
+    },
+    {
+      "group": { "fr": "Soft skills & leadership", "en": "Soft Skills & Leadership" },
+      "skills": [
+        { "skill": { "fr": "Management multiculturel", "en": "Multicultural management" }, "proof": { "fr": "7 ans Asie (Chine, Malaisie, Cambodge, Indonésie), équipes transculturelles", "en": "7 years in Asia (China, Malaysia, Cambodia, Indonesia), cross-cultural teams" }, "missions": "Sichuan Shuhan, Vacorda, Justrade" },
+        { "skill": { "fr": "Bilingue EN/FR (C1-C2)", "en": "Bilingual EN/FR (C1-C2)" }, "proof": { "fr": "Postes exercés 90-100% en anglais", "en": "Roles carried out 90-100% in English" }, "missions": "7 ans international" },
+        { "skill": { "fr": "Traducteur tech ↔ business", "en": "Tech <-> business translator" }, "proof": { "fr": "Interface COMEX/équipes, hybride codeur/dirigeant", "en": "Interface between executives/teams, hybrid coder/leader" }, "missions": "Toutes missions" },
+        { "skill": { "fr": "Autonomie totale / builder-operator", "en": "Full autonomy / builder-operator" }, "proof": { "fr": "Gestion autonome end-to-end, litiges", "en": "End-to-end autonomous management, dispute resolution" }, "missions": "Gestion Locative, Velocity Lab" },
+        { "skill": { "fr": "Facilitation transverse & médiation", "en": "Cross-functional facilitation & mediation" }, "proof": { "fr": "Alignement d'acteurs multiples dans contextes tendus", "en": "Aligning multiple stakeholders in tense contexts" }, "missions": "Arkéa, Thales" },
+        { "skill": { "fr": "Gestion de crise & Task Force leadership", "en": "Crisis management & task-force leadership" }, "proof": { "fr": "Remise sous contrôle de projets en dérive", "en": "Bringing drifting projects back under control" }, "missions": "Thales, Arkéa" },
+        { "skill": { "fr": "Rigueur & pragmatisme", "en": "Rigor & pragmatism" }, "proof": { "fr": "Approche structurée orientée résultats et valeur rapide", "en": "Structured approach focused on results and fast value" }, "missions": "Toutes missions" }
+      ]
+    }
+  ]
+}
