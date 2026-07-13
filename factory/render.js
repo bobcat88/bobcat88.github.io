@@ -19,6 +19,15 @@ const args = parseArgs(Bun.argv.slice(2));
 // --- i18n --------------------------------------------------------------
 // UI chrome strings (headers, contact labels, letter/pitch boilerplate). This is the
 // engine-level language switch: templates read {{TOKEN}}/d.ui.* — no per-offer hand edits.
+// True when the offer targets a country other than the candidate's residence (France).
+// Drives the extra "EU Citizenship / current residence / relocation" contact lines —
+// only relevant, and only shown, for offers outside the home country.
+function isForeignOffer(country) {
+  if (!country) return false;
+  const normalized = String(country).normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase();
+  return normalized !== "" && normalized !== "france";
+}
+
 function normalizeLang(v) {
   const s = String(v || "fr").toLowerCase();
   return s.startsWith("en") ? "en" : "fr";
@@ -33,7 +42,7 @@ const STRINGS = {
     educationLanguages: "Formation & Langues", docKind: "Dossier de compétences",
     resumeTitleAts: "CV ATS", resumeTitlePremium: "CV", dossierTitle: "Dossier de Compétences",
     quoteOpen: "« ", quoteClose: " »",
-    contactLabels: { location: "Localisation", phone: "Téléphone", email: "Email", linkedin: "LinkedIn", portfolio: "Portfolio" },
+    contactLabels: { location: "Localisation", phone: "Téléphone", email: "Email", linkedin: "LinkedIn", portfolio: "Portfolio", citizenship: "Citoyenneté", residence: "Résidence actuelle", relocation: "Mobilité" },
     factsExperience: "Expérience", factsAsiaExpat: "Asie · Expat", factsBilingual: "Bilingue Biz", factsManaged: "Pilotés",
     yearsSuffix: "ans",
     sections: { hook: "Angle lettre / pitch", fit: "Fit analysis", value: "Angle de positionnement" },
@@ -63,7 +72,7 @@ const STRINGS = {
     educationLanguages: "Education & Languages", docKind: "Skills Portfolio",
     resumeTitleAts: "Resume (ATS)", resumeTitlePremium: "Resume", dossierTitle: "Skills Portfolio",
     quoteOpen: "\"", quoteClose: "\"",
-    contactLabels: { location: "Location", phone: "Phone", email: "Email", linkedin: "LinkedIn", portfolio: "Portfolio" },
+    contactLabels: { location: "Location", phone: "Phone", email: "Email", linkedin: "LinkedIn", portfolio: "Portfolio", citizenship: "Citizenship", residence: "Current residence", relocation: "Relocation" },
     factsExperience: "Experience", factsAsiaExpat: "Asia · Expat", factsBilingual: "Bilingual, business-fluent", factsManaged: "Managed",
     yearsSuffix: "years",
     sections: { hook: "Letter / pitch angle", fit: "Fit analysis", value: "Positioning angle" },
@@ -930,7 +939,12 @@ function compileCvData(profile) {
       [L.contactLabels.phone, profile.contact.phone, null],
       [L.contactLabels.email, profile.contact.email, `mailto:${profile.contact.email}`],
       [L.contactLabels.linkedin, "in/johan-proust", profile.contact.linkedin],
-      [L.contactLabels.portfolio, "johanproust.me", profile.contact.portfolio]
+      [L.contactLabels.portfolio, "johanproust.me", profile.contact.portfolio],
+      ...(isForeignOffer(offerMeta.country) ? [
+        [L.contactLabels.citizenship, lang === "en" ? profile.identity.citizenshipEn : profile.identity.citizenship, null],
+        [L.contactLabels.residence, profile.identity.residenceCountry, null],
+        [L.contactLabels.relocation, lang === "en" ? profile.identity.relocationStanceEn : profile.identity.relocationStance, null],
+      ] : []),
     ],
     summary: cleanGeneratedText(summaryValue),
     metrics: metricsValue.map(([value, label, context]) => [cleanGeneratedText(value), cleanGeneratedText(label), cleanGeneratedText(context)]),

@@ -4,6 +4,11 @@
     "fullName": "Johan PROUST",
     "location": "Brest, France",
     "mobility": "Remote / national / international",
+    "citizenship": "UE (France)",
+    "citizenshipEn": "EU (France)",
+    "residenceCountry": "France",
+    "relocationStance": "Relocation possible pour package adapté",
+    "relocationStanceEn": "Open to relocation for the right package",
     "titleAts": [
       "Chef de projet senior",
       "PMO",
