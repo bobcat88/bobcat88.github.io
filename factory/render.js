@@ -230,6 +230,10 @@ console.log("✓ Data →", join(outDir, "data.js"));
 // Self-contained portrait: copy the webp next to the output so the relative path always resolves.
 const photoSrc = join(ROOT, "johan-proust.webp");
 if (existsSync(photoSrc)) copyFileSync(photoSrc, join(outDir, "johan-proust.webp"));
+if (args.offer) {
+  const signatureSrc = join(ROOT, "application", "_assets", "johan-signature.png");
+  if (existsSync(signatureSrc)) copyFileSync(signatureSrc, join(outDir, "johan-signature.png"));
+}
 
 // Keep the design-preview data snapshot in sync with the library (generic FR runs only).
 if (!args.offer && lang === "fr") writeFileSync(join(ROOT, "factory/designs/data.js"), dataJs);

@@ -15,7 +15,7 @@
 .subject{ margin-top:14pt; font-weight:700; color:var(--plum); }
 .body{ margin-top:10pt; } .body p{ margin-bottom:8pt; text-align:justify; }
 .body .accent{ color:var(--accent); font-weight:600; }
-.sign{ margin-top:14pt; } .sign .name{ font-weight:700; color:var(--plum); margin-top:2pt; }
+.sign{ margin-top:14pt; } .sign .signature{ display:block; width:34mm; height:13mm; object-fit:contain; object-position:left bottom; margin-top:2pt; } .sign .name{ font-weight:700; color:var(--plum); margin-top:2pt; }
 .tip{ background:#f7eef7; border-left:3px solid var(--accent); padding:6pt 9pt; font-size:8.6pt; color:var(--muted); margin-top:16pt; }
 @media print{ .tip{ display:none; } }
 </style></head><body>
@@ -37,7 +37,7 @@
     <p id="salaryPara" hidden></p>
     <p>{{REGARDS}}</p>
   </div>
-  <div class="sign"><span>{{CLOSING}}</span><div class="name" id="sign"></div></div>
+  <div class="sign"><span>{{CLOSING}}</span><img class="signature" src="johan-signature.png" alt=""><div class="name" id="sign"></div></div>
   <div class="tip no-print">⚙️ Factory : remplir les {{OFFER_*}} depuis <code>factory/offers/&lt;offre&gt;.md</code> + <code>library/achievements.md</code>. Garde ≤ 1 page, 4-5 paragraphes, résultats-first.</div>
 </main>
 <script src="../designs/data.js?b=3"></script>
