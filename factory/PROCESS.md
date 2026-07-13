@@ -16,6 +16,8 @@ Johan provides an offer (URL or pasted text).
 
 1. **Capture → local file.** Create `application/<company>/<role-slug>-<posted-date>/offer.md` (private repo, symlinked). Fetch the posting (browser if JS-rendered). Record: company, title, location, contract, clearance, missions, required profil, **fit analysis** (matched proofs from `library/`), **gaps**, **ATS keywords**, angle.
 
+1.5. **Resolve document conventions.** After capture and gap analysis, look up [[Application Document Conventions]] by country, posting language, document type, seniority and portal. Reuse a current matching convention. If no matching convention exists, or the portal conflicts, research authoritative local guidance and the employer instructions, then add the verified convention to the vault before finalizing. The portal's explicit language, fields, character limits and attachment requirements always win. This is a lookup gate, not research theatre: research once when unknown, then apply it consistently.
+
 2. **Fetch templates.** `designs/cv-b.html` (premium), `designs/cv-ats.html` (ATS), `templates/lettre.html`, `templates/pitch.html`.
 
 3. **Read profile.** `library/` (`profile.json`, `skills.md`, `achievements.md`, `missions/`) **and the online resume** (`index.html`) — for tone, positioning, the "what drives me" narrative.
@@ -39,7 +41,7 @@ Johan provides an offer (URL or pasted text).
    |---|-----------|-------|
    | 1 | **ATS parse-ability** | single-column where needed, selectable text, no text-in-image, keywords present |
    | 2 | **Human readability** | scannable in ~6s, clear hierarchy, no wall of text |
-   | 3 | **Print fidelity** | 1 page A4, no overflow/clipping, no visual hiccup, color-safe |
+   | 3 | **Print fidelity** | Premium CV: up to 2 A4 pages for experienced/senior candidates when the country convention allows it; ATS CV, LM and pitch: 1 page unless the portal says otherwise; no overflow/clipping, no visual hiccup, color-safe |
    | 4 | **Core-skill match** | covers the offer's required competences with proof |
    | 5 | **Value proposition** | sells a capability, not just history |
    | 6 | **Role specifics** | clearance, mobility, language, seniority fit addressed |
