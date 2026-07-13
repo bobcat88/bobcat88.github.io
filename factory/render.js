@@ -56,6 +56,7 @@ const STRINGS = {
       wouldLike: "Je serais ravi d'échanger sur la manière dont je peux contribuer à",
       availabilityPrefix: "Disponible",
       priorityNote: "j'attache plus d'importance à l'adéquation de la mission qu'au format.",
+      salaryLead: "Ma prétention salariale se situe autour de",
       regards: "Dans l'attente de votre retour, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.",
       defaultHook: "Je souhaite proposer ma candidature pour ce rôle.",
       defaultFit: "Mon parcours PMO / Business Analyst couvre le cadrage, le pilotage et la livraison de projets transverses.",
@@ -86,6 +87,7 @@ const STRINGS = {
       wouldLike: "I would welcome the opportunity to discuss how I can contribute to",
       availabilityPrefix: "Available",
       priorityNote: "I place more importance on the fit of the mission than on the contract format.",
+      salaryLead: "My salary expectation is around",
       regards: "Thank you for considering my application. I look forward to hearing from you.",
       defaultHook: "I would like to apply for this role.",
       defaultFit: "My PMO / Business Analyst track record covers framing, steering and delivery of cross-functional projects.",
@@ -926,7 +928,7 @@ function compileCvData(profile) {
       : [x.value, x.label, x.context]);
   // Same content-density trim as passion projects: the foreign-offer contact block
   // costs 3 lines, so cap the generic (non-bespoke) metrics list at 4 on the ATS.
-  if (model.variant === "ats" && isForeignOffer(offerMeta.country) && !offerProfile.metrics) {
+  if (isForeignOffer(offerMeta.country) && !offerProfile.metrics) {
     metricsValue = metricsValue.slice(0, 4);
   }
 
@@ -955,15 +957,16 @@ function compileCvData(profile) {
     metrics: metricsValue.map(([value, label, context]) => [cleanGeneratedText(value), cleanGeneratedText(label), cleanGeneratedText(context)]),
     referents,
     experience: filteredExp,
-    // The foreign-offer contact block (citizenship/residence/relocation) adds 3 lines;
-    // drop passion projects on the tight 1-page ATS to keep it fitting, same as any
-    // other content-density trim. Premium's 2-page layout doesn't need this.
-    passionProjects: (model.variant === "ats" && isForeignOffer(offerMeta.country))
+    // The foreign-offer contact block (citizenship/residence/relocation) adds 3 lines.
+    // data.js is shared between the ATS and premium renders of the same offer (whichever
+    // variant runs last wins), so this trim must be variant-independent, not "ATS only" —
+    // applying it unconditionally keeps both renders consistent regardless of run order.
+    passionProjects: isForeignOffer(offerMeta.country)
       ? []
       : selectPassionProjects(offerText, profile.passionProjects || []),
     skillGroups: (offerProfile.skillGroups || skills.groups).map(([group, items]) => [cvText(group), items.map(cvText)]),
     skillsFlat: skills.flat.map(cvText),
-    education: (model.variant === "ats" && isForeignOffer(offerMeta.country) ? profile.education.slice(0, 3) : profile.education)
+    education: (isForeignOffer(offerMeta.country) ? profile.education.slice(0, 3) : profile.education)
       .map(x => lang === "en"
         ? [x.year, cvText(x.titleEn || x.title), cvText(x.schoolEn ?? x.school)]
         : [x.year, cvText(x.title), cvText(x.school)]),
@@ -981,6 +984,9 @@ function compileCvData(profile) {
       solve: profile.pitch.solve[lang],
       seek: profile.pitch.seek[lang],
     },
+    // Set only when the offer itself gave no salary range — offer.md `salary_expectation:`.
+    // The cover letter renders this as a natural sentence instead of leaving pay unaddressed.
+    salaryExpectation: offerMeta.salary_expectation ? cleanGeneratedText(offerMeta.salary_expectation) : null,
     ui: L,
   };
 }

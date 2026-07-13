@@ -36,6 +36,7 @@
     <p>{{OFFER_FIT}}</p>
     <p>{{OFFER_VALUE}}</p>
     <p>{{WOULD_LIKE}} {{OFFER_COMPANY}}. {{AVAILABILITY_SENTENCE}}</p>
+    <p id="salaryPara" hidden></p>
     <p>{{REGARDS}}</p>
   </div>
   <div class="sign"><span>{{CLOSING}}</span><div class="name" id="sign"></div></div>
@@ -47,4 +48,8 @@ const d=window.CV_DATA, $=id=>document.getElementById(id);
 $("nm").textContent=d.name; $("ttl").textContent=d.title;
 $("ct").innerHTML=d.contact.map(([k,t,h])=>h?`<a href="${h}">${t}</a>`:t).join("<br>");
 $("sign").textContent=d.name;
+if(d.salaryExpectation){
+  $("salaryPara").textContent=`${d.ui.letter.salaryLead} ${d.salaryExpectation}.`;
+  $("salaryPara").hidden=false;
+}
 </script></body></html>
