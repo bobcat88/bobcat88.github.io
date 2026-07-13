@@ -920,10 +920,15 @@ function compileCvData(profile) {
   const brandValue = offerProfile.brand || (lang === "en" ? profile.positioning.valuePropositionEn : profile.positioning.valueProposition);
   const taglineValue = lang === "en" ? profile.positioning.taglineEn : profile.positioning.tagline;
   const summaryValue = offerProfile.summary || (lang === "en" ? profile.summary.en : profile.summary.fr);
-  const metricsValue = offerProfile.metrics
+  let metricsValue = offerProfile.metrics
     || profile.headlineMetrics.map(x => lang === "en"
       ? [x.valueEn || x.value, x.labelEn || x.label, x.contextEn || x.context]
       : [x.value, x.label, x.context]);
+  // Same content-density trim as passion projects: the foreign-offer contact block
+  // costs 3 lines, so cap the generic (non-bespoke) metrics list at 4 on the ATS.
+  if (model.variant === "ats" && isForeignOffer(offerMeta.country) && !offerProfile.metrics) {
+    metricsValue = metricsValue.slice(0, 4);
+  }
 
   return {
     name: cvText(profile.identity.fullName),
@@ -950,12 +955,18 @@ function compileCvData(profile) {
     metrics: metricsValue.map(([value, label, context]) => [cleanGeneratedText(value), cleanGeneratedText(label), cleanGeneratedText(context)]),
     referents,
     experience: filteredExp,
-    passionProjects: selectPassionProjects(offerText, profile.passionProjects || []),
+    // The foreign-offer contact block (citizenship/residence/relocation) adds 3 lines;
+    // drop passion projects on the tight 1-page ATS to keep it fitting, same as any
+    // other content-density trim. Premium's 2-page layout doesn't need this.
+    passionProjects: (model.variant === "ats" && isForeignOffer(offerMeta.country))
+      ? []
+      : selectPassionProjects(offerText, profile.passionProjects || []),
     skillGroups: (offerProfile.skillGroups || skills.groups).map(([group, items]) => [cvText(group), items.map(cvText)]),
     skillsFlat: skills.flat.map(cvText),
-    education: profile.education.map(x => lang === "en"
-      ? [x.year, cvText(x.titleEn || x.title), cvText(x.schoolEn ?? x.school)]
-      : [x.year, cvText(x.title), cvText(x.school)]),
+    education: (model.variant === "ats" && isForeignOffer(offerMeta.country) ? profile.education.slice(0, 3) : profile.education)
+      .map(x => lang === "en"
+        ? [x.year, cvText(x.titleEn || x.title), cvText(x.schoolEn ?? x.school)]
+        : [x.year, cvText(x.title), cvText(x.school)]),
     languages: profile.languages.map(x => lang === "en"
       ? [cvText(x.nameEn || x.name), cvText(x.levelEn || x.level)]
       : [cvText(x.name), cvText(x.level)]),
