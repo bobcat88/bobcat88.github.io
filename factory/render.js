@@ -45,7 +45,7 @@ const STRINGS = {
     contactLabels: { location: "Localisation", phone: "Téléphone", email: "Email", linkedin: "LinkedIn", portfolio: "Portfolio", citizenship: "Citoyenneté", residence: "Résidence actuelle", relocation: "Mobilité" },
     factsExperience: "Expérience", factsAsiaExpat: "Asie · Expat", factsBilingual: "Bilingue Biz", factsManaged: "Pilotés",
     yearsSuffix: "ans",
-    sections: { hook: "Angle lettre / pitch", fit: "Fit analysis", value: "Angle de positionnement" },
+    sections: { hook: "Angle lettre / pitch", fit: "Fit analysis", value: "Angle de positionnement", letter: "Lettre de motivation" },
     letter: {
       recipient: "Madame, Monsieur, le Responsable du Recrutement",
       company: "votre organisation",
@@ -76,7 +76,7 @@ const STRINGS = {
     contactLabels: { location: "Location", phone: "Phone", email: "Email", linkedin: "LinkedIn", portfolio: "Portfolio", citizenship: "Citizenship", residence: "Current residence", relocation: "Relocation" },
     factsExperience: "Experience", factsAsiaExpat: "Asia · Expat", factsBilingual: "Bilingual, business-fluent", factsManaged: "Managed",
     yearsSuffix: "years",
-    sections: { hook: "Letter / pitch angle", fit: "Fit analysis", value: "Positioning angle" },
+    sections: { hook: "Letter / pitch angle", fit: "Fit analysis", value: "Positioning angle", letter: "Cover Letter" },
     letter: {
       recipient: "Dear Hiring Manager",
       company: "your organization",
@@ -249,10 +249,14 @@ if (args.offer) {
 
   const valRaw = parseSection(offerContent, L.sections.value);
   const value = offerProfile.letterValue || cleanGeneratedText(valRaw) || L.letter.defaultValue;
+  const directLetter = parseSection(offerContent, L.sections.letter);
 
   // Letter
   const lettreTpl = read("factory/templates/lettre.html");
-  const lettreHtml = renderLetter(lettreTpl, offerMeta, composeLetter(hook, fit, value), profile, dateStr);
+  const letterParagraphs = directLetter
+    ? directLetter.split(/\r?\n\s*\r?\n/).map(cleanGeneratedText).filter(Boolean)
+    : composeLetter(hook, fit, value);
+  const lettreHtml = renderLetter(lettreTpl, offerMeta, letterParagraphs, profile, dateStr);
   const lettrePath = join(outDir, finalName("LM", "html"));
   writeFileSync(lettrePath, lettreHtml);
   console.log("✓ HTML (Letter) →", lettrePath);
