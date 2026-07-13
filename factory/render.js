@@ -252,7 +252,7 @@ if (args.offer) {
 
   // Letter
   const lettreTpl = read("factory/templates/lettre.html");
-  const lettreHtml = renderLetter(lettreTpl, offerMeta, hook, fit, value, profile, dateStr);
+  const lettreHtml = renderLetter(lettreTpl, offerMeta, composeLetter(hook, fit, value), profile, dateStr);
   const lettrePath = join(outDir, finalName("LM", "html"));
   writeFileSync(lettrePath, lettreHtml);
   console.log("✓ HTML (Letter) →", lettrePath);
@@ -284,27 +284,52 @@ function renderTemplate(m) {
   return applyI18n(htmlContent, i18nKey, m.lang);
 }
 
-function renderLetter(tpl, meta, hook, fit, value, profile, dateStr) {
+function renderLetter(tpl, meta, paragraphs, profile, dateStr) {
   const availability = args.offer
     ? (lang === "en" ? profile.availabilityOfferEn : profile.availabilityOfferFr)
     : (lang === "en" ? profile.availabilityEn : profile.availability);
+  const availabilitySentence = /permanent/i.test(meta.contract || "") ? "" : `${L.letter.availabilityPrefix} ${availability}.`;
   return applyI18n(tpl, "lettre", lang)
     .replaceAll("../designs/base.css", "base.css")
     .replaceAll("../designs/data.js", "data.js")
     .replaceAll("{{OFFER_RECIPIENT}}", meta.recipient || L.letter.recipient)
-    .replaceAll("{{OFFER_COMPANY}}", meta.company || L.letter.company)
+    .replaceAll("{{OFFER_COMPANY}}", cleanTerminalPunctuation(meta.company || L.letter.company))
     .replaceAll("{{OFFER_TITLE}}", offerProfile.title || meta.title || L.letter.title)
     .replaceAll("{{DATE}}", dateStr)
     .replaceAll("{{PLACE_DATE}}", lang === "en" ? `Brest, ${dateStr}` : `Brest, le ${dateStr}`)
-    .replaceAll("{{AVAILABILITY_SENTENCE}}", `${L.letter.availabilityPrefix} ${availability}, ${L.letter.priorityNote}`)
+    .replaceAll("{{AVAILABILITY_SENTENCE}}", availabilitySentence)
     .replaceAll("{{GREETING}}", L.letter.greeting)
     .replaceAll("{{CLOSING}}", L.letter.closing)
     .replaceAll("{{SUBJECT_PREFIX}}", L.letter.subject)
     .replaceAll("{{WOULD_LIKE}}", L.letter.wouldLike)
     .replaceAll("{{REGARDS}}", L.letter.regards)
-    .replace(/\{\{OFFER_HOOK[^}]*\}\}/, cleanGeneratedText(hook))
-    .replace(/\{\{OFFER_FIT[^}]*\}\}/, cleanGeneratedText(fit))
-    .replace(/\{\{OFFER_VALUE[^}]*\}\}/, cleanGeneratedText(value));
+    .replace("{{LETTER_BODY}}", paragraphs.map(p => `<p>${p}</p>`).join(""));
+}
+
+// A letter has three jobs: motivation, one proof, then one contribution.
+// Selecting one non-overlapping sentence per source keeps offer notes from echoing.
+function composeLetter(hook, fit, value) {
+  const picked = [];
+  for (const source of [hook, fit, value]) {
+    const sentence = splitSentences(source).find(x => !picked.some(y => sentenceSimilarity(x, y) >= 0.35));
+    if (sentence) picked.push(sentence);
+  }
+  return picked;
+}
+
+function splitSentences(text) {
+  return cleanGeneratedText(text).replace(/^['"«]\s*|\s*['"»]$/g, "").split(/(?<=[.!?])\s+/).filter(Boolean);
+}
+
+function sentenceSimilarity(a, b) {
+  const words = s => new Set(s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").match(/[a-z0-9]{4,}/g) || []);
+  const left = words(a), right = words(b);
+  const overlap = [...left].filter(x => right.has(x)).length;
+  return overlap / Math.max(1, Math.min(left.size, right.size));
+}
+
+function cleanTerminalPunctuation(text) {
+  return cleanGeneratedText(text).replace(/[.]+$/, "");
 }
 
 function parseFrontmatter(text) {
@@ -972,7 +997,8 @@ function compileCvData(profile) {
         : [x.year, cvText(x.title), cvText(x.school)]),
     languages: profile.languages.map(x => lang === "en"
       ? [cvText(x.nameEn || x.name), cvText(x.levelEn || x.level)]
-      : [cvText(x.name), cvText(x.level)]),
+      : [cvText(x.name), cvText(x.level)])
+      .sort(([name]) => (name.toLowerCase().startsWith(lang === "en" ? "english" : "fran") ? -1 : 1)),
     facts: [
       [`${profile.summary.experienceYears} ${L.yearsSuffix}`, L.factsExperience],
       [`${profile.summary.internationalYears} ${L.yearsSuffix}`, L.factsAsiaExpat],
@@ -984,9 +1010,8 @@ function compileCvData(profile) {
       solve: profile.pitch.solve[lang],
       seek: profile.pitch.seek[lang],
     },
-    // Set only when the offer itself gave no salary range — offer.md `salary_expectation:`.
-    // The cover letter renders this as a natural sentence instead of leaving pay unaddressed.
-    salaryExpectation: offerMeta.salary_expectation ? cleanGeneratedText(offerMeta.salary_expectation) : null,
+    // Compensation belongs in a letter only when the posting explicitly asks for it.
+    salaryExpectation: offerMeta.salary_requested === "true" ? cleanGeneratedText(offerMeta.salary_expectation) : null,
     ui: L,
   };
 }
