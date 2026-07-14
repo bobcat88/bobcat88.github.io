@@ -778,14 +778,23 @@ function selectPassionProjects(offer, projects) {
       .map(formatPassionProject);
   }
 
-  if (offerProfile.passionProjectIds) {
-    return scoreAndSelect(projects, offer, {
-      limit: 2,
-      getText: passionProjectText,
-      getSelection: item => item.selection || {},
-      preferredIds: offerProfile.passionProjectIds,
-      debugLabel: "passion-projects"
-    }).map(formatPassionProject);
+  // offerMeta.passion_project_ids (frontmatter, language-independent) lets an offer force
+  // specific projects even on the English render, where bespoke offerProfile overrides are
+  // unavailable (buildOfferProfile is FR-only — see its early return above).
+  const metaPreferredIds = offerMeta.passion_project_ids
+    ? String(offerMeta.passion_project_ids).split(",").map(s => s.trim()).filter(Boolean)
+    : null;
+  const preferredIds = offerProfile.passionProjectIds || metaPreferredIds;
+  if (preferredIds) {
+    // Hard selection, not scored ranking: an explicit preferredIds list is a deliberate pick
+    // (bespoke offer override or frontmatter override) — it must not be outscored by a project
+    // that merely shares more generic keyword overlap with the offer text.
+    const rank = new Map(preferredIds.map((id, i) => [id, i]));
+    return projects
+      .filter(project => rank.has(project.id))
+      .sort((a, b) => rank.get(a.id) - rank.get(b.id))
+      .slice(0, 2)
+      .map(formatPassionProject);
   }
 
   return scoreAndSelect(projects, offer, {
@@ -1013,11 +1022,14 @@ function compileCvData(profile) {
     metrics: metricsValue.map(([value, label, context]) => [cleanGeneratedText(value), cleanGeneratedText(label), cleanGeneratedText(context)]),
     referents,
     experience: filteredExp,
-    // The foreign-offer contact block (citizenship/residence/relocation) adds 3 lines.
+    // The foreign-offer contact block (citizenship/residence/relocation) adds 3 lines, so
+    // passion projects are trimmed by default on foreign offers to protect page fit — unless
+    // the offer explicitly opts back in via `passion_projects: true` frontmatter (e.g. when the
+    // role itself is AI/Data and the side projects are direct evidence, not filler).
     // data.js is shared between the ATS and premium renders of the same offer (whichever
     // variant runs last wins), so this trim must be variant-independent, not "ATS only" —
     // applying it unconditionally keeps both renders consistent regardless of run order.
-    passionProjects: isForeignOffer(offerMeta.country)
+    passionProjects: (isForeignOffer(offerMeta.country) && !offerMeta.passion_projects)
       ? []
       : selectPassionProjects(offerText, profile.passionProjects || []),
     skillGroups: (offerProfile.skillGroups || skills.groups).map(([group, items]) => [cvText(group), items.map(cvText)]),
