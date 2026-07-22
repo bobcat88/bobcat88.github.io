@@ -34,12 +34,13 @@
 .side .kv{ font-size:8.5pt; margin-bottom:1.8pt; line-height:1.28; } .side .kv:last-child{ margin-bottom:0; } .side a{ color:#fff; text-decoration:none; }
 .side .sk{ font-size:8.4pt; margin-bottom:1.6pt; padding-left:9pt; position:relative; } .side .sk:last-child{ margin-bottom:0; }
 .side .sk::before{ content:""; position:absolute; left:0; top:3.5pt; width:3.5pt; height:3.5pt; border-radius:50%; background:#c993cf; }
-.main{ padding:9mm 13mm; }
+.main{ padding:9mm 13mm 12mm 13mm; }
 .nm{ font-size:22pt; font-weight:800; color:var(--plum); line-height:1; }
 .title{ font-size:10pt; font-weight:600; color:var(--accent); margin-top:3pt; }
 .brand{ font-size:9.2pt; font-style:italic; color:var(--muted); margin-top:4pt; }
 h2{ font-size:9.4pt; text-transform:uppercase; letter-spacing:.9px; color:var(--accent); margin:9pt 0 5pt; border-bottom:2px solid var(--rule); padding-bottom:2pt; }
 .main > h2:first-child{ margin-top:0; }
+#summary{ font-size:8.5pt; line-height:1.34; color:var(--ink); margin-bottom:3pt; }
 .metrics{ display:grid; grid-template-columns:1fr 1fr; gap:3pt 6pt; }
 .metric{ border-left:2.5px solid var(--accent); background:var(--soft); padding:3pt 6pt; font-size:8.4pt; border-radius:0 4px 4px 0; }
 .metric{ display:grid; grid-template-columns:13pt 1fr; gap:4pt; align-items:start; }
@@ -48,7 +49,7 @@ h2{ font-size:9.4pt; text-transform:uppercase; letter-spacing:.9px; color:var(--
 .exp{ margin-bottom:6pt; page-break-inside:avoid; break-inside:avoid; }
 .exp:last-child{ margin-bottom:0; }
 .exp-head{ display:flex; justify-content:space-between; align-items:baseline; gap:8pt; }
-.exp-role b{ color:var(--ink); } .exp-meta{ font-size:8.2pt; font-weight:600; color:var(--ink); white-space:nowrap; }
+.exp-role{ font-size:9.6pt; color:var(--muted); line-height:1.25; } .exp-role b{ font-size:10.5pt; font-weight:700; color:var(--ink); } .exp-meta{ font-size:8.4pt; font-weight:600; color:var(--slate); white-space:nowrap; }
 .exp-context{ font-size:8.4pt; font-style:italic; color:var(--muted); margin-top:2pt; }
 .exp ul{ list-style:none; margin-top:3pt; } .exp li{ position:relative; padding-left:10pt; margin-bottom:1.4pt; font-size:8.9pt; line-height:1.34; }
 .exp li::before{ content:"▸"; position:absolute; left:0; color:var(--accent); font-size:7pt; top:1.5pt; }
@@ -128,8 +129,8 @@ $("edu").innerHTML=d.education.map(([y,t,s])=>`<div class="kv"><b style="color:#
 $("lang").innerHTML=d.languages.map(([l,v])=>`<div class="kv">${l} - ${v}</div>`).join("");
 $("summary").textContent=d.summary;
 $("metrics").innerHTML=d.metrics.map(([v,l,c])=>`<div class="metric">${metricIcon}<div><b>${v}</b>, ${l} <span style="color:var(--muted)">(${c})</span></div></div>`).join("");
-// Experience flows across both sheets: first half on sheet 1, remainder under "(suite)".
-const ex=d.experience, exHalf=Math.ceil(ex.length/2);
+// Experience flows across both sheets: 2 experiences on sheet 1 (to preserve page fit & 12mm bottom padding), remainder on sheet 2.
+const ex=d.experience, exHalf=ex.length >= 5 ? 2 : Math.ceil(ex.length/2);
 $("exp1").innerHTML=renderExp(ex.slice(0,exHalf));
 $("exp2").innerHTML=renderExp(ex.slice(exHalf));
 const pps=d.passionProjects||[];

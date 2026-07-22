@@ -416,6 +416,115 @@ function buildOfferProfile(raw, meta, curLang) {
   const title = normalizeOfferTitle(meta.title || "");
   if (curLang !== "fr") return { title, fileSlug: slugifyTitle(title) };
 
+  const isBinchamCyber = /bincham/i.test(raw) || (/business analyst/i.test(raw) && /cybers[ée]curit[ée]/i.test(raw));
+  if (isBinchamCyber) {
+    return {
+      title: "Business Analyst Cybersécurité & Gouvernance",
+      fileSlug: "BusinessAnalystCybersecurite",
+      summary: "Senior PMO & Product Owner (13 ans d'expérience, diplômé EPSI 2024 en Cybersécurité). Je conçois des systèmes de décision pour les organisations complexes : comprendre rapidement les mécanismes, structurer les arbitrages (Banque, Défense) et outiller sur-mesure le pilotage (Apps Script, Python, IA) pour rendre le delivery factuel et auditable.",
+      brand: "Faciliter le dialogue métier-IT-sécurité et traduire la conformité en exigences projet claires.",
+      letterHook: "C'est avec intérêt que je vous adresse ma candidature pour le poste de Business Analyst Cybersécurité à Genève. Cette opportunité retient mon attention car elle correspond à mon cœur de métier : structurer le besoin fonctionnel, faire l'interface entre les métiers et les équipes IT/sécurité, et décliner les exigences de conformité en livrables projet.",
+      letterFit: "Fort de 13 ans d'expérience en Business Analysis et PMO (Crédit Mutuel Arkéa en Banque, Thales ISR en Défense sur des portefeuilles complexes), j'ai mené la structuration fonctionnelle d'initiatives stratégiques et l'outillage de gouvernance. Diplômé Développeur Cybersécurité en 2024 (EPSI Rennes), je dispose d'une bonne compréhension des enjeux techniques et de sécurité applicative.",
+      letterValue: "Sans me positionner en juriste ou en expert GRC pur, j'apporte la rigueur méthodologique du Business Analyst pour dialoguer avec vos équipes sécurité (SOC, GRC, Architecture) et vos directions opérationnelles, afin de transformer les cadres réglementaires (FINMA, ISO 27001, NIS2, DORA) en cahiers des charges et matrices d'exigences clairs.",
+      experienceIds: ["arkea", "thales", "epsi", "shuhan", "vacorda"],
+      passionProjectIds: ["idnum-ia", "career-intelligence-system"],
+      passionProjects: [
+        {
+          name: "Projet IDNUM / PEIN — IA & Cadrage Réglementaire EUDI Wallet",
+          proof: "Cadrage de l'Instance de Partie Utilisatrice EUDI Wallet chez Crédit Mutuel Arkéa (DDM) : matrice entière de conformité et de spécifications (29 textes CIR/CID, 82 fonctionnalités sur 11 thèmes) réalisée en moins de 5 jours ouvrés avec 3 itérations validées par les équipes DSI (couverture complète).",
+          tags: ["EUDI Wallet (eIDAS 2)", "Conformité & IA", "Matrice DSI", "5 jours ouvrés"]
+        },
+        {
+          name: "Career Intelligence System & Prompt Security",
+          proof: "Graphe de connaissances personnel, audit d'invites (Prompt Hardening), serveurs MCP et orchestration LLM pour la gouvernance de données et l'analyse d'offres.",
+          tags: ["Prompt Security", "Knowledge Graph", "MCP", "AI Governance"]
+        },
+        {
+          name: "BorgInvestor / Trading Algo Stack — Screener & Risk",
+          proof: "Stack personnel de trading algorithmique et screening financier : backtesting, télémétrie, contrôle des risques et modélisation de scénarios décisionnels.",
+          tags: ["Trading Algo", "Backtesting", "Telemetry", "Decision Systems"]
+        }
+      ],
+      metrics: [
+        ["< 5 jours ouvrés", "Matrice IDNUM validée DSI (3 itérations, couverture complète)", "Crédit Mutuel Arkéa (DDM)"],
+        ["> 1 Md€", "Portefeuilles pilotés Défense", "Thales ISR"],
+        ["3h → 15 min", "Industrialisation risques (-92%)", "Thales ISR"],
+        ["Bac+5 / Cyber", "M2 IT/BI & Développeur Cybersécurité", "EPSI Rennes & ESC"]
+      ],
+      skillGroups: [
+        ["Business Analysis & Gouvernance", ["Recueil de besoins & ateliers métier", "Spécifications fonctionnelles & CDC", "Matrices d'exigences & traçabilité", "Pilotage Agile (Scrum / Kanban / PO)", "Gestion des parties prenantes & COPIL"]],
+        ["Cybersécurité & Conformité", ["Culture GRC & Gestion des risques (ROR/EMV)", "Sensibilité FINMA, ISO 27001, NIS2 & DORA", "Gouvernance des accès & Besoin de Savoir", "Plans de remédiation & Suivi d'audits", "Sécurité applicative (OWASP, RBAC, PAM)"]],
+        ["Outils & Méthodologies", ["Jira, Miro, MS Project, QDV, PowerBI", "SQL, REST APIs, Postman, Python, Apps Script", "Model Context Protocol (MCP), LLMs & Prompt Hardening"]]
+      ],
+      experienceOverrides: {
+        arkea: {
+          role: "PMO Stratégique / Business Analyst",
+          company: "Crédit Mutuel Arkéa",
+          period: "Nov 2024 – Présent",
+          location: "Brest, France",
+          context: "Direction du cadre commun de pilotage des initiatives du Plan stratégique en banque de détail.",
+          stack: ["Banque de détail", "PMO Stratégique", "Plan Stratégique", "Gouvernance IT", "Apps Script (440-2760h)", "Business Analysis"],
+          bullets: [
+            "Cadre commun de qualification des initiatives du Plan stratégique en banque de détail (12-18 mois), alignant marketing, data, expérience client et IT.",
+            "Formalisation des exigences fonctionnelles, règles de gouvernance, matrices de traçabilité et animation des comités de pilotage (COPIL / CODIR).",
+            "Conception d'une application PMO sur-mesure (Apps Script : Kanban, KPI, alertes) centralisant les arbitrages stratégiques (gain capacitaire de 440h à 2760h/an).",
+            "Accompagnement du changement et diffusion des référentiels de cadrage auprès des directions métier et IT."
+          ]
+        },
+        thales: {
+          role: "PMO & Support Bid Management",
+          company: "Thales ISR (via MIGSO-PCUBED)",
+          period: "Avr 2020 – Oct 2023",
+          location: "Brest, France",
+          context: "Pilotage des risques et de la gouvernance documentaire sur un portefeuille d'offres stratégiques >1 Md€.",
+          stack: ["Défense (>1Md€)", "Gestion des Risques", "Besoin de Savoir", "ISO 27001 context", "Audit Compliance"],
+          bullets: [
+            "Industrialisation du processus d'analyse des risques (ROR/EMV), réduisant le délai de traitement de 3h à 15 min par offre (-92%).",
+            "Gestion de la gouvernance EIM/GED (« Besoin de Savoir »), garantissant le respect strict des politiques d'accès et des audits de conformité interne.",
+            "Structuration des matrices d'exigences et des données de chiffrage d'offres complexes dans QDV."
+          ]
+        },
+        epsi: {
+          role: "Product Owner + Coach Agile",
+          company: "EPSI (client Capgemini)",
+          period: "Nov 2023 – Nov 2024",
+          location: "Rennes, France",
+          context: "Spécialisation intensive en architecture applicative sécurisée et gouvernance cyber.",
+          stack: ["Diplôme Cybersécurité", "OWASP", "RBAC", "Sécurité Applicative", "Agile Master"],
+          bullets: [
+            "Conception et validation d'architectures applicatives N-tiers sécurisées (Java/Spring Boot, PostgreSQL, APIs REST).",
+            "Mise en place de tests de sécurité applicative, contrôle d'accès RBAC et recettes fonctionnelles sous Postman.",
+            "Étude des référentiels de sécurité (OWASP Top 10, ISO 27001) et sécurisation des flux de données."
+          ]
+        },
+        shuhan: {
+          role: "Resp. Développement Commercial International",
+          company: "Sichuan Shuhan Plastics (Chine)",
+          period: "Juin 2015 – Janv. 2020",
+          location: "Deyang, Chine",
+          context: "Direction des opérations export (Juin 2015 – Janv. 2020 ; 7 ans en Asie au cumul avec Justrade & Vacorda).",
+          stack: ["International (7 ans Asie)", "Anglais Bilingue", "Gestion Transverse", "Négociation"],
+          bullets: [
+            "Croissance de la part export de 5% à 20% du CA (~15 M$ en 2019) par la conduite de projets complexes en environnement multiculturel.",
+            "Négociation de contrats internationaux et gestion des exigences de conformité douanière et qualité.",
+            "Management d'équipes pluridisciplinaires 100% en anglais."
+          ]
+        },
+        vacorda: {
+          role: "Chargé de Stratégie Digitale & Business Dev",
+          company: "Vacorda Instruments (Chine)",
+          period: "Janv. 2015 – Juin 2015",
+          location: "Chengdu, Chine",
+          context: "Création d'un écosystème digital from-scratch pour la conquête de la zone francophone.",
+          stack: ["Stratégie digitale", "SEO / SEA", "Google Ads", "Lead Generation"],
+          bullets: [
+            "Création écosystème digital from-scratch, SEO/SEA, lead generation zone francophone.",
+            "Gestion budget publicitaire 24k$/an Google Ads ; poste exercé 90% en anglais."
+          ]
+        }
+      }
+    };
+  }
   const isThalesConfigDelivery = /thales/i.test(raw)
     && /configuration management/i.test(raw)
     && /responsable projet/i.test(raw);
@@ -742,30 +851,30 @@ function pickExperience(exp, curLang) {
 }
 
 function selectTailoredExperiences(offer, exps) {
-  if (offerProfile.experienceIds) {
-    return scoreAndSelect(exps, offer, {
-      limit: 4,
+  const libRank = new Map(exps.map((x, i) => [x.id, i]));
+  let selected;
+  if (args.variant === "ats") {
+    // ATS CV exports ALL experiences so every historical role (including Vacorda Instruments, Diadom, Justrade) is fully indexed by ATS parsers!
+    selected = exps;
+  } else if (offerProfile.experienceIds) {
+    const preferredSet = new Set(offerProfile.experienceIds);
+    selected = exps.filter(x => preferredSet.has(x.id));
+  } else if (!offer) {
+    const genericIds = ["arkea", "thales", "neosoft", "epsi", "shuhan", "vacorda", "diadom"];
+    selected = exps.filter(x => genericIds.includes(x.id));
+  } else {
+    selected = scoreAndSelect(exps, offer, {
+      limit: 5,
       getText: experienceText,
       getSelection: item => item.selection || {},
-      preferredIds: offerProfile.experienceIds,
       debugLabel: "experiences"
     });
   }
-
-  if (!offer) {
-    const genericIds = ["arkea", "thales", "neosoft", "epsi", "shuhan", "diadom"];
-    return exps.filter(x => genericIds.includes(x.id));
-  }
-
-  return scoreAndSelect(exps, offer, {
-    limit: 4,
-    getText: experienceText,
-    getSelection: item => item.selection || {},
-    debugLabel: "experiences"
-  });
+  return selected.sort((a, b) => (libRank.get(a.id) ?? 0) - (libRank.get(b.id) ?? 0));
 }
 
 function selectPassionProjects(offer, projects) {
+  if (offerProfile.passionProjects) return offerProfile.passionProjects.slice(0, 3);
   if (!projects?.length) return [];
 
   if (!args.offer) {
@@ -774,31 +883,25 @@ function selectPassionProjects(offer, projects) {
     return projects
       .filter(project => rank.has(project.id))
       .sort((a, b) => rank.get(a.id) - rank.get(b.id))
-      .slice(0, 2)
+      .slice(0, 3)
       .map(formatPassionProject);
   }
 
-  // offerMeta.passion_project_ids (frontmatter, language-independent) lets an offer force
-  // specific projects even on the English render, where bespoke offerProfile overrides are
-  // unavailable (buildOfferProfile is FR-only — see its early return above).
   const metaPreferredIds = offerMeta.passion_project_ids
     ? String(offerMeta.passion_project_ids).split(",").map(s => s.trim()).filter(Boolean)
     : null;
   const preferredIds = offerProfile.passionProjectIds || metaPreferredIds;
   if (preferredIds) {
-    // Hard selection, not scored ranking: an explicit preferredIds list is a deliberate pick
-    // (bespoke offer override or frontmatter override) — it must not be outscored by a project
-    // that merely shares more generic keyword overlap with the offer text.
     const rank = new Map(preferredIds.map((id, i) => [id, i]));
     return projects
       .filter(project => rank.has(project.id))
       .sort((a, b) => rank.get(a.id) - rank.get(b.id))
-      .slice(0, 2)
+      .slice(0, 3)
       .map(formatPassionProject);
   }
 
   return scoreAndSelect(projects, offer, {
-    limit: 2,
+    limit: 3,
     getText: passionProjectText,
     getSelection: item => item.selection || {},
     debugLabel: "passion-projects"
@@ -958,15 +1061,14 @@ function compileCvData(profile) {
   // scoreAndSelect works on the language-neutral experienceLib (selection metadata is
   // shared across languages); only the DISPLAY text is picked per-language, at the end.
   let filteredExpRaw;
-  if (args.offer) {
+  if (model.variant === "ats" || args.variant === "ats") {
+    // ATS CV exports ALL experiences so every historical role (including Vacorda Instruments, Diadom, Justrade) is fully indexed by ATS parsers!
+    const libRank = new Map(experienceLib.map((x, i) => [x.id, i]));
+    filteredExpRaw = [...experienceLib].sort((a, b) => (libRank.get(a.id) ?? 0) - (libRank.get(b.id) ?? 0));
+  } else if (args.offer) {
     filteredExpRaw = selectTailoredExperiences(offerText, experienceLib);
-  } else if (model.variant === "premium") {
-    // Generic Premium is a Dossier de Compétences: export all 9 experiences!
-    filteredExpRaw = experienceLib;
   } else {
-    // Generic ATS is a single-page CV: export the tightest top 4 experiences.
-    const genericExperienceIds = ["arkea", "thales", "neosoft", "epsi"];
-    filteredExpRaw = experienceLib.filter(x => genericExperienceIds.includes(x.id));
+    filteredExpRaw = experienceLib;
   }
 
   const filteredExp = filteredExpRaw.map(x => {
